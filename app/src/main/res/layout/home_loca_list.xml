@@ -80,26 +80,26 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="지구샵"
-                        android:textSize="18dp"
-                        android:fontFamily="@font/notosansbold"
-                        android:textColor="#000000"/>
                     <ImageView
                         android:layout_width="13dp"
                         android:layout_height="17.5dp"
                         android:layout_gravity="center"
-                        android:layout_marginLeft="30dp"
                         android:src="@drawable/spot_icon"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:text="지구샵"
+                        android:textSize="18dp"
+                        android:fontFamily="@font/notosansbold"
+                        android:textColor="#000000"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="0.7km"
                         android:layout_gravity="center"
                         android:textSize="13dp"
-                        android:layout_marginLeft="5dp"
+                        android:layout_marginLeft="15dp"
                         android:fontFamily="@font/notosansregular"
                         android:textColor="#C4C4C4"/>
                 </LinearLayout>
@@ -148,23 +148,23 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="유민얼랏"
-                        android:textSize="18dp"
-                        android:fontFamily="@font/notosansbold"
-                        android:textColor="#000000"/>
                     <ImageView
                         android:layout_width="13dp"
                         android:layout_height="17.5dp"
                         android:layout_gravity="center"
-                        android:layout_marginLeft="30dp"
                         android:src="@drawable/spot_icon"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="5dp"
+                        android:layout_marginLeft="15dp"
+                        android:text="유민얼랏"
+                        android:textSize="18dp"
+                        android:fontFamily="@font/notosansbold"
+                        android:textColor="#000000"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
                         android:layout_gravity="center"
                         android:text="1.2km"
                         android:textSize="13dp"
@@ -216,24 +216,24 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="알맹상점"
-                        android:textSize="18dp"
-                        android:fontFamily="@font/notosansbold"
-                        android:textColor="#000000"/>
                     <ImageView
                         android:layout_width="13dp"
                         android:layout_height="17.5dp"
                         android:layout_gravity="center"
-                        android:layout_marginLeft="30dp"
                         android:src="@drawable/spot_icon"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:text="알맹상점"
+                        android:textSize="18dp"
+                        android:fontFamily="@font/notosansbold"
+                        android:textColor="#000000"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:layout_marginLeft="5dp"
+                        android:layout_marginLeft="15dp"
                         android:text="1.5km"
                         android:textSize="13dp"
                         android:fontFamily="@font/notosansregular"
@@ -284,23 +284,23 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="채움소"
-                        android:textSize="18dp"
-                        android:fontFamily="@font/notosansbold"
-                        android:textColor="#000000"/>
                     <ImageView
                         android:layout_width="13dp"
                         android:layout_height="17.5dp"
                         android:layout_gravity="center"
-                        android:layout_marginLeft="30dp"
                         android:src="@drawable/spot_icon"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="5dp"
+                        android:layout_marginLeft="15dp"
+                        android:text="채움소"
+                        android:textSize="18dp"
+                        android:fontFamily="@font/notosansbold"
+                        android:textColor="#000000"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
                         android:layout_gravity="center"
                         android:text="2.2km"
                         android:textSize="13dp"
@@ -352,23 +352,23 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="동그라미 리필러리"
-                        android:textSize="18dp"
-                        android:fontFamily="@font/notosansbold"
-                        android:textColor="#000000"/>
                     <ImageView
                         android:layout_width="13dp"
                         android:layout_height="17.5dp"
                         android:layout_gravity="center"
-                        android:layout_marginLeft="30dp"
                         android:src="@drawable/spot_icon"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="5dp"
+                        android:layout_marginLeft="15dp"
+                        android:text="동그라미 리필러리"
+                        android:textSize="18dp"
+                        android:fontFamily="@font/notosansbold"
+                        android:textColor="#000000"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
                         android:text="2.8km"
                         android:textSize="13dp"
                         android:fontFamily="@font/notosansregular"
