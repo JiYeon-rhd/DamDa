@@ -3,13 +3,16 @@ package com.example.wonderv2.Exp;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.viewpager.widget.ViewPager;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.wonderv2.Home_product.Product_PagerAdapter;
 import com.example.wonderv2.MainActivity;
 import com.example.wonderv2.R;
+import com.google.android.material.tabs.TabLayout;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -18,6 +21,11 @@ import com.example.wonderv2.R;
  */
 public class Exp_main extends Fragment {
     MainActivity activity;
+
+    private Exp_PagerAdapter pagerAdapter;
+    private TabLayout tabLayout;
+    private ViewPager viewPager;
+    private int tabCurrentIdx = 0;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -63,6 +71,45 @@ public class Exp_main extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.exp_main, container, false);
+        View v= inflater.inflate(R.layout.exp_main, container, false);
+
+        tabLayout = v.findViewById(R.id.tabs);
+        viewPager = v.findViewById(R.id.viewPager);
+
+        tabLayout.addTab(tabLayout.newTab().setText("푸드"));
+        tabLayout.addTab(tabLayout.newTab().setText("세제"));
+        tabLayout.addTab(tabLayout.newTab().setText("바디"));
+        tabLayout.addTab(tabLayout.newTab().setText("페이스"));
+
+        pagerAdapter = new Exp_PagerAdapter(getChildFragmentManager(),tabLayout.getTabCount());
+        viewPager.setAdapter(pagerAdapter);
+        viewPager.setCurrentItem(tabCurrentIdx);
+        viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
+        tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
+            @Override
+            public void onTabSelected(TabLayout.Tab tab) {
+                viewPager.setCurrentItem(tab.getPosition());
+                tabCurrentIdx = tab.getPosition();
+            }
+
+            @Override
+            public void onTabUnselected(TabLayout.Tab tab) {
+
+            }
+
+            @Override
+            public void onTabReselected(TabLayout.Tab tab) {
+
+            }
+        });
+
+
+
+
+
+
+
+
+        return v;
     }
 }
