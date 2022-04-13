@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.wonderv2">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.WonderV2">
+        <activity
+            android:name=".AR.AR_camera"
+            android:exported="true" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyCncbR2iaW8jj0gNKxb4azsDW1ZDB-BlJ0"></meta-data>
+        <meta-data
+            android:name="com.google.android.ges.version"
+            android:value="@integer/google_play_services_version"></meta-data>
+
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false"></uses-library>
+
+        <activity
+            android:name=".Home.Home_shop_detail"
+            android:exported="true" />
+        <activity
+            android:name=".Exp.Exp_detail"
+            android:exported="true" />
+        <activity
+            android:name=".AR.AR_select_item"
+            android:exported="true" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="app/src/main/res/drawable/ar_btn_detection_lightgreen.xml" value="0.2796296296296296" />
+        <entry key="app/src/main/res/drawable/bottom_sheet_bg.xml" value="0.24166666666666667" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.10185185185185185" />
+        <entry key="app/src/main/res/layout/ar_camera.xml" value="0.15324214792299898" />
+        <entry key="app/src/main/res/layout/ar_main.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/ar_select_item.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/exp_detail.xml" value="0.21920289855072464" />
+        <entry key="app/src/main/res/layout/exp_main.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/home_loca_list.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/home_loca_map.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/home_main.xml" value="0.335" />
+        <entry key="app/src/main/res/layout/home_product.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/home_shop_detail.xml" value="0.21920289855072464" />
+        <entry key="app/src/main/res/layout/home_shop_finder.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/product_body.xml" value="0.335" />
+        <entry key="app/src/main/res/layout/product_face.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/product_food.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/product_wash.xml" value="0.1" />
+        <entry key="app/src/main/res/menu/menu.xml" value="0.10185185185185185" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Home.Home_loca_map">
+
+
+    <!-- 위치 목록뷰 home_loca_list -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        android:background="@drawable/home_loca_bg">
+
+        <ImageButton
+            android:id="@+id/back_btn"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/back_icon"/>
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="위치"
+            android:fontFamily="@font/notosansbold"
+            android:textColor="#000000"
+            android:textSize="20dp"
+            android:textStyle="bold"/>
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+        <ImageButton
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:background="@drawable/home_icon_alarm">
+        </ImageButton>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!--지도-->
+        <com.google.android.gms.maps.MapView
+            android:id="@+id/map"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:name="com.google.android.gms.maps.MapFragment">
+
+        </com.google.android.gms.maps.MapView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:padding="30dp">
+            <TextView
+                android:layout_width="90dp"
+                android:layout_height="25dp"
+                android:background="@drawable/ar_date_bg"
+                android:padding="3dp"
+                android:text="내 위치 중심"
+                android:textSize="12dp"
+                android:textAlignment="center"
+                android:textColor="#000000"
+                android:fontFamily="@font/notosansbold"/>
+
+            <!--
+            <Button
+                android:layout_width="30dp"
+                android:layout_height="40dp"
+                android:background="@drawable/spot_resize"
+                android:layout_gravity="center"
+                android:layout_marginTop="120dp"/>
+                -->
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end">
+
+                <Button
+                    android:id="@+id/to_list_btn"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@drawable/home_loca_mapiconbg"
+                    android:drawableTop="@drawable/home_loca_listicon"
+                    android:padding="15dp" />
+            </RelativeLayout>
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+</LinearLayout>
