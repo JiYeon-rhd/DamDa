@@ -5,44 +5,48 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
+    android:background="@drawable/product_top_bg"
     tools:context=".Home_product.Home_product">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="70dp"
-        android:gravity="center"
-        android:background="@drawable/product_top_bg">
-
-        <ImageButton
-            android:id="@+id/back_btn"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:background="@drawable/back_icon"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="105dp"
-            android:layout_marginRight="120dp"
-            android:text="제품"
-            android:fontFamily="@font/notosansbold"
-            android:textColor="#000000"
-            android:textSize="20dp"
-            android:textStyle="bold"/>
-        <ImageButton
-            android:layout_width="25dp"
-            android:layout_height="25dp"
-            android:visibility="invisible"
-            android:background="@drawable/home_icon_alarm">
-        </ImageButton>
-    </LinearLayout>
-
-    <com.google.android.material.tabs.TabLayout
-        android:id="@+id/tabs"
-        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:tabMode="fixed"
-        app:tabBackground="@drawable/tab_indicator">
-    </com.google.android.material.tabs.TabLayout>
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:gravity="center">
+
+            <ImageButton
+                android:id="@+id/back_btn"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/back_icon"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="105dp"
+                android:layout_marginRight="120dp"
+                android:text="제품"
+                android:fontFamily="@font/notosansbold"
+                android:textColor="#000000"
+                android:textSize="20dp"
+                android:textStyle="bold"/>
+            <ImageButton
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:visibility="invisible"
+                android:background="@drawable/home_icon_alarm">
+            </ImageButton>
+        </LinearLayout>
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:tabMode="fixed"
+            app:tabBackground="@drawable/tab_indicator">
+        </com.google.android.material.tabs.TabLayout>
+    </LinearLayout>
 
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/viewPager"

@@ -5,6 +5,7 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
+    android:background="@drawable/exp_top_bgresize"
     tools:context=".Exp.Exp_main">
 
 
@@ -14,7 +15,6 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="70dp"
-        android:background="@drawable/exp_top_bg"
         android:orientation="vertical">
         <LinearLayout
             android:layout_width="match_parent"
@@ -70,7 +70,8 @@
             <androidx.viewpager.widget.ViewPager
                 android:id="@+id/viewPager"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:background="#FFFFFF">
 
             </androidx.viewpager.widget.ViewPager>
         </LinearLayout>
