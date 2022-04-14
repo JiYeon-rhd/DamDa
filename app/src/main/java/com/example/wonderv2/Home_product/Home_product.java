@@ -106,6 +106,7 @@ public class Home_product extends Fragment {
         tabLayout = v.findViewById(R.id.tabs);
         viewPager = v.findViewById(R.id.viewPager);
 
+
         tabLayout.addTab(tabLayout.newTab().setText("푸드"));
         tabLayout.addTab(tabLayout.newTab().setText("세제"));
         tabLayout.addTab(tabLayout.newTab().setText("바디"));
@@ -115,6 +116,7 @@ public class Home_product extends Fragment {
         viewPager.setAdapter(pagerAdapter);
         viewPager.setCurrentItem(tabCurrentIdx);
         viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
+
         tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
             public void onTabSelected(TabLayout.Tab tab) {
@@ -132,13 +134,6 @@ public class Home_product extends Fragment {
 
             }
         });
-
-
-
-
-
-
-
 
         return v;
     }

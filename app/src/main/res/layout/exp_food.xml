@@ -1,14 +1,171 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".Exp.Exp_food">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
+        android:id="@+id/exp_food"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content"
+        android:padding="30dp"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="125dp"
+            android:layout_height="30dp"
+            android:background="@drawable/home_name_bg"
+            android:gravity="center"
+            android:text="2022년 2월 3일"
+            android:fontFamily="@font/notosansbold"
+            android:textSize="13dp"
+            android:textColor="#000000"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:background="@drawable/white_bg"
+            android:elevation="0.5dp"
+            android:clickable="true"
+            android:layout_marginTop="15dp"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:paddingRight="0dp"
+            android:paddingLeft="20dp">
+            <TextView
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:background="@drawable/exp_bg"
+                android:text="D-45"
+                android:textColor="#000000"
+                android:fontFamily="@font/notosansregular"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="10dp"
+                android:orientation="horizontal">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="30dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="채움소"
+                        android:textSize="10dp"
+                        android:textColor="#505050"
+                        android:fontFamily="@font/notosansregular"/>
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="통후추"
+                        android:textColor="#000000"
+                        android:textSize="13dp"
+                        android:fontFamily="@font/notosansbold"/>
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="2022년 4월 22일"
+                        android:textSize="10dp"
+                        android:textColor="#505050"
+                        android:fontFamily="@font/notosansregular"/>
+                </LinearLayout>
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"/>
+                <ImageView
+                    android:layout_width="10dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center|right"
+                    android:layout_margin="15dp"
+                    android:background="@drawable/arrow_icon"/>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:background="@drawable/white_bg"
+            android:elevation="0.5dp"
+            android:clickable="true"
+            android:layout_marginTop="15dp"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:paddingRight="0dp"
+            android:paddingLeft="20dp">
+            <TextView
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:background="@drawable/exp_bg"
+                android:text="D-97"
+                android:textColor="#000000"
+                android:fontFamily="@font/notosansregular"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="10dp"
+                android:orientation="horizontal">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="30dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="알맹상점"
+                        android:textSize="10dp"
+                        android:textColor="#505050"
+                        android:fontFamily="@font/notosansregular"/>
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="계피가루"
+                        android:textColor="#000000"
+                        android:textSize="13dp"
+                        android:fontFamily="@font/notosansbold"/>
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="2022년 7월 21일"
+                        android:textSize="10dp"
+                        android:textColor="#505050"
+                        android:fontFamily="@font/notosansregular"/>
+                </LinearLayout>
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"/>
+                <ImageView
+                    android:layout_width="10dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center|right"
+                    android:layout_margin="15dp"
+                    android:background="@drawable/arrow_icon"/>
+            </LinearLayout>
+        </LinearLayout>
 
-</FrameLayout>
+    </LinearLayout>
+
+</ScrollView>

@@ -121,6 +121,7 @@ public class MainActivity extends AppCompatActivity {
                 ft.replace(R.id.main_frame, home_shop_finder);
                 ft.commit();
                 break;
+
         }
     }
 }

@@ -27,9 +27,11 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:background="#fff"
+        android:background="@drawable/navi_bg"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         app:menu="@menu/menu"
+        app:itemIconSize="25dp"
+        app:itemIconTint="#FFFFFF"
         tools:ignore="MissingConstraints" />
 </androidx.constraintlayout.widget.ConstraintLayout>

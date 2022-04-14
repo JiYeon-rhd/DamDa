@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     tools:context=".Home_product.Home_product">
 
@@ -10,7 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="70dp"
         android:gravity="center"
-        android:background="@drawable/product_top_blur">
+        android:background="@drawable/product_top_bg">
 
         <ImageButton
             android:id="@+id/back_btn"
@@ -38,13 +39,16 @@
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tabs"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        app:tabMode="fixed"
+        app:tabBackground="@drawable/tab_indicator">
     </com.google.android.material.tabs.TabLayout>
 
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/viewPager"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="#FFFFFF">
 
     </androidx.viewpager.widget.ViewPager>
 

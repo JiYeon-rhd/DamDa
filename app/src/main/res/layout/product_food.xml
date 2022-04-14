@@ -77,7 +77,6 @@
 
         <LinearLayout
             android:id="@+id/food_tea_shop01"
-            android:visibility="invisible"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="30dp"
@@ -472,7 +471,6 @@
 
         <LinearLayout
             android:id="@+id/food_tea_shop02"
-            android:visibility="invisible"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:paddingTop="30dp"

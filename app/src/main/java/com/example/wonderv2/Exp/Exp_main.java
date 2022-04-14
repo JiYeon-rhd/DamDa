@@ -1,5 +1,6 @@
 package com.example.wonderv2.Exp;
 
+import android.content.Context;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -8,6 +9,7 @@ import androidx.viewpager.widget.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 import com.example.wonderv2.Home_product.Product_PagerAdapter;
 import com.example.wonderv2.MainActivity;
@@ -67,6 +69,7 @@ public class Exp_main extends Fragment {
         }
     }
 
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -102,12 +105,6 @@ public class Exp_main extends Fragment {
 
             }
         });
-
-
-
-
-
-
 
 
         return v;
