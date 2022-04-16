@@ -1,30 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.wonderv2">
 
-    <uses-permission android:name="android.permission.CAMERA"></uses-permission>
+    <uses-permission android:name="android.permission.CAMERA" />
+
     <application
         android:allowBackup="true"
+        android:hardwareAccelerated="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.WonderV2">
+        <activity android:name=".Exp.CaptureForm"></activity>
+        <activity
+            android:name=".Exp.Exp_camera"
+            android:exported="true" />
         <activity
             android:name=".AR.AR_camera"
             android:exported="true" />
+        <activity
+            android:name="com.journeyapps.barcodescanner.CaptureActivity"
+            android:screenOrientation="fullSensor"
+            tools:replace="screenOrientation" />
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyCncbR2iaW8jj0gNKxb4azsDW1ZDB-BlJ0"></meta-data>
+            android:value="AIzaSyCncbR2iaW8jj0gNKxb4azsDW1ZDB-BlJ0" />
         <meta-data
             android:name="com.google.android.ges.version"
-            android:value="@integer/google_play_services_version"></meta-data>
+            android:value="@integer/google_play_services_version" />
 
         <uses-library
             android:name="org.apache.http.legacy"
-            android:required="false"></uses-library>
-
+            android:required="false" />
 
         <activity
             android:name=".Home.Home_shop_detail"

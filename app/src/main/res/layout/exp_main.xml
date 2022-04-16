@@ -85,6 +85,7 @@
             <Button
                 android:layout_width="155dp"
                 android:layout_height="50dp"
+                android:id="@+id/exp_camera_btn"
                 android:background="@drawable/ar_btn_detection"
                 android:text="+ 제품 추가"
                 android:fontFamily="@font/notosansbold"

@@ -1,6 +1,7 @@
 package com.example.wonderv2.Exp;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -11,6 +12,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
+import com.example.wonderv2.AR.AR_select_item;
 import com.example.wonderv2.Home_product.Product_PagerAdapter;
 import com.example.wonderv2.MainActivity;
 import com.example.wonderv2.R;
@@ -74,6 +76,7 @@ public class Exp_main extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
+
         View v= inflater.inflate(R.layout.exp_main, container, false);
 
         tabLayout = v.findViewById(R.id.tabs);
@@ -104,8 +107,22 @@ public class Exp_main extends Fragment {
             public void onTabReselected(TabLayout.Tab tab) {
 
             }
+
         });
 
+        Button camera_btn = (Button) v.findViewById(R.id.exp_camera_btn);
+
+        camera_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(
+                        getActivity(),
+                        Exp_camera.class
+                );
+
+                startActivity(intent);
+            }
+        });
 
         return v;
     }
