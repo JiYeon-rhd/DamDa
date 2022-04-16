@@ -10,15 +10,15 @@
 
     <ImageView
         android:id="@+id/bottle_image"
-        android:layout_width="300dp"
-        android:layout_height="300dp"
+        android:layout_width="370sp"
+        android:layout_height="370sp"
         android:layout_gravity="center">
 
     </ImageView>
 
     <TextView
         android:layout_width="wrap_content"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:text="공병 이름: ">
 
     </TextView>
@@ -26,13 +26,13 @@
         android:text=""
         android:id="@+id/bottle_name"
         android:layout_width="wrap_content"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content">
 
     </TextView>
     <Button
         android:id="@+id/scan_btn"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:text="스캔 시작">
 
     </Button>
