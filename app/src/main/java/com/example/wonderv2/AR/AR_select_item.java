@@ -74,6 +74,8 @@ public class AR_select_item extends AppCompatActivity implements View.OnClickLis
 
 
     Spinner spinner_earth_wash_detergent;
+    Spinner spinner_chaeum_tea;
+    Spinner spinner_chaeum_coffee;
 
 
 
@@ -94,6 +96,27 @@ public class AR_select_item extends AppCompatActivity implements View.OnClickLis
                 R.array.spinner_item_list, android.R.layout.simple_spinner_dropdown_item);
         spinner_item.setAdapter(itemAdapter);
 
+        //담고 싶은 g 선택 스피너
+        Spinner spinner_g = (Spinner) findViewById(R.id.spinner_g);
+        ArrayAdapter gAdapter = ArrayAdapter.createFromResource(this,
+                R.array.spinner_g_list, android.R.layout.simple_spinner_dropdown_item);
+        spinner_g.setAdapter(gAdapter);
+        spinner_g.post(new Runnable() {
+            @Override
+            public void run() {
+                spinner_g.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                    @Override
+                    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                        item_select_complete_btn.setVisibility(View.VISIBLE);
+                    }
+
+                    @Override
+                    public void onNothingSelected(AdapterView<?> parent) {
+
+                    }
+                });
+            }
+        });
 
         //확인 버튼
         item_select_complete_btn = (Button) findViewById(R.id.item_select_complete);
@@ -102,6 +125,12 @@ public class AR_select_item extends AppCompatActivity implements View.OnClickLis
             public void onClick(View v) {
                 //용기 스캔 카메라 로 인텐
                 Intent intent = new Intent(getApplicationContext(), AR_camera.class);
+
+                intent.putExtra("item_g", spinner_g.getSelectedItem().toString());
+                intent.putExtra("item_earth_detergent", spinner_earth_wash_detergent.getSelectedItem().toString());
+                intent.putExtra("item_chaeum_tea", spinner_chaeum_tea.getSelectedItem().toString());
+                intent.putExtra("item_chaeum_coffee", spinner_chaeum_coffee.getSelectedItem().toString());
+
                 startActivity(intent);
             }
         });
@@ -193,7 +222,7 @@ public class AR_select_item extends AppCompatActivity implements View.OnClickLis
 
         spinner_chaeum_tea_layout = (LinearLayout)findViewById(R.id.spinner_chaeum_tea_layout);
 
-        Spinner spinner_chaeum_tea = (Spinner) findViewById(R.id.spinner_chaeum_food_tea);
+        spinner_chaeum_tea = (Spinner) findViewById(R.id.spinner_chaeum_food_tea);
         ArrayAdapter itemAdapter_chaeum_tea = ArrayAdapter.createFromResource(this,
                 R.array.spinner_chaeum_food_tea_list, android.R.layout.simple_spinner_dropdown_item);
         spinner_chaeum_tea.setAdapter(itemAdapter_chaeum_tea);
@@ -215,7 +244,7 @@ public class AR_select_item extends AppCompatActivity implements View.OnClickLis
         });
 
         spinner_chaeum_coffee_layout= (LinearLayout)findViewById(R.id.spinner_chaeum_coffee_layout);
-        Spinner spinner_chaeum_coffee = (Spinner) findViewById(R.id.spinner_chaeum_food_coffee);
+        spinner_chaeum_coffee = (Spinner) findViewById(R.id.spinner_chaeum_food_coffee);
         ArrayAdapter itemAdapter_chaeum_coffee= ArrayAdapter.createFromResource(this,
                 R.array.spinner_chaeum_food_coffee_list, android.R.layout.simple_spinner_dropdown_item);
         spinner_chaeum_coffee.setAdapter(itemAdapter_chaeum_coffee);
@@ -242,27 +271,7 @@ public class AR_select_item extends AppCompatActivity implements View.OnClickLis
         item_g = (LinearLayout) findViewById(R.id.item_g);
 
 
-        //담고 싶은 g 선택 스피너
-        Spinner spinner_g = (Spinner) findViewById(R.id.spinner_g);
-        ArrayAdapter gAdapter = ArrayAdapter.createFromResource(this,
-                R.array.spinner_g_list, android.R.layout.simple_spinner_dropdown_item);
-        spinner_g.setAdapter(gAdapter);
-        spinner_g.post(new Runnable() {
-            @Override
-            public void run() {
-                spinner_g.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-                    @Override
-                    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                        item_select_complete_btn.setVisibility(View.VISIBLE);
-                    }
 
-                    @Override
-                    public void onNothingSelected(AdapterView<?> parent) {
-
-                    }
-                });
-            }
-        });
 
 
     }

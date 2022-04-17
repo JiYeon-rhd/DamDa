@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 
@@ -40,6 +41,8 @@ public class MainActivity extends AppCompatActivity {
 
     Fragment fragment1, fragment2, fragment3, fragment4;
 
+    public String set;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -56,6 +59,15 @@ public class MainActivity extends AppCompatActivity {
         ar_main = new AR_main();
         exp_main = new Exp_main();
         setFrag(0);
+
+
+        /**
+        Intent intent=getIntent();
+        set = intent.getStringExtra("set");
+        if(set.equals("ar")){
+            setFrag(1);
+        }
+         */
 
         home_product = new Home_product();
         home_loca_map = new Home_loca_map();

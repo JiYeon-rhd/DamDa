@@ -3,8 +3,8 @@
 
     <string-array name="spinner_earth_wash_detergent_list">
         <item>선택하세요</item>
-        <item>세탁용 세제 무향</item>
-        <item>세탁용 세제 유칼립투스향</item>
+        <item>무향 세탁용 세제</item>
+        <item>유칼립투스향 세탁용 세제</item>
         <item>꽃마리 세탁용 액상세제</item>
 
     </string-array>
