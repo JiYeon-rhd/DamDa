@@ -108,9 +108,21 @@ public class Home_main extends Fragment {
             }
         });
 
+        Button scan_btn = v.findViewById(R.id.scan_btn);
+        scan_btn.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                activity.setFrag(1);
+            }
+        });
 
-
-
+        Button qr_btn = v.findViewById(R.id.qr_icon);
+        qr_btn.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                activity.setFrag(2);
+            }
+        });
 
         return v;
     }

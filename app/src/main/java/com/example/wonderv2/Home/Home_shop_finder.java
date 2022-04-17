@@ -1,6 +1,7 @@
 package com.example.wonderv2.Home;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -8,8 +9,11 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.LinearLayout;
 
+import com.example.wonderv2.Exp.Exp_detail;
 import com.example.wonderv2.MainActivity;
 import com.example.wonderv2.R;
 
@@ -86,7 +90,18 @@ public class Home_shop_finder extends Fragment {
             }
         });
 
+        Button shop_detail_btn=v.findViewById(R.id.shop_detail_btn1);
+        shop_detail_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent= new Intent(
+                        getActivity(),
+                        Home_shop_detail.class
+                );
 
+                startActivity(intent);
+            }
+        });
 
         return v;
 
