@@ -1,6 +1,7 @@
 package com.example.wonderv2.Home;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -10,7 +11,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.LinearLayout;
 
+import com.example.wonderv2.Exp.Exp_detail;
 import com.example.wonderv2.MainActivity;
 import com.example.wonderv2.R;
 
@@ -98,8 +101,18 @@ public class Home_loca_list extends Fragment {
             }
         });
 
+        LinearLayout shop_detail1 = v.findViewById(R.id.shop_listbtn1);
+        shop_detail1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent= new Intent(
+                        getActivity(),
+                        Home_shop_detail.class
+                );
 
-
+                startActivity(intent);
+            }
+        });
 
         return v;
 

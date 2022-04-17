@@ -31,7 +31,7 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         app:menu="@menu/menu"
-        app:itemIconSize="25dp"
-        app:itemIconTint="#FFFFFF"
+        app:itemIconSize="27dp"
+        app:itemIconTint="@drawable/navi_iconcolor"
         tools:ignore="MissingConstraints" />
 </androidx.constraintlayout.widget.ConstraintLayout>
