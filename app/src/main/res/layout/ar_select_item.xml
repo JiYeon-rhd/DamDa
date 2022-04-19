@@ -12,7 +12,7 @@
         android:gravity="center"
         android:paddingLeft="30dp"
         android:paddingRight="30dp"
-        android:background="@drawable/ar_top_blur">
+        android:background="@drawable/product_top_bg">
 
         <ImageButton
             android:layout_width="25dp"
@@ -85,7 +85,7 @@
                         android:textSize="15dp"
                         android:fontFamily="@font/notosansregular"
                         android:textColor="#C2C2C2"
-                        android:layout_marginRight="15dp"
+                        android:layout_marginRight="13dp"
                         android:text="알맹상점">
 
                     </Button>
@@ -96,7 +96,7 @@
                         android:background="@drawable/ar_btn_selector"
                         android:textSize="15dp"
                         android:fontFamily="@font/notosansregular"
-                        android:layout_marginRight="15dp"
+                        android:layout_marginRight="13dp"
                         android:textColor="#C2C2C2"
                         android:text="지구샵">
 
@@ -107,9 +107,21 @@
                         android:layout_height="33dp"
                         android:background="@drawable/ar_btn_selector"
                         android:textSize="15dp"
+                        android:layout_marginRight="13dp"
                         android:fontFamily="@font/notosansregular"
                         android:textColor="#C2C2C2"
                         android:text="채움소">
+
+                    </Button>
+                    <Button
+                        android:id="@+id/ar_shop_4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="33dp"
+                        android:background="@drawable/ar_btn_selector"
+                        android:textSize="15dp"
+                        android:fontFamily="@font/notosansregular"
+                        android:textColor="#C2C2C2"
+                        android:text="아로마티카">
 
                     </Button>
                 </LinearLayout>
@@ -120,8 +132,8 @@
 
                     <!--알맹상점 레이아웃-->
                     <LinearLayout
-                        android:id="@+id/item_almaeng_layout"
-                        android:visibility="invisible"
+                        android:id="@+id/almaeng_layout"
+                        android:visibility="gone"
                         android:orientation="vertical"
                         android:layout_width="match_parent"
                         android:layout_marginTop="40dp"
@@ -142,48 +154,40 @@
                             android:layout_height="wrap_content">
 
                             <ImageView
-                                android:id="@+id/item_food_bg"
+                                android:id="@+id/almaeng_food_bg"
                                 android:visibility="invisible"
                                 android:layout_marginTop="4dp"
-                                android:src="@drawable/ar_item_food_bg"
+                                android:src="@drawable/ar_select_food_bg"
                                 android:layout_width="350dp"
                                 android:layout_height="150dp"
-                                android:layout_marginRight="30dp"
-                                android:layout_marginLeft="30dp"
                                 android:layout_gravity="center">
                             </ImageView>
 
                             <ImageView
-                                android:id="@+id/item_wash_bg"
+                                android:id="@+id/almaeng_wash_bg"
                                 android:visibility="invisible"
                                 android:layout_marginTop="4dp"
-                                android:src="@drawable/ar_item_wash_bg"
+                                android:src="@drawable/ar_select_detergent_bg"
                                 android:layout_width="350dp"
                                 android:layout_height="150dp"
-                                android:layout_marginRight="30dp"
-                                android:layout_marginLeft="30dp"
                                 android:layout_gravity="center">
                             </ImageView>
                             <ImageView
-                                android:id="@+id/item_body_bg"
+                                android:id="@+id/almaeng_body_bg"
                                 android:visibility="invisible"
                                 android:layout_marginTop="4dp"
-                                android:src="@drawable/ar_item_body_bg"
+                                android:src="@drawable/ar_select_body_bg"
                                 android:layout_width="350dp"
                                 android:layout_height="150dp"
-                                android:layout_marginRight="30dp"
-                                android:layout_marginLeft="30dp"
                                 android:layout_gravity="center">
                             </ImageView>
                             <ImageView
-                                android:id="@+id/item_face_bg"
+                                android:id="@+id/almaeng_face_bg"
                                 android:visibility="invisible"
                                 android:layout_marginTop="4dp"
-                                android:src="@drawable/ar_item_face_bg"
+                                android:src="@drawable/ar_select_face_bg"
                                 android:layout_width="350dp"
                                 android:layout_height="150dp"
-                                android:layout_marginRight="30dp"
-                                android:layout_marginLeft="30dp"
                                 android:layout_gravity="center">
                             </ImageView>
 
@@ -194,19 +198,18 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="36dp">
                                 <Button
-                                    android:id="@+id/item_food"
+                                    android:id="@+id/almaeng_food"
                                     android:layout_width="wrap_content"
                                     android:layout_height="33dp"
                                     android:background="#00FFFFFF"
                                     android:textSize="14dp"
                                     android:textStyle="bold"
-                                    android:layout_marginLeft="0dp"
                                     android:fontFamily="@font/notosansregular"
                                     android:textColor="#505050"
                                     android:text="푸드">
                                 </Button>
                                 <Button
-                                    android:id="@+id/item_wash"
+                                    android:id="@+id/almaeng_wash"
                                     android:layout_width="wrap_content"
                                     android:layout_height="33dp"
                                     android:background="#00FFFFFF"
@@ -216,9 +219,8 @@
                                     android:textColor="#505050"
                                     android:text="세제">
                                 </Button>
-
                                 <Button
-                                    android:id="@+id/item_body"
+                                    android:id="@+id/almaeng_body"
                                     android:layout_width="wrap_content"
                                     android:layout_height="33dp"
                                     android:background="#00FFFFFF"
@@ -226,11 +228,10 @@
                                     android:textStyle="bold"
                                     android:fontFamily="@font/notosansregular"
                                     android:textColor="#505050"
-                                    android:layout_marginRight="10dp"
                                     android:text="바디">
                                 </Button>
                                 <Button
-                                    android:id="@+id/item_face"
+                                    android:id="@+id/almaeng_face"
                                     android:layout_width="wrap_content"
                                     android:layout_height="33dp"
                                     android:background="#00FFFFFF"
@@ -245,9 +246,9 @@
 
                             <!-- 푸드 아이템들-->
                             <LinearLayout
-                                android:id="@+id/item_food_items"
-                                android:visibility="invisible"
-                                android:layout_marginTop="50dp"
+                                android:id="@+id/almaeng_food_items"
+                                android:visibility="gone"
+                                android:layout_marginTop="65dp"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:gravity="center_horizontal"
@@ -256,10 +257,11 @@
                                     android:layout_marginTop="15dp"
                                     android:orientation="horizontal"
                                     android:gravity="center"
+                                    android:layout_gravity="center_horizontal"
                                     android:layout_width="wrap_content"
-                                    android:layout_height="34dp">
+                                    android:layout_height="36dp">
                                     <Button
-                                        android:id="@+id/food_tea"
+                                        android:id="@+id/almaeng_food_tea"
                                         android:layout_width="wrap_content"
                                         android:layout_height="33dp"
                                         android:background="#00FFFFFF"
@@ -274,26 +276,7 @@
                                         android:background="#C2c2c2"
                                         android:layout_weight="1"/>
                                     <Button
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="33dp"
-                                        android:background="#00FFFFFF"
-                                        android:textSize="15dp"
-                                        android:fontFamily="@font/notosansregular"
-                                        android:textColor="#C2C2C2"
-                                        android:layout_marginLeft="30dp"
-                                        android:layout_marginRight="38dp"
-                                        android:text="발사믹/식초/오일">
-                                    </Button>
-                                </LinearLayout>
-
-
-                                <LinearLayout
-                                    android:orientation="horizontal"
-                                    android:gravity="center"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="36dp">
-                                    <Button
-                                        android:id="@+id/food_coffe"
+                                        android:id="@+id/almaeng_food_coffee"
                                         android:layout_width="wrap_content"
                                         android:layout_height="33dp"
                                         android:background="#00FFFFFF"
@@ -302,45 +285,14 @@
                                         android:textColor="#C2C2C2"
                                         android:text="커피">
                                     </Button>
-                                    <View
-                                        android:layout_width="1dp"
-                                        android:layout_height="20dp"
-                                        android:background="#C2c2c2"
-                                        android:layout_weight="1"/>
-                                    <Button
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="33dp"
-                                        android:background="#00FFFFFF"
-                                        android:textSize="15dp"
-                                        android:fontFamily="@font/notosansregular"
-                                        android:textColor="#C2C2C2"
-                                        android:text="향신료">
-                                    </Button>
-                                    <View
-                                        android:layout_width="1dp"
-                                        android:layout_height="20dp"
-                                        android:background="#C2c2c2"
-                                        android:layout_weight="1"/>
-                                    <Button
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="33dp"
-                                        android:background="#00FFFFFF"
-                                        android:textSize="15dp"
-                                        android:fontFamily="@font/notosansregular"
-                                        android:textColor="#C2C2C2"
-                                        android:text="오트밀">
-                                    </Button>
                                 </LinearLayout>
-
-
-
                             </LinearLayout>
 
                             <!-- 페이스 아이템들-->
                             <LinearLayout
-                                android:id="@+id/item_face_items"
-                                android:visibility="invisible"
-                                android:layout_marginTop="50dp"
+                                android:id="@+id/almaeng_face_items"
+                                android:visibility="gone"
+                                android:layout_marginTop="65dp"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:orientation="vertical">
@@ -350,8 +302,9 @@
                                     android:gravity="center"
                                     android:layout_gravity="center_horizontal"
                                     android:layout_width="wrap_content"
-                                    android:layout_height="34dp">
+                                    android:layout_height="36dp">
                                     <Button
+                                        android:id="@+id/almaeng_face_tonor"
                                         android:layout_width="wrap_content"
                                         android:layout_height="33dp"
                                         android:background="#00FFFFFF"
@@ -366,6 +319,7 @@
                                         android:background="#C2c2c2"
                                         android:layout_weight="1"/>
                                     <Button
+                                        android:id="@+id/almaeng_face_cream"
                                         android:layout_width="wrap_content"
                                         android:layout_height="33dp"
                                         android:background="#00FFFFFF"
@@ -374,77 +328,14 @@
                                         android:textColor="#C2C2C2"
                                         android:text="크림">
                                     </Button>
-                                    <View
-                                        android:layout_width="1dp"
-                                        android:layout_height="20dp"
-                                        android:background="#C2c2c2"
-                                        android:layout_weight="1"/>
-                                    <Button
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="33dp"
-                                        android:background="#00FFFFFF"
-                                        android:textSize="15dp"
-                                        android:fontFamily="@font/notosansregular"
-                                        android:textColor="#C2C2C2"
-                                        android:text="클렌저">
-                                    </Button>
                                 </LinearLayout>
-
-
-                                <LinearLayout
-                                    android:orientation="horizontal"
-                                    android:gravity="center"
-                                    android:layout_gravity="center_horizontal"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="36dp">
-                                    <Button
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="33dp"
-                                        android:background="#00FFFFFF"
-                                        android:textSize="15dp"
-                                        android:fontFamily="@font/notosansregular"
-                                        android:textColor="#C2C2C2"
-                                        android:text="썬크림">
-                                    </Button>
-                                    <View
-                                        android:layout_width="1dp"
-                                        android:layout_height="20dp"
-                                        android:background="#C2c2c2"
-                                        android:layout_weight="1"/>
-                                    <Button
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="33dp"
-                                        android:background="#00FFFFFF"
-                                        android:textSize="15dp"
-                                        android:fontFamily="@font/notosansregular"
-                                        android:textColor="#C2C2C2"
-                                        android:text="젤">
-                                    </Button>
-                                    <View
-                                        android:layout_width="1dp"
-                                        android:layout_height="20dp"
-                                        android:background="#C2c2c2"
-                                        android:layout_weight="1"/>
-                                    <Button
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="33dp"
-                                        android:background="#00FFFFFF"
-                                        android:textSize="15dp"
-                                        android:fontFamily="@font/notosansregular"
-                                        android:textColor="#C2C2C2"
-                                        android:text="오일">
-                                    </Button>
-                                </LinearLayout>
-
-
-
                             </LinearLayout>
 
                             <!-- 세제 아이템들-->
                             <LinearLayout
-                                android:id="@+id/item_wash_items"
-                                android:visibility="invisible"
-                                android:layout_marginTop="70dp"
+                                android:id="@+id/almaeng_wash_items"
+                                android:visibility="gone"
+                                android:layout_marginTop="65dp"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:orientation="vertical">
@@ -456,13 +347,14 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="36dp">
                                     <Button
+                                        android:id="@+id/almaeng_wash_scent"
                                         android:layout_width="wrap_content"
                                         android:layout_height="33dp"
                                         android:background="#00FFFFFF"
                                         android:textSize="15dp"
                                         android:fontFamily="@font/notosansregular"
                                         android:textColor="#C2C2C2"
-                                        android:text="세탁세제">
+                                        android:text="섬유유연제">
                                     </Button>
                                     <View
                                         android:layout_width="1dp"
@@ -470,20 +362,7 @@
                                         android:background="#C2c2c2"
                                         android:layout_weight="1"/>
                                     <Button
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="33dp"
-                                        android:background="#00FFFFFF"
-                                        android:textSize="15dp"
-                                        android:fontFamily="@font/notosansregular"
-                                        android:textColor="#C2C2C2"
-                                        android:text="섬유유연">
-                                    </Button>
-                                    <View
-                                        android:layout_width="1dp"
-                                        android:layout_height="20dp"
-                                        android:background="#C2c2c2"
-                                        android:layout_weight="1"/>
-                                    <Button
+                                        android:id="@+id/almaeng_wash_kitchen"
                                         android:layout_width="wrap_content"
                                         android:layout_height="33dp"
                                         android:background="#00FFFFFF"
@@ -493,15 +372,13 @@
                                         android:text="주방세제">
                                     </Button>
                                 </LinearLayout>
-
-
                             </LinearLayout>
 
                             <!-- 바디 아이템들-->
                             <LinearLayout
-                                android:id="@+id/item_body_items"
-                                android:visibility="invisible"
-                                android:layout_marginTop="50dp"
+                                android:id="@+id/almaeng_body_items"
+                                android:visibility="gone"
+                                android:layout_marginTop="65dp"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:orientation="vertical">
@@ -512,15 +389,15 @@
                                     android:layout_gravity="center_horizontal"
                                     android:layout_width="wrap_content"
                                     android:layout_height="36dp">
-
                                     <Button
+                                        android:id="@+id/almaeng_body_shampoo"
                                         android:layout_width="wrap_content"
                                         android:layout_height="33dp"
                                         android:background="#00FFFFFF"
                                         android:textSize="15dp"
                                         android:fontFamily="@font/notosansregular"
                                         android:textColor="#C2C2C2"
-                                        android:text="샴푸">
+                                        android:text="삼푸">
                                     </Button>
                                     <View
                                         android:layout_width="1dp"
@@ -528,82 +405,18 @@
                                         android:background="#C2c2c2"
                                         android:layout_weight="1"/>
                                     <Button
+                                        android:id="@+id/almaeng_body_conditioner"
                                         android:layout_width="wrap_content"
                                         android:layout_height="33dp"
                                         android:background="#00FFFFFF"
                                         android:textSize="15dp"
-                                        android:fontFamily="@font/notosansregular"
-                                        android:textColor="#C2C2C2"
-                                        android:text="바디워시">
-                                    </Button>
-                                    <View
-                                        android:layout_width="1dp"
-                                        android:layout_height="20dp"
-                                        android:background="#C2c2c2"
-                                        android:layout_weight="1"/>
-                                    <Button
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="33dp"
-                                        android:background="#00FFFFFF"
-                                        android:textSize="15dp"
-                                        android:fontFamily="@font/notosansregular"
-                                        android:textColor="#C2C2C2"
-                                        android:text="헤어에센스">
-                                    </Button>
-                                </LinearLayout>
-
-
-                                <LinearLayout
-                                    android:orientation="horizontal"
-                                    android:gravity="center"
-                                    android:layout_gravity="center"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="36dp">
-                                    <Button
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="33dp"
-                                        android:background="#00FFFFFF"
-                                        android:textSize="15dp"
+                                        android:layout_marginLeft="10dp"
                                         android:fontFamily="@font/notosansregular"
                                         android:textColor="#C2C2C2"
                                         android:text="컨디셔너">
                                     </Button>
-                                    <View
-                                        android:layout_width="1dp"
-                                        android:layout_height="20dp"
-                                        android:background="#C2c2c2"
-                                        android:layout_weight="1"/>
-                                    <Button
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="33dp"
-                                        android:background="#00FFFFFF"
-                                        android:textSize="15dp"
-                                        android:fontFamily="@font/notosansregular"
-                                        android:textColor="#C2C2C2"
-                                        android:text="올인원워시">
-                                    </Button>
-                                    <View
-                                        android:layout_width="1dp"
-                                        android:layout_height="20dp"
-                                        android:background="#C2c2c2"
-                                        android:layout_weight="1"/>
-                                    <Button
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="33dp"
-                                        android:background="#00FFFFFF"
-                                        android:textSize="15dp"
-                                        android:fontFamily="@font/notosansregular"
-                                        android:textColor="#C2C2C2"
-                                        android:text="핸드워시">
-                                    </Button>
                                 </LinearLayout>
-
-
-
                             </LinearLayout>
-
-
-
                         </FrameLayout>
                     </LinearLayout>
 
@@ -612,13 +425,12 @@
 
                     <!-- 지구샵 레이아웃-->
                     <LinearLayout
-                        android:id="@+id/item_earth_layout"
-                        android:visibility="invisible"
+                        android:id="@+id/earth_layout"
+                        android:visibility="gone"
                         android:orientation="vertical"
                         android:layout_width="match_parent"
                         android:layout_marginTop="40dp"
                         android:layout_height="wrap_content">
-
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -627,17 +439,16 @@
                             android:fontFamily="@font/notosansregular"
                             android:textColor="#000000"
                             android:text="용기에 담을 상품을 선택해주세요">
-
                         </TextView>
                         <FrameLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content">
 
                             <ImageView
-                                android:id="@+id/item_earth_wash_bg"
+                                android:id="@+id/earth_wash_bg"
                                 android:visibility="invisible"
                                 android:layout_marginTop="4dp"
-                                android:src="@drawable/ar_item_wash_bg"
+                                android:src="@drawable/ar_select_detergent_bg"
                                 android:layout_width="350dp"
                                 android:layout_height="150dp"
                                 android:layout_marginRight="30dp"
@@ -657,13 +468,12 @@
                                     android:background="#00FFFFFF"
                                     android:textSize="14dp"
                                     android:textStyle="bold"
-                                    android:layout_marginLeft="0dp"
                                     android:fontFamily="@font/notosansregular"
-                                    android:textColor="#505050"
+                                    android:textColor="#C2C2C2"
                                     android:text="푸드">
                                 </Button>
                                 <Button
-                                    android:id="@+id/item_earth_wash"
+                                    android:id="@+id/earth_wash"
                                     android:layout_width="wrap_content"
                                     android:layout_height="33dp"
                                     android:background="#00FFFFFF"
@@ -681,8 +491,7 @@
                                     android:textSize="14dp"
                                     android:textStyle="bold"
                                     android:fontFamily="@font/notosansregular"
-                                    android:textColor="#505050"
-                                    android:layout_marginRight="10dp"
+                                    android:textColor="#C2C2C2"
                                     android:text="바디">
                                 </Button>
                                 <Button
@@ -692,16 +501,16 @@
                                     android:textSize="14dp"
                                     android:textStyle="bold"
                                     android:fontFamily="@font/notosansregular"
-                                    android:textColor="#505050"
+                                    android:textColor="#C2C2C2"
                                     android:text="페이스">
                                 </Button>
                             </LinearLayout>
 
                             <!-- 세제 아이템들-->
                             <LinearLayout
-                                android:id="@+id/item_earth_wash_items"
+                                android:id="@+id/earth_wash_items"
                                 android:visibility="invisible"
-                                android:layout_marginTop="70dp"
+                                android:layout_marginTop="65dp"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:orientation="vertical">
@@ -713,7 +522,7 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="36dp">
                                     <Button
-                                        android:id="@+id/wash_detergent"
+                                        android:id="@+id/earth_wash_detergent"
                                         android:layout_width="wrap_content"
                                         android:layout_height="33dp"
                                         android:background="#00FFFFFF"
@@ -728,31 +537,16 @@
                                         android:background="#C2c2c2"
                                         android:layout_weight="1"/>
                                     <Button
+                                        android:id="@+id/earth_wash_scent"
                                         android:layout_width="wrap_content"
                                         android:layout_height="33dp"
                                         android:background="#00FFFFFF"
                                         android:textSize="15dp"
                                         android:fontFamily="@font/notosansregular"
                                         android:textColor="#C2C2C2"
-                                        android:text="섬유유연">
-                                    </Button>
-                                    <View
-                                        android:layout_width="1dp"
-                                        android:layout_height="20dp"
-                                        android:background="#C2c2c2"
-                                        android:layout_weight="1"/>
-                                    <Button
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="33dp"
-                                        android:background="#00FFFFFF"
-                                        android:textSize="15dp"
-                                        android:fontFamily="@font/notosansregular"
-                                        android:textColor="#C2C2C2"
-                                        android:text="주방세제">
+                                        android:text="섬유유연제">
                                     </Button>
                                 </LinearLayout>
-
-
                             </LinearLayout>
                         </FrameLayout>
                     </LinearLayout>
@@ -761,13 +555,12 @@
 
                     <!--채움소 레이아웃-->
                     <LinearLayout
-                        android:id="@+id/item_chaeum_layout"
+                        android:id="@+id/chaeum_layout"
                         android:visibility="invisible"
                         android:orientation="vertical"
                         android:layout_width="match_parent"
                         android:layout_marginTop="40dp"
                         android:layout_height="wrap_content">
-
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -783,10 +576,10 @@
                             android:layout_height="wrap_content">
 
                             <ImageView
-                                android:id="@+id/item_chaeum_food_bg"
+                                android:id="@+id/chaeum_food_bg"
                                 android:visibility="invisible"
                                 android:layout_marginTop="4dp"
-                                android:src="@drawable/ar_item_food_bg"
+                                android:src="@drawable/ar_select_food_bg"
                                 android:layout_width="350dp"
                                 android:layout_height="150dp"
                                 android:layout_marginRight="30dp"
@@ -801,7 +594,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="36dp">
                                 <Button
-                                    android:id="@+id/item_chaeum_food"
+                                    android:id="@+id/chaeum_food"
                                     android:layout_width="wrap_content"
                                     android:layout_height="33dp"
                                     android:background="#00FFFFFF"
@@ -819,7 +612,7 @@
                                     android:textSize="14dp"
                                     android:textStyle="bold"
                                     android:fontFamily="@font/notosansregular"
-                                    android:textColor="#505050"
+                                    android:textColor="#C2C2C2"
                                     android:text="세제">
                                 </Button>
 
@@ -830,8 +623,7 @@
                                     android:textSize="14dp"
                                     android:textStyle="bold"
                                     android:fontFamily="@font/notosansregular"
-                                    android:textColor="#505050"
-                                    android:layout_marginRight="10dp"
+                                    android:textColor="#C2C2C2"
                                     android:text="바디">
                                 </Button>
                                 <Button
@@ -841,7 +633,7 @@
                                     android:textSize="14dp"
                                     android:textStyle="bold"
                                     android:fontFamily="@font/notosansregular"
-                                    android:textColor="#505050"
+                                    android:textColor="#C2C2C2"
                                     android:text="페이스">
                                 </Button>
                             </LinearLayout>
@@ -849,9 +641,9 @@
 
                             <!-- 푸드 아이템들-->
                             <LinearLayout
-                                android:id="@+id/item_chaeum_food_items"
+                                android:id="@+id/chaeum_food_items"
                                 android:visibility="invisible"
-                                android:layout_marginTop="50dp"
+                                android:layout_marginTop="65dp"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:gravity="center_horizontal"
@@ -863,7 +655,7 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="34dp">
                                     <Button
-                                        android:id="@+id/food_chaeum_tea"
+                                        android:id="@+id/chaeum_food_tea"
                                         android:layout_width="wrap_content"
                                         android:layout_height="33dp"
                                         android:background="#00FFFFFF"
@@ -878,26 +670,7 @@
                                         android:background="#C2c2c2"
                                         android:layout_weight="1"/>
                                     <Button
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="33dp"
-                                        android:background="#00FFFFFF"
-                                        android:textSize="15dp"
-                                        android:fontFamily="@font/notosansregular"
-                                        android:textColor="#C2C2C2"
-                                        android:layout_marginLeft="30dp"
-                                        android:layout_marginRight="38dp"
-                                        android:text="발사믹/식초/오일">
-                                    </Button>
-                                </LinearLayout>
-
-
-                                <LinearLayout
-                                    android:orientation="horizontal"
-                                    android:gravity="center"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="36dp">
-                                    <Button
-                                        android:id="@+id/food_chaeum_coffee"
+                                        android:id="@+id/chaeum_food_coffee"
                                         android:layout_width="wrap_content"
                                         android:layout_height="33dp"
                                         android:background="#00FFFFFF"
@@ -906,41 +679,199 @@
                                         android:textColor="#C2C2C2"
                                         android:text="커피">
                                     </Button>
-                                    <View
-                                        android:layout_width="1dp"
-                                        android:layout_height="20dp"
-                                        android:background="#C2c2c2"
-                                        android:layout_weight="1"/>
-                                    <Button
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="33dp"
-                                        android:background="#00FFFFFF"
-                                        android:textSize="15dp"
-                                        android:fontFamily="@font/notosansregular"
-                                        android:textColor="#C2C2C2"
-                                        android:text="향신료">
-                                    </Button>
-                                    <View
-                                        android:layout_width="1dp"
-                                        android:layout_height="20dp"
-                                        android:background="#C2c2c2"
-                                        android:layout_weight="1"/>
-                                    <Button
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="33dp"
-                                        android:background="#00FFFFFF"
-                                        android:textSize="15dp"
-                                        android:fontFamily="@font/notosansregular"
-                                        android:textColor="#C2C2C2"
-                                        android:text="오트밀">
-                                    </Button>
                                 </LinearLayout>
-
 
                             </LinearLayout>
 
                         </FrameLayout>
                     </LinearLayout>
+
+                    <!--아로마티카 레이아웃-->
+                    <LinearLayout
+                        android:id="@+id/aro_layout"
+                        android:visibility="invisible"
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="40dp"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal"
+                            android:textSize="15dp"
+                            android:fontFamily="@font/notosansregular"
+                            android:textColor="#000000"
+                            android:text="용기에 담을 상품을 선택해주세요">
+
+                        </TextView>
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <ImageView
+                                android:id="@+id/aro_body_bg"
+                                android:visibility="invisible"
+                                android:layout_marginTop="4dp"
+                                android:src="@drawable/ar_select_body_bg"
+                                android:layout_width="350dp"
+                                android:layout_height="150dp"
+                                android:layout_gravity="center">
+                            </ImageView>
+                            <ImageView
+                                android:id="@+id/aro_face_bg"
+                                android:visibility="invisible"
+                                android:layout_marginTop="4dp"
+                                android:src="@drawable/ar_select_face_bg"
+                                android:layout_width="350dp"
+                                android:layout_height="150dp"
+                                android:layout_gravity="center">
+                            </ImageView>
+
+                            <LinearLayout
+                                android:layout_marginTop="15dp"
+                                android:orientation="horizontal"
+                                android:gravity="center"
+                                android:layout_width="match_parent"
+                                android:layout_height="36dp">
+                                <Button
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="33dp"
+                                    android:background="#00FFFFFF"
+                                    android:textSize="14dp"
+                                    android:textStyle="bold"
+                                    android:fontFamily="@font/notosansregular"
+                                    android:textColor="#C2C2C2"
+                                    android:text="푸드">
+                                </Button>
+                                <Button
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="33dp"
+                                    android:background="#00FFFFFF"
+                                    android:textSize="14dp"
+                                    android:textStyle="bold"
+                                    android:fontFamily="@font/notosansregular"
+                                    android:textColor="#C2C2C2"
+                                    android:text="세제">
+                                </Button>
+                                <Button
+                                    android:id="@+id/aro_body"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="33dp"
+                                    android:background="#00FFFFFF"
+                                    android:textSize="14dp"
+                                    android:textStyle="bold"
+                                    android:fontFamily="@font/notosansregular"
+                                    android:textColor="#505050"
+                                    android:text="바디">
+                                </Button>
+                                <Button
+                                    android:id="@+id/aro_face"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="33dp"
+                                    android:background="#00FFFFFF"
+                                    android:textSize="14dp"
+                                    android:textStyle="bold"
+                                    android:fontFamily="@font/notosansregular"
+                                    android:textColor="#505050"
+                                    android:text="페이스">
+                                </Button>
+                            </LinearLayout>
+
+
+
+                            <!-- 페이스 아이템들-->
+                            <LinearLayout
+                                android:id="@+id/aro_face_items"
+                                android:visibility="invisible"
+                                android:layout_marginTop="65dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+                                <LinearLayout
+                                    android:layout_marginTop="15dp"
+                                    android:orientation="horizontal"
+                                    android:gravity="center"
+                                    android:layout_gravity="center_horizontal"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="36dp">
+                                    <Button
+                                        android:id="@+id/aro_face_tonor"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="33dp"
+                                        android:background="#00FFFFFF"
+                                        android:textSize="15dp"
+                                        android:fontFamily="@font/notosansregular"
+                                        android:textColor="#C2C2C2"
+                                        android:text="토너">
+                                    </Button>
+                                    <View
+                                        android:layout_width="1dp"
+                                        android:layout_height="20dp"
+                                        android:background="#C2c2c2"
+                                        android:layout_weight="1"/>
+                                    <Button
+                                        android:id="@+id/aro_face_cream"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="33dp"
+                                        android:background="#00FFFFFF"
+                                        android:textSize="15dp"
+                                        android:fontFamily="@font/notosansregular"
+                                        android:textColor="#C2C2C2"
+                                        android:text="크림">
+                                    </Button>
+                                </LinearLayout>
+                            </LinearLayout>
+
+                            <!-- 바디 아이템들-->
+                            <LinearLayout
+                                android:id="@+id/aro_body_items"
+                                android:visibility="invisible"
+                                android:layout_marginTop="65dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+                                <LinearLayout
+                                    android:layout_marginTop="15dp"
+                                    android:orientation="horizontal"
+                                    android:gravity="center"
+                                    android:layout_gravity="center_horizontal"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="36dp">
+                                    <Button
+                                        android:id="@+id/aro_body_shampoo"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="33dp"
+                                        android:background="#00FFFFFF"
+                                        android:textSize="15dp"
+                                        android:fontFamily="@font/notosansregular"
+                                        android:textColor="#C2C2C2"
+                                        android:text="삼푸">
+                                    </Button>
+                                    <View
+                                        android:layout_width="1dp"
+                                        android:layout_height="20dp"
+                                        android:background="#C2c2c2"
+                                        android:layout_weight="1"/>
+                                    <Button
+                                        android:id="@+id/aro_body_conditioner"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="33dp"
+                                        android:background="#00FFFFFF"
+                                        android:textSize="15dp"
+                                        android:layout_marginLeft="10dp"
+                                        android:fontFamily="@font/notosansregular"
+                                        android:textColor="#C2C2C2"
+                                        android:text="컨디셔너">
+                                    </Button>
+                                </LinearLayout>
+                            </LinearLayout>
+                        </FrameLayout>
+                    </LinearLayout>
+
+
+
+
 
 
                 </FrameLayout>
