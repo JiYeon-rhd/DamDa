@@ -3,6 +3,14 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Jeonsujin/StudioProjects/WonderV2/app/src/main/res/layout/ar_camera.xml" value="0.24947916666666667" />
+        <entry key="..\:/Users/Jeonsujin/StudioProjects/WonderV2/app/src/main/res/layout/ar_main.xml" value="0.24947916666666667" />
+        <entry key="..\:/Users/Jeonsujin/StudioProjects/WonderV2/app/src/main/res/layout/ar_select_item.xml" value="0.176" />
+        <entry key="..\:/Users/Jeonsujin/StudioProjects/WonderV2/app/src/main/res/layout/custom_tab.xml" value="0.24947916666666667" />
+        <entry key="..\:/Users/Jeonsujin/StudioProjects/WonderV2/app/src/main/res/layout/home_main.xml" value="0.264" />
+        <entry key="..\:/Users/Jeonsujin/StudioProjects/WonderV2/app/src/main/res/layout/product_body.xml" value="0.1793478260869565" />
+        <entry key="..\:/Users/Jeonsujin/StudioProjects/WonderV2/app/src/main/res/layout/product_face.xml" value="0.1793478260869565" />
+        <entry key="..\:/Users/Jeonsujin/StudioProjects/WonderV2/app/src/main/res/layout/sign_in.xml" value="0.1793478260869565" />
         <entry key="..\:/WonderV2/app/src/main/res/drawable/ar_background_info.xml" value="0.378125" />
         <entry key="..\:/WonderV2/app/src/main/res/drawable/ar_background_selectitem.xml" value="0.378125" />
         <entry key="..\:/WonderV2/app/src/main/res/drawable/ar_btn_detection.xml" value="0.378125" />
