@@ -12,7 +12,7 @@
         android:gravity="center"
         android:paddingLeft="30dp"
         android:paddingRight="30dp"
-        android:background="@drawable/ar_top_blur">
+        android:background="@drawable/product_top_bg">
 
         <ImageButton
             android:layout_width="25dp"
