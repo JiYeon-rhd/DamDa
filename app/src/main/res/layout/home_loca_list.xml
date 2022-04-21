@@ -66,7 +66,7 @@
             android:layout_height="75dp"
             android:layout_marginTop="25dp"
             android:background="@drawable/white_bg"
-            android:elevation="5dp"
+            android:elevation="1.1dp"
             android:orientation="horizontal"
             android:clickable="true">
             <LinearLayout
@@ -134,7 +134,7 @@
             android:layout_height="75dp"
             android:layout_marginTop="20dp"
             android:background="@drawable/white_bg"
-            android:elevation="5dp"
+            android:elevation="1.1dp"
             android:orientation="horizontal"
             android:clickable="true">
             <LinearLayout
@@ -157,7 +157,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="15dp"
-                        android:text="유민얼랏"
+                        android:text="아로마티카"
                         android:textSize="18dp"
                         android:fontFamily="@font/notosansbold"
                         android:textColor="#000000"/>
@@ -175,7 +175,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
-                    android:text="서울특별시 마포구 연남동 487-342"
+                    android:text="서울특별시 강남구 신사동 524-10"
                     android:textSize="13dp"
                     android:textColor="#C4C4C4"
                     android:fontFamily="@font/notosansregular"/>
@@ -203,7 +203,7 @@
             android:layout_height="75dp"
             android:layout_marginTop="20dp"
             android:background="@drawable/white_bg"
-            android:elevation="5dp"
+            android:elevation="1.1dp"
             android:orientation="horizontal"
             android:clickable="true">
             <LinearLayout
@@ -271,7 +271,7 @@
             android:layout_height="75dp"
             android:layout_marginTop="20dp"
             android:background="@drawable/white_bg"
-            android:elevation="5dp"
+            android:elevation="1.1dp"
             android:orientation="horizontal"
             android:clickable="true">
             <LinearLayout
@@ -314,73 +314,6 @@
                     android:layout_marginTop="5dp"
                     android:text="인천시 중구 하늘달빛로 78 영종힐링프라자 108호"
                     android:textSize="10dp"
-                    android:textColor="#C4C4C4"
-                    android:fontFamily="@font/notosansregular"/>
-            </LinearLayout>
-            <View
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:layout_weight="1"/>
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:gravity="center"
-                android:padding="20dp">
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/arrow_icon"/>
-            </LinearLayout>
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="75dp"
-            android:layout_marginTop="20dp"
-            android:background="@drawable/white_bg"
-            android:elevation="5dp"
-            android:orientation="horizontal"
-            android:clickable="true">
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:orientation="vertical"
-                android:paddingLeft="30dp"
-                android:paddingTop="15dp"
-                android:paddingRight="20dp">
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-                    <ImageView
-                        android:layout_width="13dp"
-                        android:layout_height="17.5dp"
-                        android:layout_gravity="center"
-                        android:src="@drawable/spot_icon"/>
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="15dp"
-                        android:text="동그라미 리필러리"
-                        android:textSize="18dp"
-                        android:fontFamily="@font/notosansbold"
-                        android:textColor="#000000"/>
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="15dp"
-                        android:text="2.8km"
-                        android:textSize="13dp"
-                        android:fontFamily="@font/notosansregular"
-                        android:textColor="#C4C4C4"/>
-                </LinearLayout>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
-                    android:text="경기도 성남시 분당구 판교로33번길 9 KR 1층"
-                    android:textSize="11dp"
                     android:textColor="#C4C4C4"
                     android:fontFamily="@font/notosansregular"/>
             </LinearLayout>

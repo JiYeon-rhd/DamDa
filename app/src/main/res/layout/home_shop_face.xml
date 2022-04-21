@@ -1,17 +1,345 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="30dp"
     tools:context=".Home.Home_shop_face">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center"
-        android:text="페이스"
-        android:textSize="30dp"
-        android:textStyle="bold"/>
-
-</FrameLayout>
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/product_background"
+        android:padding="25dp">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="파밀리아랩 어성초 토너"
+            android:textSize="13dp"
+            android:fontFamily="@font/notosansregular"
+            android:textColor="#000000"/>
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="₩ 70 (1g)"
+            android:textSize="13dp"
+            android:fontFamily="@font/notosansregular"/>
+    </LinearLayout>
+    <TextView
+        android:layout_marginTop="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="어성초 추출물 100% 브로콜리 85% 함유 세럼"
+        android:textSize="10dp"
+        android:fontFamily="@font/notosansregular"
+        android:textColor="#737373"/>
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="팜앤코 수분크림"
+            android:textSize="13dp"
+            android:fontFamily="@font/notosansregular"
+            android:textColor="#000000"/>
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="₩ 180 (1g)"
+            android:textSize="13dp"
+            android:fontFamily="@font/notosansregular"/>
+    </LinearLayout>
+    <TextView
+        android:layout_marginTop="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="소듐하이알루로네이트(히알루론산), 판테놀, 알란토인, 올리브오일"
+        android:textSize="10dp"
+        android:fontFamily="@font/notosansregular"
+        android:textColor="#737373"/>
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="잇츠한불 체이싱래빗 (올인원) 클린저"
+                android:textSize="13dp"
+                android:fontFamily="@font/notosansregular"
+                android:textColor="#000000"/>
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="₩ 100 (1g)"
+                android:textSize="13dp"
+                android:fontFamily="@font/notosansregular"/>
+        </LinearLayout>
+        <TextView
+            android:layout_marginTop="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="천연 활성숯 가루, 판테놀, 빌베리"
+            android:textSize="10dp"
+            android:fontFamily="@font/notosansregular"
+            android:textColor="#737373"/>
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="잇츠한불 체이싱래빗 말차 햄프씨드 크림"
+                android:textSize="13dp"
+                android:fontFamily="@font/notosansregular"
+                android:textColor="#000000"/>
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="₩ 300 (1g)"
+                android:textSize="13dp"
+                android:fontFamily="@font/notosansregular"/>
+        </LinearLayout>
+        <TextView
+            android:layout_marginTop="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="녹차수, 프로바이오틱스, 히아루론산"
+            android:textSize="10dp"
+            android:fontFamily="@font/notosansregular"
+            android:textColor="#737373"/>
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="아이썸 썬크림"
+                android:textSize="13dp"
+                android:fontFamily="@font/notosansregular"
+                android:textColor="#000000"/>
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="₩ 100 (1g)"
+                android:textSize="13dp"
+                android:fontFamily="@font/notosansregular"/>
+        </LinearLayout>
+        <TextView
+            android:layout_marginTop="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="유해 화학성분 무첨가, 제주 백년초추출물, 유자씨추출물"
+            android:textSize="10dp"
+            android:fontFamily="@font/notosansregular"
+            android:textColor="#737373"/>
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="티오피라 아쿠아샷 토너"
+                android:textSize="13dp"
+                android:fontFamily="@font/notosansregular"
+                android:textColor="#000000"/>
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="₩ 70 (1g)"
+                android:textSize="13dp"
+                android:fontFamily="@font/notosansregular"/>
+        </LinearLayout>
+        <TextView
+            android:layout_marginTop="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="락토바실러스/우유발효여과물, 락토바실러스/알로에베라발효 여과물, \n병풀추출물, 베타-글루칸, 녹차추출물, 3중히알루론산"
+            android:textSize="10dp"
+            android:fontFamily="@font/notosansregular"
+            android:textColor="#737373"/>
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="티오피라 아쿠아샷 에멀전"
+                android:textSize="13dp"
+                android:fontFamily="@font/notosansregular"
+                android:textColor="#000000"/>
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="₩ 100 (1g)"
+                android:textSize="13dp"
+                android:fontFamily="@font/notosansregular"/>
+        </LinearLayout>
+        <TextView
+            android:layout_marginTop="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="락토바실러스/우유발효여과물, 락토바실러스/알로에베라발효 여과물, \n병풀추출물, 베타-글루칸, 녹차추출물, 3중히알루론산"
+            android:textSize="10dp"
+            android:fontFamily="@font/notosansregular"
+            android:textColor="#737373"/>
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="바이탈라이징 로즈마리 디콕션 토너"
+                android:textSize="13dp"
+                android:fontFamily="@font/notosansregular"
+                android:textColor="#000000"/>
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="₩ 44 (1g)"
+                android:textSize="13dp"
+                android:fontFamily="@font/notosansregular"/>
+        </LinearLayout>
+        <TextView
+            android:layout_marginTop="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="로즈마리잎추출물, 로즈마리잎수, 알로에베라잎추출물, 로즈마리잎오일"
+            android:textSize="10dp"
+            android:fontFamily="@font/notosansregular"
+            android:textColor="#737373"/>
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="수딩 알로에 베라 젤"
+                android:textSize="13dp"
+                android:fontFamily="@font/notosansregular"
+                android:textColor="#000000"/>
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="₩ 25 (1g)"
+                android:textSize="13dp"
+                android:fontFamily="@font/notosansregular"/>
+        </LinearLayout>
+        <TextView
+            android:layout_marginTop="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="알로에베라잎추출물"
+            android:textSize="10dp"
+            android:fontFamily="@font/notosansregular"
+            android:textColor="#737373"/>
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="시카 카밍 젤"
+                android:textSize="13dp"
+                android:fontFamily="@font/notosansregular"
+                android:textColor="#000000"/>
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="₩ 24 (1g)"
+                android:textSize="13dp"
+                android:fontFamily="@font/notosansregular"/>
+        </LinearLayout>
+        <TextView
+            android:layout_marginTop="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="병풀추출물, 알로에베라잎추출물"
+            android:textSize="10dp"
+            android:fontFamily="@font/notosansregular"
+            android:textColor="#737373"/>
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="내추럴 코코넛 클렌징 오일"
+                android:textSize="13dp"
+                android:fontFamily="@font/notosansregular"
+                android:textColor="#000000"/>
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="₩ 88 (1g)"
+                android:textSize="13dp"
+                android:fontFamily="@font/notosansregular"/>
+        </LinearLayout>
+        <TextView
+            android:layout_marginTop="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="코코넛야자오일, 스위트아몬드오일"
+            android:textSize="10dp"
+            android:fontFamily="@font/notosansregular"
+            android:textColor="#737373"/>
+    </LinearLayout>
+</ScrollView>

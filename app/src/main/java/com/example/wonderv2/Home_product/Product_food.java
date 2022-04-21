@@ -7,6 +7,8 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.LinearLayout;
 
 import com.example.wonderv2.R;
 
@@ -16,6 +18,10 @@ import com.example.wonderv2.R;
  * create an instance of this fragment.
  */
 public class Product_food extends Fragment {
+
+    Button product_tea;
+
+    LinearLayout food_tea;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -55,6 +61,7 @@ public class Product_food extends Fragment {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
+
     }
 
     @Override
@@ -63,7 +70,13 @@ public class Product_food extends Fragment {
         // Inflate the layout for this fragment
         View v= inflater.inflate(R.layout.product_food, container, false);
 
-
+        product_tea=(Button) v.findViewById(R.id.product_tea);
+        product_tea.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                food_tea.setVisibility(View.VISIBLE);
+            }
+        });
 
         return v;
     }
