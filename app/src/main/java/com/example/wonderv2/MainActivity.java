@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
@@ -22,13 +23,17 @@ import com.example.wonderv2.Home_product.Product_body;
 import com.example.wonderv2.Home_product.Product_face;
 import com.example.wonderv2.Home_product.Product_food;
 import com.example.wonderv2.Home_product.Product_wash;
+import com.google.android.material.bottomnavigation.BottomNavigationMenuView;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.bottomnavigation.LabelVisibilityMode;
+import com.ismaeldivita.chipnavigation.ChipNavigationBar;
 
 public class MainActivity extends AppCompatActivity {
 
-    private BottomNavigationView bottomNavi;
+    private ChipNavigationBar bottomNavi;
     private FragmentManager fm;
     private FragmentTransaction ft;
+    private Fragment fragment=null;
     private Home_main home_main;
     private AR_main ar_main;
     private Exp_main exp_main;
@@ -75,22 +80,27 @@ public class MainActivity extends AppCompatActivity {
         home_shop_finder = new Home_shop_finder();
 
         bottomNavi = findViewById(R.id.bottom_navi);
-        bottomNavi.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
-            @Override
-            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
 
-                switch (item.getItemId()) {
+        bottomNavi.setItemSelected(R.id.home_fragment, true);
+        getSupportFragmentManager().beginTransaction().replace(R.id.container, new Home_main()).commit();
+
+        bottomNavi.setOnItemSelectedListener(new ChipNavigationBar.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(int i) {
+                switch (i) {
                     case R.id.home_fragment:
-                        setFrag(0);
+                        fragment=new Home_main();
                         break;
                     case R.id.ar_fragment:
-                        setFrag(1);
+                        fragment=new AR_main();
                         break;
                     case R.id.exp_fragment:
-                        setFrag(2);
+                        fragment=new Exp_main();
                         break;
                 }
-                return true;
+                if (fragment!=null) {
+                    getSupportFragmentManager().beginTransaction().replace(R.id.container, fragment).commit();
+                }
             }
         });
 

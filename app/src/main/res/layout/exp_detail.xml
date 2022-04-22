@@ -5,12 +5,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@drawable/exp_detail_bgresize"
+    android:background="#FFFFFF"
     tools:context=".Exp.Exp_detail">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@drawable/exp_detail_bgresize"
         android:orientation="vertical">
         <LinearLayout
             android:layout_width="match_parent"

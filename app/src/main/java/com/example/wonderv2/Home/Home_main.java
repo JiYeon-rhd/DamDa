@@ -20,7 +20,6 @@ import com.example.wonderv2.R;
  * create an instance of this fragment.
  */
 public class Home_main extends Fragment {
-
     MainActivity activity;
 
     // TODO: Rename parameter arguments, choose names that match

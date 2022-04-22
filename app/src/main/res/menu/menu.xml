@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
         android:id="@+id/home_fragment"
         android:enabled="true"
         android:icon="@drawable/icon_home"
+        app:cnb_backgroundColor="@color/navi_selected"
+        app:cnb_textColor="#FFFFFF"
+        app:cnb_iconColor="#FFFFFF"
         android:title="홈">
 
     </item>
@@ -11,15 +15,20 @@
     <item
         android:id="@+id/ar_fragment"
         android:enabled="true"
-        android:icon="@drawable/icon_ar_resize"
+        android:icon="@drawable/icon_ar"
+        app:cnb_backgroundColor="@color/navi_selected"
+        app:cnb_textColor="#FFFFFF"
+        app:cnb_iconColor="#FFFFFF"
         android:title="AR">
 
     </item>
     <item
         android:id="@+id/exp_fragment"
-
         android:enabled="true"
         android:icon="@drawable/icon_exp"
+        app:cnb_backgroundColor="@color/navi_selected"
+        app:cnb_textColor="#FFFFFF"
+        app:cnb_iconColor="#FFFFFF"
         android:title="기한">
 
     </item>
