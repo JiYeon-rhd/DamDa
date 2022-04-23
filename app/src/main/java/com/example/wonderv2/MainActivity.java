@@ -67,11 +67,11 @@ public class MainActivity extends AppCompatActivity {
 
 
         /**
-        Intent intent=getIntent();
-        set = intent.getStringExtra("set");
-        if(set.equals("ar")){
-            setFrag(1);
-        }
+         Intent intent=getIntent();
+         set = intent.getStringExtra("set");
+         if(set.equals("ar")){
+         setFrag(1);
+         }
          */
 
         home_product = new Home_product();

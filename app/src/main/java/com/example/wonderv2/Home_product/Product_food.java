@@ -1,5 +1,6 @@
 package com.example.wonderv2.Home_product;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -10,6 +11,8 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.LinearLayout;
 
+import com.example.wonderv2.Home.Home_shop_detail;
+import com.example.wonderv2.MainActivity;
 import com.example.wonderv2.R;
 
 /**
@@ -18,10 +21,15 @@ import com.example.wonderv2.R;
  * create an instance of this fragment.
  */
 public class Product_food extends Fragment {
+    MainActivity activity;
 
-    Button product_tea;
+    Button tea_btn;
+    Button coffee_btn;
+    Button shop1_detail;
+    Button shop1_datail1;
 
-    LinearLayout food_tea;
+    LinearLayout product_tea;
+    LinearLayout product_coffee;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -70,11 +78,47 @@ public class Product_food extends Fragment {
         // Inflate the layout for this fragment
         View v= inflater.inflate(R.layout.product_food, container, false);
 
-        product_tea=(Button) v.findViewById(R.id.product_tea);
-        product_tea.setOnClickListener(new View.OnClickListener() {
+        product_tea=(LinearLayout) v.findViewById(R.id.product_tea);
+        product_coffee=(LinearLayout) v.findViewById(R.id.product_coffee);
+
+        tea_btn=(Button) v.findViewById(R.id.tea_btn);
+        tea_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                food_tea.setVisibility(View.VISIBLE);
+                product_tea.setVisibility(View.VISIBLE);
+                product_coffee.setVisibility(View.INVISIBLE);
+            }
+        });
+        coffee_btn=(Button) v.findViewById(R.id.coffee_btn);
+        coffee_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                product_tea.setVisibility(View.INVISIBLE);
+                product_coffee.setVisibility(View.VISIBLE);
+            }
+        });
+        shop1_detail=(Button) v.findViewById(R.id.shop1_datail);
+        shop1_detail.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent= new Intent(
+                        getActivity(),
+                        Home_shop_detail.class
+                );
+
+                startActivity(intent);
+            }
+        });
+        shop1_datail1=(Button) v.findViewById(R.id.shop1_datail1);
+        shop1_datail1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent= new Intent(
+                        getActivity(),
+                        Home_shop_detail.class
+                );
+
+                startActivity(intent);
             }
         });
 

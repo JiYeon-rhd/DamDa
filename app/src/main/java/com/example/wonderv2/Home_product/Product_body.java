@@ -1,5 +1,6 @@
 package com.example.wonderv2.Home_product;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -7,7 +8,11 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.LinearLayout;
 
+import com.example.wonderv2.Home.Home_shop_detail;
+import com.example.wonderv2.MainActivity;
 import com.example.wonderv2.R;
 
 /**
@@ -16,6 +21,15 @@ import com.example.wonderv2.R;
  * create an instance of this fragment.
  */
 public class Product_body extends Fragment {
+    MainActivity activity;
+
+    Button shampoo_btn;
+    Button bodywash_btn;
+    Button shop1_datail;
+    Button shop1_datail1;
+
+    LinearLayout product_shampoo;
+    LinearLayout product_bodywash;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -55,6 +69,7 @@ public class Product_body extends Fragment {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
+
     }
 
     @Override
@@ -63,8 +78,52 @@ public class Product_body extends Fragment {
         // Inflate the layout for this fragment
         View v= inflater.inflate(R.layout.product_body, container, false);
 
+        product_shampoo=(LinearLayout) v.findViewById(R.id.product_shampoo);
+        product_bodywash=(LinearLayout) v.findViewById(R.id.product_bodywash);
 
+        shampoo_btn=(Button) v.findViewById(R.id.shampoo_btn);
+        shampoo_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                product_shampoo.setVisibility(View.VISIBLE);
+                product_bodywash.setVisibility(View.INVISIBLE);
+            }
+        });
+        bodywash_btn=(Button) v.findViewById(R.id.bodywash_btn);
+        bodywash_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                product_shampoo.setVisibility(View.INVISIBLE);
+                product_bodywash.setVisibility(View.VISIBLE);
+            }
+        });
+        shop1_datail=(Button) v.findViewById(R.id.shop1_datail);
+        shop1_datail.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent= new Intent(
+                        getActivity(),
+                        Home_shop_detail.class
+                );
+
+                startActivity(intent);
+            }
+        });
+        shop1_datail1=(Button) v.findViewById(R.id.shop1_datail1);
+        shop1_datail1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent= new Intent(
+                        getActivity(),
+                        Home_shop_detail.class
+                );
+
+                startActivity(intent);
+            }
+        });
 
         return v;
     }
+
+
 }

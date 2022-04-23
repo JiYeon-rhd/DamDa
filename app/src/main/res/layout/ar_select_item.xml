@@ -124,7 +124,6 @@
                         android:fontFamily="@font/notosansregular"
                         android:textColor="#C2C2C2"
                         android:text="아로마티카">
-
                     </Button>
                 </LinearLayout>
 

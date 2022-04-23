@@ -1,5 +1,6 @@
 package com.example.wonderv2.Home_product;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -7,7 +8,11 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.LinearLayout;
 
+import com.example.wonderv2.Home.Home_shop_detail;
+import com.example.wonderv2.MainActivity;
 import com.example.wonderv2.R;
 
 /**
@@ -16,6 +21,15 @@ import com.example.wonderv2.R;
  * create an instance of this fragment.
  */
 public class Product_wash extends Fragment {
+    MainActivity activity;
+
+    Button detergent_btn;
+    Button softer_btn;
+    Button shop1_detail;
+    Button shop1_detail1;
+
+    LinearLayout product_detergent;
+    LinearLayout product_softer;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -63,7 +77,49 @@ public class Product_wash extends Fragment {
         // Inflate the layout for this fragment
         View v= inflater.inflate(R.layout.product_wash, container, false);
 
+        product_detergent=(LinearLayout) v.findViewById(R.id.product_detergent);
+        product_softer=(LinearLayout) v.findViewById(R.id.product_softer);
 
+        detergent_btn=(Button) v.findViewById(R.id.detergent_btn);
+        detergent_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                product_detergent.setVisibility(View.VISIBLE);
+                product_softer.setVisibility(View.INVISIBLE);
+            }
+        });
+        softer_btn=(Button) v.findViewById(R.id.softer_btn);
+        softer_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                product_detergent.setVisibility(View.INVISIBLE);
+                product_softer.setVisibility(View.VISIBLE);
+            }
+        });
+        shop1_detail=(Button) v.findViewById(R.id.shop1_datail);
+        shop1_detail.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent= new Intent(
+                        getActivity(),
+                        Home_shop_detail.class
+                );
+
+                startActivity(intent);
+            }
+        });
+        shop1_detail1=(Button) v.findViewById(R.id.shop1_datail1);
+        shop1_detail1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent= new Intent(
+                        getActivity(),
+                        Home_shop_detail.class
+                );
+
+                startActivity(intent);
+            }
+        });
 
         return v;
     }
