@@ -65,7 +65,7 @@
         <entry key="..\:/WonderV2/app/src/main/res/menu/menu.xml" value="0.17222222222222222" />
         <entry key="app/src/main/res/drawable/ar_btn_detection_lightgreen.xml" value="0.2796296296296296" />
         <entry key="app/src/main/res/drawable/bottom_sheet_bg.xml" value="0.24166666666666667" />
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.10185185185185185" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.335" />
         <entry key="app/src/main/res/layout/ar_camera.xml" value="0.15324214792299898" />
         <entry key="app/src/main/res/layout/ar_main.xml" value="0.1" />
         <entry key="app/src/main/res/layout/ar_select_item.xml" value="0.1" />

@@ -97,6 +97,7 @@ public class MainActivity extends AppCompatActivity {
                     case R.id.exp_fragment:
                         fragment=new Exp_main();
                         break;
+
                 }
                 if (fragment!=null) {
                     getSupportFragmentManager().beginTransaction().replace(R.id.container, fragment).commit();
@@ -113,34 +114,34 @@ public class MainActivity extends AppCompatActivity {
 
         switch (n) {
             case 0: //홈화면
-                ft.replace(R.id.main_frame, home_main);
+                ft.replace(R.id.container, home_main);
                 ft.commit();
                 break;
             case 1: //ar 화면
-                ft.replace(R.id.main_frame, ar_main);
+                ft.replace(R.id.container, ar_main);
                 ft.commit();
                 break;
             case 2: //유통기한 화면
-                ft.replace(R.id.main_frame, exp_main);
+                ft.replace(R.id.container, exp_main);
                 ft.commit();
                 break;
 
             case 3: //홈화면 -> 제품화면 으로 이동
-                ft.replace(R.id.main_frame, home_product);
+                ft.replace(R.id.container, home_product);
                 ft.commit();
                 break;
 
             case 4: //홈화면 -> 위치(맵)화면
-                ft.replace(R.id.main_frame, home_loca_map);
+                ft.replace(R.id.container, home_loca_map);
                 ft.commit();
                 break;
             case 5: //홈화면 -> 위치(리스트)화면
-                ft.replace(R.id.main_frame, home_loca_list);
+                ft.replace(R.id.container, home_loca_list);
                 ft.commit();
                 break;
 
             case 6: //홈화면 -> 매장확인하기 화면
-                ft.replace(R.id.main_frame, home_shop_finder);
+                ft.replace(R.id.container, home_shop_finder);
                 ft.commit();
                 break;
 
