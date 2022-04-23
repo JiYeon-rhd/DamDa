@@ -75,39 +75,41 @@
                     android:orientation="horizontal"
                     android:layout_width="wrap_content"
                     android:gravity="center"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
                     android:layout_height="36dp">
 
                     <Button
                         android:id="@+id/ar_shop_1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="33dp"
+                        android:layout_width="80dp"
+                        android:layout_height="30dp"
                         android:background="@drawable/ar_btn_selector"
                         android:textSize="15dp"
                         android:fontFamily="@font/notosansregular"
                         android:textColor="#C2C2C2"
-                        android:layout_marginRight="13dp"
+                        android:layout_marginRight="10dp"
                         android:text="알맹상점">
 
                     </Button>
                     <Button
                         android:id="@+id/ar_shop_2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="33dp"
+                        android:layout_width="80dp"
+                        android:layout_height="30dp"
                         android:background="@drawable/ar_btn_selector"
                         android:textSize="15dp"
                         android:fontFamily="@font/notosansregular"
-                        android:layout_marginRight="13dp"
+                        android:layout_marginRight="10dp"
                         android:textColor="#C2C2C2"
                         android:text="지구샵">
 
                     </Button>
                     <Button
                         android:id="@+id/ar_shop_3"
-                        android:layout_width="wrap_content"
-                        android:layout_height="33dp"
+                        android:layout_width="80dp"
+                        android:layout_height="30dp"
                         android:background="@drawable/ar_btn_selector"
                         android:textSize="15dp"
-                        android:layout_marginRight="13dp"
+                        android:layout_marginRight="10dp"
                         android:fontFamily="@font/notosansregular"
                         android:textColor="#C2C2C2"
                         android:text="채움소">
@@ -115,8 +117,8 @@
                     </Button>
                     <Button
                         android:id="@+id/ar_shop_4"
-                        android:layout_width="wrap_content"
-                        android:layout_height="33dp"
+                        android:layout_width="80dp"
+                        android:layout_height="30dp"
                         android:background="@drawable/ar_btn_selector"
                         android:textSize="15dp"
                         android:fontFamily="@font/notosansregular"
