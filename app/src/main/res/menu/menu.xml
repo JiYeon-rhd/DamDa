@@ -30,7 +30,6 @@
         app:cnb_textColor="#FFFFFF"
         app:cnb_iconColor="#FFFFFF"
         android:title="기한">
-
     </item>
 
 

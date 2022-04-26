@@ -21,10 +21,11 @@
     <com.ismaeldivita.chipnavigation.ChipNavigationBar
         android:id="@+id/bottom_navi"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#ACD28F"
+        android:layout_height="75dp"
+        android:background="@drawable/ar_btn_detection5"
         app:cnb_unselectedColor="@color/white"
         android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
         app:cnb_menuResource="@menu/menu"/>
     <FrameLayout
         android:id="@+id/container"
