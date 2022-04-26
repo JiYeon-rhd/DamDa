@@ -30,6 +30,8 @@ android {
         mlModelBinding true
     }
 }
+apply plugin: 'com.android.application'
+apply plugin: 'com.google.gms.google-services'
 
 dependencies {
 
@@ -61,4 +63,8 @@ dependencies {
 
     implementation 'com.ismaeldivita.chipnavigation:chip-navigation-bar:1.3.2'
     implementation 'org.jetbrains.kotlin:kotlin-stdlib:1.3.2'
+
+    implementation 'com.google.firebase:firebase-core:10.2.1'
+    implementation 'com.google.firebase:firebase-analytics:15.0.0'
+    implementation 'com.google.firebase:firebase-database:10.2.1'
 }
