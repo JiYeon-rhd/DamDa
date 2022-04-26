@@ -177,7 +177,7 @@ public class AR_camera extends AppCompatActivity {
                 }
             }
 
-            String[] classes = {"circle bottle", "square bottle"};
+            String[] classes = {"al_L", "al_M", "al_S", "aro_L", "aro_s", "ch_M", "ear_L"};
             bottle_name.setText(classes[maxPos]);
             bottle_name_fail.setText(classes[maxPos]);
 

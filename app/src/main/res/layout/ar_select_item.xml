@@ -81,10 +81,10 @@
 
                     <Button
                         android:id="@+id/ar_shop_1"
-                        android:layout_width="80dp"
+                        android:layout_width="78dp"
                         android:layout_height="30dp"
                         android:background="@drawable/ar_btn_selector"
-                        android:textSize="15dp"
+                        android:textSize="14dp"
                         android:fontFamily="@font/notosansregular"
                         android:textColor="#C2C2C2"
                         android:layout_marginRight="10dp"
@@ -93,10 +93,10 @@
                     </Button>
                     <Button
                         android:id="@+id/ar_shop_2"
-                        android:layout_width="80dp"
+                        android:layout_width="78dp"
                         android:layout_height="30dp"
                         android:background="@drawable/ar_btn_selector"
-                        android:textSize="15dp"
+                        android:textSize="14dp"
                         android:fontFamily="@font/notosansregular"
                         android:layout_marginRight="10dp"
                         android:textColor="#C2C2C2"
@@ -105,10 +105,10 @@
                     </Button>
                     <Button
                         android:id="@+id/ar_shop_3"
-                        android:layout_width="80dp"
+                        android:layout_width="78dp"
                         android:layout_height="30dp"
                         android:background="@drawable/ar_btn_selector"
-                        android:textSize="15dp"
+                        android:textSize="14dp"
                         android:layout_marginRight="10dp"
                         android:fontFamily="@font/notosansregular"
                         android:textColor="#C2C2C2"
@@ -120,7 +120,7 @@
                         android:layout_width="80dp"
                         android:layout_height="30dp"
                         android:background="@drawable/ar_btn_selector"
-                        android:textSize="15dp"
+                        android:textSize="14dp"
                         android:fontFamily="@font/notosansregular"
                         android:textColor="#C2C2C2"
                         android:text="아로마티카">
