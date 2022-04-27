@@ -25,11 +25,14 @@ public class Product_wash extends Fragment {
 
     Button detergent_btn;
     Button softer_btn;
-    Button shop1_detail;
+    Button kitchen_btn;
     Button shop1_detail1;
+    Button shop1_detail2;
+    Button shop1_datail3;
 
     LinearLayout product_detergent;
     LinearLayout product_softer;
+    LinearLayout product_kitchen;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -79,6 +82,7 @@ public class Product_wash extends Fragment {
 
         product_detergent=(LinearLayout) v.findViewById(R.id.product_detergent);
         product_softer=(LinearLayout) v.findViewById(R.id.product_softer);
+        product_kitchen=(LinearLayout) v.findViewById(R.id.product_kitchen);
 
         detergent_btn=(Button) v.findViewById(R.id.detergent_btn);
         detergent_btn.setOnClickListener(new View.OnClickListener() {
@@ -86,6 +90,7 @@ public class Product_wash extends Fragment {
             public void onClick(View view) {
                 product_detergent.setVisibility(View.VISIBLE);
                 product_softer.setVisibility(View.INVISIBLE);
+                product_kitchen.setVisibility(View.INVISIBLE);
             }
         });
         softer_btn=(Button) v.findViewById(R.id.softer_btn);
@@ -94,10 +99,20 @@ public class Product_wash extends Fragment {
             public void onClick(View view) {
                 product_detergent.setVisibility(View.INVISIBLE);
                 product_softer.setVisibility(View.VISIBLE);
+                product_kitchen.setVisibility(View.INVISIBLE);
             }
         });
-        shop1_detail=(Button) v.findViewById(R.id.shop1_datail);
-        shop1_detail.setOnClickListener(new View.OnClickListener() {
+        kitchen_btn=(Button) v.findViewById(R.id.kitchen_btn);
+        kitchen_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                product_detergent.setVisibility(View.INVISIBLE);
+                product_softer.setVisibility(View.INVISIBLE);
+                product_kitchen.setVisibility(View.VISIBLE);
+            }
+        });
+        shop1_detail1=(Button) v.findViewById(R.id.shop1_datail1);
+        shop1_detail1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent= new Intent(
@@ -108,8 +123,20 @@ public class Product_wash extends Fragment {
                 startActivity(intent);
             }
         });
-        shop1_detail1=(Button) v.findViewById(R.id.shop1_datail1);
-        shop1_detail1.setOnClickListener(new View.OnClickListener() {
+        shop1_detail2=(Button) v.findViewById(R.id.shop1_datail2);
+        shop1_detail2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent= new Intent(
+                        getActivity(),
+                        Home_shop_detail.class
+                );
+
+                startActivity(intent);
+            }
+        });
+        shop1_datail3=(Button) v.findViewById(R.id.shop1_datail3);
+        shop1_datail3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent= new Intent(

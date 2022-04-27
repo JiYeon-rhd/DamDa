@@ -25,11 +25,17 @@ public class Product_food extends Fragment {
 
     Button tea_btn;
     Button coffee_btn;
-    Button shop1_detail;
-    Button shop1_datail1;
+    Button spice_btn;
+    Button oatmeal_btn;
+    Button shop1_detail1;
+    Button shop1_datail2;
+    Button shop1_datail3;
+    Button shop1_datail4;
 
     LinearLayout product_tea;
     LinearLayout product_coffee;
+    LinearLayout product_spice;
+    LinearLayout product_oatmeal;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -80,6 +86,8 @@ public class Product_food extends Fragment {
 
         product_tea=(LinearLayout) v.findViewById(R.id.product_tea);
         product_coffee=(LinearLayout) v.findViewById(R.id.product_coffee);
+        product_spice=(LinearLayout) v.findViewById(R.id.product_spice);
+        product_oatmeal=(LinearLayout) v.findViewById(R.id.product_oatmeal);
 
         tea_btn=(Button) v.findViewById(R.id.tea_btn);
         tea_btn.setOnClickListener(new View.OnClickListener() {
@@ -87,6 +95,8 @@ public class Product_food extends Fragment {
             public void onClick(View view) {
                 product_tea.setVisibility(View.VISIBLE);
                 product_coffee.setVisibility(View.INVISIBLE);
+                product_spice.setVisibility(View.INVISIBLE);
+                product_oatmeal.setVisibility(View.INVISIBLE);
             }
         });
         coffee_btn=(Button) v.findViewById(R.id.coffee_btn);
@@ -95,10 +105,32 @@ public class Product_food extends Fragment {
             public void onClick(View view) {
                 product_tea.setVisibility(View.INVISIBLE);
                 product_coffee.setVisibility(View.VISIBLE);
+                product_spice.setVisibility(View.INVISIBLE);
+                product_oatmeal.setVisibility(View.INVISIBLE);
             }
         });
-        shop1_detail=(Button) v.findViewById(R.id.shop1_datail);
-        shop1_detail.setOnClickListener(new View.OnClickListener() {
+        spice_btn=(Button) v.findViewById(R.id.spice_btn);
+        spice_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                product_tea.setVisibility(View.INVISIBLE);
+                product_coffee.setVisibility(View.INVISIBLE);
+                product_spice.setVisibility(View.VISIBLE);
+                product_oatmeal.setVisibility(View.INVISIBLE);
+            }
+        });
+        oatmeal_btn=(Button) v.findViewById(R.id.oatmeal_btn);
+        oatmeal_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                product_tea.setVisibility(View.INVISIBLE);
+                product_coffee.setVisibility(View.INVISIBLE);
+                product_spice.setVisibility(View.INVISIBLE);
+                product_oatmeal.setVisibility(View.VISIBLE);
+            }
+        });
+        shop1_detail1=(Button) v.findViewById(R.id.shop1_datail1);
+        shop1_detail1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent= new Intent(
@@ -109,8 +141,32 @@ public class Product_food extends Fragment {
                 startActivity(intent);
             }
         });
-        shop1_datail1=(Button) v.findViewById(R.id.shop1_datail1);
-        shop1_datail1.setOnClickListener(new View.OnClickListener() {
+        shop1_datail2=(Button) v.findViewById(R.id.shop1_datail2);
+        shop1_datail2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent= new Intent(
+                        getActivity(),
+                        Home_shop_detail.class
+                );
+
+                startActivity(intent);
+            }
+        });
+        shop1_datail3=(Button) v.findViewById(R.id.shop1_datail3);
+        shop1_datail3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent= new Intent(
+                        getActivity(),
+                        Home_shop_detail.class
+                );
+
+                startActivity(intent);
+            }
+        });
+        shop1_datail4=(Button) v.findViewById(R.id.shop1_datail4);
+        shop1_datail4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent= new Intent(

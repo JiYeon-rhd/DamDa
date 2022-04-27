@@ -48,13 +48,13 @@
                 android:background="#C2c2c2"
                 android:layout_gravity="center"/>
             <Button
-                android:id="@+id/product_spice"
+                android:id="@+id/spice_btn"
                 android:layout_width="wrap_content"
                 android:layout_height="33dp"
                 android:background="#00FFFFFF"
                 android:textSize="15dp"
                 android:fontFamily="@font/notosansregular"
-                android:textColor="#000000"
+                android:textColor="@color/text_selector"
                 android:text="향신료">
             </Button>
             <View
@@ -63,15 +63,14 @@
                 android:background="#C2c2c2"
                 android:layout_gravity="center"/>
             <Button
-                android:id="@+id/product_oatmeal"
+                android:id="@+id/oatmeal_btn"
                 android:layout_width="wrap_content"
                 android:layout_height="33dp"
                 android:background="#00FFFFFF"
                 android:textSize="15dp"
                 android:fontFamily="@font/notosansregular"
-                android:textColor="#000000"
+                android:textColor="@color/text_selector"
                 android:text="오트밀">
-
             </Button>
         </LinearLayout>
 
@@ -80,7 +79,7 @@
             android:layout_height="wrap_content">
             <LinearLayout
                 android:id="@+id/product_tea"
-                android:visibility="invisible"
+                android:visibility="visible"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
@@ -119,7 +118,7 @@
                             android:layout_height="0dp"
                             android:layout_weight="1"/>
                         <Button
-                            android:id="@+id/shop1_datail"
+                            android:id="@+id/shop1_datail1"
                             android:layout_width="wrap_content"
                             android:layout_height="33dp"
                             android:background="@drawable/product_detail"
@@ -502,13 +501,13 @@
                                 android:gravity="center"
                                 android:background="@drawable/product_background01"
                                 android:fontFamily="@font/notosansregular"
-                                android:text="    채움소"
+                                android:text="      채움소"
                                 android:textColor="#000000"
                                 android:textSize="15dp"/>
                             <ImageView
                                 android:layout_width="33dp"
                                 android:layout_height="33dp"
-                                android:background="@drawable/shop_icon"/>
+                                android:background="@drawable/shop_icon2"/>
                         </FrameLayout>
                         <View
                             android:layout_width="0dp"
@@ -532,6 +531,7 @@
                         android:orientation="vertical"
                         android:background="@drawable/product_background06"
                         android:layout_marginTop="30dp"
+                        android:layout_marginBottom="20dp"
                         android:padding="25dp">
                         <LinearLayout
                             android:layout_width="wrap_content"
@@ -671,6 +671,7 @@
 
             <LinearLayout
                 android:id="@+id/product_coffee"
+                android:visibility="invisible"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
@@ -707,7 +708,7 @@
                             android:layout_height="0dp"
                             android:layout_weight="1"/>
                         <Button
-                            android:id="@+id/shop1_datail1"
+                            android:id="@+id/shop1_datail2"
                             android:layout_width="wrap_content"
                             android:layout_height="33dp"
                             android:background="@drawable/product_detail"
@@ -837,6 +838,510 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="₩ 6 (1g)"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/product_spice"
+                android:visibility="invisible"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="30dp"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <FrameLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:background="@drawable/product_background01"
+                                android:fontFamily="@font/notosansregular"
+                                android:text="      알맹상점"
+                                android:textColor="#000000"
+                                android:textSize="15dp"/>
+                            <ImageView
+                                android:layout_width="33dp"
+                                android:layout_height="33dp"
+                                android:background="@drawable/shop_icon1"/>
+                        </FrameLayout>
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"/>
+                        <Button
+                            android:id="@+id/shop1_datail3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="33dp"
+                            android:background="@drawable/product_detail"
+                            android:fontFamily="@font/notosansregular"
+                            android:text="바로가기  >"
+                            android:textColor="#000000"
+                            android:textSize="15dp"></Button>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="320dp"
+                        android:orientation="vertical"
+                        android:background="@drawable/product_background06"
+                        android:layout_marginTop="30dp"
+                        android:padding="25dp">
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="계피가루"
+                                android:textColor="#000000"/>
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="₩ 70 (1g)"/>
+                        </LinearLayout>
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="15dp"
+                            android:layout_marginBottom="15dp"
+                            android:background="#8CFF8360"/>
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="레드페퍼"
+                                android:textColor="#000000"/>
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="₩ 50 (1g)"/>
+                        </LinearLayout>
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="15dp"
+                            android:layout_marginBottom="15dp"
+                            android:background="#8CFF8360"/>
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="건조 오레가홀"
+                                android:textColor="#000000"/>
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="₩ 80 (1g)"/>
+                        </LinearLayout>
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="15dp"
+                            android:layout_marginBottom="15dp"
+                            android:background="#8CFF8360"/>
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="건조 허브 바질홀"
+                                android:textColor="#000000"/>
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="₩ 60 (1g)"/>
+                        </LinearLayout>
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="15dp"
+                            android:layout_marginBottom="15dp"
+                            android:background="#8CFF8360"/>
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="피클링스파이스"
+                                android:textColor="#000000"/>
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="₩ 40 (1g)"/>
+                        </LinearLayout>
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="15dp"
+                            android:layout_marginBottom="15dp"
+                            android:background="#8CFF8360"/>
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="흑후추"
+                                android:textColor="#000000"/>
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="₩ 50 (1g)"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="30dp"
+                    android:paddingLeft="30dp"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <FrameLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="33dp">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:background="@drawable/product_background01"
+                                android:fontFamily="@font/notosansregular"
+                                android:text="       채움소"
+                                android:textColor="#000000"
+                                android:textSize="15dp"/>
+                            <ImageView
+                                android:layout_width="37dp"
+                                android:layout_height="37dp"
+                                android:background="@drawable/shop_icon4"/>
+                        </FrameLayout>
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"/>
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="33dp"
+                            android:background="@drawable/product_detail"
+                            android:fontFamily="@font/notosansregular"
+                            android:text="바로가기  >"
+                            android:textColor="#000000"
+                            android:textSize="15dp"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="170dp"
+                        android:orientation="vertical"
+                        android:padding="25dp"
+                        android:background="@drawable/product_background06"
+                        android:layout_marginTop="30dp">
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="파슬리"
+                                android:textColor="#000000"/>
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="₩ 150 (1g)"/>
+                        </LinearLayout>
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="15dp"
+                            android:layout_marginBottom="15dp"
+                            android:background="#8CFF8360"/>
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="통후추"
+                                android:textColor="#000000"/>
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="₩ 50 (1g)"/>
+                        </LinearLayout>
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="15dp"
+                            android:layout_marginBottom="15dp"
+                            android:background="#8CFF8360"/>
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="바질"
+                                android:textColor="#000000"/>
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="₩ 70 (1g)"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/product_oatmeal"
+                android:visibility="invisible"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="30dp"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <FrameLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:background="@drawable/product_background01"
+                                android:fontFamily="@font/notosansregular"
+                                android:text="      알맹상점"
+                                android:textColor="#000000"
+                                android:textSize="15dp"/>
+                            <ImageView
+                                android:layout_width="33dp"
+                                android:layout_height="33dp"
+                                android:background="@drawable/shop_icon1"/>
+                        </FrameLayout>
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"/>
+                        <Button
+                            android:id="@+id/shop1_datail4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="33dp"
+                            android:background="@drawable/product_detail"
+                            android:fontFamily="@font/notosansregular"
+                            android:text="바로가기  >"
+                            android:textColor="#000000"
+                            android:textSize="15dp"></Button>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="120dp"
+                        android:orientation="vertical"
+                        android:background="@drawable/product_background06"
+                        android:layout_marginTop="30dp"
+                        android:padding="25dp">
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="시그니처 그래놀라"
+                                android:textColor="#000000"/>
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="₩ 50 (1g)"/>
+                        </LinearLayout>
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="15dp"
+                            android:layout_marginBottom="15dp"
+                            android:background="#8CFF8360"/>
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="초코 그래놀라"
+                                android:textColor="#000000"/>
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="₩ 50 (1g)"/>
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="30dp"
+                    android:paddingLeft="30dp"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <FrameLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="33dp">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:background="@drawable/product_background01"
+                                android:fontFamily="@font/notosansregular"
+                                android:text="       채움소"
+                                android:textColor="#000000"
+                                android:textSize="15dp"/>
+                            <ImageView
+                                android:layout_width="37dp"
+                                android:layout_height="37dp"
+                                android:background="@drawable/shop_icon4"/>
+                        </FrameLayout>
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"/>
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="33dp"
+                            android:background="@drawable/product_detail"
+                            android:fontFamily="@font/notosansregular"
+                            android:text="바로가기  >"
+                            android:textColor="#000000"
+                            android:textSize="15dp"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="120dp"
+                        android:orientation="vertical"
+                        android:padding="25dp"
+                        android:background="@drawable/product_background06"
+                        android:layout_marginTop="30dp">
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="국산 오트밀"
+                                android:textColor="#000000"/>
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="₩ 20 (1g)"/>
+                        </LinearLayout>
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="15dp"
+                            android:layout_marginBottom="15dp"
+                            android:background="#8CFF8360"/>
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="오트밀 그래놀라 시리얼"
+                                android:textColor="#000000"/>
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="₩ 42 (1g)"/>
                         </LinearLayout>
                     </LinearLayout>
                 </LinearLayout>

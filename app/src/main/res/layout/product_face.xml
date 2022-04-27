@@ -54,13 +54,13 @@
                     android:background="#C2c2c2"
                     android:layout_gravity="center"/>
                 <Button
-                    android:id="@+id/product_cleanser"
+                    android:id="@+id/cleanser_btn"
                     android:layout_width="wrap_content"
                     android:layout_height="33dp"
                     android:background="#00FFFFFF"
                     android:textSize="15dp"
                     android:fontFamily="@font/notosansregular"
-                    android:textColor="#000000"
+                    android:textColor="@color/text_selector"
                     android:text="클렌저">
                 </Button>
                 <View
@@ -69,13 +69,13 @@
                     android:background="#C2c2c2"
                     android:layout_gravity="center"/>
                 <Button
-                    android:id="@+id/product_gel"
+                    android:id="@+id/gel_btn"
                     android:layout_width="wrap_content"
                     android:layout_height="33dp"
                     android:background="#00FFFFFF"
                     android:textSize="15dp"
                     android:fontFamily="@font/notosansregular"
-                    android:textColor="#000000"
+                    android:textColor="@color/text_selector"
                     android:text="젤">
                 </Button>
                 <View
@@ -84,13 +84,13 @@
                     android:background="#C2c2c2"
                     android:layout_gravity="center"/>
                 <Button
-                    android:id="@+id/product_suncream"
+                    android:id="@+id/suncream_btn"
                     android:layout_width="wrap_content"
                     android:layout_height="33dp"
                     android:background="#00FFFFFF"
                     android:textSize="15dp"
                     android:fontFamily="@font/notosansregular"
-                    android:textColor="#000000"
+                    android:textColor="@color/text_selector"
                     android:text="썬크림">
                 </Button>
                 <View
@@ -99,13 +99,13 @@
                     android:background="#C2c2c2"
                     android:layout_gravity="center"/>
                 <Button
-                    android:id="@+id/product_oil"
+                    android:id="@+id/oil_btn"
                     android:layout_width="wrap_content"
                     android:layout_height="33dp"
                     android:background="#00FFFFFF"
                     android:textSize="15dp"
                     android:fontFamily="@font/notosansregular"
-                    android:textColor="#000000"
+                    android:textColor="@color/text_selector"
                     android:text="오일">
                 </Button>
             </LinearLayout>
@@ -156,7 +156,7 @@
                             android:layout_height="0dp"
                             android:layout_weight="1"/>
                         <Button
-                            android:id="@+id/shop1_datail"
+                            android:id="@+id/shop1_datail1"
                             android:layout_width="wrap_content"
                             android:layout_height="33dp"
                             android:background="@drawable/product_detail"
@@ -249,7 +249,7 @@
                             android:layout_height="0dp"
                             android:layout_weight="1"/>
                         <Button
-                            android:id="@+id/shop2_datail"
+                            android:id="@+id/shop2_datail1"
                             android:layout_width="wrap_content"
                             android:layout_height="33dp"
                             android:background="@drawable/product_detail"
@@ -331,7 +331,7 @@
                             android:layout_height="0dp"
                             android:layout_weight="1"/>
                         <Button
-                            android:id="@+id/shop1_datail1"
+                            android:id="@+id/shop1_datail2"
                             android:layout_width="wrap_content"
                             android:layout_height="33dp"
                             android:background="@drawable/product_detail"
@@ -387,6 +387,425 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="₩ 300 (1g)"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/product_cleanser"
+                android:visibility="invisible"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="30dp"
+                    android:paddingRight="30dp"
+                    android:paddingLeft="30dp"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <FrameLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:background="@drawable/product_background01"
+                                android:fontFamily="@font/notosansregular"
+                                android:text="    알맹상점"
+                                android:textColor="#000000"
+                                android:textSize="15dp"/>
+                            <ImageView
+                                android:layout_width="33dp"
+                                android:layout_height="33dp"
+                                android:background="@drawable/shop_icon1"/>
+                        </FrameLayout>
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"/>
+                        <Button
+                            android:id="@+id/shop1_datail3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="33dp"
+                            android:background="@drawable/product_detail"
+                            android:fontFamily="@font/notosansregular"
+                            android:text="바로가기  >"
+                            android:textColor="#000000"
+                            android:textSize="15dp"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:orientation="vertical"
+                        android:background="@drawable/product_background06"
+                        android:layout_marginTop="30dp"
+                        android:gravity="center"
+                        android:paddingLeft="25dp"
+                        android:paddingRight="25dp">
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="체이싱래빗 (올인원) 클린저"
+                                android:textColor="#000000"/>
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="₩ 100 (1g)"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/product_gel"
+                android:visibility="invisible"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="30dp"
+                    android:paddingRight="30dp"
+                    android:paddingLeft="30dp"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <FrameLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:background="@drawable/product_background01"
+                                android:fontFamily="@font/notosansregular"
+                                android:text="       아로마티카"
+                                android:textColor="#000000"
+                                android:textSize="15dp"/>
+                            <ImageView
+                                android:layout_width="33dp"
+                                android:layout_height="33dp"
+                                android:background="@drawable/shop_icon3"/>
+                        </FrameLayout>
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"/>
+                        <Button
+                            android:id="@+id/shop2_datail2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="33dp"
+                            android:background="@drawable/product_detail"
+                            android:fontFamily="@font/notosansregular"
+                            android:text="바로가기  >"
+                            android:textColor="#000000"
+                            android:textSize="15dp"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="120dp"
+                        android:orientation="vertical"
+                        android:background="@drawable/product_background06"
+                        android:layout_marginTop="30dp"
+                        android:padding="25dp">
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="수딩 알로에 베라 젤"
+                                android:textColor="#000000"/>
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="₩ 25 (1g)"/>
+                        </LinearLayout>
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="15dp"
+                            android:layout_marginBottom="15dp"
+                            android:background="#8CFF8360"/>
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="시카 카밍 젤"
+                                android:textColor="#000000"/>
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="₩ 24 (1g)"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/product_suncream"
+                android:visibility="invisible"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="30dp"
+                    android:paddingRight="30dp"
+                    android:paddingLeft="30dp"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <FrameLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:background="@drawable/product_background01"
+                                android:fontFamily="@font/notosansregular"
+                                android:text="    알맹상점"
+                                android:textColor="#000000"
+                                android:textSize="15dp"/>
+                            <ImageView
+                                android:layout_width="33dp"
+                                android:layout_height="33dp"
+                                android:background="@drawable/shop_icon1"/>
+                        </FrameLayout>
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"/>
+                        <Button
+                            android:id="@+id/shop1_datail4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="33dp"
+                            android:background="@drawable/product_detail"
+                            android:fontFamily="@font/notosansregular"
+                            android:text="바로가기  >"
+                            android:textColor="#000000"
+                            android:textSize="15dp"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:orientation="vertical"
+                        android:background="@drawable/product_background06"
+                        android:layout_marginTop="30dp"
+                        android:gravity="center"
+                        android:paddingLeft="25dp"
+                        android:paddingRight="25dp">
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="아이썸 썬크림"
+                                android:textColor="#000000"/>
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="₩ 100 (1g)"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/product_oil"
+                android:visibility="visible"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="30dp"
+                    android:paddingRight="30dp"
+                    android:paddingLeft="30dp"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <FrameLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:background="@drawable/product_background01"
+                                android:fontFamily="@font/notosansregular"
+                                android:text="    알맹상점"
+                                android:textColor="#000000"
+                                android:textSize="15dp"/>
+                            <ImageView
+                                android:layout_width="33dp"
+                                android:layout_height="33dp"
+                                android:background="@drawable/shop_icon1"/>
+                        </FrameLayout>
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"/>
+                        <Button
+                            android:id="@+id/shop1_datail5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="33dp"
+                            android:background="@drawable/product_detail"
+                            android:fontFamily="@font/notosansregular"
+                            android:text="바로가기  >"
+                            android:textColor="#000000"
+                            android:textSize="15dp"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:orientation="vertical"
+                        android:background="@drawable/product_background06"
+                        android:layout_marginTop="30dp"
+                        android:gravity="center"
+                        android:paddingLeft="25dp"
+                        android:paddingRight="25dp">
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="티오피라 아쿠아샤 에멀전"
+                                android:textColor="#000000"/>
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="₩ 100 (1g)"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="30dp"
+                    android:paddingRight="30dp"
+                    android:paddingLeft="30dp"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <FrameLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:background="@drawable/product_background01"
+                                android:fontFamily="@font/notosansregular"
+                                android:text="       아로마티카"
+                                android:textColor="#000000"
+                                android:textSize="15dp"/>
+                            <ImageView
+                                android:layout_width="33dp"
+                                android:layout_height="33dp"
+                                android:background="@drawable/shop_icon3"/>
+                        </FrameLayout>
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"/>
+                        <Button
+                            android:id="@+id/shop3_datail1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="33dp"
+                            android:background="@drawable/product_detail"
+                            android:fontFamily="@font/notosansregular"
+                            android:text="바로가기  >"
+                            android:textColor="#000000"
+                            android:textSize="15dp"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:orientation="vertical"
+                        android:background="@drawable/product_background06"
+                        android:layout_marginTop="30dp"
+                        android:gravity="center"
+                        android:paddingLeft="25dp"
+                        android:paddingRight="25dp">
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="내추럴 코코넛 클렌징 오일"
+                                android:textColor="#000000"/>
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="₩ 88 (1g)"/>
                         </LinearLayout>
                     </LinearLayout>
                 </LinearLayout>

@@ -25,11 +25,23 @@ public class Product_face extends Fragment {
 
     Button toner_btn;
     Button cream_btn;
-    Button shop1_detail;
+    Button cleanser_btn;
+    Button suncream_btn;
+    Button gel_btn;
+    Button oil_btn;
     Button shop1_detail1;
+    Button shop1_detail2;
+    Button shop1_detail3;
+    Button shop1_detail4;
+    Button shop1_detail5;
+
 
     LinearLayout product_toner;
     LinearLayout product_cream;
+    LinearLayout product_cleanser;
+    LinearLayout product_suncream;
+    LinearLayout product_gel;
+    LinearLayout product_oil;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -79,6 +91,10 @@ public class Product_face extends Fragment {
 
         product_toner=(LinearLayout) v.findViewById(R.id.product_toner);
         product_cream=(LinearLayout) v.findViewById(R.id.product_cream);
+        product_cleanser=(LinearLayout) v.findViewById(R.id.product_cleanser);
+        product_suncream=(LinearLayout) v.findViewById(R.id.product_suncream);
+        product_gel=(LinearLayout) v.findViewById(R.id.product_gel);
+        product_oil=(LinearLayout) v.findViewById(R.id.product_oil);
 
         toner_btn=(Button) v.findViewById(R.id.toner_btn);
         toner_btn.setOnClickListener(new View.OnClickListener() {
@@ -86,6 +102,10 @@ public class Product_face extends Fragment {
             public void onClick(View view) {
                 product_toner.setVisibility(View.VISIBLE);
                 product_cream.setVisibility(View.INVISIBLE);
+                product_cleanser.setVisibility(View.INVISIBLE);
+                product_suncream.setVisibility(View.INVISIBLE);
+                product_gel.setVisibility(View.INVISIBLE);
+                product_oil.setVisibility(View.INVISIBLE);
             }
         });
         cream_btn=(Button) v.findViewById(R.id.cream_btn);
@@ -94,10 +114,62 @@ public class Product_face extends Fragment {
             public void onClick(View view) {
                 product_toner.setVisibility(View.INVISIBLE);
                 product_cream.setVisibility(View.VISIBLE);
+                product_cleanser.setVisibility(View.INVISIBLE);
+                product_suncream.setVisibility(View.INVISIBLE);
+                product_gel.setVisibility(View.INVISIBLE);
+                product_oil.setVisibility(View.INVISIBLE);
             }
         });
-        shop1_detail=(Button) v.findViewById(R.id.shop1_datail);
-        shop1_detail.setOnClickListener(new View.OnClickListener() {
+        cleanser_btn=(Button) v.findViewById(R.id.cleanser_btn);
+        cleanser_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                product_toner.setVisibility(View.INVISIBLE);
+                product_cream.setVisibility(View.INVISIBLE);
+                product_cleanser.setVisibility(View.VISIBLE);
+                product_suncream.setVisibility(View.INVISIBLE);
+                product_gel.setVisibility(View.INVISIBLE);
+                product_oil.setVisibility(View.INVISIBLE);
+            }
+        });
+        suncream_btn=(Button) v.findViewById(R.id.suncream_btn);
+        suncream_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                product_toner.setVisibility(View.INVISIBLE);
+                product_cream.setVisibility(View.INVISIBLE);
+                product_cleanser.setVisibility(View.INVISIBLE);
+                product_suncream.setVisibility(View.VISIBLE);
+                product_gel.setVisibility(View.INVISIBLE);
+                product_oil.setVisibility(View.INVISIBLE);
+            }
+        });
+        gel_btn=(Button) v.findViewById(R.id.gel_btn);
+        gel_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                product_toner.setVisibility(View.INVISIBLE);
+                product_cream.setVisibility(View.INVISIBLE);
+                product_cleanser.setVisibility(View.INVISIBLE);
+                product_suncream.setVisibility(View.INVISIBLE);
+                product_gel.setVisibility(View.VISIBLE);
+                product_oil.setVisibility(View.INVISIBLE);
+            }
+        });
+        oil_btn=(Button) v.findViewById(R.id.oil_btn);
+        oil_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                product_toner.setVisibility(View.INVISIBLE);
+                product_cream.setVisibility(View.INVISIBLE);
+                product_cleanser.setVisibility(View.INVISIBLE);
+                product_suncream.setVisibility(View.INVISIBLE);
+                product_gel.setVisibility(View.INVISIBLE);
+                product_oil.setVisibility(View.VISIBLE);
+            }
+        });
+        shop1_detail1=(Button) v.findViewById(R.id.shop1_datail1);
+        shop1_detail1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent= new Intent(
@@ -108,8 +180,44 @@ public class Product_face extends Fragment {
                 startActivity(intent);
             }
         });
-        shop1_detail1=(Button) v.findViewById(R.id.shop1_datail1);
-        shop1_detail1.setOnClickListener(new View.OnClickListener() {
+        shop1_detail2=(Button) v.findViewById(R.id.shop1_datail2);
+        shop1_detail2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent= new Intent(
+                        getActivity(),
+                        Home_shop_detail.class
+                );
+
+                startActivity(intent);
+            }
+        });
+        shop1_detail3=(Button) v.findViewById(R.id.shop1_datail3);
+        shop1_detail3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent= new Intent(
+                        getActivity(),
+                        Home_shop_detail.class
+                );
+
+                startActivity(intent);
+            }
+        });
+        shop1_detail4=(Button) v.findViewById(R.id.shop1_datail4);
+        shop1_detail4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent= new Intent(
+                        getActivity(),
+                        Home_shop_detail.class
+                );
+
+                startActivity(intent);
+            }
+        });
+        shop1_detail5=(Button) v.findViewById(R.id.shop1_datail5);
+        shop1_detail5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent= new Intent(

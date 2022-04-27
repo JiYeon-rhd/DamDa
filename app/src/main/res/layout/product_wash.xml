@@ -104,7 +104,7 @@
                             android:layout_height="0dp"
                             android:layout_weight="1"/>
                         <Button
-                            android:id="@+id/shop1_datail"
+                            android:id="@+id/shop1_datail1"
                             android:layout_width="wrap_content"
                             android:layout_height="33dp"
                             android:background="@drawable/product_detail"
@@ -220,7 +220,7 @@
                             android:layout_height="0dp"
                             android:layout_weight="1"/>
                         <Button
-                            android:id="@+id/shop2_datail"
+                            android:id="@+id/shop2_datail1"
                             android:layout_width="wrap_content"
                             android:layout_height="33dp"
                             android:background="@drawable/product_detail"
@@ -307,6 +307,7 @@
 
             <LinearLayout
                 android:id="@+id/product_softer"
+                android:visibility="invisible"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
@@ -345,7 +346,7 @@
                             android:layout_height="0dp"
                             android:layout_weight="1"/>
                         <Button
-                            android:id="@+id/shop1_datail1"
+                            android:id="@+id/shop1_datail2"
                             android:layout_width="wrap_content"
                             android:layout_height="33dp"
                             android:background="@drawable/product_detail"
@@ -474,6 +475,204 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="₩ 13 (1g)"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/product_kitchen"
+                android:visibility="visible"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="30dp"
+                    android:paddingRight="30dp"
+                    android:paddingLeft="30dp"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <FrameLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:background="@drawable/product_background01"
+                                android:fontFamily="@font/notosansregular"
+                                android:text="    알맹상점"
+                                android:textColor="#000000"
+                                android:textSize="15dp"/>
+                            <ImageView
+                                android:layout_width="33dp"
+                                android:layout_height="33dp"
+                                android:background="@drawable/shop_icon1"/>
+                        </FrameLayout>
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"/>
+                        <Button
+                            android:id="@+id/shop1_datail3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="33dp"
+                            android:background="@drawable/product_detail"
+                            android:fontFamily="@font/notosansregular"
+                            android:text="바로가기  >"
+                            android:textColor="#000000"
+                            android:textSize="15dp"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="170dp"
+                        android:orientation="vertical"
+                        android:background="@drawable/product_background06"
+                        android:layout_marginTop="30dp"
+                        android:padding="25dp">
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="소화아람일터 em 주방세제"
+                                android:textColor="#000000"/>
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="₩ 7 (1g)"/>
+                        </LinearLayout>
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="15dp"
+                            android:layout_marginBottom="15dp"
+                            android:background="#8CFF8360"/>
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="코코리 주방세제"
+                                android:textColor="#000000"/>
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="₩ 15 (1g)"/>
+                        </LinearLayout>
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="15dp"
+                            android:layout_marginBottom="15dp"
+                            android:background="#8CFF8360"/>
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="인블리스 컨전셔스 주방세제"
+                                android:textColor="#000000"/>
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="₩ 4 (1g)"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="30dp"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <FrameLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:background="@drawable/product_background01"
+                                android:fontFamily="@font/notosansregular"
+                                android:text="    지구샵"
+                                android:textColor="#000000"
+                                android:textSize="15dp"/>
+                            <ImageView
+                                android:layout_width="33dp"
+                                android:layout_height="33dp"
+                                android:background="@drawable/shop_icon2"/>
+                        </FrameLayout>
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"/>
+                        <Button
+                            android:id="@+id/shop_datail2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="33dp"
+                            android:background="@drawable/product_detail"
+                            android:fontFamily="@font/notosansregular"
+                            android:text="바로가기  >"
+                            android:textColor="#000000"
+                            android:textSize="15dp"></Button>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:orientation="vertical"
+                        android:background="@drawable/product_background06"
+                        android:gravity="center"
+                        android:layout_marginTop="30dp"
+                        android:paddingLeft="25dp"
+                        android:paddingRight="25dp">
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="꽃마리 주방용 액상세제"
+                                android:textColor="#000000"/>
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="₩ 12 (1g)"/>
                         </LinearLayout>
                     </LinearLayout>
                 </LinearLayout>
