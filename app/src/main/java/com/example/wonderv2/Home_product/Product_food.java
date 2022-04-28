@@ -1,6 +1,7 @@
 package com.example.wonderv2.Home_product;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -93,6 +94,11 @@ public class Product_food extends Fragment {
         tea_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                tea_btn.setTextColor(Color.RED);
+                coffee_btn.setTextColor(Color.BLACK);
+                spice_btn.setTextColor(Color.BLACK);
+                oatmeal_btn.setTextColor(Color.BLACK);
+
                 product_tea.setVisibility(View.VISIBLE);
                 product_coffee.setVisibility(View.INVISIBLE);
                 product_spice.setVisibility(View.INVISIBLE);
@@ -103,6 +109,11 @@ public class Product_food extends Fragment {
         coffee_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                tea_btn.setTextColor(Color.BLACK);
+                coffee_btn.setTextColor(Color.RED);
+                spice_btn.setTextColor(Color.BLACK);
+                oatmeal_btn.setTextColor(Color.BLACK);
+
                 product_tea.setVisibility(View.INVISIBLE);
                 product_coffee.setVisibility(View.VISIBLE);
                 product_spice.setVisibility(View.INVISIBLE);
@@ -113,6 +124,11 @@ public class Product_food extends Fragment {
         spice_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                tea_btn.setTextColor(Color.BLACK);
+                coffee_btn.setTextColor(Color.BLACK);
+                spice_btn.setTextColor(Color.RED);
+                oatmeal_btn.setTextColor(Color.BLACK);
+
                 product_tea.setVisibility(View.INVISIBLE);
                 product_coffee.setVisibility(View.INVISIBLE);
                 product_spice.setVisibility(View.VISIBLE);
@@ -123,6 +139,11 @@ public class Product_food extends Fragment {
         oatmeal_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                tea_btn.setTextColor(Color.BLACK);
+                coffee_btn.setTextColor(Color.BLACK);
+                spice_btn.setTextColor(Color.BLACK);
+                oatmeal_btn.setTextColor(Color.RED);
+
                 product_tea.setVisibility(View.INVISIBLE);
                 product_coffee.setVisibility(View.INVISIBLE);
                 product_spice.setVisibility(View.INVISIBLE);

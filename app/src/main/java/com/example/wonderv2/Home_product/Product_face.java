@@ -1,6 +1,7 @@
 package com.example.wonderv2.Home_product;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -100,6 +101,13 @@ public class Product_face extends Fragment {
         toner_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                toner_btn.setTextColor(Color.RED);
+                cream_btn.setTextColor(Color.BLACK);
+                cleanser_btn.setTextColor(Color.BLACK);
+                suncream_btn.setTextColor(Color.BLACK);
+                gel_btn.setTextColor(Color.BLACK);
+                oil_btn.setTextColor(Color.BLACK);
+
                 product_toner.setVisibility(View.VISIBLE);
                 product_cream.setVisibility(View.INVISIBLE);
                 product_cleanser.setVisibility(View.INVISIBLE);
@@ -112,6 +120,13 @@ public class Product_face extends Fragment {
         cream_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                toner_btn.setTextColor(Color.BLACK);
+                cream_btn.setTextColor(Color.RED);
+                cleanser_btn.setTextColor(Color.BLACK);
+                suncream_btn.setTextColor(Color.BLACK);
+                gel_btn.setTextColor(Color.BLACK);
+                oil_btn.setTextColor(Color.BLACK);
+
                 product_toner.setVisibility(View.INVISIBLE);
                 product_cream.setVisibility(View.VISIBLE);
                 product_cleanser.setVisibility(View.INVISIBLE);
@@ -124,6 +139,13 @@ public class Product_face extends Fragment {
         cleanser_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                toner_btn.setTextColor(Color.BLACK);
+                cream_btn.setTextColor(Color.BLACK);
+                cleanser_btn.setTextColor(Color.RED);
+                suncream_btn.setTextColor(Color.BLACK);
+                gel_btn.setTextColor(Color.BLACK);
+                oil_btn.setTextColor(Color.BLACK);
+
                 product_toner.setVisibility(View.INVISIBLE);
                 product_cream.setVisibility(View.INVISIBLE);
                 product_cleanser.setVisibility(View.VISIBLE);
@@ -136,6 +158,13 @@ public class Product_face extends Fragment {
         suncream_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                toner_btn.setTextColor(Color.BLACK);
+                cream_btn.setTextColor(Color.BLACK);
+                cleanser_btn.setTextColor(Color.BLACK);
+                suncream_btn.setTextColor(Color.RED);
+                gel_btn.setTextColor(Color.BLACK);
+                oil_btn.setTextColor(Color.BLACK);
+
                 product_toner.setVisibility(View.INVISIBLE);
                 product_cream.setVisibility(View.INVISIBLE);
                 product_cleanser.setVisibility(View.INVISIBLE);
@@ -148,6 +177,13 @@ public class Product_face extends Fragment {
         gel_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                toner_btn.setTextColor(Color.BLACK);
+                cream_btn.setTextColor(Color.BLACK);
+                cleanser_btn.setTextColor(Color.BLACK);
+                suncream_btn.setTextColor(Color.BLACK);
+                gel_btn.setTextColor(Color.RED);
+                oil_btn.setTextColor(Color.BLACK);
+
                 product_toner.setVisibility(View.INVISIBLE);
                 product_cream.setVisibility(View.INVISIBLE);
                 product_cleanser.setVisibility(View.INVISIBLE);
@@ -160,6 +196,13 @@ public class Product_face extends Fragment {
         oil_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                toner_btn.setTextColor(Color.BLACK);
+                cream_btn.setTextColor(Color.BLACK);
+                cleanser_btn.setTextColor(Color.BLACK);
+                suncream_btn.setTextColor(Color.BLACK);
+                gel_btn.setTextColor(Color.BLACK);
+                oil_btn.setTextColor(Color.RED);
+                
                 product_toner.setVisibility(View.INVISIBLE);
                 product_cream.setVisibility(View.INVISIBLE);
                 product_cleanser.setVisibility(View.INVISIBLE);

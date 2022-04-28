@@ -1,6 +1,7 @@
 package com.example.wonderv2.Home_product;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -100,6 +101,13 @@ public class Product_body extends Fragment {
         shampoo_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                shampoo_btn.setTextColor(Color.RED);
+                bodywash_btn.setTextColor(Color.BLACK);
+                hairessence_btn.setTextColor(Color.BLACK);
+                conditioning_btn.setTextColor(Color.BLACK);
+                allinone_btn.setTextColor(Color.BLACK);
+                handwash_btn.setTextColor(Color.BLACK);
+
                 product_shampoo.setVisibility(View.VISIBLE);
                 product_bodywash.setVisibility(View.INVISIBLE);
                 product_hariessence.setVisibility(View.INVISIBLE);
@@ -112,6 +120,13 @@ public class Product_body extends Fragment {
         bodywash_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                shampoo_btn.setTextColor(Color.BLACK);
+                bodywash_btn.setTextColor(Color.RED);
+                hairessence_btn.setTextColor(Color.BLACK);
+                conditioning_btn.setTextColor(Color.BLACK);
+                allinone_btn.setTextColor(Color.BLACK);
+                handwash_btn.setTextColor(Color.BLACK);
+
                 product_shampoo.setVisibility(View.INVISIBLE);
                 product_bodywash.setVisibility(View.VISIBLE);
                 product_hariessence.setVisibility(View.INVISIBLE);
@@ -124,6 +139,13 @@ public class Product_body extends Fragment {
         hairessence_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                shampoo_btn.setTextColor(Color.BLACK);
+                bodywash_btn.setTextColor(Color.BLACK);
+                hairessence_btn.setTextColor(Color.RED);
+                conditioning_btn.setTextColor(Color.BLACK);
+                allinone_btn.setTextColor(Color.BLACK);
+                handwash_btn.setTextColor(Color.BLACK);
+
                 product_shampoo.setVisibility(View.INVISIBLE);
                 product_bodywash.setVisibility(View.INVISIBLE);
                 product_hariessence.setVisibility(View.VISIBLE);
@@ -136,6 +158,13 @@ public class Product_body extends Fragment {
         conditioning_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                shampoo_btn.setTextColor(Color.BLACK);
+                bodywash_btn.setTextColor(Color.BLACK);
+                hairessence_btn.setTextColor(Color.BLACK);
+                conditioning_btn.setTextColor(Color.RED);
+                allinone_btn.setTextColor(Color.BLACK);
+                handwash_btn.setTextColor(Color.BLACK);
+
                 product_shampoo.setVisibility(View.INVISIBLE);
                 product_bodywash.setVisibility(View.INVISIBLE);
                 product_hariessence.setVisibility(View.INVISIBLE);
@@ -148,6 +177,13 @@ public class Product_body extends Fragment {
         allinone_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                shampoo_btn.setTextColor(Color.BLACK);
+                bodywash_btn.setTextColor(Color.BLACK);
+                hairessence_btn.setTextColor(Color.BLACK);
+                conditioning_btn.setTextColor(Color.BLACK);
+                allinone_btn.setTextColor(Color.RED);
+                handwash_btn.setTextColor(Color.BLACK);
+
                 product_shampoo.setVisibility(View.INVISIBLE);
                 product_bodywash.setVisibility(View.INVISIBLE);
                 product_hariessence.setVisibility(View.INVISIBLE);
@@ -160,6 +196,13 @@ public class Product_body extends Fragment {
         handwash_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                shampoo_btn.setTextColor(Color.BLACK);
+                bodywash_btn.setTextColor(Color.BLACK);
+                hairessence_btn.setTextColor(Color.BLACK);
+                conditioning_btn.setTextColor(Color.BLACK);
+                allinone_btn.setTextColor(Color.BLACK);
+                handwash_btn.setTextColor(Color.RED);
+
                 product_shampoo.setVisibility(View.INVISIBLE);
                 product_bodywash.setVisibility(View.INVISIBLE);
                 product_hariessence.setVisibility(View.INVISIBLE);

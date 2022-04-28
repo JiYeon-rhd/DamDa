@@ -239,7 +239,7 @@
                             android:layout_height="0dp"
                             android:layout_weight="1"/>
                         <Button
-                            android:id="@+id/shop2_datail1"
+                            android:id="@+id/shop3_datail1"
                             android:layout_width="wrap_content"
                             android:layout_height="33dp"
                             android:background="@drawable/product_detail"
@@ -508,7 +508,7 @@
                             android:layout_height="0dp"
                             android:layout_weight="1"/>
                         <Button
-                            android:id="@+id/shop2_datail2"
+                            android:id="@+id/shop3_datail2"
                             android:layout_width="wrap_content"
                             android:layout_height="33dp"
                             android:background="@drawable/product_detail"
@@ -692,7 +692,7 @@
                             android:layout_height="0dp"
                             android:layout_weight="1"/>
                         <Button
-                            android:id="@+id/shop2_datail3"
+                            android:id="@+id/shop3_datail3"
                             android:layout_width="wrap_content"
                             android:layout_height="33dp"
                             android:background="@drawable/product_detail"
@@ -890,7 +890,7 @@
                             android:layout_height="0dp"
                             android:layout_weight="1"/>
                         <Button
-                            android:id="@+id/shop2_datail4"
+                            android:id="@+id/shop3_datail4"
                             android:layout_width="wrap_content"
                             android:layout_height="33dp"
                             android:background="@drawable/product_detail"

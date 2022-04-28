@@ -1,6 +1,7 @@
 package com.example.wonderv2.Home_product;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -88,6 +89,10 @@ public class Product_wash extends Fragment {
         detergent_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                detergent_btn.setTextColor(Color.RED);
+                softer_btn.setTextColor(Color.BLACK);
+                kitchen_btn.setTextColor(Color.BLACK);
+
                 product_detergent.setVisibility(View.VISIBLE);
                 product_softer.setVisibility(View.INVISIBLE);
                 product_kitchen.setVisibility(View.INVISIBLE);
@@ -97,6 +102,10 @@ public class Product_wash extends Fragment {
         softer_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                detergent_btn.setTextColor(Color.BLACK);
+                softer_btn.setTextColor(Color.RED);
+                kitchen_btn.setTextColor(Color.BLACK);
+
                 product_detergent.setVisibility(View.INVISIBLE);
                 product_softer.setVisibility(View.VISIBLE);
                 product_kitchen.setVisibility(View.INVISIBLE);
@@ -106,6 +115,10 @@ public class Product_wash extends Fragment {
         kitchen_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                detergent_btn.setTextColor(Color.BLACK);
+                softer_btn.setTextColor(Color.BLACK);
+                kitchen_btn.setTextColor(Color.RED);
+
                 product_detergent.setVisibility(View.INVISIBLE);
                 product_softer.setVisibility(View.INVISIBLE);
                 product_kitchen.setVisibility(View.VISIBLE);
