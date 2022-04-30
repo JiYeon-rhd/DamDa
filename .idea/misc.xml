@@ -3,6 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Jeonsujin/StudioProjects/WonderV2/app/src/main/res/drawable/ar_background_selectitem.xml" value="0.26145833333333335" />
+        <entry key="..\:/Users/Jeonsujin/StudioProjects/WonderV2/app/src/main/res/drawable/ar_background_selectitem_gray.xml" value="0.26145833333333335" />
+        <entry key="..\:/Users/Jeonsujin/StudioProjects/WonderV2/app/src/main/res/drawable/ar_background_selectitem_gray2.xml" value="0.26145833333333335" />
+        <entry key="..\:/Users/Jeonsujin/StudioProjects/WonderV2/app/src/main/res/drawable/bottom_sheet_bg.xml" value="0.26145833333333335" />
         <entry key="..\:/Users/Jeonsujin/StudioProjects/WonderV2/app/src/main/res/layout/activity_main.xml" value="0.1793478260869565" />
         <entry key="..\:/Users/Jeonsujin/StudioProjects/WonderV2/app/src/main/res/layout/ar_camera.xml" value="0.1793478260869565" />
         <entry key="..\:/Users/Jeonsujin/StudioProjects/WonderV2/app/src/main/res/layout/ar_main.xml" value="0.15217391304347827" />
@@ -10,7 +14,7 @@
         <entry key="..\:/Users/Jeonsujin/StudioProjects/WonderV2/app/src/main/res/layout/custom_tab.xml" value="0.1793478260869565" />
         <entry key="..\:/Users/Jeonsujin/StudioProjects/WonderV2/app/src/main/res/layout/exp_body.xml" value="0.1793478260869565" />
         <entry key="..\:/Users/Jeonsujin/StudioProjects/WonderV2/app/src/main/res/layout/exp_camera.xml" value="0.15217391304347827" />
-        <entry key="..\:/Users/Jeonsujin/StudioProjects/WonderV2/app/src/main/res/layout/exp_detail.xml" value="0.15217391304347827" />
+        <entry key="..\:/Users/Jeonsujin/StudioProjects/WonderV2/app/src/main/res/layout/exp_detail.xml" value="0.264" />
         <entry key="..\:/Users/Jeonsujin/StudioProjects/WonderV2/app/src/main/res/layout/exp_face.xml" value="0.1793478260869565" />
         <entry key="..\:/Users/Jeonsujin/StudioProjects/WonderV2/app/src/main/res/layout/exp_food.xml" value="0.1793478260869565" />
         <entry key="..\:/Users/Jeonsujin/StudioProjects/WonderV2/app/src/main/res/layout/exp_main.xml" value="0.15217391304347827" />
