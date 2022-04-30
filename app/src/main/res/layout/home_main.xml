@@ -45,7 +45,7 @@
             android:layout_weight="1" />
 
         <ImageButton
-            android:layout_width="21dp"
+            android:layout_width="22dp"
             android:layout_height="22.5dp"
             android:background="@drawable/home_icon_alarm" />
     </LinearLayout>

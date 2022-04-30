@@ -16,8 +16,8 @@
         android:paddingLeft="30dp"
         android:background="@drawable/product_top_bg">
         <ImageButton
-            android:layout_width="25dp"
-            android:layout_height="25dp"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
             android:background="@drawable/home_icon_setting"/>
         <View
             android:layout_width="0dp"
@@ -29,15 +29,15 @@
             android:text="AR"
             android:fontFamily="@font/notosansbold"
             android:textColor="#000000"
-            android:textSize="20dp"
+            android:textSize="15dp"
             android:textStyle="bold"/>
         <View
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_weight="1"/>
         <ImageButton
-            android:layout_width="25dp"
-            android:layout_height="25dp"
+            android:layout_width="22dp"
+            android:layout_height="22.5dp"
             android:background="@drawable/home_icon_alarm"/>
     </LinearLayout>
     <FrameLayout
