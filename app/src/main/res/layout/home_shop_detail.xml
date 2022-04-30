@@ -14,8 +14,8 @@
         android:paddingRight="30dp"
         android:gravity="center|right">
         <ImageButton
-            android:layout_width="15dp"
-            android:layout_height="25dp"
+            android:layout_width="12dp"
+            android:layout_height="12dp"
             android:background="@drawable/close_icon"/>
     </LinearLayout>
 

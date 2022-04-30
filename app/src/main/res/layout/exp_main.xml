@@ -23,8 +23,8 @@
             android:paddingRight="30dp"
             android:paddingLeft="30dp">
             <ImageButton
-                android:layout_width="20dp"
-                android:layout_height="20dp"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
                 android:background="@drawable/home_icon_setting"/>
             <View
                 android:layout_width="0dp"
