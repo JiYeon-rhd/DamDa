@@ -392,7 +392,7 @@ public class AR_camera extends AppCompatActivity {
             //스캔 스플래시 보여주기
             ar_splash_scan.show();
 
-            //스캔 스플래시 3초후 종료
+            //스캔 스플래시 몇 초 후에 종료
             Thread thread = new Thread(new Runnable() {
                 @Override
                 public void run() {
@@ -404,7 +404,7 @@ public class AR_camera extends AppCompatActivity {
                     };
 
                     Timer timer = new Timer();
-                    timer.schedule(task, 4000);
+                    timer.schedule(task, 4500);
                 }
             });
             thread.start();
