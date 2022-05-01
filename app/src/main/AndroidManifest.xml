@@ -15,6 +15,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.WonderV2">
         <activity
+            android:name=".AR.AR_splash_scan"
+            android:exported="true" />
+        <activity
             android:name=".AR.AR_complete"
             android:exported="true" />
         <activity

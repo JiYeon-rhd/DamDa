@@ -99,9 +99,13 @@
         <entry key="app/src/main/res/drawable/ar_btn_detection_lightgreen.xml" value="0.2796296296296296" />
         <entry key="app/src/main/res/drawable/bottom_sheet_bg.xml" value="0.24166666666666667" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.335" />
-        <entry key="app/src/main/res/layout/ar_camera.xml" value="0.25" />
-        <entry key="app/src/main/res/layout/ar_complete.xml" value="0.3211050724637681" />
+        <entry key="app/src/main/res/layout/ar_camera.xml" value="0.335" />
+        <entry key="app/src/main/res/layout/ar_complete.xml" value="0.25" />
         <entry key="app/src/main/res/layout/ar_main.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/ar_select_almaeng.xml" value="0.3179347826086957" />
+        <entry key="app/src/main/res/layout/ar_select_aromatica.xml" value="0.3179347826086957" />
+        <entry key="app/src/main/res/layout/ar_select_chaeum.xml" value="0.3179347826086957" />
+        <entry key="app/src/main/res/layout/ar_select_earth.xml" value="0.3179347826086957" />
         <entry key="app/src/main/res/layout/ar_select_item.xml" value="0.335" />
         <entry key="app/src/main/res/layout/exp_body.xml" value="0.15324214792299898" />
         <entry key="app/src/main/res/layout/exp_detail.xml" value="0.21920289855072464" />
@@ -111,6 +115,7 @@
         <entry key="app/src/main/res/layout/home_loca_map.xml" value="0.1" />
         <entry key="app/src/main/res/layout/home_main.xml" value="0.335" />
         <entry key="app/src/main/res/layout/home_product.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/home_shop_body.xml" value="0.3179347826086957" />
         <entry key="app/src/main/res/layout/home_shop_detail.xml" value="0.21920289855072464" />
         <entry key="app/src/main/res/layout/home_shop_finder.xml" value="0.1" />
         <entry key="app/src/main/res/layout/product_body.xml" value="0.335" />
