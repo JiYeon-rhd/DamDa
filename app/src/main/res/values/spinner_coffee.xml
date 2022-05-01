@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="spinner_coffee">
+        <item>선택하세요</item>
+        <item>리브레 원두</item>
+        <item>다크 벨벳</item>
+        <item>커피 원두</item>
+
+    </string-array>
+</resources>

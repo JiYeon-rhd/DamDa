@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="spinner_cream">
+        <item>선택하세요</item>
+        <item>팜앤코 수분크림</item>
+        <item>체이싱래빗 말차 크림</item>
+    </string-array>
+</resources>

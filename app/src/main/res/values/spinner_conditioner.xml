@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="spinner_conditioner">
+        <item>선택하세요</item>
+        <item>로즈마리 헤어 씨크닝 컨디셔너</item>
+        <item>B5+ 비오틴 포티파잉 컨디셔너</item>
+    </string-array>
+</resources>

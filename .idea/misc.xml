@@ -98,10 +98,20 @@
         <entry key="..\:/WonderV2/app/src/main/res/menu/menu.xml" value="0.17222222222222222" />
         <entry key="app/src/main/res/drawable/ar_background_info.xml" value="0.24166666666666667" />
         <entry key="app/src/main/res/drawable/ar_background_selectitem.xml" value="0.24166666666666667" />
+        <entry key="app/src/main/res/drawable/ar_background_selectitem_gray.xml" value="0.41302083333333334" />
         <entry key="app/src/main/res/drawable/ar_background_selectitem_gray2.xml" value="0.24166666666666667" />
+        <entry key="app/src/main/res/drawable/ar_background_selectitem_on.xml" value="0.41302083333333334" />
+        <entry key="app/src/main/res/drawable/ar_background_selectitem_pink.xml" value="0.41302083333333334" />
         <entry key="app/src/main/res/drawable/ar_background_selectitem_pink2.xml" value="0.24166666666666667" />
+        <entry key="app/src/main/res/drawable/ar_btn_detection.xml" value="0.41302083333333334" />
+        <entry key="app/src/main/res/drawable/ar_btn_detection2.xml" value="0.41302083333333334" />
+        <entry key="app/src/main/res/drawable/ar_btn_detection4.xml" value="0.41302083333333334" />
+        <entry key="app/src/main/res/drawable/ar_btn_detection5.xml" value="0.41302083333333334" />
+        <entry key="app/src/main/res/drawable/ar_btn_detection6.xml" value="0.41302083333333334" />
         <entry key="app/src/main/res/drawable/ar_btn_detection_lightgreen.xml" value="0.2796296296296296" />
         <entry key="app/src/main/res/drawable/bottom_sheet_bg.xml" value="0.24166666666666667" />
+        <entry key="app/src/main/res/drawable/gray_stroke_bg.xml" value="0.41302083333333334" />
+        <entry key="app/src/main/res/drawable/white_bg.xml" value="0.41302083333333334" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.335" />
         <entry key="app/src/main/res/layout/ar_camera.xml" value="0.335" />
         <entry key="app/src/main/res/layout/ar_complete.xml" value="0.25" />
