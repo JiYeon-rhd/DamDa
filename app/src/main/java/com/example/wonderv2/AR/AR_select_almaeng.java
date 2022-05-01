@@ -2,6 +2,7 @@ package com.example.wonderv2.AR;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
@@ -332,6 +333,13 @@ public class AR_select_almaeng extends AppCompatActivity implements View.OnClick
             }
         });
 
+        complete_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(AR_select_almaeng.this, AR_complete.class);
+                startActivity(intent);
+            }
+        });
 
 
 
