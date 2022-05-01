@@ -52,17 +52,29 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <TextView
-            android:id="@+id/scan_before_txt"
+        <!--스캔전 화면-->
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:visibility="invisible"
-            android:gravity="bottom|center_horizontal"
-            android:textSize="18dp"
-            android:layout_marginBottom="190dp"
-            android:textColor="@color/black"
-            android:text="용기 스캔을 시작합니다.">
-        </TextView>
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/scan_before_txt"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="visible"
+                android:gravity="bottom|center_horizontal"
+                android:textSize="18dp"
+                android:layout_marginBottom="190dp"
+                android:textColor="@color/black"
+                android:text="용기 스캔을 시작합니다.">
+            </TextView>
+
+
+
+        </LinearLayout>
+
+
 
         <LinearLayout
             android:layout_width="match_parent"

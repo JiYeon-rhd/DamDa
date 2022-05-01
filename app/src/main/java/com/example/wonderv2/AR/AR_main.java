@@ -74,7 +74,7 @@ public class AR_main extends Fragment {
             public void onClick(View v) {
                 Intent intent = new Intent(
                         getActivity(),
-                        AR_select_item.class
+                        AR_camera.class
                 );
 
                 startActivity(intent);
