@@ -96,6 +96,10 @@
         <entry key="..\:/WonderV2/app/src/main/res/layout/sign_in.xml" value="0.2694746376811594" />
         <entry key="..\:/WonderV2/app/src/main/res/layout/sign_up.xml" value="0.2694746376811594" />
         <entry key="..\:/WonderV2/app/src/main/res/menu/menu.xml" value="0.17222222222222222" />
+        <entry key="app/src/main/res/drawable/ar_background_info.xml" value="0.24166666666666667" />
+        <entry key="app/src/main/res/drawable/ar_background_selectitem.xml" value="0.24166666666666667" />
+        <entry key="app/src/main/res/drawable/ar_background_selectitem_gray2.xml" value="0.24166666666666667" />
+        <entry key="app/src/main/res/drawable/ar_background_selectitem_pink2.xml" value="0.24166666666666667" />
         <entry key="app/src/main/res/drawable/ar_btn_detection_lightgreen.xml" value="0.2796296296296296" />
         <entry key="app/src/main/res/drawable/bottom_sheet_bg.xml" value="0.24166666666666667" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.335" />
@@ -107,6 +111,8 @@
         <entry key="app/src/main/res/layout/ar_select_chaeum.xml" value="0.3179347826086957" />
         <entry key="app/src/main/res/layout/ar_select_earth.xml" value="0.3179347826086957" />
         <entry key="app/src/main/res/layout/ar_select_item.xml" value="0.335" />
+        <entry key="app/src/main/res/layout/ar_splash_scan.xml" value="0.375" />
+        <entry key="app/src/main/res/layout/custom_tab.xml" value="0.22552083333333334" />
         <entry key="app/src/main/res/layout/exp_body.xml" value="0.15324214792299898" />
         <entry key="app/src/main/res/layout/exp_detail.xml" value="0.21920289855072464" />
         <entry key="app/src/main/res/layout/exp_main.xml" value="0.25" />

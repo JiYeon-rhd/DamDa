@@ -9,13 +9,18 @@ import android.Manifest;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
+import android.graphics.Color;
 import android.graphics.Matrix;
+import android.graphics.drawable.ColorDrawable;
 import android.media.ExifInterface;
 import android.media.MediaSession2Service;
 import android.media.ThumbnailUtils;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Trace;
 import android.provider.MediaStore;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -33,8 +38,12 @@ import java.io.IOException;
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
 import java.sql.Struct;
+import java.sql.Time;
+import java.util.Timer;
+import java.util.TimerTask;
 
 public class AR_camera extends AppCompatActivity {
+    private static int TIME_OUT = 1001;
     MainActivity activity;
 
     LinearLayout before_scan_layout;
@@ -47,6 +56,8 @@ public class AR_camera extends AppCompatActivity {
     TextView shop_name_txt;
     Button item_select_btn;
     Button re_scan_btn;
+
+    AR_splash_scan ar_splash_scan;
 
     //Button homeBtn;
     //Button home_btn;
@@ -91,6 +102,13 @@ public class AR_camera extends AppCompatActivity {
 
 
         ar_main = new AR_main();
+
+        //스플래시 화면 설정
+        ar_splash_scan = new AR_splash_scan(this);
+        ar_splash_scan.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        ar_splash_scan.setCancelable(false);
+        ar_splash_scan.getWindow().setFlags(WindowManager.LayoutParams.FLAG_NOT_TOUCH_MODAL, WindowManager.LayoutParams.FLAG_NOT_TOUCH_MODAL);
+        ar_splash_scan.getWindow().clearFlags(WindowManager.LayoutParams.FLAG_DIM_BEHIND);
 
 
 
@@ -140,7 +158,11 @@ public class AR_camera extends AppCompatActivity {
                 else {
                     requestPermissions(new String[]{Manifest.permission.CAMERA},100);
                 }
+
+
+
             }
+
         });
 
         //제품 선택 버튼 누루면 상점 이름에 따라 액티비티 인텐트
@@ -366,6 +388,26 @@ public class AR_camera extends AppCompatActivity {
             before_scan_layout.setVisibility(View.INVISIBLE);
             success_scan_layout.setVisibility(View.VISIBLE);
 
+
+            //스캔 스플래시 보여주기
+            ar_splash_scan.show();
+
+            //스캔 스플래시 3초후 종료
+            Thread thread = new Thread(new Runnable() {
+                @Override
+                public void run() {
+                    TimerTask task = new TimerTask() {
+                        @Override
+                        public void run() {
+                            ar_splash_scan.dismiss();
+                        }
+                    };
+
+                    Timer timer = new Timer();
+                    timer.schedule(task, 4000);
+                }
+            });
+            thread.start();
 
 
             classifyImage(image);
