@@ -15,6 +15,24 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.WonderV2">
         <activity
+            android:name=".Setting.Setting_main"
+            android:exported="true" />
+        <activity
+            android:name=".Setting.MainActivity"
+            android:exported="true" />
+        <activity
+            android:name=".Setting.Setting_alarm"
+            android:exported="true" />
+        <activity
+            android:name=".Home.Home_shop_aromatica_detail"
+            android:exported="true" />
+        <activity
+            android:name=".Home.Home_shop_earth_detail"
+            android:exported="true" />
+        <activity
+            android:name=".Home.Home_shop_chaeum_detail"
+            android:exported="true" />
+        <activity
             android:name=".AR.AR_splash_scan"
             android:exported="true" />
         <activity
@@ -65,7 +83,7 @@
             android:required="false" />
 
         <activity
-            android:name=".Home.Home_shop_detail"
+            android:name=".Home.Home_shop_almaeng_detail"
             android:exported="true" />
         <activity
             android:name=".Exp.Exp_detail"

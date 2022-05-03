@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@drawable/shop_detail_bg"
-    tools:context=".Home.Home_shop_detail">
+    tools:context=".Home.Home_shop_almaeng_detail">
 
     <LinearLayout
         android:layout_width="match_parent"

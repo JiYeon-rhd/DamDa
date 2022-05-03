@@ -12,7 +12,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.LinearLayout;
 
-import com.example.wonderv2.Home.Home_shop_detail;
+import com.example.wonderv2.Home.Home_shop_almaeng_detail;
 import com.example.wonderv2.MainActivity;
 import com.example.wonderv2.R;
 
@@ -130,7 +130,7 @@ public class Product_wash extends Fragment {
             public void onClick(View view) {
                 Intent intent= new Intent(
                         getActivity(),
-                        Home_shop_detail.class
+                        Home_shop_almaeng_detail.class
                 );
 
                 startActivity(intent);
@@ -142,7 +142,7 @@ public class Product_wash extends Fragment {
             public void onClick(View view) {
                 Intent intent= new Intent(
                         getActivity(),
-                        Home_shop_detail.class
+                        Home_shop_almaeng_detail.class
                 );
 
                 startActivity(intent);
@@ -154,7 +154,7 @@ public class Product_wash extends Fragment {
             public void onClick(View view) {
                 Intent intent= new Intent(
                         getActivity(),
-                        Home_shop_detail.class
+                        Home_shop_almaeng_detail.class
                 );
 
                 startActivity(intent);

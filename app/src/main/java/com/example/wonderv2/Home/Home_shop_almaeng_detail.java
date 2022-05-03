@@ -9,7 +9,7 @@ import android.os.Bundle;
 import com.example.wonderv2.R;
 import com.google.android.material.tabs.TabLayout;
 
-public class Home_shop_detail extends AppCompatActivity {
+public class Home_shop_almaeng_detail extends AppCompatActivity {
     private Context mContext;
     private TabLayout mTabLayout;
     private ViewPager mViewPager;
@@ -18,7 +18,7 @@ public class Home_shop_detail extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.home_shop_detail);
+        setContentView(R.layout.home_shop_almaeng_detail);
         mContext = getApplicationContext();
         mTabLayout=(TabLayout) findViewById(R.id.tabs);
 

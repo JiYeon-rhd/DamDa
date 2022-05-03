@@ -1,31 +1,24 @@
 package com.example.wonderv2;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
-import android.annotation.SuppressLint;
-import android.content.Intent;
 import android.os.Bundle;
-import android.view.MenuItem;
 
 import com.example.wonderv2.AR.AR_main;
 import com.example.wonderv2.Exp.Exp_main;
 import com.example.wonderv2.Home.Home_loca_list;
 import com.example.wonderv2.Home.Home_loca_map;
 import com.example.wonderv2.Home.Home_main;
-import com.example.wonderv2.Home.Home_shop_detail;
+import com.example.wonderv2.Home.Home_shop_almaeng_detail;
 import com.example.wonderv2.Home.Home_shop_finder;
 import com.example.wonderv2.Home_product.Home_product;
 import com.example.wonderv2.Home_product.Product_body;
 import com.example.wonderv2.Home_product.Product_face;
 import com.example.wonderv2.Home_product.Product_food;
 import com.example.wonderv2.Home_product.Product_wash;
-import com.google.android.material.bottomnavigation.BottomNavigationMenuView;
-import com.google.android.material.bottomnavigation.BottomNavigationView;
-import com.google.android.material.bottomnavigation.LabelVisibilityMode;
 import com.ismaeldivita.chipnavigation.ChipNavigationBar;
 
 public class MainActivity extends AppCompatActivity {
@@ -41,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
     private Home_product home_product;
     private Home_loca_map home_loca_map;
     private Home_loca_list home_loca_list;
-    private Home_shop_detail home_shop_detail;
+    private Home_shop_almaeng_detail home_shop_almaeng_detail;
     private Home_shop_finder home_shop_finder;
 
     Fragment fragment1, fragment2, fragment3, fragment4;

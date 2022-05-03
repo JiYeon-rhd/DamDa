@@ -113,6 +113,7 @@
         <entry key="app/src/main/res/drawable/gray_stroke_bg.xml" value="0.41302083333333334" />
         <entry key="app/src/main/res/drawable/white_bg.xml" value="0.41302083333333334" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.335" />
+        <entry key="app/src/main/res/layout/activity_main2.xml" value="0.2971014492753623" />
         <entry key="app/src/main/res/layout/ar_camera.xml" value="0.335" />
         <entry key="app/src/main/res/layout/ar_complete.xml" value="0.25" />
         <entry key="app/src/main/res/layout/ar_main.xml" value="0.1" />
@@ -125,6 +126,7 @@
         <entry key="app/src/main/res/layout/custom_tab.xml" value="0.22552083333333334" />
         <entry key="app/src/main/res/layout/exp_body.xml" value="0.15324214792299898" />
         <entry key="app/src/main/res/layout/exp_detail.xml" value="0.21920289855072464" />
+        <entry key="app/src/main/res/layout/exp_food.xml" value="0.19300911854103345" />
         <entry key="app/src/main/res/layout/exp_main.xml" value="0.25" />
         <entry key="app/src/main/res/layout/exp_wash.xml" value="0.16576086956521738" />
         <entry key="app/src/main/res/layout/home_loca_list.xml" value="0.1" />
