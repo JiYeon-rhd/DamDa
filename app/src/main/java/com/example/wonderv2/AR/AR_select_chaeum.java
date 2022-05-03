@@ -61,9 +61,10 @@ public class AR_select_chaeum extends AppCompatActivity implements View.OnClickL
         gram_chaeum_layout=findViewById(R.id.gram_chaeum_layout);
         spinner_chaeum_gram = (Spinner)findViewById(R.id.spinner_chaeum_gram);
 
+        //티 스피너
         spinner_chaeum_tea = (Spinner) findViewById(R.id.spinner_chaeum_tea_item);
         ArrayAdapter itemAdapter_chaeum_tea = ArrayAdapter.createFromResource(this,
-                R.array.spinner_chaeum_food_tea_list, android.R.layout.simple_spinner_dropdown_item);
+                R.array.spinner_tea, android.R.layout.simple_spinner_dropdown_item);
         spinner_chaeum_tea.setAdapter(itemAdapter_chaeum_tea);
         spinner_chaeum_tea.post(new Runnable() {
             @Override
@@ -82,10 +83,11 @@ public class AR_select_chaeum extends AppCompatActivity implements View.OnClickL
             }
         });
 
+        //커피 스피너
         spinner_chaeum_coffee_layout= (LinearLayout)findViewById(R.id.spinner_chaeum_coffee_layout);
         spinner_chaeum_coffee = (Spinner) findViewById(R.id.spinner_chaeum_coffee_item);
         ArrayAdapter itemAdapter_chaeum_coffee= ArrayAdapter.createFromResource(this,
-                R.array.spinner_chaeum_food_coffee_list, android.R.layout.simple_spinner_dropdown_item);
+                R.array.spinner_coffee, android.R.layout.simple_spinner_dropdown_item);
         spinner_chaeum_coffee.setAdapter(itemAdapter_chaeum_coffee);
         spinner_chaeum_coffee.post(new Runnable() {
             @Override
