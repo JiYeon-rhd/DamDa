@@ -135,6 +135,9 @@ public class Exp_camera extends AppCompatActivity {
                         // Write was successful!
                         Toast.makeText(Exp_camera.this, "저장을 완료했습니다.", Toast.LENGTH_SHORT).show();
                     }
+
+
+
                 })
                 .addOnFailureListener(new OnFailureListener() {
                     @Override
