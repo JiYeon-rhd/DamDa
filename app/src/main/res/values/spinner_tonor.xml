@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="spinner_tonor">
+        <item>선택하세요</item>
+        <item>어성초 토너</item>
+        <item>티오피라 아쿠아샷 토너</item>
+        <item>바이탈라이징 로즈마리 토너</item>
+    </string-array>
+</resources>

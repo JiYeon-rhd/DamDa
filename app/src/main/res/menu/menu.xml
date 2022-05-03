@@ -8,7 +8,7 @@
         app:cnb_backgroundColor="@color/navi_selected"
         app:cnb_textColor="#FFFFFF"
         app:cnb_iconColor="#FFFFFF"
-        android:title="홈">
+        android:title="   홈   ">
 
     </item>
 
@@ -19,7 +19,7 @@
         app:cnb_backgroundColor="@color/navi_selected"
         app:cnb_textColor="#FFFFFF"
         app:cnb_iconColor="#FFFFFF"
-        android:title="AR">
+        android:title="   AR   ">
 
     </item>
     <item
@@ -29,7 +29,7 @@
         app:cnb_backgroundColor="@color/navi_selected"
         app:cnb_textColor="#FFFFFF"
         app:cnb_iconColor="#FFFFFF"
-        android:title="기한">
+        android:title="  기한  ">
     </item>
 
 

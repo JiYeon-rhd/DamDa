@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="spinner_scent">
+        <item>선택하세요</item>
+        <item>에코띠끄 친환경 섬유유연제</item>
+        <item>인블리스 컨전셔스 섬유유연제</item>
+        <item>시트러스향 섬유유연제</item>
+    </string-array>
+</resources>

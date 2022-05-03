@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="spinner_tea">
+        <item>선택하세요</item>
+        <item>로즈마리</item>
+        <item>페퍼민트</item>
+        <item>카모마일</item>
+    </string-array>
+</resources>
