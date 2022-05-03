@@ -38,10 +38,19 @@ public class AR_select_chaeum extends AppCompatActivity implements View.OnClickL
 
     Button complete_btn_chaeum;
 
+    String bottle_name;
+    String shop_name;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.ar_select_chaeum);
+
+        //용기이름, 상점 이름 받아서 넘기기
+        Intent intent = getIntent();
+        bottle_name = intent.getStringExtra("용기이름");
+        shop_name = intent.getStringExtra("상점이름");
 
         //채움소
         chaeum_layout = (LinearLayout) findViewById(R.id.chaeum_layout);
@@ -136,6 +145,8 @@ public class AR_select_chaeum extends AppCompatActivity implements View.OnClickL
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(AR_select_chaeum.this, AR_complete.class);
+                intent.putExtra("상점이름", shop_name);
+                intent.putExtra("용기이름", bottle_name);
                 startActivity(intent);
             }
         });

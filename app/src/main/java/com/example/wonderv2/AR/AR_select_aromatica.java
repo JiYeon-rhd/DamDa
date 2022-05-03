@@ -46,11 +46,20 @@ public class AR_select_aromatica extends AppCompatActivity implements View.OnCli
 
     Button complete_btn_aro;
 
+    String bottle_name;
+    String shop_name;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.ar_select_aromatica);
+
+        //용기이름, 상점 이름 받아서 넘기기
+        Intent intent = getIntent();
+        bottle_name = intent.getStringExtra("용기이름");
+        shop_name = intent.getStringExtra("상점이름");
 
         aro_layout = findViewById(R.id.aro_layout);
 
@@ -205,6 +214,10 @@ public class AR_select_aromatica extends AppCompatActivity implements View.OnCli
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(AR_select_aromatica.this, AR_complete.class);
+
+                intent.putExtra("상점이름", shop_name);
+                intent.putExtra("용기이름", bottle_name);
+
                 startActivity(intent);
             }
         });

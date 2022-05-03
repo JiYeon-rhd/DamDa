@@ -37,10 +37,19 @@ public class AR_select_earth extends AppCompatActivity implements View.OnClickLi
 
     Button complete_btn_earth;
 
+    String bottle_name;
+    String shop_name;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.ar_select_earth);
+
+        //용기이름, 상점 이름 받아서 넘기기
+        Intent intent = getIntent();
+        bottle_name = intent.getStringExtra("용기이름");
+        shop_name = intent.getStringExtra("상점이름");
 
         //지구샵
         earth_layout = (LinearLayout)findViewById(R.id.earth_layout);
@@ -136,6 +145,8 @@ public class AR_select_earth extends AppCompatActivity implements View.OnClickLi
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(AR_select_earth.this, AR_complete.class);
+                intent.putExtra("상점이름", shop_name);
+                intent.putExtra("용기이름", bottle_name);
                 startActivity(intent);
             }
         });
