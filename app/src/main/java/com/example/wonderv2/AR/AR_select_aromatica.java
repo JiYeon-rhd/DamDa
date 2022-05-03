@@ -2,12 +2,16 @@ package com.example.wonderv2.AR;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.Spinner;
 
 import com.example.wonderv2.R;
 
@@ -25,6 +29,22 @@ public class AR_select_aromatica extends AppCompatActivity implements View.OnCli
     Button aro_body_conditioner;
     Button aro_face_tonor;
     Button aro_face_cream;
+
+    LinearLayout spinner_aro_shampoo_layout;
+    LinearLayout spinner_aro_conditioner_layout;
+    LinearLayout spinner_aro_tonor_layout;
+    LinearLayout spinner_aro_cream_layout;
+
+    Spinner spinner_aro_shampoo_item;
+    Spinner spinner_aro_conditioner_item;
+    Spinner spinner_aro_tonor_item;
+    Spinner spinner_aro_cream_item;
+
+
+    LinearLayout gram_aro_layout;
+    Spinner spinner_aro_gram;
+
+    Button complete_btn_aro;
 
 
     @Override
@@ -54,6 +74,145 @@ public class AR_select_aromatica extends AppCompatActivity implements View.OnCli
         aro_face_tonor.setOnClickListener(this);
         aro_face_cream = findViewById(R.id.aro_face_cream);
         aro_face_cream.setOnClickListener(this);
+
+
+        //스피너 레이아웃
+        spinner_aro_shampoo_layout = findViewById(R.id.spinner_aro_shampoo_layout);
+        spinner_aro_conditioner_layout = findViewById(R.id.spinner_aro_conditioner_layout);
+        spinner_aro_tonor_layout = findViewById(R.id.spinner_aro_tonor_layout);
+        spinner_aro_cream_layout = findViewById(R.id.spinner_aro_cream_layout);
+
+        gram_aro_layout=findViewById(R.id.gram_aro_layout);
+        spinner_aro_gram = (Spinner)findViewById(R.id.spinner_aro_gram);
+
+
+        //샴푸 스피너
+        spinner_aro_shampoo_item = (Spinner) findViewById(R.id.spinner_aro_shampoo_item);
+        ArrayAdapter itemAdapter_shampoo= ArrayAdapter.createFromResource(this,
+                R.array.spinner_shampoo, android.R.layout.simple_spinner_dropdown_item);
+        spinner_aro_shampoo_item.setAdapter(itemAdapter_shampoo);
+        spinner_aro_shampoo_item.setSelected(false);
+        spinner_aro_shampoo_item.post(new Runnable() {
+            @Override
+            public void run() {
+                spinner_aro_shampoo_item.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                    @Override
+                    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                        gram_aro_layout.setVisibility(View.VISIBLE);
+                    }
+
+                    @Override
+                    public void onNothingSelected(AdapterView<?> parent) {
+
+                    }
+                });
+            }
+        });
+        //컨디셔너 스피너
+        spinner_aro_conditioner_item = (Spinner) findViewById(R.id.spinner_aro_conditioner_item);
+        ArrayAdapter itemAdapter_conditioner= ArrayAdapter.createFromResource(this,
+                R.array.spinner_conditioner, android.R.layout.simple_spinner_dropdown_item);
+        spinner_aro_conditioner_item.setAdapter(itemAdapter_conditioner);
+        spinner_aro_conditioner_item.setSelected(false);
+        spinner_aro_conditioner_item.post(new Runnable() {
+            @Override
+            public void run() {
+                spinner_aro_conditioner_item.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                    @Override
+                    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                        gram_aro_layout.setVisibility(View.VISIBLE);
+                    }
+
+                    @Override
+                    public void onNothingSelected(AdapterView<?> parent) {
+
+                    }
+                });
+            }
+        });
+        //토너 스피너
+        spinner_aro_tonor_item = (Spinner) findViewById(R.id.spinner_aro_tonor_item);
+        ArrayAdapter itemAdapter_toner= ArrayAdapter.createFromResource(this,
+                R.array.spinner_tonor, android.R.layout.simple_spinner_dropdown_item);
+        spinner_aro_tonor_item.setAdapter(itemAdapter_toner);
+        spinner_aro_tonor_item.setSelected(false);
+        spinner_aro_tonor_item.post(new Runnable() {
+            @Override
+            public void run() {
+                spinner_aro_tonor_item.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                    @Override
+                    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                        gram_aro_layout.setVisibility(View.VISIBLE);
+                    }
+
+                    @Override
+                    public void onNothingSelected(AdapterView<?> parent) {
+
+                    }
+                });
+            }
+        });
+        //크림 스피너
+        spinner_aro_cream_item = (Spinner) findViewById(R.id.spinner_aro_cream_item);
+        ArrayAdapter itemAdapter_cream= ArrayAdapter.createFromResource(this,
+                R.array.spinner_cream, android.R.layout.simple_spinner_dropdown_item);
+        spinner_aro_cream_item.setAdapter(itemAdapter_cream);
+        spinner_aro_cream_item.setSelected(false);
+        spinner_aro_cream_item.post(new Runnable() {
+            @Override
+            public void run() {
+                spinner_aro_cream_item.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                    @Override
+                    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                        gram_aro_layout.setVisibility(View.VISIBLE);
+                    }
+
+                    @Override
+                    public void onNothingSelected(AdapterView<?> parent) {
+
+                    }
+                });
+            }
+        });
+
+        //완료버튼
+        complete_btn_aro =findViewById(R.id.item_select_complete_aro);
+
+        //그램 스피너
+        spinner_aro_gram = (Spinner) findViewById(R.id.spinner_aro_gram);
+        ArrayAdapter itemAdapter_gram= ArrayAdapter.createFromResource(this,
+                R.array.spinner_g_list, android.R.layout.simple_spinner_dropdown_item);
+        spinner_aro_gram.setAdapter(itemAdapter_gram);
+        spinner_aro_gram.setSelected(false);
+        spinner_aro_gram.post(new Runnable() {
+            @Override
+            public void run() {
+                spinner_aro_gram.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                    @Override
+                    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                        complete_btn_aro.setVisibility(View.VISIBLE);
+                    }
+
+                    @Override
+                    public void onNothingSelected(AdapterView<?> parent) {
+
+                    }
+                });
+            }
+        });
+
+        complete_btn_aro.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(AR_select_aromatica.this, AR_complete.class);
+                startActivity(intent);
+            }
+        });
+
+
+
+
+
     }
 
     @Override
@@ -68,6 +227,13 @@ public class AR_select_aromatica extends AppCompatActivity implements View.OnCli
 
                 aro_body.setTextColor(Color.parseColor("#EB6446"));
                 aro_face.setTextColor(Color.parseColor("#505050"));
+
+                spinner_aro_tonor_layout.setVisibility(View.INVISIBLE);
+                spinner_aro_cream_layout.setVisibility(View.INVISIBLE);
+                spinner_aro_shampoo_layout.setVisibility(View.INVISIBLE);
+                spinner_aro_conditioner_layout.setVisibility(View.INVISIBLE);
+                gram_aro_layout.setVisibility(View.INVISIBLE);
+                complete_btn_aro.setVisibility(View.INVISIBLE);
                 break;
 
             case R.id.aro_face:
@@ -79,6 +245,13 @@ public class AR_select_aromatica extends AppCompatActivity implements View.OnCli
 
                 aro_body.setTextColor(Color.parseColor("#505050"));
                 aro_face.setTextColor(Color.parseColor("#EB6446"));
+
+                spinner_aro_tonor_layout.setVisibility(View.INVISIBLE);
+                spinner_aro_cream_layout.setVisibility(View.INVISIBLE);
+                spinner_aro_shampoo_layout.setVisibility(View.INVISIBLE);
+                spinner_aro_conditioner_layout.setVisibility(View.INVISIBLE);
+                gram_aro_layout.setVisibility(View.INVISIBLE);
+                complete_btn_aro.setVisibility(View.INVISIBLE);
                 break;
         }
 
@@ -86,23 +259,64 @@ public class AR_select_aromatica extends AppCompatActivity implements View.OnCli
             case R.id.aro_body_shampoo:
                 aro_body_shampoo.setTextColor(Color.parseColor("#EB6446"));
                 aro_body_conditioner.setTextColor(Color.parseColor("#505050"));
+                aro_face_tonor.setTextColor(Color.parseColor("#505050"));
+                aro_face_cream.setTextColor(Color.parseColor("#505050"));
+
+                spinner_aro_tonor_layout.setVisibility(View.INVISIBLE);
+                spinner_aro_cream_layout.setVisibility(View.INVISIBLE);
+                spinner_aro_shampoo_layout.setVisibility(View.VISIBLE);
+                spinner_aro_conditioner_layout.setVisibility(View.INVISIBLE);
+
+                gram_aro_layout.setVisibility(View.INVISIBLE);
+                complete_btn_aro.setVisibility(View.INVISIBLE);
 
                 break;
 
             case R.id.aro_body_conditioner:
                 aro_body_shampoo.setTextColor(Color.parseColor("#505050"));
                 aro_body_conditioner.setTextColor(Color.parseColor("#EB6446"));
+                aro_face_tonor.setTextColor(Color.parseColor("#505050"));
+                aro_face_cream.setTextColor(Color.parseColor("#505050"));
+
+                spinner_aro_tonor_layout.setVisibility(View.INVISIBLE);
+                spinner_aro_cream_layout.setVisibility(View.INVISIBLE);
+                spinner_aro_shampoo_layout.setVisibility(View.INVISIBLE);
+                spinner_aro_conditioner_layout.setVisibility(View.VISIBLE);
+
+                gram_aro_layout.setVisibility(View.INVISIBLE);
+                complete_btn_aro.setVisibility(View.INVISIBLE);
 
                 break;
 
             case R.id.aro_face_tonor:
                 aro_face_tonor.setTextColor(Color.parseColor("#EB6446"));
                 aro_face_cream.setTextColor(Color.parseColor("#505050"));
+                aro_body_shampoo.setTextColor(Color.parseColor("#505050"));
+                aro_body_conditioner.setTextColor(Color.parseColor("#505050"));
+
+                spinner_aro_tonor_layout.setVisibility(View.VISIBLE);
+                spinner_aro_cream_layout.setVisibility(View.INVISIBLE);
+                spinner_aro_shampoo_layout.setVisibility(View.INVISIBLE);
+                spinner_aro_conditioner_layout.setVisibility(View.INVISIBLE);
+
+                gram_aro_layout.setVisibility(View.INVISIBLE);
+                complete_btn_aro.setVisibility(View.INVISIBLE);
                 break;
 
             case R.id.aro_face_cream:
                 aro_face_tonor.setTextColor(Color.parseColor("#505050"));
                 aro_face_cream.setTextColor(Color.parseColor("#EB6446"));
+                aro_body_shampoo.setTextColor(Color.parseColor("#505050"));
+                aro_body_conditioner.setTextColor(Color.parseColor("#505050"));
+
+
+                spinner_aro_tonor_layout.setVisibility(View.INVISIBLE);
+                spinner_aro_cream_layout.setVisibility(View.VISIBLE);
+                spinner_aro_shampoo_layout.setVisibility(View.INVISIBLE);
+                spinner_aro_conditioner_layout.setVisibility(View.INVISIBLE);
+
+                gram_aro_layout.setVisibility(View.INVISIBLE);
+                complete_btn_aro.setVisibility(View.INVISIBLE);
 
                 break;
 

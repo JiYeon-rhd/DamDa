@@ -282,7 +282,7 @@
         <!--샴푸 스피너 -->
         <LinearLayout
             android:visibility="invisible"
-            android:id="@+id/spinner_shampoo_layout"
+            android:id="@+id/spinner_aro_shampoo_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="40dp"
@@ -300,7 +300,7 @@
             </TextView>
             <Spinner
                 android:background="@drawable/ar_btn_detection3"
-                android:id="@+id/spinner_shampoo_item"
+                android:id="@+id/spinner_aro_shampoo_item"
                 android:layout_width="300dp"
                 android:layout_height="30dp"
                 android:gravity="center"
@@ -312,7 +312,7 @@
         <!--컨디셔너 스피너 -->
         <LinearLayout
             android:visibility="invisible"
-            android:id="@+id/spinner_conditioner_layout"
+            android:id="@+id/spinner_aro_conditioner_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="40dp"
@@ -330,7 +330,7 @@
             </TextView>
             <Spinner
                 android:background="@drawable/ar_btn_detection3"
-                android:id="@+id/spinner_conditioner_item"
+                android:id="@+id/spinner_aro_conditioner_item"
                 android:layout_width="300dp"
                 android:layout_height="30dp"
                 android:gravity="center"
@@ -342,7 +342,7 @@
         <!--토너 스피너 -->
         <LinearLayout
             android:visibility="invisible"
-            android:id="@+id/spinner_tonor_layout"
+            android:id="@+id/spinner_aro_tonor_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="40dp"
@@ -360,7 +360,7 @@
             </TextView>
             <Spinner
                 android:background="@drawable/ar_btn_detection3"
-                android:id="@+id/spinner_tonor_item"
+                android:id="@+id/spinner_aro_tonor_item"
                 android:layout_width="300dp"
                 android:layout_height="30dp"
                 android:gravity="center"
@@ -372,7 +372,7 @@
         <!--크림 스피너 -->
         <LinearLayout
             android:visibility="invisible"
-            android:id="@+id/spinner_cream_layout"
+            android:id="@+id/spinner_aro_cream_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="40dp"
@@ -390,7 +390,7 @@
             </TextView>
             <Spinner
                 android:background="@drawable/ar_btn_detection3"
-                android:id="@+id/spinner_cream_item"
+                android:id="@+id/spinner_aro_cream_item"
                 android:layout_width="300dp"
                 android:layout_height="30dp"
                 android:gravity="center"
@@ -400,5 +400,64 @@
             </Spinner>
         </LinearLayout>
     </FrameLayout>
+
+
+    <!--그램-->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/gram_aro_layout"
+            android:visibility="invisible"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:gravity="center"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:textSize="15dp"
+                android:fontFamily="@font/notosansregular"
+                android:layout_gravity="center"
+                android:textColor="#000000"
+                android:text="담고싶은 g수를 입력해주세요">
+
+            </TextView>
+            <Spinner
+                android:background="@drawable/ar_btn_detection3"
+                android:layout_marginTop="15dp"
+                android:id="@+id/spinner_aro_gram"
+                android:layout_width="300dp"
+                android:layout_height="30dp"
+                android:gravity="center"
+                android:layout_weight="1">
+            </Spinner>
+
+        </LinearLayout>
+    </FrameLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:gravity="center">
+        <Button
+            android:id="@+id/item_select_complete_aro"
+            android:visibility="invisible"
+            android:layout_width="140dp"
+            android:layout_height="41dp"
+            android:fontFamily="@font/notosansregular"
+            android:background="@drawable/ar_btn_detection"
+            android:text="확인"
+            android:textColor="#000000"
+            >
+        </Button>
+    </LinearLayout>
+
+
 
 </LinearLayout>
