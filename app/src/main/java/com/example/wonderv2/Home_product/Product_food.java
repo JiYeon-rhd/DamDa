@@ -13,6 +13,8 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 
 import com.example.wonderv2.Home.Home_shop_almaeng_detail;
+import com.example.wonderv2.Home.Home_shop_aromatica_detail;
+import com.example.wonderv2.Home.Home_shop_chaeum_detail;
 import com.example.wonderv2.MainActivity;
 import com.example.wonderv2.R;
 
@@ -32,6 +34,10 @@ public class Product_food extends Fragment {
     Button shop1_datail2;
     Button shop1_datail3;
     Button shop1_datail4;
+    Button shop4_detail1;
+    Button shop4_detail2;
+    Button shop4_detail3;
+    Button shop4_detail4;
 
     LinearLayout product_tea;
     LinearLayout product_coffee;
@@ -193,6 +199,54 @@ public class Product_food extends Fragment {
                 Intent intent= new Intent(
                         getActivity(),
                         Home_shop_almaeng_detail.class
+                );
+
+                startActivity(intent);
+            }
+        });
+        shop4_detail1=(Button) v.findViewById(R.id.shop4_datail1);
+        shop4_detail1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent= new Intent(
+                        getActivity(),
+                        Home_shop_chaeum_detail.class
+                );
+
+                startActivity(intent);
+            }
+        });
+        shop4_detail2=(Button) v.findViewById(R.id.shop4_detail2);
+        shop4_detail2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent= new Intent(
+                        getActivity(),
+                        Home_shop_chaeum_detail.class
+                );
+
+                startActivity(intent);
+            }
+        });
+        shop4_detail3=(Button) v.findViewById(R.id.shop4_detail3);
+        shop4_detail3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent= new Intent(
+                        getActivity(),
+                        Home_shop_chaeum_detail.class
+                );
+
+                startActivity(intent);
+            }
+        });
+        shop4_detail4=(Button) v.findViewById(R.id.shop4_detail4);
+        shop4_detail4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent= new Intent(
+                        getActivity(),
+                        Home_shop_chaeum_detail.class
                 );
 
                 startActivity(intent);

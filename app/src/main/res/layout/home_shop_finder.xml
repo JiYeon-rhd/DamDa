@@ -18,7 +18,7 @@
             android:gravity="center"
             android:paddingLeft="30dp"
             android:paddingRight="30dp"
-            android:background="@drawable/home_loca_bg">
+            android:background="@drawable/exp_top_bg">
             <ImageButton
                 android:id="@+id/back_btn"
                 android:layout_width="18dp"
@@ -78,7 +78,7 @@
                     android:layout_height="395dp"
                     android:layout_gravity="bottom"
                     android:elevation="1dp"
-                    android:background="@drawable/home_shops_none">
+                    android:background="@drawable/home_shops_selected">
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -102,6 +102,7 @@
                             android:textColor="#000000"
                             android:fontFamily="@font/notosansregular"/>
                         <Button
+                            android:id="@+id/earth_btn"
                             android:layout_width="95dp"
                             android:layout_height="55dp"
                             android:elevation="1dp"
@@ -154,7 +155,7 @@
                             android:textColor="#000000"
                             android:fontFamily="@font/notosansregular"/>
                         <Button
-                            android:id="@+id/shop_detail_btn1"
+                            android:id="@+id/almaeng_btn"
                             android:layout_width="95dp"
                             android:layout_height="55dp"
                             android:elevation="1dp"
@@ -183,7 +184,7 @@
                     android:layout_height="395dp"
                     android:layout_gravity="bottom"
                     android:elevation="1dp"
-                    android:background="@drawable/home_shops_none">
+                    android:background="@drawable/home_shops_selected">
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -207,6 +208,7 @@
                             android:textColor="#000000"
                             android:fontFamily="@font/notosansregular"/>
                         <Button
+                            android:id="@+id/aromatica_btn"
                             android:layout_width="95dp"
                             android:layout_height="55dp"
                             android:elevation="1dp"
@@ -235,7 +237,7 @@
                     android:layout_height="395dp"
                     android:layout_gravity="bottom"
                     android:elevation="1dp"
-                    android:background="@drawable/home_shops_none">
+                    android:background="@drawable/home_shops_selected">
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -259,6 +261,7 @@
                             android:textColor="#000000"
                             android:fontFamily="@font/notosansregular"/>
                         <Button
+                            android:id="@+id/chaeum_btn"
                             android:layout_width="95dp"
                             android:layout_height="55dp"
                             android:elevation="1dp"

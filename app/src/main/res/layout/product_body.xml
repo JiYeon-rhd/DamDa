@@ -174,7 +174,8 @@
                             android:fontFamily="@font/notosansregular"
                             android:text="바로가기  >"
                             android:textColor="#000000"
-                            android:textSize="15dp"/>
+                            android:gravity="center|right"
+                            android:textSize="12dp"/>
                     </LinearLayout>
 
                     <LinearLayout
@@ -246,7 +247,8 @@
                             android:fontFamily="@font/notosansregular"
                             android:text="바로가기  >"
                             android:textColor="#000000"
-                            android:textSize="15dp"></Button>
+                            android:gravity="center|right"
+                            android:textSize="12dp"></Button>
 
                     </LinearLayout>
 
@@ -443,7 +445,8 @@
                             android:fontFamily="@font/notosansregular"
                             android:text="바로가기  >"
                             android:textColor="#000000"
-                            android:textSize="15dp"/>
+                            android:gravity="center|right"
+                            android:textSize="12dp"/>
                     </LinearLayout>
 
                     <LinearLayout
@@ -515,7 +518,8 @@
                             android:fontFamily="@font/notosansregular"
                             android:text="바로가기  >"
                             android:textColor="#000000"
-                            android:textSize="15dp"
+                            android:gravity="center|right"
+                            android:textSize="12dp"
                             tools:ignore="DuplicateIds"/>
                     </LinearLayout>
 
@@ -620,7 +624,8 @@
                             android:fontFamily="@font/notosansregular"
                             android:text="바로가기  >"
                             android:textColor="#000000"
-                            android:textSize="15dp"/>
+                            android:gravity="center|right"
+                            android:textSize="12dp"/>
                     </LinearLayout>
 
                     <LinearLayout
@@ -699,7 +704,8 @@
                             android:fontFamily="@font/notosansregular"
                             android:text="바로가기  >"
                             android:textColor="#000000"
-                            android:textSize="15dp"
+                            android:gravity="center|right"
+                            android:textSize="12dp"
                             tools:ignore="DuplicateIds"/>
                     </LinearLayout>
 
@@ -804,7 +810,8 @@
                             android:fontFamily="@font/notosansregular"
                             android:text="바로가기  >"
                             android:textColor="#000000"
-                            android:textSize="15dp"/>
+                            android:gravity="center|right"
+                            android:textSize="12dp"/>
                     </LinearLayout>
 
                     <LinearLayout
@@ -897,7 +904,8 @@
                             android:fontFamily="@font/notosansregular"
                             android:text="바로가기  >"
                             android:textColor="#000000"
-                            android:textSize="15dp"
+                            android:gravity="center|right"
+                            android:textSize="12dp"
                             tools:ignore="DuplicateIds"/>
                     </LinearLayout>
 
@@ -980,8 +988,9 @@
                             android:background="@drawable/product_detail"
                             android:fontFamily="@font/notosansregular"
                             android:text="바로가기  >"
+                            android:gravity="center|right"
                             android:textColor="#000000"
-                            android:textSize="15dp"/>
+                            android:textSize="12dp"/>
                     </LinearLayout>
 
                     <LinearLayout
