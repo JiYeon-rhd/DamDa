@@ -139,7 +139,7 @@
                     android:id="@+id/scan_bottle_image"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src= "@drawable/aro_s"
+                    android:src= "@drawable/almaeng_large"
                     android:layout_gravity="center">
                 </ImageView>
             </LinearLayout>

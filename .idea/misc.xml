@@ -70,8 +70,11 @@
         <entry key="..\:/WonderV2/app/src/main/res/drawable/tab_unseleted_bg.xml" value="0.36205128205128206" />
         <entry key="..\:/WonderV2/app/src/main/res/drawable/text_selector.xml" value="0.378125" />
         <entry key="..\:/WonderV2/app/src/main/res/layout/activity_main.xml" value="0.17097264437689969" />
+        <entry key="..\:/WonderV2/app/src/main/res/layout/ar_camera.xml" value="0.16576086956521738" />
+        <entry key="..\:/WonderV2/app/src/main/res/layout/ar_complete.xml" value="0.2549246813441483" />
         <entry key="..\:/WonderV2/app/src/main/res/layout/ar_main.xml" value="0.11955420466058764" />
         <entry key="..\:/WonderV2/app/src/main/res/layout/ar_select_item.xml" value="0.33" />
+        <entry key="..\:/WonderV2/app/src/main/res/layout/ar_splash_scan.xml" value="0.16576086956521738" />
         <entry key="..\:/WonderV2/app/src/main/res/layout/custom_tab.xml" value="0.17097264437689969" />
         <entry key="..\:/WonderV2/app/src/main/res/layout/exp_body.xml" value="0.17401215805471124" />
         <entry key="..\:/WonderV2/app/src/main/res/layout/exp_detail.xml" value="0.20208333333333334" />
