@@ -1,6 +1,7 @@
 package com.example.wonderv2.Home;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -9,10 +10,13 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.LinearLayout;
 
 import com.example.wonderv2.MainActivity;
 import com.example.wonderv2.R;
+import com.example.wonderv2.Setting.Setting_alarm;
+import com.example.wonderv2.Setting.Setting_main;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -120,6 +124,32 @@ public class Home_main extends Fragment {
             @Override
             public void onClick(View v) {
                 activity.setFrag(2);
+            }
+        });
+
+        ImageButton alarm_btn=v.findViewById(R.id.alarm_btn);
+        alarm_btn.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+                Intent intent= new Intent(
+                        getActivity(),
+                        Setting_alarm.class
+                );
+
+                startActivity(intent);
+            }
+        });
+
+        ImageButton setting_btn=v.findViewById(R.id.setting_btn);
+        setting_btn.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+                Intent intent= new Intent(
+                        getActivity(),
+                        Setting_main.class
+                );
+
+                startActivity(intent);
             }
         });
 

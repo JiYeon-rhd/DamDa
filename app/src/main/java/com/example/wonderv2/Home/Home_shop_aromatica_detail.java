@@ -5,6 +5,8 @@ import androidx.viewpager.widget.ViewPager;
 
 import android.content.Context;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageButton;
 
 import com.example.wonderv2.R;
 import com.google.android.material.tabs.TabLayout;
@@ -46,6 +48,14 @@ public class Home_shop_aromatica_detail extends AppCompatActivity {
             @Override
             public void onTabReselected(TabLayout.Tab tab) {
 
+            }
+        });
+
+        ImageButton close_btn=findViewById(R.id.close_btn);
+        close_btn.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+                finish();
             }
         });
     }

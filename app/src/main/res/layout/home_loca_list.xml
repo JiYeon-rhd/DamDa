@@ -38,6 +38,7 @@
             android:layout_height="0dp"
             android:layout_weight="1"/>
         <ImageButton
+            android:id="@+id/alarm_btn"
             android:layout_width="22dp"
             android:layout_height="22.5dp"
             android:background="@drawable/home_icon_alarm">
@@ -62,6 +63,7 @@
             android:fontFamily="@font/notosansbold"/>
 
         <LinearLayout
+            android:id="@+id/earth"
             android:layout_width="match_parent"
             android:layout_height="75dp"
             android:layout_marginTop="25dp"
@@ -130,6 +132,7 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/aromatica"
             android:layout_width="match_parent"
             android:layout_height="75dp"
             android:layout_marginTop="20dp"
@@ -198,7 +201,7 @@
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/shop_listbtn1"
+            android:id="@+id/almaeng"
             android:layout_width="match_parent"
             android:layout_height="75dp"
             android:layout_marginTop="20dp"
@@ -267,6 +270,7 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/chaeum"
             android:layout_width="match_parent"
             android:layout_height="75dp"
             android:layout_marginTop="20dp"

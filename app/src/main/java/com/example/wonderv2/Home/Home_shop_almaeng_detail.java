@@ -4,12 +4,19 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageButton;
 
+import com.example.wonderv2.MainActivity;
 import com.example.wonderv2.R;
+import com.example.wonderv2.Setting.Setting_alarm;
 import com.google.android.material.tabs.TabLayout;
 
 public class Home_shop_almaeng_detail extends AppCompatActivity {
+    MainActivity activity;
+
     private Context mContext;
     private TabLayout mTabLayout;
     private ViewPager mViewPager;
@@ -46,6 +53,14 @@ public class Home_shop_almaeng_detail extends AppCompatActivity {
             @Override
             public void onTabReselected(TabLayout.Tab tab) {
 
+            }
+        });
+
+        ImageButton close_btn=findViewById(R.id.close_btn);
+        close_btn.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+                finish();
             }
         });
     }

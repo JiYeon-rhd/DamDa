@@ -14,6 +14,7 @@ import android.widget.ImageButton;
 
 import com.example.wonderv2.MainActivity;
 import com.example.wonderv2.R;
+import com.example.wonderv2.Setting.Setting_alarm;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -136,6 +137,19 @@ public class Home_shop_finder extends Fragment {
                 startActivity(intent);
             }
         });
+        ImageButton alarm_btn=v.findViewById(R.id.alarm_btn);
+        alarm_btn.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+                Intent intent= new Intent(
+                        getActivity(),
+                        Setting_alarm.class
+                );
+
+                startActivity(intent);
+            }
+        });
+
 
         return v;
 

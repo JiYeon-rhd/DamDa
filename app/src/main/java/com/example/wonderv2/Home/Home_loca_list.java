@@ -15,6 +15,7 @@ import android.widget.LinearLayout;
 
 import com.example.wonderv2.MainActivity;
 import com.example.wonderv2.R;
+import com.example.wonderv2.Setting.Setting_alarm;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -100,13 +101,62 @@ public class Home_loca_list extends Fragment {
             }
         });
 
-        LinearLayout shop_detail1 = v.findViewById(R.id.shop_listbtn1);
-        shop_detail1.setOnClickListener(new View.OnClickListener() {
+        LinearLayout almaeng = v.findViewById(R.id.almaeng);
+        almaeng.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent= new Intent(
                         getActivity(),
                         Home_shop_almaeng_detail.class
+                );
+
+                startActivity(intent);
+            }
+        });
+        LinearLayout earth = v.findViewById(R.id.earth);
+        earth.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent= new Intent(
+                        getActivity(),
+                        Home_shop_earth_detail.class
+                );
+
+                startActivity(intent);
+            }
+        });
+        LinearLayout aromatica = v.findViewById(R.id.aromatica);
+        aromatica.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent= new Intent(
+                        getActivity(),
+                        Home_shop_aromatica_detail.class
+                );
+
+                startActivity(intent);
+            }
+        });
+        LinearLayout chaeum = v.findViewById(R.id.chaeum);
+        chaeum.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent= new Intent(
+                        getActivity(),
+                        Home_shop_chaeum_detail.class
+                );
+
+                startActivity(intent);
+            }
+        });
+
+        ImageButton alarm_btn=v.findViewById(R.id.alarm_btn);
+        alarm_btn.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+                Intent intent= new Intent(
+                        getActivity(),
+                        Setting_alarm.class
                 );
 
                 startActivity(intent);

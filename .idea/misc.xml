@@ -97,11 +97,24 @@
         <entry key="..\:/WonderV2/app/src/main/res/layout/home_shop_almaeng_detail.xml" value="0.20969202898550723" />
         <entry key="..\:/WonderV2/app/src/main/res/layout/home_shop_almaeng_face.xml" value="0.20969202898550723" />
         <entry key="..\:/WonderV2/app/src/main/res/layout/home_shop_almaeng_food.xml" value="0.20969202898550723" />
+        <entry key="..\:/WonderV2/app/src/main/res/layout/home_shop_almaeng_wash.xml" value="0.29393115942028986" />
+        <entry key="..\:/WonderV2/app/src/main/res/layout/home_shop_aromatica_body.xml" value="0.17097264437689969" />
         <entry key="..\:/WonderV2/app/src/main/res/layout/home_shop_aromatica_detail.xml" value="0.20969202898550723" />
+        <entry key="..\:/WonderV2/app/src/main/res/layout/home_shop_aromatica_face.xml" value="0.29393115942028986" />
+        <entry key="..\:/WonderV2/app/src/main/res/layout/home_shop_aromatica_food.xml" value="0.29393115942028986" />
+        <entry key="..\:/WonderV2/app/src/main/res/layout/home_shop_aromatica_wash.xml" value="0.29393115942028986" />
         <entry key="..\:/WonderV2/app/src/main/res/layout/home_shop_body.xml" value="0.24947916666666667" />
+        <entry key="..\:/WonderV2/app/src/main/res/layout/home_shop_chaeum_body.xml" value="0.29393115942028986" />
         <entry key="..\:/WonderV2/app/src/main/res/layout/home_shop_chaeum_detail.xml" value="0.20969202898550723" />
+        <entry key="..\:/WonderV2/app/src/main/res/layout/home_shop_chaeum_face.xml" value="0.17097264437689969" />
+        <entry key="..\:/WonderV2/app/src/main/res/layout/home_shop_chaeum_food.xml" value="0.17097264437689969" />
+        <entry key="..\:/WonderV2/app/src/main/res/layout/home_shop_chaeum_wash.xml" value="0.17097264437689969" />
         <entry key="..\:/WonderV2/app/src/main/res/layout/home_shop_detail.xml" value="0.1793478260869565" />
+        <entry key="..\:/WonderV2/app/src/main/res/layout/home_shop_earth_body.xml" value="0.29393115942028986" />
         <entry key="..\:/WonderV2/app/src/main/res/layout/home_shop_earth_detail.xml" value="0.20969202898550723" />
+        <entry key="..\:/WonderV2/app/src/main/res/layout/home_shop_earth_face.xml" value="0.17097264437689969" />
+        <entry key="..\:/WonderV2/app/src/main/res/layout/home_shop_earth_food.xml" value="0.17097264437689969" />
+        <entry key="..\:/WonderV2/app/src/main/res/layout/home_shop_earth_wash.xml" value="0.33" />
         <entry key="..\:/WonderV2/app/src/main/res/layout/home_shop_face.xml" value="0.5" />
         <entry key="..\:/WonderV2/app/src/main/res/layout/home_shop_finder.xml" value="0.20833333333333334" />
         <entry key="..\:/WonderV2/app/src/main/res/layout/home_shop_food.xml" value="0.2651006711409396" />
@@ -110,6 +123,9 @@
         <entry key="..\:/WonderV2/app/src/main/res/layout/product_face.xml" value="0.33" />
         <entry key="..\:/WonderV2/app/src/main/res/layout/product_food.xml" value="0.33" />
         <entry key="..\:/WonderV2/app/src/main/res/layout/product_wash.xml" value="0.3619791666666667" />
+        <entry key="..\:/WonderV2/app/src/main/res/layout/productlist_item.xml" value="0.276268115942029" />
+        <entry key="..\:/WonderV2/app/src/main/res/layout/setting_alarm.xml" value="0.5" />
+        <entry key="..\:/WonderV2/app/src/main/res/layout/setting_main.xml" value="0.33" />
         <entry key="..\:/WonderV2/app/src/main/res/layout/sign_in.xml" value="0.2694746376811594" />
         <entry key="..\:/WonderV2/app/src/main/res/layout/sign_up.xml" value="0.2694746376811594" />
         <entry key="..\:/WonderV2/app/src/main/res/menu/menu.xml" value="0.17222222222222222" />
@@ -148,13 +164,8 @@
         <entry key="app/src/main/res/layout/home_loca_map.xml" value="0.1" />
         <entry key="app/src/main/res/layout/home_main.xml" value="0.335" />
         <entry key="app/src/main/res/layout/home_product.xml" value="0.1" />
-        <entry key="app/src/main/res/layout/home_shop_almaeng_body.xml" value="0.16894630192502533" />
-        <entry key="app/src/main/res/layout/home_shop_almaeng_face.xml" value="0.3692708333333333" />
         <entry key="app/src/main/res/layout/home_shop_body.xml" value="0.3179347826086957" />
-        <entry key="app/src/main/res/layout/home_shop_chaeum_face.xml" value="0.3692708333333333" />
-        <entry key="app/src/main/res/layout/home_shop_chaeum_wash.xml" value="0.3692708333333333" />
         <entry key="app/src/main/res/layout/home_shop_detail.xml" value="0.21920289855072464" />
-        <entry key="app/src/main/res/layout/home_shop_earth_face.xml" value="0.3692708333333333" />
         <entry key="app/src/main/res/layout/home_shop_finder.xml" value="0.1" />
         <entry key="app/src/main/res/layout/product_body.xml" value="0.335" />
         <entry key="app/src/main/res/layout/product_face.xml" value="0.1" />

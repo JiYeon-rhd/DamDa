@@ -1,6 +1,7 @@
 package com.example.wonderv2.Home;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -14,6 +15,7 @@ import android.widget.ImageButton;
 
 import com.example.wonderv2.MainActivity;
 import com.example.wonderv2.R;
+import com.example.wonderv2.Setting.Setting_alarm;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapView;
@@ -108,6 +110,18 @@ public class Home_loca_map extends Fragment implements OnMapReadyCallback{
             }
         });
 
+        ImageButton alarm_btn=v.findViewById(R.id.alarm_btn);
+        alarm_btn.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+                Intent intent= new Intent(
+                        getActivity(),
+                        Setting_alarm.class
+                );
+
+                startActivity(intent);
+            }
+        });
 
         //지도 구현
         mapView = (MapView)v.findViewById(R.id.map);
