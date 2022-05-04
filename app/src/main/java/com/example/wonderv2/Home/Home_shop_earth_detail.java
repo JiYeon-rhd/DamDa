@@ -13,7 +13,7 @@ public class Home_shop_earth_detail extends AppCompatActivity {
     private Context mContext;
     private TabLayout mTabLayout;
     private ViewPager mViewPager;
-    private Home_PagerAdapter mPageAdapter;
+    private Home_earth_PagerAdapter mPageAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,7 +28,7 @@ public class Home_shop_earth_detail extends AppCompatActivity {
         mTabLayout.addTab(mTabLayout.newTab().setText("페이스"));
 
         mViewPager = (ViewPager) findViewById(R.id.viewPager);
-        mPageAdapter = new Home_PagerAdapter(getSupportFragmentManager(),mTabLayout.getTabCount());
+        mPageAdapter = new Home_earth_PagerAdapter(getSupportFragmentManager(),mTabLayout.getTabCount());
         mViewPager.setAdapter(mPageAdapter);
 
         mViewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(mTabLayout));
