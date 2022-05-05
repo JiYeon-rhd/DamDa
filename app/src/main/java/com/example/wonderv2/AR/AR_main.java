@@ -9,9 +9,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageButton;
 
 import com.example.wonderv2.MainActivity;
 import com.example.wonderv2.R;
+import com.example.wonderv2.Setting.Setting_alarm;
+import com.example.wonderv2.Setting.Setting_main;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -83,7 +86,30 @@ public class AR_main extends Fragment {
 
         });
 
+        ImageButton alarm_btn=v.findViewById(R.id.alarm_btn);
+        alarm_btn.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+                Intent intent= new Intent(
+                        getActivity(),
+                        Setting_alarm.class
+                );
 
+                startActivity(intent);
+            }
+        });
+        ImageButton setting_btn=v.findViewById(R.id.setting_btn);
+        setting_btn.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+                Intent intent= new Intent(
+                        getActivity(),
+                        Setting_main.class
+                );
+
+                startActivity(intent);
+            }
+        });
 
         return v;
     }

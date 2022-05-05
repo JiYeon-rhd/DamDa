@@ -13,6 +13,7 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 
 import com.example.wonderv2.Home.Home_shop_almaeng_detail;
+import com.example.wonderv2.Home.Home_shop_earth_detail;
 import com.example.wonderv2.MainActivity;
 import com.example.wonderv2.R;
 
@@ -30,6 +31,9 @@ public class Product_wash extends Fragment {
     Button shop1_detail1;
     Button shop1_detail2;
     Button shop1_datail3;
+    Button shop2_detail1;
+    Button shop2_detail2;
+    Button shop2_detail3;
 
     LinearLayout product_detergent;
     LinearLayout product_softer;
@@ -155,6 +159,42 @@ public class Product_wash extends Fragment {
                 Intent intent= new Intent(
                         getActivity(),
                         Home_shop_almaeng_detail.class
+                );
+
+                startActivity(intent);
+            }
+        });
+        shop2_detail1=(Button) v.findViewById(R.id.shop2_datail1);
+        shop2_detail1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent= new Intent(
+                        getActivity(),
+                        Home_shop_earth_detail.class
+                );
+
+                startActivity(intent);
+            }
+        });
+        shop2_detail2=(Button) v.findViewById(R.id.shop2_datail2);
+        shop2_detail2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent= new Intent(
+                        getActivity(),
+                        Home_shop_earth_detail.class
+                );
+
+                startActivity(intent);
+            }
+        });
+        shop2_detail3=(Button) v.findViewById(R.id.shop2_datail3);
+        shop2_detail3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent= new Intent(
+                        getActivity(),
+                        Home_shop_earth_detail.class
                 );
 
                 startActivity(intent);

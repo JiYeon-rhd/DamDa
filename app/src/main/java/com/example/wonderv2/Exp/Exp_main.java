@@ -11,11 +11,14 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageButton;
 
 import com.example.wonderv2.AR.AR_select_item;
 import com.example.wonderv2.Home_product.Product_PagerAdapter;
 import com.example.wonderv2.MainActivity;
 import com.example.wonderv2.R;
+import com.example.wonderv2.Setting.Setting_alarm;
+import com.example.wonderv2.Setting.Setting_main;
 import com.google.android.material.tabs.TabLayout;
 
 /**
@@ -118,6 +121,31 @@ public class Exp_main extends Fragment {
                 Intent intent = new Intent(
                         getActivity(),
                         Exp_camera.class
+                );
+
+                startActivity(intent);
+            }
+        });
+
+        ImageButton alarm_btn=v.findViewById(R.id.alarm_btn);
+        alarm_btn.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+                Intent intent= new Intent(
+                        getActivity(),
+                        Setting_alarm.class
+                );
+
+                startActivity(intent);
+            }
+        });
+        ImageButton setting_btn=v.findViewById(R.id.setting_btn);
+        setting_btn.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+                Intent intent= new Intent(
+                        getActivity(),
+                        Setting_main.class
                 );
 
                 startActivity(intent);

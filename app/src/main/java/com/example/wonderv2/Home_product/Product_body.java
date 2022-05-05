@@ -13,6 +13,7 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 
 import com.example.wonderv2.Home.Home_shop_almaeng_detail;
+import com.example.wonderv2.Home.Home_shop_aromatica_detail;
 import com.example.wonderv2.MainActivity;
 import com.example.wonderv2.R;
 
@@ -35,6 +36,11 @@ public class Product_body extends Fragment {
     Button shop1_datail3;
     Button shop1_datail5;
     Button shop1_datail6;
+    Button shop3_detail1;
+    Button shop3_detail2;
+    Button shop3_detail3;
+    Button shop3_detail4;
+
 
     LinearLayout product_shampoo;
     LinearLayout product_bodywash;
@@ -266,6 +272,54 @@ public class Product_body extends Fragment {
                 Intent intent= new Intent(
                         getActivity(),
                         Home_shop_almaeng_detail.class
+                );
+
+                startActivity(intent);
+            }
+        });
+        shop3_detail1=(Button) v.findViewById(R.id.shop3_datail1);
+        shop3_detail1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent= new Intent(
+                        getActivity(),
+                        Home_shop_aromatica_detail.class
+                );
+
+                startActivity(intent);
+            }
+        });
+        shop3_detail2=(Button) v.findViewById(R.id.shop3_datail2);
+        shop3_detail2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent= new Intent(
+                        getActivity(),
+                        Home_shop_aromatica_detail.class
+                );
+
+                startActivity(intent);
+            }
+        });
+        shop3_detail3=(Button) v.findViewById(R.id.shop3_datail3);
+        shop3_detail3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent= new Intent(
+                        getActivity(),
+                        Home_shop_aromatica_detail.class
+                );
+
+                startActivity(intent);
+            }
+        });
+        shop3_detail4=(Button) v.findViewById(R.id.shop3_datail4);
+        shop3_detail4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent= new Intent(
+                        getActivity(),
+                        Home_shop_aromatica_detail.class
                 );
 
                 startActivity(intent);

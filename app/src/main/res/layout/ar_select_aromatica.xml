@@ -67,7 +67,7 @@
             <ImageView
                 android:layout_width="65dp"
                 android:layout_height="65dp"
-                android:background="@drawable/shop_icon1"/>
+                android:background="@drawable/aromatica_logo"/>
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -84,12 +84,380 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
-                    android:text="“ 껍데기는 가라 알맹이만 오라 “"
+                    android:text=" SAVE THE SKIN, SAVE THE PLANET"
                     android:textSize="13dp"
                     android:textColor="#000000"
                     android:fontFamily="@font/notosansregular"/>
             </LinearLayout>
         </LinearLayout>
     </FrameLayout>
+
+
+
+    <!--아로마티카 레이아웃-->
+    <LinearLayout
+        android:id="@+id/aro_layout"
+        android:visibility="visible"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_marginTop="40dp"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:textSize="15dp"
+            android:fontFamily="@font/notosansregular"
+            android:textColor="#000000"
+            android:text="용기에 담을 상품을 선택해주세요">
+        </TextView>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/aro_body_bg"
+                android:visibility="invisible"
+                android:layout_marginTop="4dp"
+                android:src="@drawable/ar_select_body_bg"
+                android:layout_width="350dp"
+                android:layout_height="150dp"
+                android:layout_gravity="center">
+            </ImageView>
+            <ImageView
+                android:id="@+id/aro_face_bg"
+                android:visibility="invisible"
+                android:layout_marginTop="4dp"
+                android:src="@drawable/ar_select_face_bg"
+                android:layout_width="350dp"
+                android:layout_height="150dp"
+                android:layout_gravity="center">
+            </ImageView>
+            <LinearLayout
+                android:layout_marginTop="15dp"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="36dp">
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="33dp"
+                    android:background="#00FFFFFF"
+                    android:textSize="14dp"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/notosansregular"
+                    android:textColor="#C2C2C2"
+                    android:text="푸드">
+                </Button>
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="33dp"
+                    android:background="#00FFFFFF"
+                    android:textSize="14dp"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/notosansregular"
+                    android:textColor="#C2C2C2"
+                    android:text="세제">
+                </Button>
+                <Button
+                    android:id="@+id/aro_body"
+                    android:layout_width="wrap_content"
+                    android:layout_height="33dp"
+                    android:background="#00FFFFFF"
+                    android:textSize="14dp"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/notosansregular"
+                    android:textColor="#505050"
+                    android:text="바디">
+                </Button>
+                <Button
+                    android:id="@+id/aro_face"
+                    android:layout_width="wrap_content"
+                    android:layout_height="33dp"
+                    android:background="#00FFFFFF"
+                    android:textSize="14dp"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/notosansregular"
+                    android:textColor="#505050"
+                    android:text="페이스">
+                </Button>
+            </LinearLayout>
+
+
+
+            <!-- 페이스 아이템들-->
+            <LinearLayout
+                android:id="@+id/aro_face_items"
+                android:visibility="invisible"
+                android:layout_marginTop="65dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_marginTop="15dp"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="36dp">
+                    <Button
+                        android:id="@+id/aro_face_tonor"
+                        android:layout_width="wrap_content"
+                        android:layout_height="33dp"
+                        android:background="#00FFFFFF"
+                        android:textSize="15dp"
+                        android:fontFamily="@font/notosansregular"
+                        android:textColor="#C2C2C2"
+                        android:text="토너">
+                    </Button>
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="20dp"
+                        android:background="#C2c2c2"
+                        android:layout_weight="1"/>
+                    <Button
+                        android:id="@+id/aro_face_cream"
+                        android:layout_width="wrap_content"
+                        android:layout_height="33dp"
+                        android:background="#00FFFFFF"
+                        android:textSize="15dp"
+                        android:fontFamily="@font/notosansregular"
+                        android:textColor="#C2C2C2"
+                        android:text="크림">
+                    </Button>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- 바디 아이템들-->
+            <LinearLayout
+                android:id="@+id/aro_body_items"
+                android:visibility="invisible"
+                android:layout_marginTop="65dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_marginTop="15dp"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="36dp">
+                    <Button
+                        android:id="@+id/aro_body_shampoo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="33dp"
+                        android:background="#00FFFFFF"
+                        android:textSize="15dp"
+                        android:fontFamily="@font/notosansregular"
+                        android:textColor="#C2C2C2"
+                        android:text="삼푸">
+                    </Button>
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="20dp"
+                        android:background="#C2c2c2"
+                        android:layout_weight="1"/>
+                    <Button
+                        android:id="@+id/aro_body_conditioner"
+                        android:layout_width="wrap_content"
+                        android:layout_height="33dp"
+                        android:background="#00FFFFFF"
+                        android:textSize="15dp"
+                        android:layout_marginLeft="10dp"
+                        android:fontFamily="@font/notosansregular"
+                        android:textColor="#C2C2C2"
+                        android:text="컨디셔너">
+                    </Button>
+                </LinearLayout>
+            </LinearLayout>
+        </FrameLayout>
+    </LinearLayout>
+
+
+    <!--스피너-->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <!--샴푸 스피너 -->
+        <LinearLayout
+            android:visibility="invisible"
+            android:id="@+id/spinner_aro_shampoo_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:gravity="center"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:textSize="15dp"
+                android:fontFamily="@font/notosansregular"
+                android:layout_gravity="center"
+                android:textColor="#000000"
+                android:text="용기에 담을 제품을 선택해주세요">
+            </TextView>
+            <Spinner
+                android:background="@drawable/ar_btn_detection3"
+                android:id="@+id/spinner_aro_shampoo_item"
+                android:layout_width="300dp"
+                android:layout_height="30dp"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:layout_marginTop="15dp">
+            </Spinner>
+        </LinearLayout>
+        <!--컨디셔너 스피너 -->
+        <LinearLayout
+            android:visibility="invisible"
+            android:id="@+id/spinner_aro_conditioner_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:gravity="center"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:textSize="15dp"
+                android:fontFamily="@font/notosansregular"
+                android:layout_gravity="center"
+                android:textColor="#000000"
+                android:text="용기에 담을 제품을 선택해주세요">
+            </TextView>
+            <Spinner
+                android:background="@drawable/ar_btn_detection3"
+                android:id="@+id/spinner_aro_conditioner_item"
+                android:layout_width="300dp"
+                android:layout_height="30dp"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:layout_marginTop="15dp">
+            </Spinner>
+        </LinearLayout>
+        <!--토너 스피너 -->
+        <LinearLayout
+            android:visibility="invisible"
+            android:id="@+id/spinner_aro_tonor_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:gravity="center"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:textSize="15dp"
+                android:fontFamily="@font/notosansregular"
+                android:layout_gravity="center"
+                android:textColor="#000000"
+                android:text="용기에 담을 제품을 선택해주세요">
+            </TextView>
+            <Spinner
+                android:background="@drawable/ar_btn_detection3"
+                android:id="@+id/spinner_aro_tonor_item"
+                android:layout_width="300dp"
+                android:layout_height="30dp"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:layout_marginTop="15dp">
+            </Spinner>
+        </LinearLayout>
+        <!--크림 스피너 -->
+        <LinearLayout
+            android:visibility="invisible"
+            android:id="@+id/spinner_aro_cream_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:gravity="center"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:textSize="15dp"
+                android:fontFamily="@font/notosansregular"
+                android:layout_gravity="center"
+                android:textColor="#000000"
+                android:text="용기에 담을 제품을 선택해주세요">
+            </TextView>
+            <Spinner
+                android:background="@drawable/ar_btn_detection3"
+                android:id="@+id/spinner_aro_cream_item"
+                android:layout_width="300dp"
+                android:layout_height="30dp"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:layout_marginTop="15dp">
+            </Spinner>
+        </LinearLayout>
+    </FrameLayout>
+
+
+    <!--그램-->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/gram_aro_layout"
+            android:visibility="invisible"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:gravity="center"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:textSize="15dp"
+                android:fontFamily="@font/notosansregular"
+                android:layout_gravity="center"
+                android:textColor="#000000"
+                android:text="담고싶은 g수를 입력해주세요">
+
+            </TextView>
+            <Spinner
+                android:background="@drawable/ar_btn_detection3"
+                android:layout_marginTop="15dp"
+                android:id="@+id/spinner_aro_gram"
+                android:layout_width="300dp"
+                android:layout_height="30dp"
+                android:gravity="center"
+                android:layout_weight="1">
+            </Spinner>
+
+        </LinearLayout>
+    </FrameLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:gravity="center">
+        <Button
+            android:id="@+id/item_select_complete_aro"
+            android:visibility="invisible"
+            android:layout_width="140dp"
+            android:layout_height="41dp"
+            android:fontFamily="@font/notosansregular"
+            android:background="@drawable/ar_btn_detection"
+            android:text="확인"
+            android:textColor="#000000"
+            >
+        </Button>
+    </LinearLayout>
+
+
 
 </LinearLayout>

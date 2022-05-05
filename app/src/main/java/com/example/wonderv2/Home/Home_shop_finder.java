@@ -14,6 +14,7 @@ import android.widget.ImageButton;
 
 import com.example.wonderv2.MainActivity;
 import com.example.wonderv2.R;
+import com.example.wonderv2.Setting.Setting_alarm;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -88,8 +89,20 @@ public class Home_shop_finder extends Fragment {
             }
         });
 
-        Button shop_detail_btn=v.findViewById(R.id.shop_detail_btn1);
-        shop_detail_btn.setOnClickListener(new View.OnClickListener() {
+        Button earth_btn=v.findViewById(R.id.earth_btn);
+        earth_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent= new Intent(
+                        getActivity(),
+                        Home_shop_earth_detail.class
+                );
+
+                startActivity(intent);
+            }
+        });
+        Button almaeng_btn=v.findViewById(R.id.almaeng_btn);
+        almaeng_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent= new Intent(
@@ -100,6 +113,43 @@ public class Home_shop_finder extends Fragment {
                 startActivity(intent);
             }
         });
+        Button chaeum_btn=v.findViewById(R.id.chaeum_btn);
+        chaeum_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent= new Intent(
+                        getActivity(),
+                        Home_shop_chaeum_detail.class
+                );
+
+                startActivity(intent);
+            }
+        });
+        Button aromatica_btn=v.findViewById(R.id.aromatica_btn);
+        aromatica_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent= new Intent(
+                        getActivity(),
+                        Home_shop_aromatica_detail.class
+                );
+
+                startActivity(intent);
+            }
+        });
+        ImageButton alarm_btn=v.findViewById(R.id.alarm_btn);
+        alarm_btn.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+                Intent intent= new Intent(
+                        getActivity(),
+                        Setting_alarm.class
+                );
+
+                startActivity(intent);
+            }
+        });
+
 
         return v;
 

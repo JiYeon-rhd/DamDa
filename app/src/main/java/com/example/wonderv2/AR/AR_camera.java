@@ -171,18 +171,34 @@ public class AR_camera extends AppCompatActivity {
             public void onClick(View v) {
                 if(shop_name_txt.getText().toString() == "알맹상점"){
                     Intent intent = new Intent(AR_camera.this, AR_select_almaeng.class);
+
+                    intent.putExtra("상점이름", shop_name_txt.getText().toString());
+                    intent.putExtra("용기이름", bottle_name_txt.getText().toString());
+
                     startActivity(intent);
                 }
                 else if(shop_name_txt.getText().toString() == "아로마티카"){
                     Intent intent = new Intent(AR_camera.this, AR_select_aromatica.class);
+
+                    intent.putExtra("상점이름", shop_name_txt.getText().toString());
+                    intent.putExtra("용기이름", bottle_name_txt.getText().toString());
+
                     startActivity(intent);
                 }
                 else if(shop_name_txt.getText().toString() == "채움소"){
                     Intent intent = new Intent(AR_camera.this, AR_select_chaeum.class);
+
+                    intent.putExtra("상점이름", shop_name_txt.getText().toString());
+                    intent.putExtra("용기이름", bottle_name_txt.getText().toString());
+
                     startActivity(intent);
                 }
                 else if(shop_name_txt.getText().toString() == "지구샵"){
                     Intent intent = new Intent(AR_camera.this, AR_select_earth.class);
+
+                    intent.putExtra("상점이름", shop_name_txt.getText().toString());
+                    intent.putExtra("용기이름", bottle_name_txt.getText().toString());
+
                     startActivity(intent);
                 }
             }

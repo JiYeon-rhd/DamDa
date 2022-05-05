@@ -140,7 +140,7 @@ public class AR_select_item extends AppCompatActivity implements View.OnClickLis
         earth_wash_detergent =(Button)findViewById(R.id.earth_wash_detergent);
         earth_wash_detergent.setOnClickListener(this);
 
-        spinner_earth_layout = (LinearLayout)findViewById(R.id.spinner_earth);
+        //spinner_earth_layout = (LinearLayout)findViewById(R.id.spinner_earth);
 
         spinner_earth_wash_detergent = (Spinner) findViewById(R.id.spinner_earth_detergent);  //지구샵 세제 스피너
         ArrayAdapter itemAdapter_earth = ArrayAdapter.createFromResource(this,
@@ -181,7 +181,7 @@ public class AR_select_item extends AppCompatActivity implements View.OnClickLis
 
         spinner_chaeum_tea_layout = (LinearLayout)findViewById(R.id.spinner_chaeum_tea_layout);
 
-        spinner_chaeum_tea = (Spinner) findViewById(R.id.spinner_chaeum_food_tea);
+       // spinner_chaeum_tea = (Spinner) findViewById(R.id.spinner_chaeum_food_tea);
         ArrayAdapter itemAdapter_chaeum_tea = ArrayAdapter.createFromResource(this,
                 R.array.spinner_chaeum_food_tea_list, android.R.layout.simple_spinner_dropdown_item);
         spinner_chaeum_tea.setAdapter(itemAdapter_chaeum_tea);
@@ -203,7 +203,7 @@ public class AR_select_item extends AppCompatActivity implements View.OnClickLis
         });
 
         spinner_chaeum_coffee_layout= (LinearLayout)findViewById(R.id.spinner_chaeum_coffee_layout);
-        spinner_chaeum_coffee = (Spinner) findViewById(R.id.spinner_chaeum_food_coffee);
+        //spinner_chaeum_coffee = (Spinner) findViewById(R.id.spinner_chaeum_food_coffee);
         ArrayAdapter itemAdapter_chaeum_coffee= ArrayAdapter.createFromResource(this,
                 R.array.spinner_chaeum_food_coffee_list, android.R.layout.simple_spinner_dropdown_item);
         spinner_chaeum_coffee.setAdapter(itemAdapter_chaeum_coffee);

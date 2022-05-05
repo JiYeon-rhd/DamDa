@@ -13,6 +13,7 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 
 import com.example.wonderv2.Home.Home_shop_almaeng_detail;
+import com.example.wonderv2.Home.Home_shop_aromatica_detail;
 import com.example.wonderv2.MainActivity;
 import com.example.wonderv2.R;
 
@@ -35,6 +36,9 @@ public class Product_face extends Fragment {
     Button shop1_detail3;
     Button shop1_detail4;
     Button shop1_detail5;
+    Button shop3_detail1;
+    Button shop3_detail2;
+    Button shop3_detail3;
 
 
     LinearLayout product_toner;
@@ -266,6 +270,42 @@ public class Product_face extends Fragment {
                 Intent intent= new Intent(
                         getActivity(),
                         Home_shop_almaeng_detail.class
+                );
+
+                startActivity(intent);
+            }
+        });
+        shop3_detail1=(Button) v.findViewById(R.id.shop3_datail1);
+        shop3_detail1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent= new Intent(
+                        getActivity(),
+                        Home_shop_aromatica_detail.class
+                );
+
+                startActivity(intent);
+            }
+        });
+        shop3_detail2=(Button) v.findViewById(R.id.shop3_datail2);
+        shop3_detail2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent= new Intent(
+                        getActivity(),
+                        Home_shop_aromatica_detail.class
+                );
+
+                startActivity(intent);
+            }
+        });
+        shop3_detail3=(Button) v.findViewById(R.id.shop3_datail3);
+        shop3_detail3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent= new Intent(
+                        getActivity(),
+                        Home_shop_aromatica_detail.class
                 );
 
                 startActivity(intent);

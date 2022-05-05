@@ -382,6 +382,7 @@
     </LinearLayout>
 
 
+    <!--스피너-->
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -653,7 +654,6 @@
                 android:layout_gravity="center"
                 android:textColor="#000000"
                 android:text="담고싶은 g수를 입력해주세요">
-
             </TextView>
             <Spinner
                 android:background="@drawable/ar_btn_detection3"

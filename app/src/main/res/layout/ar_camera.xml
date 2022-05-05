@@ -84,7 +84,7 @@
         <!--스캔전 화면-->
         <LinearLayout
             android:id="@+id/before_scan_layout"
-            android:visibility="visible"
+            android:visibility="invisible"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center_horizontal|center"
@@ -123,7 +123,7 @@
         <!--스캔 성공 화면-->
         <LinearLayout
             android:id="@+id/success_scan_layout"
-            android:visibility="invisible"
+            android:visibility="visible"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center_horizontal|center"
@@ -131,18 +131,25 @@
 
 
             <!--스캔 공병 이미지-->
-            <LinearLayout
+            <FrameLayout
                 android:layout_width="match_parent"
-                android:layout_height="200dp"
+                android:layout_height="wrap_content"
                 android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="210dp"
+                    android:layout_height="210dp"
+                    android:background="@drawable/ar_circle"
+                    android:layout_gravity="center|top"/>
                 <ImageView
                     android:id="@+id/scan_bottle_image"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src= "@drawable/aro_s"
+                    android:paddingLeft="12dp"
+                    android:paddingTop="13dp"
+                    android:src= "@drawable/example_al_resize"
                     android:layout_gravity="center">
                 </ImageView>
-            </LinearLayout>
+            </FrameLayout>
 
             <TextView
                 android:id="@+id/bottle_name_txt"
@@ -181,11 +188,11 @@
                 android:layout_width="150dp"
                 android:layout_height="49dp"
                 android:fontFamily="@font/notosansregular"
-                android:background="@drawable/ar_btn_detection_green"
+                android:background="@drawable/ar_btn_reselect"
                 android:text="다시 스캔"
                 android:textStyle="bold"
                 android:textSize="17dp"
-                android:textColor="#FFFFFF"
+                android:textColor="#26805B"
                 android:layout_marginTop="20dp">
             </Button>
         </LinearLayout>

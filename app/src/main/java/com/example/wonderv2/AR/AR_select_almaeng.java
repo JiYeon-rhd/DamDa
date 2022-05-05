@@ -67,10 +67,19 @@ public class AR_select_almaeng extends AppCompatActivity implements View.OnClick
 
     Button complete_btn;
 
+    String bottle_name;
+    String shop_name;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.ar_select_almaeng);
+
+        //용기이름, 상점 이름 받아서 넘기기
+        Intent intent = getIntent();
+        bottle_name = intent.getStringExtra("용기이름");
+        shop_name = intent.getStringExtra("상점이름");
+
 
         //알맹상점
         almaeng_layout = (LinearLayout) findViewById(R.id.almaeng_layout);
@@ -337,6 +346,10 @@ public class AR_select_almaeng extends AppCompatActivity implements View.OnClick
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(AR_select_almaeng.this, AR_complete.class);
+
+                intent.putExtra("상점이름", shop_name);
+                intent.putExtra("용기이름", bottle_name);
+
                 startActivity(intent);
             }
         });

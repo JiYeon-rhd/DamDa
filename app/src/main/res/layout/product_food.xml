@@ -125,7 +125,8 @@
                             android:fontFamily="@font/notosansregular"
                             android:text="바로가기  >"
                             android:textColor="#000000"
-                            android:textSize="15dp"/>
+                            android:gravity="center|right"
+                            android:textSize="12dp"/>
                     </LinearLayout>
 
                     <LinearLayout
@@ -494,7 +495,6 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content">
                             <TextView
-                                android:id="@+id/product_shop2"
                                 android:layout_width="wrap_content"
                                 android:layout_height="match_parent"
                                 android:layout_gravity="center"
@@ -521,7 +521,8 @@
                             android:fontFamily="@font/notosansregular"
                             android:text="바로가기  >"
                             android:textColor="#000000"
-                            android:textSize="15dp"></Button>
+                            android:gravity="center|right"
+                            android:textSize="12dp"></Button>
 
                     </LinearLayout>
 
@@ -715,7 +716,8 @@
                             android:fontFamily="@font/notosansregular"
                             android:text="바로가기  >"
                             android:textColor="#000000"
-                            android:textSize="15dp"></Button>
+                            android:gravity="center|right"
+                            android:textSize="12dp"></Button>
 
                     </LinearLayout>
 
@@ -811,7 +813,8 @@
                             android:fontFamily="@font/notosansregular"
                             android:text="바로가기  >"
                             android:textColor="#000000"
-                            android:textSize="15dp"/>
+                            android:gravity="center|right"
+                            android:textSize="12dp"/>
                     </LinearLayout>
 
                     <LinearLayout
@@ -890,7 +893,8 @@
                             android:fontFamily="@font/notosansregular"
                             android:text="바로가기  >"
                             android:textColor="#000000"
-                            android:textSize="15dp"></Button>
+                            android:gravity="center|right"
+                            android:textSize="12dp"></Button>
 
                     </LinearLayout>
 
@@ -1077,7 +1081,8 @@
                             android:fontFamily="@font/notosansregular"
                             android:text="바로가기  >"
                             android:textColor="#000000"
-                            android:textSize="15dp"/>
+                            android:gravity="center|right"
+                            android:textSize="12dp"/>
                     </LinearLayout>
 
                     <LinearLayout
@@ -1200,7 +1205,8 @@
                             android:fontFamily="@font/notosansregular"
                             android:text="바로가기  >"
                             android:textColor="#000000"
-                            android:textSize="15dp"></Button>
+                            android:gravity="center|right"
+                            android:textSize="12dp"></Button>
 
                     </LinearLayout>
 
@@ -1296,7 +1302,8 @@
                             android:fontFamily="@font/notosansregular"
                             android:text="바로가기  >"
                             android:textColor="#000000"
-                            android:textSize="15dp"/>
+                            android:gravity="center|right"
+                            android:textSize="12dp"/>
                     </LinearLayout>
 
                     <LinearLayout

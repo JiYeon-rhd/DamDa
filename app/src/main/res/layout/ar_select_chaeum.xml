@@ -67,7 +67,7 @@
             <ImageView
                 android:layout_width="65dp"
                 android:layout_height="65dp"
-                android:background="@drawable/shop_icon1"/>
+                android:background="@drawable/chaeum_logo"/>
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -84,13 +84,271 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
-                    android:text="“ 껍데기는 가라 알맹이만 오라 “"
+                    android:text="ZEROWASTE &amp; REFILLSTATION"
                     android:textSize="13dp"
                     android:textColor="#000000"
                     android:fontFamily="@font/notosansregular"/>
             </LinearLayout>
         </LinearLayout>
     </FrameLayout>
+
+
+    <!--채움소 레이아웃-->
+    <LinearLayout
+        android:id="@+id/chaeum_layout"
+        android:visibility="visible"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_marginTop="40dp"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:textSize="15dp"
+            android:fontFamily="@font/notosansregular"
+            android:textColor="#000000"
+            android:text="용기에 담을 상품을 선택해주세요">
+
+        </TextView>
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/chaeum_food_bg"
+                android:visibility="invisible"
+                android:layout_marginTop="4dp"
+                android:src="@drawable/ar_select_food_bg"
+                android:layout_width="350dp"
+                android:layout_height="150dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginLeft="30dp"
+                android:layout_gravity="center">
+            </ImageView>
+
+            <LinearLayout
+                android:layout_marginTop="15dp"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="36dp">
+                <Button
+                    android:id="@+id/chaeum_food"
+                    android:layout_width="wrap_content"
+                    android:layout_height="33dp"
+                    android:background="#00FFFFFF"
+                    android:textSize="14dp"
+                    android:textStyle="bold"
+                    android:layout_marginLeft="0dp"
+                    android:fontFamily="@font/notosansregular"
+                    android:textColor="#505050"
+                    android:text="푸드">
+                </Button>
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="33dp"
+                    android:background="#00FFFFFF"
+                    android:textSize="14dp"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/notosansregular"
+                    android:textColor="#C2C2C2"
+                    android:text="세제">
+                </Button>
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="33dp"
+                    android:background="#00FFFFFF"
+                    android:textSize="14dp"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/notosansregular"
+                    android:textColor="#C2C2C2"
+                    android:text="바디">
+                </Button>
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="33dp"
+                    android:background="#00FFFFFF"
+                    android:textSize="14dp"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/notosansregular"
+                    android:textColor="#C2C2C2"
+                    android:text="페이스">
+                </Button>
+            </LinearLayout>
+
+
+            <!-- 푸드 아이템들-->
+            <LinearLayout
+                android:id="@+id/chaeum_food_items"
+                android:visibility="invisible"
+                android:layout_marginTop="65dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_marginTop="15dp"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="34dp">
+                    <Button
+                        android:id="@+id/chaeum_food_tea"
+                        android:layout_width="wrap_content"
+                        android:layout_height="33dp"
+                        android:background="#00FFFFFF"
+                        android:textSize="15dp"
+                        android:fontFamily="@font/notosansregular"
+                        android:textColor="#C2C2C2"
+                        android:text="차">
+                    </Button>
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="20dp"
+                        android:background="#C2c2c2"
+                        android:layout_weight="1"/>
+                    <Button
+                        android:id="@+id/chaeum_food_coffee"
+                        android:layout_width="wrap_content"
+                        android:layout_height="33dp"
+                        android:background="#00FFFFFF"
+                        android:textSize="15dp"
+                        android:fontFamily="@font/notosansregular"
+                        android:textColor="#C2C2C2"
+                        android:text="커피">
+                    </Button>
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </FrameLayout>
+    </LinearLayout>
+
+
+    <!--스피너-->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <!--티 스피너 -->
+        <LinearLayout
+            android:visibility="invisible"
+            android:id="@+id/spinner_chaeum_tea_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:gravity="center"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:textSize="15dp"
+                android:fontFamily="@font/notosansregular"
+                android:layout_gravity="center"
+                android:textColor="#000000"
+                android:text="용기에 담을 제품을 선택해주세요">
+            </TextView>
+            <Spinner
+                android:background="@drawable/ar_btn_detection3"
+                android:id="@+id/spinner_chaeum_tea_item"
+                android:layout_width="300dp"
+                android:layout_height="30dp"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:layout_marginTop="15dp">
+            </Spinner>
+        </LinearLayout>
+        <!--커피 스피너 -->
+        <LinearLayout
+            android:visibility="invisible"
+            android:id="@+id/spinner_chaeum_coffee_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:gravity="center"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:textSize="15dp"
+                android:fontFamily="@font/notosansregular"
+                android:layout_gravity="center"
+                android:textColor="#000000"
+                android:text="용기에 담을 제품을 선택해주세요">
+            </TextView>
+            <Spinner
+                android:background="@drawable/ar_btn_detection3"
+                android:id="@+id/spinner_chaeum_coffee_item"
+                android:layout_width="300dp"
+                android:layout_height="30dp"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:layout_marginTop="15dp">
+            </Spinner>
+        </LinearLayout>
+    </FrameLayout>
+
+    <!--그램-->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/gram_chaeum_layout"
+            android:visibility="invisible"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:gravity="center"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:textSize="15dp"
+                android:fontFamily="@font/notosansregular"
+                android:layout_gravity="center"
+                android:textColor="#000000"
+                android:text="담고싶은 g수를 입력해주세요">
+
+            </TextView>
+            <Spinner
+                android:background="@drawable/ar_btn_detection3"
+                android:layout_marginTop="15dp"
+                android:id="@+id/spinner_chaeum_gram"
+                android:layout_width="300dp"
+                android:layout_height="30dp"
+                android:gravity="center"
+                android:layout_weight="1">
+            </Spinner>
+
+        </LinearLayout>
+    </FrameLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:gravity="center">
+        <Button
+            android:id="@+id/item_select_complete_chaeum"
+            android:visibility="invisible"
+            android:layout_width="140dp"
+            android:layout_height="41dp"
+            android:fontFamily="@font/notosansregular"
+            android:background="@drawable/ar_btn_detection"
+            android:text="확인"
+            android:textColor="#000000"
+            >
+        </Button>
+    </LinearLayout>
+
 
 
 </LinearLayout>
