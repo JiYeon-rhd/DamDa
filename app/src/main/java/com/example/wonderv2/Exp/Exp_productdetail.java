@@ -2,13 +2,13 @@ package com.example.wonderv2.Exp;
 
 public class Exp_productdetail {
 
-    public String productName;
-    public String shopName;
-    public String expDay;
-    public String productDetail;
-    public String productIngredient;
-    public String productGuide;
-    public String dDay;
+    private String productName;
+    private String shopName;
+    private String expDay;
+    private String productDetail;
+    private String productIngredient;
+    private String productGuide;
+    private String dDay;
 
     public Exp_productdetail(){}
 

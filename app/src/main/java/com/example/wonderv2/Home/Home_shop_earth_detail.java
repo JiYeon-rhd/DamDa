@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
@@ -23,6 +24,7 @@ public class Home_shop_earth_detail extends AppCompatActivity {
         setContentView(R.layout.home_shop_earth_detail);
         mContext = getApplicationContext();
         mTabLayout=(TabLayout) findViewById(R.id.tabs);
+        mTabLayout.setSelectedTabIndicatorColor(Color.parseColor("#FFFFFF"));
 
         mTabLayout.addTab(mTabLayout.newTab().setText("푸드"));
         mTabLayout.addTab(mTabLayout.newTab().setText("세제"));

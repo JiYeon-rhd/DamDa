@@ -2,6 +2,7 @@ package com.example.wonderv2.Exp;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -83,6 +84,7 @@ public class Exp_main extends Fragment {
         View v= inflater.inflate(R.layout.exp_main, container, false);
 
         tabLayout = v.findViewById(R.id.tabs);
+        tabLayout.setSelectedTabIndicatorColor(Color.parseColor("#FFFFFF"));
         viewPager = v.findViewById(R.id.viewPager);
 
         tabLayout.addTab(tabLayout.newTab().setText("푸드"));
