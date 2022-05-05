@@ -30,7 +30,7 @@ import java.util.HashMap;
 public class Exp_camera extends AppCompatActivity {
 
     private Button btn_save;
-    private TextView view_productname, view_shopname, view_expday, view_productdetail, view_productingredient, view_productguide,textresult;
+    private TextView view_productname, view_shopname, view_expday, view_productdetail, view_productingredient, view_productguide, view_dday, textresult;
     private IntentIntegrator qrScan;
     private DatabaseReference mDatabase;
 
@@ -58,6 +58,7 @@ public class Exp_camera extends AppCompatActivity {
                 String getProductDetail= view_productdetail.getText().toString();
                 String getProductIngredient = view_productingredient.getText().toString();
                 String getProductGuide = view_productguide.getText().toString();
+                String getDDay = view_dday.getText().toString();
 
                 //hashmap 만들기
                 HashMap result = new HashMap<>();
@@ -67,11 +68,12 @@ public class Exp_camera extends AppCompatActivity {
                 result.put("제품설명",getProductDetail);
                 result.put("주요성분",getProductIngredient);
                 result.put("사용/보관법",getProductGuide);
+                result.put("",getDDay);
 
 
                 a = a+1;
 
-                writeNewExp_productdetail(a,getProductName, getShopName,getExpDay,getProductDetail,getProductIngredient,getProductGuide);
+                writeNewExp_productdetail(a,getProductName, getShopName,getExpDay,getProductDetail,getProductIngredient,getProductGuide,getDDay);
 
             }
         });
@@ -84,6 +86,7 @@ public class Exp_camera extends AppCompatActivity {
         view_productdetail = (TextView) findViewById(R.id.view_productdetail);
         view_productingredient = (TextView) findViewById(R.id.view_productingredient);
         view_productguide = (TextView) findViewById(R.id.view_productguide);
+        view_dday = (TextView) findViewById(R.id.view_dday);
         textresult = (TextView) findViewById(R.id.textresult);
 
         qrScan = new IntentIntegrator(this);
@@ -113,6 +116,7 @@ public class Exp_camera extends AppCompatActivity {
                     view_productdetail.setText(obj.getString("detail"));
                     view_productingredient.setText(obj.getString("ingredient"));
                     view_productguide.setText(obj.getString("guide"));
+                    view_dday.setText(obj.getString("dday"));
 
                 } catch (JSONException e) {
                     e.printStackTrace();
@@ -125,8 +129,8 @@ public class Exp_camera extends AppCompatActivity {
         }
     }
 
-    private void writeNewExp_productdetail(int a, String productName, String shopName, String expDay, String productDetail, String productIngredient, String productGuide) {
-        Exp_productdetail Exp_productdetail = new Exp_productdetail(productName,  shopName,  expDay, productDetail, productIngredient,productGuide);
+    private void writeNewExp_productdetail(int a, String productName, String shopName, String expDay, String productDetail, String productIngredient, String productGuide, String dDay) {
+        Exp_productdetail Exp_productdetail = new Exp_productdetail(productName,  shopName,  expDay, productDetail, productIngredient,productGuide,dDay);
 
         mDatabase.child("exp_product").child(productName).setValue(Exp_productdetail)
                 .addOnSuccessListener(new OnSuccessListener<Void>() {

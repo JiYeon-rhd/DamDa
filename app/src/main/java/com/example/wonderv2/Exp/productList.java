@@ -4,6 +4,7 @@ public class productList {
     private String shopName;
     private String productName;
     private String expDay;
+    private String dDay;
 
     public productList(){}
 
@@ -30,4 +31,8 @@ public class productList {
     public void setExpDay(String expDay) {
         this.expDay = expDay;
     }
+
+    public String getDDay() {return dDay;}
+
+    public void setDDay(String dDay) { this.dDay = dDay; }
 }

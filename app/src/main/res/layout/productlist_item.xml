@@ -33,7 +33,8 @@
                 android:background="@drawable/exp_bg"
                 android:fontFamily="@font/notosansregular"
                 android:gravity="center"
-                android:text=""
+                android:text="디데이"
+                android:textSize="13dp"
                 android:textColor="#000000" />
 
             <LinearLayout

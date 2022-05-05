@@ -21,13 +21,13 @@
             android:orientation="vertical"
             android:layout_gravity="center_horizontal"
             android:gravity="center_horizontal">
-            <com.airbnb.lottie.LottieAnimationView
+      <!--      <com.airbnb.lottie.LottieAnimationView
                 android:layout_marginTop="100dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:lottie_rawRes="@raw/scan_animation"
                 app:lottie_autoPlay="true">
-            </com.airbnb.lottie.LottieAnimationView>
+            </com.airbnb.lottie.LottieAnimationView> !-->
             <TextView
                 android:text="측정중"
                 android:layout_width="wrap_content"

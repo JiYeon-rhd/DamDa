@@ -47,6 +47,7 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.CustomView
         holder.tv_shopName.setText(String.valueOf(arrayList.get(position).getShopName()));
         holder.tv_productName.setText(String.valueOf(arrayList.get(position).getProductName()));
         holder.tv_expDay.setText(String.valueOf(arrayList.get(position).getExpDay()));
+        holder.tv_dDay.setText(String.valueOf(arrayList.get(position).getDDay()));
     }
 
     @Override
@@ -58,12 +59,14 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.CustomView
         TextView tv_shopName;
         TextView tv_productName;
         TextView tv_expDay;
+        TextView tv_dDay;
 
         public CustomViewHolder(@NonNull View itemView) {
             super(itemView);
             this.tv_shopName = itemView.findViewById(R.id.tv_shopName);
             this.tv_productName = itemView.findViewById(R.id.tv_productName);
             this.tv_expDay = itemView.findViewById(R.id.tv_expDay);
+            this.tv_dDay = itemView.findViewById(R.id.tv_dDay);
 
             itemView.setOnCreateContextMenuListener(this);
 

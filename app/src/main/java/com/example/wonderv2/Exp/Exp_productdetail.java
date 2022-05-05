@@ -8,16 +8,18 @@ public class Exp_productdetail {
     public String productDetail;
     public String productIngredient;
     public String productGuide;
+    public String dDay;
 
     public Exp_productdetail(){}
 
-    public Exp_productdetail(String productName, String shopName, String expDay, String productDetail, String productIngredient, String productGuide) {
+    public Exp_productdetail(String productName, String shopName, String expDay, String productDetail, String productIngredient, String productGuide, String dDay) {
         this.productName = productName;
         this.shopName = shopName;
         this.expDay = expDay;
         this.productDetail = productDetail;
         this.productIngredient = productIngredient;
         this.productGuide = productGuide;
+        this.dDay = dDay;
     }
 
     public String getProductName() {
@@ -56,17 +58,15 @@ public class Exp_productdetail {
         return productIngredient;
     }
 
-    public void setProductIngredient(String productIngredient) {
-        this.productIngredient = productIngredient;
-    }
+    public void setProductIngredient(String productIngredient) { this.productIngredient = productIngredient;}
 
-    public String getProductGuide() {
-        return productGuide;
-    }
+    public String getProductGuide() { return productGuide; }
 
-    public void setProductGuide(String productGuide) {
-        this.productGuide = productGuide;
-    }
+    public void setProductGuide(String productGuide) { this.productGuide = productGuide;  }
+
+    public String getDDay(){return dDay;}
+
+    public void setDDay(String dDay){this.dDay=dDay;}
 
     @Override
     public String toString(){
@@ -76,6 +76,7 @@ public class Exp_productdetail {
                 ", productDetail = '" + productDetail + '\'' +
                 ", productIngredient = '" + productIngredient + '\'' +
                 ", productGuide = '" + productGuide + '\'' +
+                ", dDay = '" + dDay + '\'' +
                 '}';
     }
 }
