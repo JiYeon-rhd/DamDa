@@ -437,6 +437,37 @@
             </Spinner>
 
         </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/gram_aro_400_layout"
+            android:visibility="invisible"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:gravity="center"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:textSize="15dp"
+                android:fontFamily="@font/notosansregular"
+                android:layout_gravity="center"
+                android:textColor="#000000"
+                android:text="담고싶은 g수를 입력해주세요">
+
+            </TextView>
+            <Spinner
+                android:background="@drawable/ar_btn_detection3"
+                android:layout_marginTop="15dp"
+                android:id="@+id/spinner_aro_gram_400"
+                android:layout_width="300dp"
+                android:layout_height="30dp"
+                android:gravity="center"
+                android:layout_weight="1">
+            </Spinner>
+
+        </LinearLayout>
     </FrameLayout>
 
 

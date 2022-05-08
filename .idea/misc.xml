@@ -109,8 +109,10 @@
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.335" />
         <entry key="app/src/main/res/layout/activity_main2.xml" value="0.2971014492753623" />
         <entry key="app/src/main/res/layout/ar_camera.xml" value="0.375" />
-        <entry key="app/src/main/res/layout/ar_complete.xml" value="0.2898550724637681" />
+        <entry key="app/src/main/res/layout/ar_complete.xml" value="0.4494902687673772" />
         <entry key="app/src/main/res/layout/ar_main.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/ar_select_almaeng.xml" value="0.22552083333333334" />
+        <entry key="app/src/main/res/layout/ar_select_aromatica.xml" value="0.22552083333333334" />
         <entry key="app/src/main/res/layout/ar_select_item.xml" value="0.1" />
         <entry key="app/src/main/res/layout/exp_body.xml" value="0.15324214792299898" />
         <entry key="app/src/main/res/layout/exp_detail.xml" value="0.21920289855072464" />

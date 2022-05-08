@@ -171,17 +171,6 @@ public class AR_camera extends AppCompatActivity {
             }
         });
 
-        /*
-        homeBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-                intent.putExtra("set", "ar");
-                startActivity(intent);
-
-            }
-        });
-                 */
     }
 
 
@@ -257,78 +246,6 @@ public class AR_camera extends AppCompatActivity {
                 shop_name_txt.setText("지구샵");
                 scan_bottle_image.setImageResource(R.drawable.bottle_ear_l);
             }
-
-
-            //가격 계산
-            /*
-            //동그라미 공병 -> 푸드 (채움소 차, 채움소 커피)
-            if(bottle_name.getText().toString() == "circle bottle"){ //
-                if(itemG < 210){
-                    if(itemName_ch_tea.equals("로즈마리")){
-                        itemG = itemG * 120;
-                        item_price_txt.setText(String.valueOf(itemG));
-                    }
-                    else if(itemName_ch_tea.equals("페퍼민트")){
-                        itemG = itemG * 120;
-                        item_price_txt.setText(String.valueOf(itemG));
-                    }
-                    else if(itemName_ch_tea.equals("카모마일")){
-                        itemG = itemG * 180;
-                        item_price_txt.setText(String.valueOf(itemG));
-                    }
-                    else if(itemName_ch_coffee.equals("다크 벨벳")){
-                        itemG = itemG * 90;
-                        item_price_txt.setText(String.valueOf(itemG));
-                    }
-                    else if(itemName_ch_coffee.equals("커피 원두")){
-                        itemG = itemG * 50;
-                        item_price_txt.setText(String.valueOf(itemG));
-                    }
-
-                }
-                else if(itemG >210){
-                    scan_after_txt_layout.setVisibility(View.INVISIBLE);
-
-                    scan_fail_layout.setVisibility(View.VISIBLE);
-                }
-
-            }
-            //사격형 공병 -> 푸드 (채움소 차, 채움소 커피)
-            else if(bottle_name.getText().toString()=="square bottle"){
-                if(itemG < 180){
-                    if(itemName_ch_tea.equals("로즈마리")){
-                        itemG = itemG * 120;
-                        item_price_txt.setText(String.valueOf(itemG));
-                    }
-                    else if(itemName_ch_tea.equals("페퍼민트")){
-                        itemG = itemG * 120;
-                        item_price_txt.setText(String.valueOf(itemG));
-                    }
-                    else if(itemName_ch_tea.equals("카모마일")){
-                        itemG = itemG * 180;
-                        item_price_txt.setText(String.valueOf(itemG));
-                    }
-                    else if(itemName_ch_coffee.equals("다크 벨벳")){
-                        itemG = itemG * 90;
-                        item_price_txt.setText(String.valueOf(itemG));
-                    }
-                    else if(itemName_ch_coffee.equals("커피 원두")){
-                        itemG = itemG * 50;
-                        item_price_txt.setText(String.valueOf(itemG));
-                    }
-
-                }
-                else if(itemG >180){
-                    scan_after_txt_layout.setVisibility(View.INVISIBLE);
-
-                    scan_fail_layout.setVisibility(View.VISIBLE);
-                }
-
-
-
-            }
-             */
-
 
 
             //정확도 측정

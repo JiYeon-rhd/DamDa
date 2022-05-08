@@ -57,8 +57,8 @@
         android:gravity="center"
         android:orientation="vertical">
         <FrameLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:gravity="center_horizontal">
             <ImageView
                 android:layout_width="180dp"
@@ -68,11 +68,9 @@
             </ImageView>
             <ImageView
                 android:id="@+id/scan_bottle_gram_image"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingLeft="12dp"
-                android:paddingTop="13dp"
-                android:src= "@drawable/example_al_resize"
+                android:layout_width="180dp"
+                android:layout_height="180dp"
+                android:src= "@drawable/bottle_aro_l"
                 android:layout_gravity="center">
             </ImageView>
         </FrameLayout>
@@ -96,13 +94,12 @@
             android:layout_width="314dp"
             android:layout_height="130dp"
             android:orientation="vertical"
-            android:layout_gravity="center_horizontal"
-            android:gravity="center_horizontal"
+            android:layout_gravity="center"
+            android:gravity="center"
             android:elevation="7dp"
             android:layout_marginBottom="10dp"
             android:layout_marginTop="10dp"
-            android:background="@drawable/ar_btn_detection"
-            android:padding="30dp">
+            android:background="@drawable/ar_btn_detection">
             <TextView
                 android:text="지구샵PET 용기"
                 android:id="@+id/bottle_name"
@@ -172,7 +169,15 @@
                     android:orientation="horizontal">
                     <TextView
                         android:id="@+id/item_g_txt"
-                        android:text="100g"
+                        android:text="100"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:textSize="33dp">
+                    </TextView>
+                    <TextView
+                        android:text="g"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="@color/black"
@@ -192,6 +197,7 @@
 
             <!--최대용량 레이아웃-->
             <LinearLayout
+                android:visibility="gone"
                 android:layout_marginTop="20dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

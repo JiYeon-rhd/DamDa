@@ -121,7 +121,7 @@ public class AR_select_earth extends AppCompatActivity implements View.OnClickLi
         //그램 스피너
         spinner_earth_gram = (Spinner) findViewById(R.id.spinner_earth_gram);
         ArrayAdapter itemAdapter_gram= ArrayAdapter.createFromResource(this,
-                R.array.spinner_g_list, android.R.layout.simple_spinner_dropdown_item);
+                R.array.spinner_400g_list, android.R.layout.simple_spinner_dropdown_item);
         spinner_earth_gram.setAdapter(itemAdapter_gram);
         spinner_earth_gram.setSelected(false);
         spinner_earth_gram.post(new Runnable() {
