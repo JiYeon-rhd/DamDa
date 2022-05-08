@@ -76,8 +76,6 @@
         <entry key="..\:/WonderV2/app/src/main/res/drawable/tab_unseleted_bg.xml" value="0.36205128205128206" />
         <entry key="..\:/WonderV2/app/src/main/res/drawable/text_selector.xml" value="0.378125" />
         <entry key="..\:/WonderV2/app/src/main/res/layout/activity_main.xml" value="0.17097264437689969" />
-        <entry key="..\:/WonderV2/app/src/main/res/layout/ar_camera.xml" value="0.17426545086119555" />
-        <entry key="..\:/WonderV2/app/src/main/res/layout/ar_complete.xml" value="0.26268115942028986" />
         <entry key="..\:/WonderV2/app/src/main/res/layout/ar_main.xml" value="0.11955420466058764" />
         <entry key="..\:/WonderV2/app/src/main/res/layout/ar_select_item.xml" value="0.33" />
         <entry key="..\:/WonderV2/app/src/main/res/layout/custom_tab.xml" value="0.17097264437689969" />
@@ -97,7 +95,7 @@
         <entry key="..\:/WonderV2/app/src/main/res/layout/home_shop_finder.xml" value="0.20833333333333334" />
         <entry key="..\:/WonderV2/app/src/main/res/layout/home_shop_food.xml" value="0.2651006711409396" />
         <entry key="..\:/WonderV2/app/src/main/res/layout/home_shop_wash.xml" value="0.33" />
-        <entry key="..\:/WonderV2/app/src/main/res/layout/product_body.xml" value="0.25" />
+        <entry key="..\:/WonderV2/app/src/main/res/layout/product_body.xml" value="0.47649918962722854" />
         <entry key="..\:/WonderV2/app/src/main/res/layout/product_face.xml" value="0.33" />
         <entry key="..\:/WonderV2/app/src/main/res/layout/product_food.xml" value="0.33" />
         <entry key="..\:/WonderV2/app/src/main/res/layout/product_wash.xml" value="0.3619791666666667" />
@@ -111,7 +109,7 @@
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.335" />
         <entry key="app/src/main/res/layout/activity_main2.xml" value="0.2971014492753623" />
         <entry key="app/src/main/res/layout/ar_camera.xml" value="0.375" />
-        <entry key="app/src/main/res/layout/ar_complete.xml" value="0.4494902687673772" />
+        <entry key="app/src/main/res/layout/ar_complete.xml" value="0.335" />
         <entry key="app/src/main/res/layout/ar_main.xml" value="0.1" />
         <entry key="app/src/main/res/layout/ar_select_almaeng.xml" value="0.22552083333333334" />
         <entry key="app/src/main/res/layout/ar_select_aromatica.xml" value="0.22552083333333334" />

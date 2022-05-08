@@ -197,7 +197,8 @@
 
             <!--최대용량 레이아웃-->
             <LinearLayout
-                android:visibility="gone"
+                android:id="@+id/max_gram_layout"
+                android:visibility="visible"
                 android:layout_marginTop="20dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -218,6 +219,7 @@
                     android:gravity="center_horizontal"
                     android:orientation="horizontal">
                     <TextView
+                        android:id="@+id/max_gram"
                         android:text="100g"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -246,6 +248,7 @@
                 android:gravity="center_horizontal"
                 android:orientation="vertical">
                 <TextView
+                    android:id="@+id/price_txt"
                     android:text="측정된 금액은"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -285,6 +288,24 @@
                         android:textSize="15dp">
                     </TextView>
                 </LinearLayout>
+            </LinearLayout>
+
+
+            <!--추가용기 준비 레이아웃-->
+            <LinearLayout
+                android:id="@+id/other_layout"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical">
+                <TextView
+                    android:text="추가 용기를 준비해 주세요!"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:textSize="15dp">
+                </TextView>
             </LinearLayout>
 
 
