@@ -109,11 +109,13 @@
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.335" />
         <entry key="app/src/main/res/layout/activity_main2.xml" value="0.2971014492753623" />
         <entry key="app/src/main/res/layout/ar_camera.xml" value="0.375" />
+        <entry key="app/src/main/res/layout/ar_card.xml" value="0.45" />
         <entry key="app/src/main/res/layout/ar_complete.xml" value="0.335" />
-        <entry key="app/src/main/res/layout/ar_main.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/ar_main.xml" value="0.45" />
         <entry key="app/src/main/res/layout/ar_select_almaeng.xml" value="0.22552083333333334" />
         <entry key="app/src/main/res/layout/ar_select_aromatica.xml" value="0.22552083333333334" />
         <entry key="app/src/main/res/layout/ar_select_item.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/custom_tab.xml" value="0.29846014492753625" />
         <entry key="app/src/main/res/layout/exp_body.xml" value="0.15324214792299898" />
         <entry key="app/src/main/res/layout/exp_detail.xml" value="0.21920289855072464" />
         <entry key="app/src/main/res/layout/exp_food.xml" value="0.19300911854103345" />
@@ -123,12 +125,15 @@
         <entry key="app/src/main/res/layout/home_loca_map.xml" value="0.1" />
         <entry key="app/src/main/res/layout/home_main.xml" value="0.335" />
         <entry key="app/src/main/res/layout/home_product.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/home_shop_almaeng_face.xml" value="0.29846014492753625" />
+        <entry key="app/src/main/res/layout/home_shop_chaeum_detail.xml" value="0.45" />
         <entry key="app/src/main/res/layout/home_shop_detail.xml" value="0.21920289855072464" />
         <entry key="app/src/main/res/layout/home_shop_finder.xml" value="0.1" />
         <entry key="app/src/main/res/layout/product_body.xml" value="0.335" />
         <entry key="app/src/main/res/layout/product_face.xml" value="0.1" />
         <entry key="app/src/main/res/layout/product_food.xml" value="0.1" />
         <entry key="app/src/main/res/layout/product_wash.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/productlist_item.xml" value="0.29846014492753625" />
         <entry key="app/src/main/res/menu/menu.xml" value="0.10185185185185185" />
       </map>
     </option>

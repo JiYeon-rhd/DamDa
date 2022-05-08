@@ -4,7 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".AR.AR_main">
+    tools:context=".AR.AR_main"
+    android:background="#ffffff">
 
     //ar 프래그먼트 화면
 
@@ -43,6 +44,7 @@
             android:background="@drawable/home_icon_alarm"/>
     </LinearLayout>
     <FrameLayout
+        android:visibility="gone"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
@@ -418,4 +420,28 @@
                 android:layout_marginBottom="20dp"/>
         </LinearLayout>
     </FrameLayout>
+
+    <TextView
+        android:layout_width="125dp"
+        android:layout_height="30dp"
+        android:background="@drawable/home_name_bg"
+        android:gravity="center"
+        android:text="2022년 5월 9일"
+        android:fontFamily="@font/notosansbold"
+        android:textSize="13dp"
+        android:textColor="#000000"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="30dp"/>
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/ar_recyclerveiw"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+
+    </LinearLayout>
 </LinearLayout>

@@ -3,26 +3,47 @@ package com.example.wonderv2.AR;
 import android.content.Intent;
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.ListView;
 
 import com.example.wonderv2.MainActivity;
 import com.example.wonderv2.R;
 import com.example.wonderv2.Setting.Setting_alarm;
 import com.example.wonderv2.Setting.Setting_main;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+import com.google.firebase.firestore.auth.User;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * A simple {@link Fragment} subclass.
  * Use the {@link AR_main#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class AR_main extends Fragment {
+public class AR_main extends Fragment{
     MainActivity activity;
+
+    private RecyclerView ar_recyclerveiw;
+    private RecyclerView.Adapter arAdapter;
+    private RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getActivity());
+    private ArrayList<AR_card_model> arrayList;
+    private FirebaseDatabase database;
+    private DatabaseReference databaseReference;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -110,6 +131,48 @@ public class AR_main extends Fragment {
                 startActivity(intent);
             }
         });
+
+
+        //리사이클러뷰
+        //ar_recyclerveiw.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
+        //ar_recyclerveiw.setAdapter(new AR_card_adapter(ar_recyclerveiw.getContext(), ));
+
+
+        ar_recyclerveiw = v.findViewById(R.id.ar_recyclerveiw);
+        ar_recyclerveiw.setHasFixedSize(true);
+        layoutManager = new LinearLayoutManager(getActivity());
+        ar_recyclerveiw.setLayoutManager(layoutManager);
+        arrayList = new ArrayList<>();
+
+
+
+        database = FirebaseDatabase.getInstance();
+
+        databaseReference = database.getReference("ARCard");
+
+        databaseReference.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                arrayList.clear();
+                for(DataSnapshot snapshot1 : snapshot.getChildren()){
+                    AR_card_model ar_card_model = snapshot1.getValue(AR_card_model.class);
+                    arrayList.add(ar_card_model);
+                }
+                arAdapter.notifyDataSetChanged();
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+
+        arAdapter = new AR_card_adapter(arrayList, getActivity());
+        ar_recyclerveiw.setAdapter(arAdapter);
+
+
+
+
 
         return v;
     }

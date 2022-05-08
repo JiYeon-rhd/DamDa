@@ -12,6 +12,8 @@ import android.widget.TextView;
 
 import com.example.wonderv2.MainActivity;
 import com.example.wonderv2.R;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class AR_complete extends AppCompatActivity {
 
@@ -24,7 +26,7 @@ public class AR_complete extends AppCompatActivity {
     TextView item_g_txt;
     TextView item_price_txt;
 
-    TextView price_txt;
+    TextView price_txt; //측정된 금액은
     TextView max_gram;
     LinearLayout max_gram_layout;
     LinearLayout other_layout;
@@ -57,6 +59,10 @@ public class AR_complete extends AppCompatActivity {
 
     String Gram_name_5;//알맹상점 400
     String Gram_name_6; //아로마티카 400
+
+    //파이어베이스 연동
+    private  FirebaseDatabase database = FirebaseDatabase.getInstance();
+    private DatabaseReference databaseReference = database.getReference();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -187,16 +193,28 @@ public class AR_complete extends AppCompatActivity {
         });
 
 
-        //[스캔 완료 버튼]
+        //[스캔 완료 버튼] 파이어 베이스에 정보 넘기기
         home_btn = findViewById(R.id.home_btn);
         home_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(AR_complete.this, MainActivity.class);
+
+                addARCard(shop_name.getText().toString(), item_name_txt.getText().toString(),
+                        item_g_txt.getText().toString(), item_price_txt.getText().toString());
+
+
                 startActivity(intent);
             }
         });
 
+    }
+
+    //파이어베이스 리얼파이 데베로 넘기는 함수
+    public void addARCard(String shop_name, String item_name, String item_gram, String item_price){
+        AR_card_model ar_card_Model = new AR_card_model(shop_name, item_name, item_gram, item_price);
+
+        databaseReference.child("ARCard").child(shop_name).setValue(ar_card_Model);
     }
 
 
