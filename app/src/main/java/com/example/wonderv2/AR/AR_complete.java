@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.wonderv2.MainActivity;
@@ -23,6 +24,8 @@ public class AR_complete extends AppCompatActivity {
 
     Button scan_btn;
     Button home_btn;
+
+    ImageView scan_bottle_gram_image;
 
     String Product_name_1;
     String Product_name_2;
@@ -63,6 +66,30 @@ public class AR_complete extends AppCompatActivity {
         Shop_name = intent.getStringExtra("상점이름");
         bottle_name.setText(Bottle_name);
         shop_name.setText(Shop_name);
+
+        //용기 이름에 따라 공병 사진 바꾸기
+        scan_bottle_gram_image = findViewById(R.id.scan_bottle_gram_image);
+        if(bottle_name.getText().toString() == "al_L"){
+            scan_bottle_gram_image.setImageResource(R.drawable.bottle_al_l);
+        }
+        else if(bottle_name.getText().toString() == "al_M"){
+            scan_bottle_gram_image.setImageResource(R.drawable.bottle_al_m);
+        }
+        else if(bottle_name.getText().toString() == "al_S"){
+            scan_bottle_gram_image.setImageResource(R.drawable.bottle_al_s);
+        }
+        else if(bottle_name.getText().toString() == "aro_L"){
+            scan_bottle_gram_image.setImageResource(R.drawable.bottle_aro_l);
+        }
+        else if(bottle_name.getText().toString() == "aro_s"){
+            scan_bottle_gram_image.setImageResource(R.drawable.bottle_aro_s);
+        }
+        else if(bottle_name.getText().toString() == "ch_M"){
+            scan_bottle_gram_image.setImageResource(R.drawable.bottle_ch_m);
+        }
+        else if(bottle_name.getText().toString() == "ear_L"){
+            scan_bottle_gram_image.setImageResource(R.drawable.bottle_ear_l);
+        }
 
         //선택한 제품
         Product_name_1 = intent.getStringExtra("알맹 샴푸");

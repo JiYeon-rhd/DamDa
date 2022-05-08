@@ -59,18 +59,6 @@ public class AR_camera extends AppCompatActivity {
 
     AR_splash_scan ar_splash_scan;
 
-    //Button homeBtn;
-    //Button home_btn;
-    //TextView scan_before_txt;
-    //TextView item_g_txt;
-    //TextView item_name_txt;
-    //TextView item_price_txt;
-    //스캔 실패
-    //LinearLayout scan_fail_layout;
-    //TextView bottle_name_fail;
-    //TextView item_g_txt_fail;
-
-
     public int itemG =0;
     public String itemName_earth_detergent;
     public String itemName_ch_tea;
@@ -111,41 +99,6 @@ public class AR_camera extends AppCompatActivity {
         ar_splash_scan.getWindow().clearFlags(WindowManager.LayoutParams.FLAG_DIM_BEHIND);
 
 
-
-        //scan_before_txt = findViewById(R.id.scan_before_txt);
-        //scan_after_txt_layout = findViewById(R.id.scan_after_txt_layout);
-        //item_g_txt = findViewById(R.id.item_g_txt);
-        //item_name_txt = findViewById(R.id.item_name_txt);
-        //item_price_txt = findViewById(R.id.item_price_txt);
-
-        //스캔 실패
-        //scan_fail_layout =findViewById(R.id.scan_fail_txt_layout);
-        //bottle_name_fail =findViewById(R.id.bottle_name_fail);
-        //item_g_txt_fail =findViewById(R.id.item_g_txt_fail);
-
-
-        /*
-        Bundle intent3 = getIntent().getExtras();
-        String item_g_txt_2 = intent3.getString("item_g");
-        itemG = Integer.parseInt(item_g_txt_2);
-        item_g_txt.setText(intent3.getString("item_g"));
-        item_g_txt_fail.setText(intent3.getString("item_g"));
-
-        itemName_earth_detergent=intent3.getString("item_earth_detergent");
-        itemName_ch_tea=intent3.getString("item_chaeum_tea");
-        itemName_ch_coffee=intent3.getString("item_chaeum_coffee");
-
-
-        if(!itemName_earth_detergent.equals("선택하세요")){
-            item_name_txt.setText(intent3.getString("item_earth_detergent"));
-        }
-        else if(!itemName_ch_tea.equals("선택하세요")){
-            item_name_txt.setText(intent3.getString("item_chaeum_tea"));
-        }
-        else if(!itemName_ch_coffee.equals("선택하세요")){
-            item_name_txt.setText(intent3.getString("item_chaeum_coffee"));
-        }
-*/
 
         //스캔 시작 버튼을 누르면 카메라 실행
         scan_btn.setOnClickListener(new View.OnClickListener() {
@@ -278,24 +231,31 @@ public class AR_camera extends AppCompatActivity {
             //공병 이름에 따라 상점 이름 바꾸기
             if(bottle_name_txt.getText().toString() == "al_L"){
                 shop_name_txt.setText("알맹상점");
+                scan_bottle_image.setImageResource(R.drawable.bottle_al_l);
             }
             else if(bottle_name_txt.getText().toString() == "al_M"){
                 shop_name_txt.setText("알맹상점");
+                scan_bottle_image.setImageResource(R.drawable.bottle_al_m);
             }
             else if(bottle_name_txt.getText().toString() == "al_S"){
                 shop_name_txt.setText("알맹상점");
+                scan_bottle_image.setImageResource(R.drawable.bottle_al_s);
             }
             else if(bottle_name_txt.getText().toString() == "aro_L"){
                 shop_name_txt.setText("아로마티카");
+                scan_bottle_image.setImageResource(R.drawable.bottle_aro_l);
             }
             else if(bottle_name_txt.getText().toString() == "aro_s"){
                 shop_name_txt.setText("아로마티카");
+                scan_bottle_image.setImageResource(R.drawable.bottle_aro_s);
             }
             else if(bottle_name_txt.getText().toString() == "ch_M"){
                 shop_name_txt.setText("채움소");
+                scan_bottle_image.setImageResource(R.drawable.bottle_ch_m);
             }
             else if(bottle_name_txt.getText().toString() == "ear_L"){
                 shop_name_txt.setText("지구샵");
+                scan_bottle_image.setImageResource(R.drawable.bottle_ear_l);
             }
 
 
@@ -397,10 +357,6 @@ public class AR_camera extends AppCompatActivity {
 
             image = Bitmap.createScaledBitmap(image, imageSize, imageSize, false);
 
-
-            //home_btn.setVisibility(View.VISIBLE);
-           // scan_before_txt.setVisibility(View.INVISIBLE);
-            //scan_after_txt_layout.setVisibility(View.VISIBLE);
             before_scan_layout.setVisibility(View.INVISIBLE);
             success_scan_layout.setVisibility(View.VISIBLE);
 
