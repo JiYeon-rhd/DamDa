@@ -18,9 +18,6 @@
             android:name=".Setting.Setting_main"
             android:exported="true" />
         <activity
-            android:name=".Setting.MainActivity"
-            android:exported="true" />
-        <activity
             android:name=".Setting.Setting_alarm"
             android:exported="true" />
         <activity
@@ -34,7 +31,8 @@
             android:exported="true" />
         <activity
             android:name=".AR.AR_splash_scan"
-            android:exported="true" />
+            android:exported="true"
+            tools:ignore="Instantiatable" />
         <activity
             android:name=".AR.AR_complete"
             android:exported="true" />
@@ -52,7 +50,8 @@
             android:exported="true" />
         <activity
             android:name=".Home.Home_PagerAdapter"
-            android:exported="true" />
+            android:exported="true"
+            tools:ignore="Instantiatable" />
         <activity
             android:name=".Sign.Sign_up"
             android:exported="true" />

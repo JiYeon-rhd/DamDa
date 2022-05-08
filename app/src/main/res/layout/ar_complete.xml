@@ -282,11 +282,14 @@
                     android:layout_width="150dp"
                     android:layout_height="49dp"
                     android:fontFamily="@font/notosansregular"
-                    android:background="@drawable/ar_btn_detection_lightgreen"
-                    android:text="스캔 시작"
+                    android:background="@drawable/ar_btn_reselect"
+                    android:text="다시 선택"
                     android:textStyle="bold"
                     android:textSize="17dp"
-                    android:textColor="#FFFFFF">
+                    android:textColor="#26805B"
+                    android:drawableLeft="@drawable/icon_re_scan"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp">
                 </Button>
 
                 <Button
@@ -301,6 +304,9 @@
                     android:textSize="17dp"
                     android:textColor="#FFFFFF"
                     android:layout_marginLeft="20dp"
+                    android:drawableLeft="@drawable/icon_item_select"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
                     >
                 </Button>
             </LinearLayout>

@@ -147,6 +147,11 @@ public class AR_select_chaeum extends AppCompatActivity implements View.OnClickL
                 Intent intent = new Intent(AR_select_chaeum.this, AR_complete.class);
                 intent.putExtra("상점이름", shop_name);
                 intent.putExtra("용기이름", bottle_name);
+
+                intent.putExtra("채움소 티", spinner_chaeum_tea.getSelectedItem().toString());
+                intent.putExtra("채움소 커피", spinner_chaeum_coffee.getSelectedItem().toString());
+                intent.putExtra("채움소 선택한 그램", spinner_chaeum_gram.getSelectedItem().toString());
+
                 startActivity(intent);
             }
         });
@@ -175,6 +180,9 @@ public class AR_select_chaeum extends AppCompatActivity implements View.OnClickL
 
                 spinner_chaeum_tea_layout.setVisibility(View.VISIBLE);
                 spinner_chaeum_coffee_layout.setVisibility(View.INVISIBLE);
+                spinner_chaeum_tea.setSelection(0);
+                spinner_chaeum_coffee.setSelection(0);
+
 
                 gram_chaeum_layout.setVisibility(View.INVISIBLE);
                 complete_btn_chaeum.setVisibility(View.INVISIBLE);
@@ -188,6 +196,9 @@ public class AR_select_chaeum extends AppCompatActivity implements View.OnClickL
 
                 spinner_chaeum_tea_layout.setVisibility(View.INVISIBLE);
                 spinner_chaeum_coffee_layout.setVisibility(View.VISIBLE);
+                spinner_chaeum_tea.setSelection(0);
+                spinner_chaeum_coffee.setSelection(0);
+
 
                 gram_chaeum_layout.setVisibility(View.INVISIBLE);
                 complete_btn_chaeum.setVisibility(View.INVISIBLE);

@@ -147,6 +147,10 @@ public class AR_select_earth extends AppCompatActivity implements View.OnClickLi
                 Intent intent = new Intent(AR_select_earth.this, AR_complete.class);
                 intent.putExtra("상점이름", shop_name);
                 intent.putExtra("용기이름", bottle_name);
+                intent.putExtra("지구샵 섬유유연제", spinner_earth_scent.getSelectedItem().toString());
+                intent.putExtra("지구샵 주방세제", spinner_earth_kitchen.getSelectedItem().toString());
+                intent.putExtra("지구샵 선택한 그램", spinner_earth_gram.getSelectedItem().toString());
+
                 startActivity(intent);
             }
         });
@@ -173,6 +177,8 @@ public class AR_select_earth extends AppCompatActivity implements View.OnClickLi
 
                 spinner_earth_scent_layout.setVisibility(View.VISIBLE);
                 spinner_earth_kitchen_layout.setVisibility(View.INVISIBLE);
+                spinner_earth_scent.setSelection(0);
+                spinner_earth_kitchen.setSelection(0);
 
                 gram_earth_layout.setVisibility(View.INVISIBLE);
                 complete_btn_earth.setVisibility(View.INVISIBLE);
@@ -184,6 +190,8 @@ public class AR_select_earth extends AppCompatActivity implements View.OnClickLi
 
                 spinner_earth_scent_layout.setVisibility(View.INVISIBLE);
                 spinner_earth_kitchen_layout.setVisibility(View.VISIBLE);
+                spinner_earth_scent.setSelection(0);
+                spinner_earth_kitchen.setSelection(0);
 
                 gram_earth_layout.setVisibility(View.INVISIBLE);
                 complete_btn_earth.setVisibility(View.INVISIBLE);

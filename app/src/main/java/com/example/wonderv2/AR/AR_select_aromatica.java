@@ -218,6 +218,12 @@ public class AR_select_aromatica extends AppCompatActivity implements View.OnCli
                 intent.putExtra("상점이름", shop_name);
                 intent.putExtra("용기이름", bottle_name);
 
+                intent.putExtra("아로마 샴푸", spinner_aro_shampoo_item.getSelectedItem().toString());
+                intent.putExtra("아로마 컨디셔너", spinner_aro_conditioner_item.getSelectedItem().toString());
+                intent.putExtra("아로마 토너", spinner_aro_tonor_item.getSelectedItem().toString());
+                intent.putExtra("아로마 크림", spinner_aro_cream_item.getSelectedItem().toString());
+                intent.putExtra("아로마 선택한 그램", spinner_aro_gram.getSelectedItem().toString());
+
                 startActivity(intent);
             }
         });
@@ -279,6 +285,10 @@ public class AR_select_aromatica extends AppCompatActivity implements View.OnCli
                 spinner_aro_cream_layout.setVisibility(View.INVISIBLE);
                 spinner_aro_shampoo_layout.setVisibility(View.VISIBLE);
                 spinner_aro_conditioner_layout.setVisibility(View.INVISIBLE);
+                spinner_aro_conditioner_item.setSelection(0);
+                spinner_aro_shampoo_item.setSelection(0);
+                spinner_aro_tonor_item.setSelection(0);
+                spinner_aro_cream_item.setSelection(0);
 
                 gram_aro_layout.setVisibility(View.INVISIBLE);
                 complete_btn_aro.setVisibility(View.INVISIBLE);
@@ -295,6 +305,10 @@ public class AR_select_aromatica extends AppCompatActivity implements View.OnCli
                 spinner_aro_cream_layout.setVisibility(View.INVISIBLE);
                 spinner_aro_shampoo_layout.setVisibility(View.INVISIBLE);
                 spinner_aro_conditioner_layout.setVisibility(View.VISIBLE);
+                spinner_aro_conditioner_item.setSelection(0);
+                spinner_aro_shampoo_item.setSelection(0);
+                spinner_aro_tonor_item.setSelection(0);
+                spinner_aro_cream_item.setSelection(0);
 
                 gram_aro_layout.setVisibility(View.INVISIBLE);
                 complete_btn_aro.setVisibility(View.INVISIBLE);
@@ -311,6 +325,10 @@ public class AR_select_aromatica extends AppCompatActivity implements View.OnCli
                 spinner_aro_cream_layout.setVisibility(View.INVISIBLE);
                 spinner_aro_shampoo_layout.setVisibility(View.INVISIBLE);
                 spinner_aro_conditioner_layout.setVisibility(View.INVISIBLE);
+                spinner_aro_conditioner_item.setSelection(0);
+                spinner_aro_shampoo_item.setSelection(0);
+                spinner_aro_tonor_item.setSelection(0);
+                spinner_aro_cream_item.setSelection(0);
 
                 gram_aro_layout.setVisibility(View.INVISIBLE);
                 complete_btn_aro.setVisibility(View.INVISIBLE);
@@ -327,6 +345,10 @@ public class AR_select_aromatica extends AppCompatActivity implements View.OnCli
                 spinner_aro_cream_layout.setVisibility(View.VISIBLE);
                 spinner_aro_shampoo_layout.setVisibility(View.INVISIBLE);
                 spinner_aro_conditioner_layout.setVisibility(View.INVISIBLE);
+                spinner_aro_conditioner_item.setSelection(0);
+                spinner_aro_shampoo_item.setSelection(0);
+                spinner_aro_tonor_item.setSelection(0);
+                spinner_aro_cream_item.setSelection(0);
 
                 gram_aro_layout.setVisibility(View.INVISIBLE);
                 complete_btn_aro.setVisibility(View.INVISIBLE);

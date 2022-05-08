@@ -84,7 +84,7 @@
         <!--스캔전 화면-->
         <LinearLayout
             android:id="@+id/before_scan_layout"
-            android:visibility="invisible"
+            android:visibility="visible"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center_horizontal|center"
@@ -123,7 +123,7 @@
         <!--스캔 성공 화면-->
         <LinearLayout
             android:id="@+id/success_scan_layout"
-            android:visibility="visible"
+            android:visibility="invisible"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center_horizontal|center"
@@ -181,7 +181,10 @@
                 android:textStyle="bold"
                 android:textSize="17dp"
                 android:textColor="#FFFFFF"
-                android:layout_marginTop="40dp">
+                android:layout_marginTop="40dp"
+                android:drawableLeft="@drawable/icon_item_select"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp">
             </Button>
             <Button
                 android:id="@+id/re_scan_btn"
@@ -193,7 +196,10 @@
                 android:textStyle="bold"
                 android:textSize="17dp"
                 android:textColor="#26805B"
-                android:layout_marginTop="20dp">
+                android:layout_marginTop="20dp"
+                android:drawableLeft="@drawable/icon_re_scan"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp">
             </Button>
         </LinearLayout>
 

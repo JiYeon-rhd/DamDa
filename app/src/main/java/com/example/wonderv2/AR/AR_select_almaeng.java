@@ -342,6 +342,7 @@ public class AR_select_almaeng extends AppCompatActivity implements View.OnClick
             }
         });
 
+        //[확인 버튼]
         complete_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -349,6 +350,17 @@ public class AR_select_almaeng extends AppCompatActivity implements View.OnClick
 
                 intent.putExtra("상점이름", shop_name);
                 intent.putExtra("용기이름", bottle_name);
+
+
+                intent.putExtra("알맹 선택한 그램", spinner_gram.getSelectedItem().toString());
+                intent.putExtra("알맹 샴푸", spinner_shampoo_item.getSelectedItem().toString());
+                intent.putExtra("알맹 컨디셔너", spinner_conditioner_item.getSelectedItem().toString());
+                intent.putExtra("알맹 토너", spinner_tonor_item.getSelectedItem().toString());
+                intent.putExtra("알맹 크림", spinner_cream_item.getSelectedItem().toString());
+                intent.putExtra("알맹 섬유유연제", spinner_scent_item.getSelectedItem().toString());
+                intent.putExtra("알맹 주방세제", spinner_kitchen_item.getSelectedItem().toString());
+                intent.putExtra("알맹 티", spinner_tea_item.getSelectedItem().toString());
+                intent.putExtra("알맹 커피", spinner_coffee_item.getSelectedItem().toString());
 
                 startActivity(intent);
             }
@@ -495,6 +507,14 @@ public class AR_select_almaeng extends AppCompatActivity implements View.OnClick
                 spinner_kitchen_layout.setVisibility(View.INVISIBLE);
                 spinner_shampoo_layout.setVisibility(View.INVISIBLE);
                 spinner_conditioner_layout.setVisibility(View.INVISIBLE);
+                spinner_conditioner_item.setSelection(0);
+                spinner_shampoo_item.setSelection(0);
+                spinner_tonor_item.setSelection(0);
+                spinner_cream_item.setSelection(0);
+                spinner_scent_item.setSelection(0);
+                spinner_kitchen_item.setSelection(0);
+                spinner_tea_item.setSelection(0);
+                spinner_coffee_item.setSelection(0);
 
                 gram_layout.setVisibility(View.INVISIBLE);
                 complete_btn.setVisibility(View.INVISIBLE);
@@ -514,6 +534,14 @@ public class AR_select_almaeng extends AppCompatActivity implements View.OnClick
                 spinner_kitchen_layout.setVisibility(View.INVISIBLE);
                 spinner_shampoo_layout.setVisibility(View.INVISIBLE);
                 spinner_conditioner_layout.setVisibility(View.INVISIBLE);
+                spinner_conditioner_item.setSelection(0);
+                spinner_shampoo_item.setSelection(0);
+                spinner_tonor_item.setSelection(0);
+                spinner_cream_item.setSelection(0);
+                spinner_scent_item.setSelection(0);
+                spinner_kitchen_item.setSelection(0);
+                spinner_tea_item.setSelection(0);
+                spinner_coffee_item.setSelection(0);
 
                 gram_layout.setVisibility(View.INVISIBLE);
                 complete_btn.setVisibility(View.INVISIBLE);
@@ -533,6 +561,14 @@ public class AR_select_almaeng extends AppCompatActivity implements View.OnClick
                 spinner_kitchen_layout.setVisibility(View.INVISIBLE);
                 spinner_shampoo_layout.setVisibility(View.INVISIBLE);
                 spinner_conditioner_layout.setVisibility(View.INVISIBLE);
+                spinner_conditioner_item.setSelection(0);
+                spinner_shampoo_item.setSelection(0);
+                spinner_tonor_item.setSelection(0);
+                spinner_cream_item.setSelection(0);
+                spinner_scent_item.setSelection(0);
+                spinner_kitchen_item.setSelection(0);
+                spinner_tea_item.setSelection(0);
+                spinner_coffee_item.setSelection(0);
 
                 gram_layout.setVisibility(View.INVISIBLE);
                 complete_btn.setVisibility(View.INVISIBLE);
@@ -551,6 +587,14 @@ public class AR_select_almaeng extends AppCompatActivity implements View.OnClick
                 spinner_kitchen_layout.setVisibility(View.INVISIBLE);
                 spinner_shampoo_layout.setVisibility(View.INVISIBLE);
                 spinner_conditioner_layout.setVisibility(View.INVISIBLE);
+                spinner_conditioner_item.setSelection(0);
+                spinner_shampoo_item.setSelection(0);
+                spinner_tonor_item.setSelection(0);
+                spinner_cream_item.setSelection(0);
+                spinner_scent_item.setSelection(0);
+                spinner_kitchen_item.setSelection(0);
+                spinner_tea_item.setSelection(0);
+                spinner_coffee_item.setSelection(0);
 
                 gram_layout.setVisibility(View.INVISIBLE);
                 complete_btn.setVisibility(View.INVISIBLE);
@@ -570,6 +614,14 @@ public class AR_select_almaeng extends AppCompatActivity implements View.OnClick
                 spinner_kitchen_layout.setVisibility(View.INVISIBLE);
                 spinner_shampoo_layout.setVisibility(View.INVISIBLE);
                 spinner_conditioner_layout.setVisibility(View.INVISIBLE);
+                spinner_conditioner_item.setSelection(0);
+                spinner_shampoo_item.setSelection(0);
+                spinner_tonor_item.setSelection(0);
+                spinner_cream_item.setSelection(0);
+                spinner_scent_item.setSelection(0);
+                spinner_kitchen_item.setSelection(0);
+                spinner_tea_item.setSelection(0);
+                spinner_coffee_item.setSelection(0);
 
                 gram_layout.setVisibility(View.INVISIBLE);
                 complete_btn.setVisibility(View.INVISIBLE);
@@ -588,6 +640,14 @@ public class AR_select_almaeng extends AppCompatActivity implements View.OnClick
                 spinner_kitchen_layout.setVisibility(View.VISIBLE);
                 spinner_shampoo_layout.setVisibility(View.INVISIBLE);
                 spinner_conditioner_layout.setVisibility(View.INVISIBLE);
+                spinner_conditioner_item.setSelection(0);
+                spinner_shampoo_item.setSelection(0);
+                spinner_tonor_item.setSelection(0);
+                spinner_cream_item.setSelection(0);
+                spinner_scent_item.setSelection(0);
+                spinner_kitchen_item.setSelection(0);
+                spinner_tea_item.setSelection(0);
+                spinner_coffee_item.setSelection(0);
 
                 gram_layout.setVisibility(View.INVISIBLE);
                 complete_btn.setVisibility(View.INVISIBLE);
@@ -607,6 +667,14 @@ public class AR_select_almaeng extends AppCompatActivity implements View.OnClick
                 spinner_kitchen_layout.setVisibility(View.INVISIBLE);
                 spinner_shampoo_layout.setVisibility(View.VISIBLE);
                 spinner_conditioner_layout.setVisibility(View.INVISIBLE);
+                spinner_conditioner_item.setSelection(0);
+                spinner_shampoo_item.setSelection(0);
+                spinner_tonor_item.setSelection(0);
+                spinner_cream_item.setSelection(0);
+                spinner_scent_item.setSelection(0);
+                spinner_kitchen_item.setSelection(0);
+                spinner_tea_item.setSelection(0);
+                spinner_coffee_item.setSelection(0);
 
                 gram_layout.setVisibility(View.INVISIBLE);
                 complete_btn.setVisibility(View.INVISIBLE);
@@ -626,6 +694,14 @@ public class AR_select_almaeng extends AppCompatActivity implements View.OnClick
                 spinner_kitchen_layout.setVisibility(View.INVISIBLE);
                 spinner_shampoo_layout.setVisibility(View.INVISIBLE);
                 spinner_conditioner_layout.setVisibility(View.VISIBLE);
+                spinner_conditioner_item.setSelection(0);
+                spinner_shampoo_item.setSelection(0);
+                spinner_tonor_item.setSelection(0);
+                spinner_cream_item.setSelection(0);
+                spinner_scent_item.setSelection(0);
+                spinner_kitchen_item.setSelection(0);
+                spinner_tea_item.setSelection(0);
+                spinner_coffee_item.setSelection(0);
 
                 gram_layout.setVisibility(View.INVISIBLE);
                 complete_btn.setVisibility(View.INVISIBLE);

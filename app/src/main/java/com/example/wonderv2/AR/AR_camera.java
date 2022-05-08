@@ -165,7 +165,7 @@ public class AR_camera extends AppCompatActivity {
 
         });
 
-        //제품 선택 버튼 누루면 상점 이름에 따라 액티비티 인텐트
+        //[제품 선택 버튼] 누루면 상점 이름에 따라 액티비티 인텐트
         item_select_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -204,7 +204,7 @@ public class AR_camera extends AppCompatActivity {
             }
         });
 
-        //다시 시작 버튼을 누르면 카메라 실행
+        //[다시 선택 버튼]을 누르면 카메라 실행
         re_scan_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
