@@ -214,7 +214,7 @@ public class AR_complete extends AppCompatActivity {
     public void addARCard(String shop_name, String item_name, String item_gram, String item_price){
         AR_card_model ar_card_Model = new AR_card_model(shop_name, item_name, item_gram, item_price);
 
-        databaseReference.child("ARCard").child(shop_name).setValue(ar_card_Model);
+        databaseReference.child("ARCard").push().setValue(ar_card_Model);
     }
 
 
