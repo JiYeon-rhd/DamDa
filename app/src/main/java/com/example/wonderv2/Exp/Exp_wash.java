@@ -115,49 +115,8 @@ public class Exp_wash extends Fragment {
                     Exp_productdetail exp_productdetail = snapshot.getValue(Exp_productdetail.class);
 
 
-
-                    int ONE_DAY = 24*60*60*1000;//millisecond 형의 하루 24시간
-
-                    //유통기한 날짜
+                    String dday = exp_productdetail.getDDay().toString();
                     String expday = exp_productdetail.getExpDay().toString();
-                    DateTimeFormatter format = DateTimeFormatter.ofPattern("yyyy년 MM월 dd일");
-                    LocalDate date = LocalDate.parse(expday, format);
-                    int expYear = date.getYear();
-                    int expMonth = date.getMonthValue();
-                    int expDay = date.getDayOfMonth();
-                    Calendar ddayCalendar = Calendar.getInstance();
-                    ddayCalendar.set(expYear, expMonth, expDay);
-                    long DateDday = ddayCalendar.getTimeInMillis() / ONE_DAY;
-
-                    //System.out.println(date);
-
-                    //현재 날짜 구하기
-                    LocalDateTime today = LocalDateTime.now();
-                    int toYear = today.getYear();
-                    int toMonth = today.getMonthValue();
-                    int toDay = today.getDayOfMonth();
-                    Calendar todayCalendar = Calendar.getInstance();
-                    todayCalendar.set(toYear, toMonth, toDay);
-                    long DateToday = todayCalendar.getTimeInMillis() / ONE_DAY;
-
-                    long result = DateDday - DateToday;
-
-                    String dday;
-                    if(result > 0){
-                        dday = "D - " + result;
-                    }
-                    else if(result == 0){
-                        dday = "D - Day";
-                    }
-                    else{
-                        result *= -1;
-                        dday = "D + " + result;
-                    }
-
-                    //String dday = exp_productdetail.getDDay().toString();
-
-
-
                     String shopname = exp_productdetail.getShopName().toString();
                     String productname = exp_productdetail.getProductName().toString();
 
