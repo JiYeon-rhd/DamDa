@@ -30,6 +30,10 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+import java.util.Calendar;
 import java.util.HashMap;
 
 public class Exp_camera extends AppCompatActivity {
@@ -142,9 +146,47 @@ public class Exp_camera extends AppCompatActivity {
     private void writeNewExp_productdetail(int a, String productName, String shopName, String expDay, String productDetail, String productIngredient, String productGuide, String dDay) {
         Exp_productdetail Exp_productdetail = new Exp_productdetail(productName,  shopName,  expDay, productDetail, productIngredient,productGuide,dDay);
 
-        Log.d(TAG,expDay );
-        Log.d(TAG,dDay );
 
+
+        int ONE_DAY = 24*60*60*1000;//millisecond 형의 하루 24시간
+
+        //유통기한 날짜
+        String expday = Exp_productdetail.getExpDay().toString();
+        DateTimeFormatter format = DateTimeFormatter.ofPattern("yyyy년 MM월 dd일");
+        LocalDate date = LocalDate.parse(expday, format);
+        int expYear = date.getYear();
+        int expMonth = date.getMonthValue();
+        int expDate = date.getDayOfMonth();
+        Calendar ddayCalendar = Calendar.getInstance();
+        ddayCalendar.set(expYear, expMonth, expDate);
+        long DateDday = ddayCalendar.getTimeInMillis() / ONE_DAY;
+
+        //System.out.println(date);
+
+        //현재 날짜 구하기
+        LocalDateTime today = LocalDateTime.now();
+        int toYear = today.getYear();
+        int toMonth = today.getMonthValue();
+        int toDay = today.getDayOfMonth();
+        Calendar todayCalendar = Calendar.getInstance();
+        todayCalendar.set(toYear, toMonth, toDay);
+        long DateToday = todayCalendar.getTimeInMillis() / ONE_DAY;
+
+        long result = DateDday - DateToday;
+
+        String dday;
+        if(result > 0){
+            dday = "D-" + result;
+        }
+        else if(result == 0){
+            dday = "D-Day";
+        }
+        else{
+            result *= -1;
+            dday = "D+" + result;
+        }
+
+        Exp_productdetail.setDDay(dday);
 
 
         mDatabase.child("exp_product").child(productName).setValue(Exp_productdetail)
