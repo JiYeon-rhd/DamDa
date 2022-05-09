@@ -1,6 +1,7 @@
 package com.example.wonderv2.Home;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
 import androidx.viewpager.widget.ViewPager;
 
 import android.content.Context;
@@ -8,8 +9,10 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
 
+import com.example.wonderv2.AR.AR_main;
 import com.example.wonderv2.MainActivity;
 import com.example.wonderv2.R;
 import com.example.wonderv2.Setting.Setting_alarm;
@@ -63,6 +66,14 @@ public class Home_shop_almaeng_detail extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 finish();
+            }
+        });
+
+        Button scan_btn = findViewById(R.id.scan_btn);
+        scan_btn.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                activity.setFrag(1);
             }
         });
     }
