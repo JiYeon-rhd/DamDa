@@ -2,6 +2,8 @@ package com.example.wonderv2.Exp;
 
 import android.app.AlertDialog;
 import android.content.Context;
+import android.content.Intent;
+import android.provider.ContactsContract;
 import android.view.ContextMenu;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -15,6 +17,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.example.wonderv2.R;
+import com.example.wonderv2.Setting.Setting_alarm;
 
 import org.checkerframework.checker.units.qual.C;
 
@@ -24,6 +27,7 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.CustomView
 
     private ArrayList<productList> arrayList;
     private Context context;
+    private Intent intent;
 
     public CustomAdapter(ArrayList<productList> arrayList, Context context) {
         this.arrayList = arrayList;
@@ -48,6 +52,16 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.CustomView
         holder.tv_productName.setText(String.valueOf(arrayList.get(position).getProductName()));
         holder.tv_expDay.setText(String.valueOf(arrayList.get(position).getExpDay()));
         holder.tv_dDay.setText(String.valueOf(arrayList.get(position).getDDay()));
+
+   //     holder.itemView.setTag(position);
+   //     holder.itemView.setOnClickListener(new View.OnClickListener(){
+   //         @Override
+   //         public void onClick(View v){
+   //             Intent intent = new Intent(context, Exp_detail.class);
+
+   //             context.startActivity(intent);
+   //         }
+   //     });
     }
 
     @Override
@@ -55,7 +69,7 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.CustomView
         return (arrayList != null ? arrayList.size() : 0);
     }
 
-    public class CustomViewHolder extends RecyclerView.ViewHolder implements View.OnCreateContextMenuListener {
+    public class CustomViewHolder extends RecyclerView.ViewHolder {
         TextView tv_shopName;
         TextView tv_productName;
         TextView tv_expDay;
@@ -68,30 +82,33 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.CustomView
             this.tv_expDay = itemView.findViewById(R.id.tv_expDay);
             this.tv_dDay = itemView.findViewById(R.id.tv_dDay);
 
-            itemView.setOnCreateContextMenuListener(this);
-
+    //        itemView.setOnCreateContextMenuListener(this);
+    //        implements View.OnCreateContextMenuListener
         }
 
-        @Override
-        public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo) {
-            MenuItem Delete = menu.add(Menu.NONE, 1001, 1, "삭제");
-            Delete.setOnMenuItemClickListener(onEditMenu);
-        }
 
-        private final MenuItem.OnMenuItemClickListener onEditMenu = new MenuItem.OnMenuItemClickListener() {
-            @Override
-            public boolean onMenuItemClick(MenuItem item) {
-                switch (item.getItemId()) {
-                    case 1001:
-                        arrayList.remove(getAdapterPosition());
-                        notifyItemRemoved(getAdapterPosition());
-                        notifyItemRangeChanged(getAdapterPosition(), arrayList.size());
 
-                        break;
-                }
-                return true;
-            }
-        };
+
+  //      @Override
+  //      public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo) {
+  //          MenuItem Delete = menu.add(Menu.NONE, 1001, 1, "삭제");
+  //          Delete.setOnMenuItemClickListener(onEditMenu);
+  //      }
+
+   //     private final MenuItem.OnMenuItemClickListener onEditMenu = new MenuItem.OnMenuItemClickListener() {
+   //         @Override
+   //         public boolean onMenuItemClick(MenuItem item) {
+   //             switch (item.getItemId()) {
+   //                 case 1001:
+   //                     arrayList.remove(getAdapterPosition());
+   //                     notifyItemRemoved(getAdapterPosition());
+   //                     notifyItemRangeChanged(getAdapterPosition(), arrayList.size());
+
+   //                     break;
+   //             }
+   //             return true;
+   //         }
+   //     };
     }
 }
 

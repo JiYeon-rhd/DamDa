@@ -11,8 +11,10 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
+import com.example.wonderv2.AR.AR_card_model;
 import com.example.wonderv2.R;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -21,7 +23,14 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 import java.security.cert.PolicyNode;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -85,22 +94,44 @@ public class Exp_wash extends Fragment {
                              Bundle savedInstanceState) {
 
         view = inflater.inflate(R.layout.exp_wash, container,false);
-        recyclerView = (RecyclerView) view.findViewById(R.id.recyclerView);
+        recyclerView = view.findViewById(R.id.recyclerView);
         recyclerView.setHasFixedSize(true);
         layoutManager = new LinearLayoutManager(getContext());
         recyclerView.setLayoutManager(layoutManager);
-        arrayList = new ArrayList<>();
+        arrayList = new ArrayList<productList>();
 
         database = FirebaseDatabase.getInstance();
         databaseReference = database.getReference("exp_product");
+
+        ArrayList<String> list = new ArrayList<>();
+
+
         databaseReference.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 arrayList.clear();
                 for (DataSnapshot snapshot : dataSnapshot.getChildren()){
-                    productList productList = snapshot.getValue(com.example.wonderv2.Exp.productList.class);
+                    productList productList = snapshot.getValue(productList.class);
+                    Exp_productdetail exp_productdetail = snapshot.getValue(Exp_productdetail.class);
+
+
+                    String dday = exp_productdetail.getDDay().toString();
+                    String expday = exp_productdetail.getExpDay().toString();
+                    String shopname = exp_productdetail.getShopName().toString();
+                    String productname = exp_productdetail.getProductName().toString();
+
+
+
+                    productList.setDDay(dday.toString());
+                    productList.setExpDay(expday.toString());
+                    productList.setShopName(shopname.toString());
+                    productList.setProductName(productname.toString());
+
                     arrayList.add(productList);
-                }
+
+               }
+          //      productList productList = dataSnapshot.getValue(com.example.wonderv2.Exp.productList.class);
+          //      arrayList.add(productList);
                 adapter.notifyDataSetChanged();
             }
 
@@ -109,10 +140,14 @@ public class Exp_wash extends Fragment {
                 Log.e("Exp_wash",String.valueOf(databaseError.toException()));
             }
         });
-        adapter = new CustomAdapter(arrayList,getContext());
+
+
+       adapter = new CustomAdapter(arrayList,getActivity());
         recyclerView.setAdapter(adapter);
 
         // Inflate the layout for this fragment
         return view;
     }
+
+
 }
