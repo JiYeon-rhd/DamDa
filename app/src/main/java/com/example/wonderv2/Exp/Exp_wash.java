@@ -99,12 +99,12 @@ public class Exp_wash extends Fragment {
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 arrayList.clear();
                 for (DataSnapshot snapshot : dataSnapshot.getChildren()){
-                    productList productList = snapshot.getValue(com.example.wonderv2.Exp.productList.class);
-                    arrayList.add(productList);
+                    productList ProductList = snapshot.getValue(com.example.wonderv2.Exp.productList.class);
+                    arrayList.add(ProductList);
                }
           //      productList productList = dataSnapshot.getValue(com.example.wonderv2.Exp.productList.class);
           //      arrayList.add(productList);
-          //      adapter.notifyDataSetChanged();
+              adapter.notifyDataSetChanged();
             }
 
             @Override

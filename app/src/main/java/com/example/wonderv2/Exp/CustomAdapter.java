@@ -27,7 +27,7 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.CustomView
 
     private ArrayList<productList> arrayList;
     private Context context;
-    private Intent intent;
+ //   private Intent intent;
 
     public CustomAdapter(ArrayList<productList> arrayList, Context context) {
         this.arrayList = arrayList;
@@ -48,6 +48,8 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.CustomView
         //      Glide.with(holder.itemView).load(arrayList.get(position).getShopName()).into(holder.tv_shopName);
         //    holder.tv_productName.setText(arrayList.get(position).getProductName());
         //  holder.tv_expDay.setText(arrayList.get(position).getExpDay());
+
+
         holder.tv_shopName.setText(String.valueOf(arrayList.get(position).getShopName()));
         holder.tv_productName.setText(String.valueOf(arrayList.get(position).getProductName()));
         holder.tv_expDay.setText(String.valueOf(arrayList.get(position).getExpDay()));
@@ -84,6 +86,10 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.CustomView
 
     //        itemView.setOnCreateContextMenuListener(this);
     //        implements View.OnCreateContextMenuListener
+
+
+
+
         }
 
 
