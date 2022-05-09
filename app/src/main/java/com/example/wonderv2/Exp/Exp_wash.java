@@ -93,6 +93,7 @@ public class Exp_wash extends Fragment {
 
         database = FirebaseDatabase.getInstance();
         databaseReference = database.getReference("exp_product");
+
         databaseReference.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
@@ -100,8 +101,10 @@ public class Exp_wash extends Fragment {
                 for (DataSnapshot snapshot : dataSnapshot.getChildren()){
                     productList productList = snapshot.getValue(com.example.wonderv2.Exp.productList.class);
                     arrayList.add(productList);
-                }
-                adapter.notifyDataSetChanged();
+               }
+          //      productList productList = dataSnapshot.getValue(com.example.wonderv2.Exp.productList.class);
+          //      arrayList.add(productList);
+          //      adapter.notifyDataSetChanged();
             }
 
             @Override
