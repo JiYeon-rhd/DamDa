@@ -1,5 +1,7 @@
 package com.example.wonderv2.Exp;
 
+import static android.content.ContentValues.TAG;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -76,6 +78,8 @@ public class Exp_camera extends AppCompatActivity {
 
                 a = a+1;
 
+
+
                 writeNewExp_productdetail(a,getProductName, getShopName,getExpDay,getProductDetail,getProductIngredient,getProductGuide,getDDay);
 
                 Intent intent = new Intent(Exp_camera.this, MainActivity.class);
@@ -137,6 +141,11 @@ public class Exp_camera extends AppCompatActivity {
 
     private void writeNewExp_productdetail(int a, String productName, String shopName, String expDay, String productDetail, String productIngredient, String productGuide, String dDay) {
         Exp_productdetail Exp_productdetail = new Exp_productdetail(productName,  shopName,  expDay, productDetail, productIngredient,productGuide,dDay);
+
+        Log.d(TAG,expDay );
+        Log.d(TAG,dDay );
+
+
 
         mDatabase.child("exp_product").child(productName).setValue(Exp_productdetail)
                 .addOnSuccessListener(new OnSuccessListener<Void>() {
