@@ -10,6 +10,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -27,7 +28,18 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.CustomView
 
     private ArrayList<productList> arrayList;
     private Context context;
- //   private Intent intent;
+    private OnItemClickListener itemClickListener;
+
+    public interface OnItemClickListener{
+        void onItemClick(View v, int pos);
+    }
+
+    public void setOnItemClickListener(OnItemClickListener listener){
+        this.itemClickListener = listener;
+    }
+
+
+
 
     public CustomAdapter(ArrayList<productList> arrayList, Context context) {
         this.arrayList = arrayList;
@@ -76,19 +88,31 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.CustomView
         TextView tv_productName;
         TextView tv_expDay;
         TextView tv_dDay;
+        View itemView;
+
 
         public CustomViewHolder(@NonNull View itemView) {
-            super(itemView);
+            super(itemView.getRootView());
             this.tv_shopName = itemView.findViewById(R.id.tv_shopName);
             this.tv_productName = itemView.findViewById(R.id.tv_productName);
             this.tv_expDay = itemView.findViewById(R.id.tv_expDay);
             this.tv_dDay = itemView.findViewById(R.id.tv_dDay);
 
+            itemView.getRootView().setOnClickListener(new View.OnClickListener(){
+                @Override
+                public void onClick(View v){
+                    int position = getAdapterPosition();
+                    if(position != RecyclerView.NO_POSITION){
+                        if(itemClickListener != null){
+                            itemClickListener.onItemClick(v, position);
+                        }
+                    }
+                }
+            });
+
+
     //        itemView.setOnCreateContextMenuListener(this);
     //        implements View.OnCreateContextMenuListener
-
-
-
 
         }
 
