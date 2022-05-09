@@ -35,4 +35,13 @@ public class productList {
     public String getDDay() {return dDay;}
 
     public void setDDay(String dDay) { this.dDay = dDay; }
+
+
+    public productList(String shopName, String productName, String expDay, String dDay){
+        this.shopName = shopName;
+        this.productName = productName;
+        this.expDay = expDay;
+        this.dDay = dDay;
+    }
+
 }

@@ -13,6 +13,9 @@ import static java.security.AccessController.getContext;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.wonderv2.AR.AR_complete;
+import com.example.wonderv2.MainActivity;
 import com.example.wonderv2.R;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -74,6 +77,9 @@ public class Exp_camera extends AppCompatActivity {
                 a = a+1;
 
                 writeNewExp_productdetail(a,getProductName, getShopName,getExpDay,getProductDetail,getProductIngredient,getProductGuide,getDDay);
+
+                Intent intent = new Intent(Exp_camera.this, MainActivity.class);
+                startActivity(intent);
 
             }
         });
