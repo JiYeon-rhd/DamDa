@@ -315,7 +315,7 @@
                 android:layout_height="match_parent"
                 android:gravity="center_horizontal"
                 android:background="@drawable/ar_btn_detection4"
-                android:layout_marginBottom="30dp"
+                android:layout_marginBottom="15dp"
                 android:orientation="horizontal">
                 <Button
                     android:id="@+id/scan_btn"

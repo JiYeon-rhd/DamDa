@@ -64,6 +64,8 @@
         <entry key="..\:/Users/jiyeon/AndroidStudioProjects/WonderV2/app/src/main/res/layout/product_wash.xml" value="0.33177083333333335" />
         <entry key="..\:/Users/jiyeon/AndroidStudioProjects/WonderV2/app/src/main/res/layout/productlist_item.xml" value="0.22" />
         <entry key="..\:/WonderV2/app/src/main/res/drawable/ar_btn_selector.xml" value="0.378125" />
+        <entry key="..\:/WonderV2/app/src/main/res/drawable/close_icon_resize.xml" value="0.2824074074074074" />
+        <entry key="..\:/WonderV2/app/src/main/res/drawable/example_al_resize.xml" value="0.2824074074074074" />
         <entry key="..\:/WonderV2/app/src/main/res/drawable/navi_bg.xml" value="0.21481481481481482" />
         <entry key="..\:/WonderV2/app/src/main/res/drawable/navi_iconcolor.xml" value="0.21481481481481482" />
         <entry key="..\:/WonderV2/app/src/main/res/drawable/navi_select.xml" value="0.21822916666666667" />
@@ -76,6 +78,8 @@
         <entry key="..\:/WonderV2/app/src/main/res/drawable/tab_unseleted_bg.xml" value="0.36205128205128206" />
         <entry key="..\:/WonderV2/app/src/main/res/drawable/text_selector.xml" value="0.378125" />
         <entry key="..\:/WonderV2/app/src/main/res/layout/activity_main.xml" value="0.17097264437689969" />
+        <entry key="..\:/WonderV2/app/src/main/res/layout/ar_camera.xml" value="0.17401215805471124" />
+        <entry key="..\:/WonderV2/app/src/main/res/layout/ar_complete.xml" value="0.14447463768115942" />
         <entry key="..\:/WonderV2/app/src/main/res/layout/ar_main.xml" value="0.11955420466058764" />
         <entry key="..\:/WonderV2/app/src/main/res/layout/ar_select_item.xml" value="0.33" />
         <entry key="..\:/WonderV2/app/src/main/res/layout/custom_tab.xml" value="0.17097264437689969" />
@@ -89,8 +93,12 @@
         <entry key="..\:/WonderV2/app/src/main/res/layout/home_loca_map.xml" value="0.2694746376811594" />
         <entry key="..\:/WonderV2/app/src/main/res/layout/home_main.xml" value="0.4" />
         <entry key="..\:/WonderV2/app/src/main/res/layout/home_product.xml" value="0.17097264437689969" />
+        <entry key="..\:/WonderV2/app/src/main/res/layout/home_shop_almaeng_detail.xml" value="0.25" />
+        <entry key="..\:/WonderV2/app/src/main/res/layout/home_shop_aromatica_detail.xml" value="0.25" />
         <entry key="..\:/WonderV2/app/src/main/res/layout/home_shop_body.xml" value="0.24947916666666667" />
+        <entry key="..\:/WonderV2/app/src/main/res/layout/home_shop_chaeum_detail.xml" value="0.33" />
         <entry key="..\:/WonderV2/app/src/main/res/layout/home_shop_detail.xml" value="0.1793478260869565" />
+        <entry key="..\:/WonderV2/app/src/main/res/layout/home_shop_earth_detail.xml" value="0.33" />
         <entry key="..\:/WonderV2/app/src/main/res/layout/home_shop_face.xml" value="0.5" />
         <entry key="..\:/WonderV2/app/src/main/res/layout/home_shop_finder.xml" value="0.20833333333333334" />
         <entry key="..\:/WonderV2/app/src/main/res/layout/home_shop_food.xml" value="0.2651006711409396" />
