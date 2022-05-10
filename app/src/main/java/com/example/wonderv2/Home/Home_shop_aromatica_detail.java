@@ -11,6 +11,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 
+import com.example.wonderv2.AR.AR_camera;
 import com.example.wonderv2.AR.AR_complete;
 import com.example.wonderv2.AR.AR_main;
 import com.example.wonderv2.MainActivity;
@@ -72,7 +73,9 @@ public class Home_shop_aromatica_detail extends AppCompatActivity {
         scan_btn.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                activity.setFrag(1);
+                Intent intent= new Intent(Home_shop_aromatica_detail.this, AR_camera.class);
+
+                startActivity(intent);
             }
         });
     }

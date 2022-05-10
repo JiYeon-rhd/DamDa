@@ -12,10 +12,12 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 
+import com.example.wonderv2.AR.AR_camera;
 import com.example.wonderv2.AR.AR_main;
 import com.example.wonderv2.MainActivity;
 import com.example.wonderv2.R;
 import com.example.wonderv2.Setting.Setting_alarm;
+import com.example.wonderv2.Setting.Setting_main;
 import com.google.android.material.tabs.TabLayout;
 
 public class Home_shop_almaeng_detail extends AppCompatActivity {
@@ -73,7 +75,9 @@ public class Home_shop_almaeng_detail extends AppCompatActivity {
         scan_btn.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                activity.setFrag(1);
+                Intent intent= new Intent(Home_shop_almaeng_detail.this, AR_camera.class);
+
+                startActivity(intent);
             }
         });
     }
