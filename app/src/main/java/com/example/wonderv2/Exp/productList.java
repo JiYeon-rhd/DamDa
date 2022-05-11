@@ -6,6 +6,34 @@ public class productList {
     private String expDay;
     private String dDay;
 
+    public String getProductDetail() {
+        return productDetail;
+    }
+
+    public void setProductDetail(String productDetail) {
+        this.productDetail = productDetail;
+    }
+
+    public String getProductIngredient() {
+        return productIngredient;
+    }
+
+    public void setProductIngredient(String productIngredient) {
+        this.productIngredient = productIngredient;
+    }
+
+    public String getProductGuide() {
+        return productGuide;
+    }
+
+    public void setProductGuide(String productGuide) {
+        this.productGuide = productGuide;
+    }
+
+    private String productDetail;
+    private String productIngredient;
+    private String productGuide;
+
     public productList(){}
 
     public String getShopName() {

@@ -16,6 +16,7 @@ public class Exp_detail extends AppCompatActivity {
 
     TextView detail_dday, detail_product, detail_shop, detail_exp, detail_detail, detail_ingredient, detail_guide;
 
+    String productName, shopName, expDay, dDay, productDetail, productIngredient, productGuide;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,6 +39,7 @@ public class Exp_detail extends AppCompatActivity {
         TextView detail_guide = findViewById(R.id.detail_guide);
 
         Intent intent = getIntent();
+
 
         detail_dday.setText(intent.getStringExtra("dday"));
         detail_product.setText(intent.getStringExtra("product"));

@@ -104,15 +104,17 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.CustomView
            @Override
            public void onClick(View v){
                int pos = getAdapterPosition();
+               Context context = v.getContext();
+               Intent Exp_detail = new Intent(context, com.example.wonderv2.Exp.Exp_detail.class);
                if(pos != RecyclerView.NO_POSITION){
                    Intent intent = new Intent(context, Exp_detail.class).addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                   intent.putExtra("shop", String.valueOf(arrayList.get(pos)));
-                   intent.putExtra("product", String.valueOf(arrayList.get(pos)));
-                   intent.putExtra("exp", String.valueOf(arrayList.get(pos)));
-                   intent.putExtra("dday", String.valueOf(arrayList.get(pos)));
-                   intent.putExtra("ingredient", String.valueOf(arrayList.get(pos)));
-                   intent.putExtra("guide", String.valueOf(arrayList.get(pos)));
-                   intent.putExtra("detail", String.valueOf(arrayList.get(pos)));
+                   intent.putExtra("shop", String.valueOf(arrayList.get(pos).getShopName()));
+                   intent.putExtra("product", String.valueOf(arrayList.get(pos).getProductName()));
+                   intent.putExtra("exp", String.valueOf(arrayList.get(pos).getExpDay()));
+                   intent.putExtra("dday", String.valueOf(arrayList.get(pos).getDDay()));
+                   intent.putExtra("ingredient", String.valueOf(arrayList.get(pos).getProductIngredient()));
+                   intent.putExtra("guide", String.valueOf(arrayList.get(pos).getProductGuide()));
+                   intent.putExtra("detail", String.valueOf(arrayList.get(pos).getProductDetail()));
 
                    context.startActivity(intent);
                }
@@ -123,9 +125,6 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.CustomView
     //        implements View.OnCreateContextMenuListener
 
         }
-
-
-
 
   //      @Override
   //      public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo) {
