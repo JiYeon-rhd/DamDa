@@ -327,7 +327,7 @@
                     android:textStyle="bold"
                     android:textSize="17dp"
                     android:textColor="#26805B"
-                    android:drawableLeft="@drawable/icon_re_scan"
+                    android:drawableLeft="@drawable/icon_rescan_resize"
                     android:paddingLeft="15dp"
                     android:paddingRight="15dp">
                 </Button>
@@ -344,7 +344,7 @@
                     android:textSize="17dp"
                     android:textColor="#FFFFFF"
                     android:layout_marginLeft="20dp"
-                    android:drawableLeft="@drawable/icon_item_select"
+                    android:drawableLeft="@drawable/icon_select2_resize"
                     android:paddingLeft="15dp"
                     android:paddingRight="15dp"
                     >
