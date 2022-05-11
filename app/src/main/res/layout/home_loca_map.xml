@@ -53,9 +53,9 @@
         <!--지도-->
         <com.google.android.gms.maps.MapView
             android:id="@+id/map"
+            android:name="com.google.android.gms.maps.MapFragment"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:name="com.google.android.gms.maps.MapFragment">
+            android:layout_height="match_parent">
 
         </com.google.android.gms.maps.MapView>
 
@@ -89,6 +89,40 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="end">
+                <Button
+                    android:id="@+id/almaeng_btn"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/shop_icon1"
+                    android:padding="15dp" />
+                <Button
+                    android:id="@+id/chaeum_btn"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_below="@id/almaeng_btn"
+                    android:background="@drawable/shop_icon4"
+                    android:padding="15dp" />
+                <Button
+                    android:id="@+id/earth_btn"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_below="@id/chaeum_btn"
+                    android:background="@drawable/shop_icon2"
+                    android:padding="15dp" />
+                <Button
+                    android:id="@+id/aromatica_btni"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_below="@id/earth_btn"
+                    android:background="@drawable/shop_icon3"
+                    android:padding="15dp" />
 
                 <Button
                     android:id="@+id/to_list_btn"

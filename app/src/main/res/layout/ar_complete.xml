@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@drawable/ar_bg_2"
+    android:background="@drawable/ar_complete_bg"
     tools:context=".AR.AR_complete">
 
     <!--상단-->
@@ -14,26 +14,25 @@
         android:layout_height="70dp"
         android:gravity="center"
         android:paddingLeft="30dp"
-        android:paddingRight="30dp"
-        >
-
+        android:paddingRight="30dp">
         <ImageButton
+            android:id="@+id/back_btn"
             android:layout_width="18dp"
             android:layout_height="18dp"
-            android:visibility="invisible"
-            android:background="@drawable/home_icon_setting"/>
+            android:background="@drawable/back_icon"/>
         <View
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_weight="1"/>
         <TextView
+            android:text="지구샵 PET 용기"
+            android:id="@+id/bottle_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="측정완료"
-            android:fontFamily="@font/notosansbold"
-            android:textColor="#000000"
-            android:textSize="15dp"
-            android:textStyle="bold"/>
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="17dp">
+        </TextView>
         <View
             android:layout_width="0dp"
             android:layout_height="0dp"
@@ -43,9 +42,7 @@
             android:layout_height="22.5dp"
             android:visibility="invisible"
             android:background="@drawable/home_icon_alarm">
-
         </ImageButton>
-
     </LinearLayout>
 
 
@@ -53,19 +50,16 @@
     <LinearLayout
         android:visibility="visible"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_height="255dp"
         android:gravity="center"
         android:orientation="vertical">
-        <FrameLayout
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:gravity="center_horizontal">
-            <ImageView
-                android:layout_width="180dp"
-                android:layout_height="180dp"
-                android:layout_gravity="center"
-                android:background="@drawable/ar_circle_resize">
-            </ImageView>
+            android:gravity="center_horizontal"
+            android:background="@drawable/ar_green_bg"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp">
             <ImageView
                 android:id="@+id/scan_bottle_gram_image"
                 android:layout_width="180dp"
@@ -73,247 +67,242 @@
                 android:src= "@drawable/bottle_aro_l"
                 android:layout_gravity="center">
             </ImageView>
-        </FrameLayout>
+        </LinearLayout>
     </LinearLayout>
-
-
-    <!--타이들-->
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:orientation="vertical">
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:background="@drawable/ar_btn_detection4"
-            android:layout_height="70dp"
-            android:layout_gravity="bottom">
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="314dp"
-            android:layout_height="130dp"
-            android:orientation="vertical"
-            android:layout_gravity="center"
-            android:gravity="center"
-            android:elevation="7dp"
-            android:layout_marginBottom="10dp"
-            android:layout_marginTop="10dp"
-            android:background="@drawable/ar_btn_detection">
-            <TextView
-                android:text="지구샵PET 용기"
-                android:id="@+id/bottle_name"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textColor="@color/black"
-                android:textStyle="bold"
-                android:textSize="17dp">
-            </TextView>
-
-            <TextView
-                android:text="지구샵"
-                android:id="@+id/shop_name"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textColor="@color/black"
-                android:layout_marginTop="5dp"
-                android:textSize="15dp">
-            </TextView>
-
-            <TextView
-                android:id="@+id/item_name_txt"
-                android:text="에코띠끄 친환경 세탁세제"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textColor="@color/black"
-                android:layout_marginTop="5dp"
-                android:textSize="15dp">
-            </TextView>
-
-        </LinearLayout>
-
-    </FrameLayout>
-
-
 
     <ScrollView
         android:layout_width="match_parent"
-        android:background="#ffffff"
+        android:background="@drawable/white_bg"
         android:layout_height="match_parent">
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
 
-            <!--선택한 무게 레이아웃-->
             <LinearLayout
-                android:layout_marginTop="20dp"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center_horizontal"
-                android:orientation="vertical">
+                android:layout_height="match_parent"
+                android:layout_marginLeft="55dp"
+                android:layout_marginRight="55dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginBottom="30dp"
+                android:layout_gravity="center"
+                android:orientation="horizontal">
                 <TextView
-                    android:text="선택한 무게는"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="제품"
+                    android:textSize="20dp"
+                    android:fontFamily="@font/notosansregular"
+                    android:textColor="@color/black"/>
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"/>
+                <TextView
+                    android:id="@+id/item_name_txt"
+                    android:text="에코띠끄 친환경 세탁세제"
+                    android:layout_gravity="center"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="@color/black"
-                    android:textSize="15dp"
-                    android:layout_marginTop="10dp">
+                    android:textSize="20dp">
                 </TextView>
+            </LinearLayout>
 
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="horizontal">
+                <!--선택한 무게 레이아웃-->
                 <LinearLayout
-                    android:layout_marginTop="5dp"
-                    android:layout_width="match_parent"
+                    android:layout_width="120dp"
                     android:layout_height="wrap_content"
+                    android:layout_marginRight="25dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+                    <TextView
+                        android:text="무게"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:textSize="20dp"
+                        android:layout_marginTop="10dp">
+                    </TextView>
+                    <LinearLayout
+                        android:layout_marginTop="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:id="@+id/item_g_txt"
+                            android:text="100"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/black"
+                            android:textStyle="bold"
+                            android:textSize="20dp">
+                        </TextView>
+                        <TextView
+                            android:text="g"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/black"
+                            android:textStyle="bold"
+                            android:textSize="20dp">
+                        </TextView>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center"
+                    android:background="#DFDADA"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"/>
+
+
+                <!--측정된 금액 레이아웃-->
+                <LinearLayout
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
                     android:gravity="center_horizontal"
+                    android:orientation="vertical">
+                    <TextView
+                        android:id="@+id/price_txt"
+                        android:text="금액"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:textSize="20dp"
+                        android:layout_marginTop="10dp">
+                    </TextView>
+                    <LinearLayout
+                        android:layout_marginTop="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:text="₩"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/black"
+                            android:textStyle="bold"
+                            android:textSize="20dp">
+                        </TextView>
+                        <TextView
+                            android:id="@+id/item_price_txt"
+                            android:text="2800"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/black"
+                            android:textStyle="bold"
+                            android:textSize="20dp">
+                        </TextView>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:layerType="software"
+                android:layout_marginTop="30dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:src="@drawable/dash_line"/>
+
+            <!--설명-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="25dp"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:orientation="horizontal">
                     <TextView
-                        android:id="@+id/item_g_txt"
+                        android:id="@+id/bottle_name2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="지구샵 PET 용기"
+                        android:fontFamily="@font/notosansregular"
+                        android:textColor="@color/black"
+                        android:textSize="15dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="에 "
+                        android:fontFamily="@font/notosansregular"
+                        android:textColor="@color/black"
+                        android:textSize="15dp"/>
+                    <TextView
+                        android:id="@+id/item_name_txt2"
+                        android:text="에코띠끄 친환경 세탁세제"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:textSize="15dp"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/item_g_txt2"
                         android:text="100"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="@color/black"
-                        android:textStyle="bold"
-                        android:textSize="33dp">
+                        android:textSize="15dp">
                     </TextView>
                     <TextView
                         android:text="g"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="@color/black"
-                        android:textStyle="bold"
-                        android:textSize="33dp">
-                    </TextView>
-                    <TextView
-                        android:text=" 이고,"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textColor="@color/black"
                         android:textSize="15dp">
                     </TextView>
-                </LinearLayout>
-            </LinearLayout>
-
-
-            <!--최대용량 레이아웃-->
-            <LinearLayout
-                android:id="@+id/max_gram_layout"
-                android:visibility="visible"
-                android:layout_marginTop="20dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center_horizontal"
-                android:orientation="vertical">
-                <TextView
-                    android:text="최대 용량은"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/black"
-                    android:textSize="15dp"
-                    android:layout_marginTop="10dp">
-                </TextView>
-                <LinearLayout
-                    android:layout_marginTop="5dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center_horizontal"
-                    android:orientation="horizontal">
                     <TextView
-                        android:id="@+id/max_gram"
-                        android:text="100g"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:text="을 담으면 "
+                        android:fontFamily="@font/notosansregular"
                         android:textColor="@color/black"
-                        android:textStyle="bold"
-                        android:textSize="33dp">
-                    </TextView>
+                        android:textSize="15dp"/>
                     <TextView
-                        android:text="이기 때문에"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textColor="@color/black"
-                        android:textSize="15dp">
-                    </TextView>
-                </LinearLayout>
-            </LinearLayout>
-
-
-
-
-            <!--측정된 금액 레이아웃-->
-            <LinearLayout
-                android:layout_marginTop="20dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center_horizontal"
-                android:orientation="vertical">
-                <TextView
-                    android:id="@+id/price_txt"
-                    android:text="측정된 금액은"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/black"
-                    android:textSize="15dp"
-                    android:layout_marginTop="10dp">
-                </TextView>
-                <LinearLayout
-                    android:layout_marginTop="5dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center_horizontal"
-                    android:orientation="horizontal">
-                    <TextView
-                        android:text="₩"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textColor="@color/black"
-                        android:textStyle="bold"
-                        android:textSize="33dp">
-                    </TextView>
-
-                    <TextView
-                        android:id="@+id/item_price_txt"
+                        android:id="@+id/item_price_txt2"
                         android:text="2800"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="@color/black"
-                        android:textStyle="bold"
-                        android:textSize="33dp">
-                    </TextView>
+                        android:textSize="15dp"/>
                     <TextView
-                        android:text=" 입니다."
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:text="원 입니다."
+                        android:fontFamily="@font/notosansregular"
                         android:textColor="@color/black"
-                        android:textSize="15dp">
-                    </TextView>
+                        android:textSize="15dp"/>
                 </LinearLayout>
             </LinearLayout>
 
-
-            <!--추가용기 준비 레이아웃-->
             <LinearLayout
-                android:id="@+id/other_layout"
-                android:layout_marginTop="20dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:orientation="vertical">
-                <TextView
-                    android:text="추가 용기를 준비해 주세요!"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/black"
-                    android:textSize="15dp">
-                </TextView>
-            </LinearLayout>
-
-
-            <LinearLayout
-                android:layout_marginTop="20dp"
-                android:layout_width="match_parent"
+                android:layout_marginTop="40dp"
+                android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:gravity="center_horizontal"
+                android:layout_gravity="center|bottom"
                 android:background="@drawable/ar_btn_detection4"
                 android:layout_marginBottom="15dp"
                 android:orientation="horizontal">
@@ -331,7 +320,6 @@
                     android:paddingLeft="15dp"
                     android:paddingRight="15dp">
                 </Button>
-
                 <Button
                     android:id="@+id/home_btn"
                     android:visibility="visible"

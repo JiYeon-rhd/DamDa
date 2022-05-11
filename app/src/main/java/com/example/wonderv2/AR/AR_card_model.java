@@ -38,7 +38,7 @@ public class AR_card_model {
     }
 
 
-    public AR_card_model(String shop_name, String item_name, String item_gram, String item_price){
+    public AR_card_model(String shop_name, String item_name, String item_gram){
         this.shop_name = shop_name;
         this.item_name = item_name;
         this.item_gram = item_gram;
