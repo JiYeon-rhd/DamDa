@@ -63,6 +63,9 @@
             android:name=".Exp.Exp_camera_wash"
             android:exported="true" />
         <activity
+            android:name=".Exp.Exp_camera_food"
+            android:exported="true" />
+        <activity
             android:name=".AR.AR_camera"
             android:exported="true" />
         <activity
