@@ -29,6 +29,7 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.CustomView
     private ArrayList<productList> arrayList;
     private Context context;
     private OnItemClickListener itemClickListener;
+    private Intent intent;
 
     public interface OnItemClickListener{
         void onItemClick(View v, int pos);
@@ -92,24 +93,31 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.CustomView
 
 
         public CustomViewHolder(@NonNull View itemView) {
-            super(itemView.getRootView());
+            super(itemView);
             this.tv_shopName = itemView.findViewById(R.id.tv_shopName);
             this.tv_productName = itemView.findViewById(R.id.tv_productName);
             this.tv_expDay = itemView.findViewById(R.id.tv_expDay);
             this.tv_dDay = itemView.findViewById(R.id.tv_dDay);
 
-            itemView.getRootView().setOnClickListener(new View.OnClickListener(){
-                @Override
-                public void onClick(View v){
-                    int position = getAdapterPosition();
-                    if(position != RecyclerView.NO_POSITION){
-                        if(itemClickListener != null){
-                            itemClickListener.onItemClick(v, position);
-                        }
-                    }
-                }
-            });
+       itemView.setClickable(true);
+       itemView.setOnClickListener(new View.OnClickListener(){
+           @Override
+           public void onClick(View v){
+               int pos = getAdapterPosition();
+               if(pos != RecyclerView.NO_POSITION){
+                   Intent intent = new Intent(context, Exp_detail.class).addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                   intent.putExtra("shop", String.valueOf(arrayList.get(pos)));
+                   intent.putExtra("product", String.valueOf(arrayList.get(pos)));
+                   intent.putExtra("exp", String.valueOf(arrayList.get(pos)));
+                   intent.putExtra("dday", String.valueOf(arrayList.get(pos)));
+                   intent.putExtra("ingredient", String.valueOf(arrayList.get(pos)));
+                   intent.putExtra("guide", String.valueOf(arrayList.get(pos)));
+                   intent.putExtra("detail", String.valueOf(arrayList.get(pos)));
 
+                   context.startActivity(intent);
+               }
+           }
+       });
 
     //        itemView.setOnCreateContextMenuListener(this);
     //        implements View.OnCreateContextMenuListener
