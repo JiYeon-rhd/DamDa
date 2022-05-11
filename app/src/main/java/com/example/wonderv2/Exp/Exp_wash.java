@@ -1,5 +1,6 @@
 package com.example.wonderv2.Exp;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -12,6 +13,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ListView;
 
 import com.example.wonderv2.AR.AR_card_model;
@@ -101,9 +103,23 @@ public class Exp_wash extends Fragment {
         arrayList = new ArrayList<productList>();
 
         database = FirebaseDatabase.getInstance();
-        databaseReference = database.getReference("exp_product");
+        databaseReference = database.getReference("exp_wash");
 
         ArrayList<String> list = new ArrayList<>();
+
+        Button camera_btn = (Button)view.findViewById(R.id.exp_camera_btn);
+
+        camera_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(
+                        getActivity(),
+                        Exp_camera_wash.class
+                );
+
+                startActivity(intent);
+            }
+        });
 
 
         databaseReference.addListenerForSingleValueEvent(new ValueEventListener() {

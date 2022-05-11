@@ -1,6 +1,5 @@
 package com.example.wonderv2.Exp;
 
-import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -14,8 +13,6 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageButton;
 
-import com.example.wonderv2.AR.AR_select_item;
-import com.example.wonderv2.Home_product.Product_PagerAdapter;
 import com.example.wonderv2.MainActivity;
 import com.example.wonderv2.R;
 import com.example.wonderv2.Setting.Setting_alarm;
@@ -115,19 +112,7 @@ public class Exp_main extends Fragment {
 
         });
 
-        Button camera_btn = (Button) v.findViewById(R.id.exp_camera_btn);
 
-        camera_btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(
-                        getActivity(),
-                        Exp_camera.class
-                );
-
-                startActivity(intent);
-            }
-        });
 
         ImageButton alarm_btn=v.findViewById(R.id.alarm_btn);
         alarm_btn.setOnClickListener(new View.OnClickListener(){

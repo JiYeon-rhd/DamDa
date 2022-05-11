@@ -52,5 +52,6 @@ public class Exp_detail extends AppCompatActivity {
 
 
 
+
     }
 }

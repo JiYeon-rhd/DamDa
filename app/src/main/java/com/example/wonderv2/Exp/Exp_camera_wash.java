@@ -1,7 +1,5 @@
 package com.example.wonderv2.Exp;
 
-import static android.content.ContentValues.TAG;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -11,12 +9,10 @@ import android.widget.TextView;
 import android.widget.Toast;
 import org.json.JSONException;
 import org.json.JSONObject;
-import static java.security.AccessController.getContext;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.wonderv2.AR.AR_complete;
 import com.example.wonderv2.MainActivity;
 import com.example.wonderv2.R;
 import com.google.android.gms.tasks.OnFailureListener;
@@ -36,7 +32,7 @@ import java.time.format.DateTimeFormatter;
 import java.util.Calendar;
 import java.util.HashMap;
 
-public class Exp_camera extends AppCompatActivity {
+public class Exp_camera_wash extends AppCompatActivity {
 
     private Button btn_save;
     private TextView view_productname, view_shopname, view_expday, view_productdetail, view_productingredient, view_productguide, view_dday, textresult;
@@ -86,7 +82,7 @@ public class Exp_camera extends AppCompatActivity {
 
                 writeNewExp_productdetail(a,getProductName, getShopName,getExpDay,getProductDetail,getProductIngredient,getProductGuide,getDDay);
 
-                Intent intent = new Intent(Exp_camera.this, MainActivity.class);
+                Intent intent = new Intent(Exp_camera_wash.this, MainActivity.class);
                 startActivity(intent);
 
             }
@@ -118,9 +114,9 @@ public class Exp_camera extends AppCompatActivity {
         IntentResult result = IntentIntegrator.parseActivityResult(requestCode, resultCode, data);
         if (result != null) {
             if (result.getContents() == null) {
-                Toast.makeText(Exp_camera.this, "스캔취소", Toast.LENGTH_SHORT).show();
+                Toast.makeText(Exp_camera_wash.this, "스캔취소", Toast.LENGTH_SHORT).show();
             } else {
-                Toast.makeText(Exp_camera.this, "스캔완료", Toast.LENGTH_SHORT).show();
+                Toast.makeText(Exp_camera_wash.this, "스캔완료", Toast.LENGTH_SHORT).show();
                 try {
                     //data를 json으로 변환
                     JSONObject obj = new JSONObject(result.getContents());
@@ -189,12 +185,12 @@ public class Exp_camera extends AppCompatActivity {
         Exp_productdetail.setDDay(dday);
 
 
-        mDatabase.child("exp_product").child(productName).setValue(Exp_productdetail)
+        mDatabase.child("exp_wash").child(productName).setValue(Exp_productdetail)
                 .addOnSuccessListener(new OnSuccessListener<Void>() {
                     @Override
                     public void onSuccess(Void aVoid) {
                         // Write was successful!
-                        Toast.makeText(Exp_camera.this, "저장을 완료했습니다.", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(Exp_camera_wash.this, "저장을 완료했습니다.", Toast.LENGTH_SHORT).show();
                     }
 
 
@@ -204,14 +200,14 @@ public class Exp_camera extends AppCompatActivity {
                     @Override
                     public void onFailure(@NonNull Exception e) {
                         // Write failed
-                        Toast.makeText(Exp_camera.this, "저장을 실패했습니다.", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(Exp_camera_wash.this, "저장을 실패했습니다.", Toast.LENGTH_SHORT).show();
                     }
                 });
 
     }
 
     private void readExp_productdetail(){
-        mDatabase.child("exp_product").child("1").addValueEventListener(new ValueEventListener() {
+        mDatabase.child("exp_wash").child("1").addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 // Get Post object and use the values to update the UI
@@ -219,7 +215,7 @@ public class Exp_camera extends AppCompatActivity {
                     Exp_productdetail post = dataSnapshot.getValue(Exp_productdetail.class);
                     Log.w("FireBaseData", "getData" + post.toString());
                 } else {
-                    Toast.makeText(Exp_camera.this, "데이터 없음", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Exp_camera_wash.this, "데이터 없음", Toast.LENGTH_SHORT).show();
                 }
             }
 

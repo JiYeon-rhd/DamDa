@@ -4,6 +4,7 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:orientation="vertical"
+    android:clickable="true"
     tools:context=".Exp.Exp_wash">
 
     <LinearLayout
@@ -20,7 +21,6 @@
             android:layout_height="80dp"
             android:layout_gravity="center"
             android:background="@drawable/white_bg"
-            android:clickable="true"
             android:elevation="1.1dp"
             android:orientation="horizontal"
             android:paddingLeft="20dp"

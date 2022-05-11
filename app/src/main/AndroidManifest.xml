@@ -60,7 +60,7 @@
             android:exported="true" />
         <activity android:name=".Exp.CaptureForm" />
         <activity
-            android:name=".Exp.Exp_camera"
+            android:name=".Exp.Exp_camera_wash"
             android:exported="true" />
         <activity
             android:name=".AR.AR_camera"
