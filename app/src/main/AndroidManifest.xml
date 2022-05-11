@@ -66,6 +66,12 @@
             android:name=".Exp.Exp_camera_food"
             android:exported="true" />
         <activity
+            android:name=".Exp.Exp_camera_body"
+            android:exported="true" />
+        <activity
+            android:name=".Exp.Exp_camera_face"
+            android:exported="true" />
+        <activity
             android:name=".AR.AR_camera"
             android:exported="true" />
         <activity

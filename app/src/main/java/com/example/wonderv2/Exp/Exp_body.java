@@ -4,15 +4,27 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.LinearLayout;
 
 import com.example.wonderv2.MainActivity;
 import com.example.wonderv2.R;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+
+import java.util.ArrayList;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -20,6 +32,15 @@ import com.example.wonderv2.R;
  * create an instance of this fragment.
  */
 public class Exp_body extends Fragment {
+    private RecyclerView recyclerView_body;
+    private RecyclerView.Adapter adapter;
+    private RecyclerView.LayoutManager layoutManager;
+    private ArrayList<productList> arrayList;
+    private FirebaseDatabase database;
+    private DatabaseReference databaseReference;
+
+    private View view;
+
 
     MainActivity activity;
 
@@ -77,16 +98,27 @@ public class Exp_body extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View v = inflater.inflate(R.layout.exp_body, container, false);
 
-        //매장확인하기 화면으로 넘어가는 버튼
-        LinearLayout exp_detail1 = v.findViewById(R.id.exp_detail1);
-        exp_detail1.setOnClickListener(new View.OnClickListener() {
+        view = inflater.inflate(R.layout.exp_body, container,false);
+        recyclerView_body = view.findViewById(R.id.recyclerView_body);
+        recyclerView_body.setHasFixedSize(true);
+        layoutManager = new LinearLayoutManager(getContext());
+        recyclerView_body.setLayoutManager(layoutManager);
+        arrayList = new ArrayList<productList>();
+
+        database = FirebaseDatabase.getInstance();
+        databaseReference = database.getReference("exp_body");
+
+        ArrayList<String> list = new ArrayList<>();
+
+        Button camera_btn_body = (Button)view.findViewById(R.id.exp_camera_body_btn);
+
+        camera_btn_body.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent= new Intent(
+                Intent intent = new Intent(
                         getActivity(),
-                        Exp_detail.class
+                        Exp_camera_body.class
                 );
 
                 startActivity(intent);
@@ -94,6 +126,45 @@ public class Exp_body extends Fragment {
         });
 
 
-        return v;
+        databaseReference.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                arrayList.clear();
+                for (DataSnapshot snapshot : dataSnapshot.getChildren()){
+                    productList productList = snapshot.getValue(productList.class);
+                    Exp_productdetail exp_productdetail = snapshot.getValue(Exp_productdetail.class);
+
+
+                    String dday = exp_productdetail.getDDay().toString();
+                    String expday = exp_productdetail.getExpDay().toString();
+                    String shopname = exp_productdetail.getShopName().toString();
+                    String productname = exp_productdetail.getProductName().toString();
+
+
+
+                    productList.setDDay(dday.toString());
+                    productList.setExpDay(expday.toString());
+                    productList.setShopName(shopname.toString());
+                    productList.setProductName(productname.toString());
+
+                    arrayList.add(productList);
+
+                }
+                //      productList productList = dataSnapshot.getValue(com.example.wonderv2.Exp.productList.class);
+                //      arrayList.add(productList);
+                adapter.notifyDataSetChanged();
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+                Log.e("Exp_wash",String.valueOf(databaseError.toException()));
+            }
+        });
+
+
+        adapter = new CustomAdapter(arrayList,getActivity());
+        recyclerView_body.setAdapter(adapter);
+
+        return view;
     }
 }
