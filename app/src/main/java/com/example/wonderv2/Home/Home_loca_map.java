@@ -165,6 +165,12 @@ public class Home_loca_map extends Fragment implements OnMapReadyCallback{
         mapView.onDestroy();
     }
 
+    @Override
+    public void onLowMemory() {
+        super.onLowMemory();
+        mapView.onLowMemory();
+    }
+
 
       public void onMapReady(GoogleMap googleMap){
         final LatLng seoul =new LatLng(37.55785465716031, 126.90515485604969);

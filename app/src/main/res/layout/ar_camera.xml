@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@drawable/ar_bg_2"
+    android:background="@drawable/ar_bg"
     tools:context=".AR.AR_camera">
 
     <!--스캔 실사 이미지-->
@@ -28,19 +28,16 @@
         </LinearLayout>
     </LinearLayout>
 
-
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
-
-
         <!--스캔전 화면-->
         <LinearLayout
             android:id="@+id/before_scan_layout"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@drawable/ar_bg_2"
+            android:background="@drawable/ar_bg"
             android:visibility="visible"
             android:orientation="vertical">
             <!--상단-->
@@ -91,7 +88,6 @@
                     android:layout_marginTop="40dp"
                     android:textColor="#FFFFFF">
                 </Button>
-
             </LinearLayout>
         </LinearLayout>
 

@@ -275,8 +275,6 @@ public class AR_camera extends AppCompatActivity {
             image = Bitmap.createScaledBitmap(image, imageSize, imageSize, false);
 
             before_scan_layout.setVisibility(View.INVISIBLE);
-            success_scan_layout.setVisibility(View.VISIBLE);
-
 
             //스캔 스플래시 보여주기
             ar_splash_scan.show();
@@ -300,6 +298,7 @@ public class AR_camera extends AppCompatActivity {
 
 
             classifyImage(image);
+            success_scan_layout.setVisibility(View.VISIBLE);
 
         }
         super.onActivityResult(requestCode, resultCode, data);

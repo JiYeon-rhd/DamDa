@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@drawable/ar_bg_2"
+    android:background="@drawable/shop_detail_bg"
     tools:context=".AR.AR_complete">
 
     <!--상단-->
@@ -57,7 +57,6 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center_horizontal"
-            android:background="@drawable/ar_green_bg"
             android:layout_marginLeft="30dp"
             android:layout_marginRight="30dp">
             <ImageView
