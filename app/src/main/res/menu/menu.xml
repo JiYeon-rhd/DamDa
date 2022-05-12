@@ -15,11 +15,11 @@
     <item
         android:id="@+id/ar_fragment"
         android:enabled="true"
-        android:icon="@drawable/icon_ar"
+        android:icon="@drawable/ai_icon"
         app:cnb_backgroundColor="@color/navi_selected"
         app:cnb_textColor="#FFFFFF"
         app:cnb_iconColor="#FFFFFF"
-        android:title="   AR   ">
+        android:title="   스캔   ">
 
     </item>
     <item

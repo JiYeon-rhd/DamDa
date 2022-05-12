@@ -18,10 +18,12 @@ import com.google.firebase.database.FirebaseDatabase;
 public class AR_complete extends AppCompatActivity {
 
     String Bottle_name;
+    String Shop_name;
 
     TextView bottle_name;
     TextView item_name_txt;
     TextView item_g_txt;
+    TextView shop_name;
     TextView item_price_txt;
     TextView bottle_name2;
     TextView item_name_txt2;
@@ -72,6 +74,8 @@ public class AR_complete extends AppCompatActivity {
         setContentView(R.layout.ar_complete);
 
         bottle_name = findViewById(R.id.bottle_name);
+        shop_name = findViewById(R.id.shop_name);
+
         item_name_txt = findViewById(R.id.item_name_txt);
         item_g_txt = findViewById(R.id.item_g_txt);
         scan_image = findViewById(R.id.scan_bottle_gram_image);
@@ -87,6 +91,8 @@ public class AR_complete extends AppCompatActivity {
 
         //용기 이름, 상점 이름 설정
         Bottle_name = intent.getStringExtra("용기이름");
+        Shop_name = intent.getStringExtra("상점이름");
+        shop_name.setText(Shop_name);
         bottle_name.setText(Bottle_name);
         bottle_name2.setText(Bottle_name);
 
@@ -207,7 +213,7 @@ public class AR_complete extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(AR_complete.this, MainActivity.class);
 
-                addARCard(item_name_txt.getText().toString(),
+                addARCard(shop_name.getText().toString(), item_name_txt.getText().toString(),
                         item_g_txt.getText().toString(), item_price_txt.getText().toString());
 
 
@@ -218,8 +224,8 @@ public class AR_complete extends AppCompatActivity {
     }
 
     //파이어베이스 리얼파이 데베로 넘기는 함수
-    public void addARCard(String item_name, String item_gram, String item_price){
-        AR_card_model ar_card_Model = new AR_card_model(item_name, item_gram, item_price);
+    public void addARCard(String shop_name, String item_name, String item_gram, String item_price){
+        AR_card_model ar_card_Model = new AR_card_model(shop_name, item_name, item_gram, item_price);
 
         databaseReference.child("ARCard").push().setValue(ar_card_Model);
     }

@@ -118,9 +118,13 @@
         <entry key="..\:/final_wonder/app/src/main/res/drawable/dash_line.xml" value="0.2814814814814815" />
         <entry key="..\:/final_wonder/app/src/main/res/drawable/icon_rescan_resize.xml" value="0.2814814814814815" />
         <entry key="..\:/final_wonder/app/src/main/res/layout/ar_camera.xml" value="0.23777173913043478" />
+        <entry key="..\:/final_wonder/app/src/main/res/layout/ar_card.xml" value="0.23777173913043478" />
         <entry key="..\:/final_wonder/app/src/main/res/layout/ar_complete.xml" value="0.25" />
+        <entry key="..\:/final_wonder/app/src/main/res/layout/ar_main.xml" value="0.23777173913043478" />
+        <entry key="..\:/final_wonder/app/src/main/res/layout/ar_select_almaeng.xml" value="0.23777173913043478" />
         <entry key="..\:/final_wonder/app/src/main/res/layout/ar_splash_scan.xml" value="0.23777173913043478" />
         <entry key="..\:/final_wonder/app/src/main/res/layout/home_loca_map.xml" value="0.23777173913043478" />
+        <entry key="..\:/final_wonder/app/src/main/res/menu/menu.xml" value="0.3578125" />
         <entry key="app/src/main/res/drawable/ar_btn_detection_lightgreen.xml" value="0.2796296296296296" />
         <entry key="app/src/main/res/drawable/bottom_sheet_bg.xml" value="0.24166666666666667" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.335" />

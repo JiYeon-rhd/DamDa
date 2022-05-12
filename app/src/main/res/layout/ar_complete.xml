@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@drawable/ar_complete_bg"
+    android:background="@drawable/ar_bg_2"
     tools:context=".AR.AR_complete">
 
     <!--상단-->
@@ -25,12 +25,12 @@
             android:layout_height="0dp"
             android:layout_weight="1"/>
         <TextView
-            android:text="지구샵 PET 용기"
+            android:text="지구샵PET 용기"
             android:id="@+id/bottle_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/black"
-            android:textStyle="bold"
+            android:fontFamily="@font/notosansbold"
             android:textSize="17dp">
         </TextView>
         <View
@@ -69,6 +69,179 @@
             </ImageView>
         </LinearLayout>
     </LinearLayout>
+
+    <TextView
+        android:visibility="gone"
+        android:text="지구샵"
+        android:id="@+id/shop_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:layout_marginTop="5dp"
+        android:textSize="15dp">
+    </TextView>
+
+    <!--visibility=gone-->
+    <ScrollView
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:background="#ffffff"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <!--선택한 무게 레이아웃-->
+            <LinearLayout
+                android:visibility="gone"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+                <TextView
+                    android:text="선택한 무게는"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:textSize="15dp"
+                    android:layout_marginTop="10dp">
+                </TextView>
+
+                <LinearLayout
+                    android:layout_marginTop="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal">
+                    <!--<TextView
+                        android:id="@+id/item_g_txt"
+                        android:text="100"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:textSize="33dp">
+                    </TextView>-->
+                    <TextView
+                        android:text="g"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:textSize="33dp">
+                    </TextView>
+                    <TextView
+                        android:text=" 이고,"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:textSize="15dp">
+                    </TextView>
+                </LinearLayout>
+            </LinearLayout>
+            <!--최대용량 레이아웃-->
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/max_gram_layout"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+                <TextView
+                    android:text="최대 용량은"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:textSize="15dp"
+                    android:layout_marginTop="10dp">
+                </TextView>
+                <LinearLayout
+                    android:layout_marginTop="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/max_gram"
+                        android:text="100g"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:textSize="33dp">
+                    </TextView>
+                    <TextView
+                        android:text="이기 때문에"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:textSize="15dp">
+                    </TextView>
+                </LinearLayout>
+            </LinearLayout>
+            <!--추가용기 준비 레이아웃-->
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/other_layout"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical">
+                <TextView
+                    android:text="추가 용기를 준비해 주세요!"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:textSize="15dp">
+                </TextView>
+            </LinearLayout>
+            <LinearLayout
+                android:visibility="gone"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal"
+                android:background="@drawable/ar_btn_detection4"
+                android:layout_marginBottom="15dp"
+                android:orientation="horizontal">
+                <!--<Button
+                    android:id="@+id/scan_btn"
+                    android:layout_width="150dp"
+                    android:layout_height="49dp"
+                    android:fontFamily="@font/notosansregular"
+                    android:background="@drawable/ar_btn_reselect"
+                    android:text="다시 선택"
+                    android:textStyle="bold"
+                    android:textSize="17dp"
+                    android:textColor="#26805B"
+                    android:drawableLeft="@drawable/icon_rescan_resize"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp">
+                </Button>
+
+                <Button
+                    android:id="@+id/home_btn"
+                    android:visibility="visible"
+                    android:layout_width="150dp"
+                    android:layout_height="49dp"
+                    android:fontFamily="@font/notosansregular"
+                    android:background="@drawable/ar_btn_detection_green"
+                    android:text="스캔 완료"
+                    android:textStyle="bold"
+                    android:textSize="17dp"
+                    android:textColor="#FFFFFF"
+                    android:layout_marginLeft="20dp"
+                    android:drawableLeft="@drawable/icon_select2_resize"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    >
+                </Button>-->
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
 
     <ScrollView
         android:layout_width="match_parent"
