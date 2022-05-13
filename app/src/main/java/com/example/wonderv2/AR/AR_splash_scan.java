@@ -24,6 +24,7 @@ public class AR_splash_scan extends Dialog {
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.ar_splash_scan);
 
+
         
     }
 

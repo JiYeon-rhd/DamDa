@@ -20,6 +20,7 @@ import android.os.Handler;
 import android.os.Trace;
 import android.provider.MediaStore;
 import android.view.View;
+import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -100,6 +101,10 @@ public class AR_camera extends AppCompatActivity {
         ar_splash_scan.setCancelable(false);
         ar_splash_scan.getWindow().setFlags(WindowManager.LayoutParams.FLAG_NOT_TOUCH_MODAL, WindowManager.LayoutParams.FLAG_NOT_TOUCH_MODAL);
         ar_splash_scan.getWindow().clearFlags(WindowManager.LayoutParams.FLAG_DIM_BEHIND);
+        WindowManager.LayoutParams params = ar_splash_scan.getWindow().getAttributes();
+        params.width = WindowManager.LayoutParams.MATCH_PARENT;
+        params.height = WindowManager.LayoutParams.MATCH_PARENT;
+        ar_splash_scan.getWindow().setAttributes(params);
 
 
 
