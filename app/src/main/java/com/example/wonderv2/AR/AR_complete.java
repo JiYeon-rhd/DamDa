@@ -100,28 +100,6 @@ public class AR_complete extends AppCompatActivity {
         bottle_name.setText(Bottle_name);
         bottle_name2.setText(Bottle_name);
 
-        //용기이름에 따라 이미지 바꾸기
-        if(bottle_name.getText().toString().equals("al_L")){
-            scan_image.setImageResource(R.drawable.bottle_al_l);
-        }
-        else if(bottle_name.getText().toString().equals("al_M")){
-            scan_image.setImageResource(R.drawable.bottle_al_m);
-        }
-        else if(bottle_name.getText().toString().equals("al_S")){
-            scan_image.setImageResource(R.drawable.bottle_al_s);
-        }
-        else if(bottle_name.getText().toString().equals("aro_L")){
-            scan_image.setImageResource(R.drawable.bottle_aro_l);
-        }
-        else if(bottle_name.getText().toString().equals("aro_s")){
-            scan_image.setImageResource(R.drawable.bottle_aro_s);
-        }
-        else if(bottle_name.getText().toString().equals("ch_M")){
-            scan_image.setImageResource(R.drawable.bottle_ch_m);
-        }
-        else if(bottle_name.getText().toString().equals("ear_L")){
-            scan_image.setImageResource(R.drawable.bottle_ear_l);
-        }
 
         //선택한 제품
         Product_name_1 = intent.getStringExtra("알맹 샴푸");
@@ -201,6 +179,43 @@ public class AR_complete extends AppCompatActivity {
             else if(!Product_name_16.equals("선택하세요")){ item_name_txt.setText(Product_name_16); item_name_txt2.setText(Product_name_15);}
         }
 
+        //용기이름과 그램수에 따라 이미지 바꾸기
+        if(bottle_name.getText().toString().equals("al_L")){
+            if(item_g_txt.getText().toString().equals("400")){
+                scan_image.setImageResource(R.drawable.bottle_al_l_400); }
+            else if(item_g_txt.getText().toString().equals("350")){
+                scan_image.setImageResource(R.drawable.bottle_al_l_350); }
+            else if(item_g_txt.getText().toString().equals("300")){
+                scan_image.setImageResource(R.drawable.bottle_al_l_300); }
+            else if(item_g_txt.getText().toString().equals("250")){
+                scan_image.setImageResource(R.drawable.bottle_al_l_250); }
+            else if(item_g_txt.getText().toString().equals("200")){
+                scan_image.setImageResource(R.drawable.bottle_al_l_200); }
+            else if(item_g_txt.getText().toString().equals("150")){
+                scan_image.setImageResource(R.drawable.bottle_al_l_150); }
+            else if(item_g_txt.getText().toString().equals("100")){
+                scan_image.setImageResource(R.drawable.bottle_al_l_100); }
+            else if(item_g_txt.getText().toString().equals("50")){
+                scan_image.setImageResource(R.drawable.bottle_al_l_50); }
+        }
+        else if(bottle_name.getText().toString().equals("al_M")){
+            scan_image.setImageResource(R.drawable.bottle_al_m);
+        }
+        else if(bottle_name.getText().toString().equals("al_S")){
+            scan_image.setImageResource(R.drawable.bottle_al_s);
+        }
+        else if(bottle_name.getText().toString().equals("aro_L")){
+            scan_image.setImageResource(R.drawable.bottle_aro_l);
+        }
+        else if(bottle_name.getText().toString().equals("aro_s")){
+            scan_image.setImageResource(R.drawable.bottle_aro_s);
+        }
+        else if(bottle_name.getText().toString().equals("ch_M")){
+            scan_image.setImageResource(R.drawable.bottle_ch_m);
+        }
+        else if(bottle_name.getText().toString().equals("ear_L")){
+            scan_image.setImageResource(R.drawable.bottle_ear_l);
+        }
 
         priceSet();
 

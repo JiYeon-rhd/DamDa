@@ -115,15 +115,16 @@
                     android:layout_marginTop="15dp"
                     android:background="@drawable/shop_icon2"
                     android:padding="15dp" />
+
                 <Button
                     android:id="@+id/aromatica_btni"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
                     android:layout_below="@id/earth_btn"
                     android:layout_marginLeft="10dp"
                     android:layout_marginTop="15dp"
                     android:background="@drawable/shop_icon3"
-                    android:padding="15dp" />
+                    android:padding="10dp" />
 
                 <Button
                     android:id="@+id/to_list_btn"
