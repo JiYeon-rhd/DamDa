@@ -62,10 +62,15 @@ public class AR_select_almaeng extends AppCompatActivity implements View.OnClick
     Spinner spinner_tea_item;
     Spinner spinner_coffee_item;
 
-    LinearLayout gram_layout;
-    Spinner spinner_gram;
-    LinearLayout gram_400_layout;
-    Spinner spinner_gram_400;
+
+    //그램 스피
+    LinearLayout layout_400g;
+    Spinner spinner_400g;
+    LinearLayout layout_200g;
+    Spinner spinner_200g;
+    LinearLayout layout_100g;
+    Spinner spinner_100g;
+
 
     Button complete_btn;
 
@@ -137,10 +142,14 @@ public class AR_select_almaeng extends AppCompatActivity implements View.OnClick
         spinner_tea_layout = findViewById(R.id.spinner_tea_layout);
         spinner_coffee_layout = findViewById(R.id.spinner_coffee_layout);
 
-        gram_layout=findViewById(R.id.gram_layout);
-        spinner_gram = (Spinner)findViewById(R.id.spinner_gram);
-        gram_400_layout=findViewById(R.id.gram_400_layout);
-        spinner_gram_400 = (Spinner)findViewById(R.id.spinner_gram_400);
+        layout_400g=findViewById(R.id.layout_400g);
+        spinner_400g = (Spinner)findViewById(R.id.spinner_400g);
+        layout_200g=findViewById(R.id.layout_200g);
+        spinner_200g = (Spinner)findViewById(R.id.spinner_200g);
+        layout_100g=findViewById(R.id.layout_100g);
+        spinner_100g = (Spinner)findViewById(R.id.spinner_100g);
+
+
 
         //샴푸 스피너
         spinner_shampoo_item = (Spinner) findViewById(R.id.spinner_shampoo_item);
@@ -323,16 +332,16 @@ public class AR_select_almaeng extends AppCompatActivity implements View.OnClick
         //완료버튼
         complete_btn =findViewById(R.id.item_select_complete);
 
-        //그램 스피너  작은거
-        spinner_gram = (Spinner) findViewById(R.id.spinner_gram);
+        //400그램 스피너
+        spinner_400g = (Spinner) findViewById(R.id.spinner_400g);
         ArrayAdapter itemAdapter_gram= ArrayAdapter.createFromResource(this,
-                R.array.spinner_g_list, android.R.layout.simple_spinner_dropdown_item);
-        spinner_gram.setAdapter(itemAdapter_gram);
-        spinner_gram.setSelected(false);
-        spinner_gram.post(new Runnable() {
+                R.array.spinner_400g_list, android.R.layout.simple_spinner_dropdown_item);
+        spinner_400g.setAdapter(itemAdapter_gram);
+        spinner_400g.setSelected(false);
+        spinner_400g.post(new Runnable() {
             @Override
             public void run() {
-                spinner_gram.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                spinner_400g.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                     @Override
                     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                        complete_btn.setVisibility(View.VISIBLE);
@@ -345,16 +354,38 @@ public class AR_select_almaeng extends AppCompatActivity implements View.OnClick
                 });
             }
         });
-        //그램 스피너  400까지
-        spinner_gram_400 = (Spinner) findViewById(R.id.spinner_gram_400);
-        ArrayAdapter itemAdapter_gram_400= ArrayAdapter.createFromResource(this,
-                R.array.spinner_400g_list, android.R.layout.simple_spinner_dropdown_item);
-        spinner_gram_400.setAdapter(itemAdapter_gram_400);
-        spinner_gram_400.setSelected(false);
-        spinner_gram_400.post(new Runnable() {
+        //200그램 스피너
+        spinner_200g = (Spinner) findViewById(R.id.spinner_200g);
+        ArrayAdapter itemAdapter_gram_200= ArrayAdapter.createFromResource(this,
+                R.array.spinner_200g_list, android.R.layout.simple_spinner_dropdown_item);
+        spinner_200g.setAdapter(itemAdapter_gram_200);
+        spinner_200g.setSelected(false);
+        spinner_200g.post(new Runnable() {
             @Override
             public void run() {
-                spinner_gram_400.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                spinner_200g.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                    @Override
+                    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                        complete_btn.setVisibility(View.VISIBLE);
+                    }
+
+                    @Override
+                    public void onNothingSelected(AdapterView<?> parent) {
+
+                    }
+                });
+            }
+        });
+        //100그램 스피너
+        spinner_100g = (Spinner) findViewById(R.id.spinner_100g);
+        ArrayAdapter itemAdapter_gram_100= ArrayAdapter.createFromResource(this,
+                R.array.spinner_200g_list, android.R.layout.simple_spinner_dropdown_item);
+        spinner_100g.setAdapter(itemAdapter_gram_100);
+        spinner_100g.setSelected(false);
+        spinner_100g.post(new Runnable() {
+            @Override
+            public void run() {
+                spinner_100g.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                     @Override
                     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                         complete_btn.setVisibility(View.VISIBLE);
@@ -378,8 +409,9 @@ public class AR_select_almaeng extends AppCompatActivity implements View.OnClick
                 intent.putExtra("용기이름", bottle_name);
 
 
-                intent.putExtra("알맹 선택한 그램", spinner_gram.getSelectedItem().toString());
-                intent.putExtra("알맹 선택한 그램 400", spinner_gram_400.getSelectedItem().toString());
+                intent.putExtra("알맹 선택한 그램 400", spinner_400g.getSelectedItem().toString());
+                intent.putExtra("알맹 선택한 그램 200", spinner_200g.getSelectedItem().toString());
+                intent.putExtra("알맹 선택한 그램 100", spinner_100g.getSelectedItem().toString());
                 intent.putExtra("알맹 샴푸", spinner_shampoo_item.getSelectedItem().toString());
                 intent.putExtra("알맹 컨디셔너", spinner_conditioner_item.getSelectedItem().toString());
                 intent.putExtra("알맹 토너", spinner_tonor_item.getSelectedItem().toString());
@@ -399,13 +431,56 @@ public class AR_select_almaeng extends AppCompatActivity implements View.OnClick
 
     public void setGramSpinner(){
         if(bottle_name.equals("al_L")){//400까지
-            gram_layout.setVisibility(View.INVISIBLE);
-            gram_400_layout.setVisibility(View.VISIBLE);
+            layout_400g.setVisibility(View.VISIBLE);
+            layout_200g.setVisibility(View.INVISIBLE);
+            layout_100g.setVisibility(View.INVISIBLE);
         }
-        else if(bottle_name.equals("al_M") || bottle_name.equals("al_S")){
-            gram_400_layout.setVisibility(View.INVISIBLE);
-            gram_layout.setVisibility(View.VISIBLE);
+        else if(bottle_name.equals("al_M")){ //200
+            layout_400g.setVisibility(View.INVISIBLE);
+            layout_200g.setVisibility(View.VISIBLE);
+            layout_100g.setVisibility(View.INVISIBLE);
         }
+        else if(bottle_name.equals("al_S")){ //100
+            layout_400g.setVisibility(View.INVISIBLE);
+            layout_200g.setVisibility(View.INVISIBLE);
+            layout_100g.setVisibility(View.VISIBLE);
+        }
+
+
+    }
+
+    public void setINVISIBLE(){
+        spinner_conditioner_item.setSelection(0);
+        spinner_shampoo_item.setSelection(0);
+        spinner_tonor_item.setSelection(0);
+        spinner_cream_item.setSelection(0);
+        spinner_scent_item.setSelection(0);
+        spinner_kitchen_item.setSelection(0);
+        spinner_tea_item.setSelection(0);
+        spinner_coffee_item.setSelection(0);
+        spinner_100g.setSelection(0);
+        spinner_200g.setSelection(0);
+        spinner_400g.setSelection(0);
+
+        layout_100g.setVisibility(View.INVISIBLE);
+        layout_200g.setVisibility(View.INVISIBLE);
+        layout_400g.setVisibility(View.INVISIBLE);
+        complete_btn.setVisibility(View.INVISIBLE);
+    }
+
+    public void setINVISIBLElayout(){
+        spinner_tea_layout.setVisibility(View.INVISIBLE);
+        spinner_coffee_layout.setVisibility(View.INVISIBLE);
+        spinner_tonor_layout.setVisibility(View.INVISIBLE);
+        spinner_cream_layout.setVisibility(View.INVISIBLE);
+        spinner_scent_layout.setVisibility(View.INVISIBLE);
+        spinner_kitchen_layout.setVisibility(View.INVISIBLE);
+        spinner_shampoo_layout.setVisibility(View.INVISIBLE);
+        spinner_conditioner_layout.setVisibility(View.INVISIBLE);
+        layout_100g.setVisibility(View.INVISIBLE);
+        layout_200g.setVisibility(View.INVISIBLE);
+        layout_400g.setVisibility(View.INVISIBLE);
+        complete_btn.setVisibility(View.INVISIBLE);
     }
 
     @Override
@@ -429,18 +504,8 @@ public class AR_select_almaeng extends AppCompatActivity implements View.OnClick
                 almaeng_body.setTextColor(Color.parseColor("#505050"));
                 almaeng_face.setTextColor(Color.parseColor("#505050"));
 
-                spinner_tea_layout.setVisibility(View.INVISIBLE);
-                spinner_coffee_layout.setVisibility(View.INVISIBLE);
-                spinner_tonor_layout.setVisibility(View.INVISIBLE);
-                spinner_cream_layout.setVisibility(View.INVISIBLE);
-                spinner_scent_layout.setVisibility(View.INVISIBLE);
-                spinner_kitchen_layout.setVisibility(View.INVISIBLE);
-                spinner_shampoo_layout.setVisibility(View.INVISIBLE);
-                spinner_conditioner_layout.setVisibility(View.INVISIBLE);
-                gram_layout.setVisibility(View.INVISIBLE);
-                gram_400_layout.setVisibility(View.INVISIBLE);
-                complete_btn.setVisibility(View.INVISIBLE);
 
+                setINVISIBLElayout();
                 break;
 
             case R.id.almaeng_wash:
@@ -459,17 +524,7 @@ public class AR_select_almaeng extends AppCompatActivity implements View.OnClick
                 almaeng_body.setTextColor(Color.parseColor("#505050"));
                 almaeng_face.setTextColor(Color.parseColor("#505050"));
 
-                spinner_tea_layout.setVisibility(View.INVISIBLE);
-                spinner_coffee_layout.setVisibility(View.INVISIBLE);
-                spinner_tonor_layout.setVisibility(View.INVISIBLE);
-                spinner_cream_layout.setVisibility(View.INVISIBLE);
-                spinner_scent_layout.setVisibility(View.INVISIBLE);
-                spinner_kitchen_layout.setVisibility(View.INVISIBLE);
-                spinner_shampoo_layout.setVisibility(View.INVISIBLE);
-                spinner_conditioner_layout.setVisibility(View.INVISIBLE);
-                gram_layout.setVisibility(View.INVISIBLE);
-                gram_400_layout.setVisibility(View.INVISIBLE);
-                complete_btn.setVisibility(View.INVISIBLE);
+                setINVISIBLElayout();
                 break;
 
             case R.id.almaeng_body:
@@ -488,17 +543,8 @@ public class AR_select_almaeng extends AppCompatActivity implements View.OnClick
                 almaeng_body.setTextColor(Color.parseColor("#EB6446"));
                 almaeng_face.setTextColor(Color.parseColor("#505050"));
 
-                spinner_tea_layout.setVisibility(View.INVISIBLE);
-                spinner_coffee_layout.setVisibility(View.INVISIBLE);
-                spinner_tonor_layout.setVisibility(View.INVISIBLE);
-                spinner_cream_layout.setVisibility(View.INVISIBLE);
-                spinner_scent_layout.setVisibility(View.INVISIBLE);
-                spinner_kitchen_layout.setVisibility(View.INVISIBLE);
-                spinner_shampoo_layout.setVisibility(View.INVISIBLE);
-                spinner_conditioner_layout.setVisibility(View.INVISIBLE);
-                gram_layout.setVisibility(View.INVISIBLE);
-                gram_400_layout.setVisibility(View.INVISIBLE);
-                complete_btn.setVisibility(View.INVISIBLE);
+
+                setINVISIBLElayout();
 
                 break;
 
@@ -518,17 +564,8 @@ public class AR_select_almaeng extends AppCompatActivity implements View.OnClick
                 almaeng_body.setTextColor(Color.parseColor("#505050"));
                 almaeng_face.setTextColor(Color.parseColor("#EB6446"));
 
-                spinner_tea_layout.setVisibility(View.INVISIBLE);
-                spinner_coffee_layout.setVisibility(View.INVISIBLE);
-                spinner_tonor_layout.setVisibility(View.INVISIBLE);
-                spinner_cream_layout.setVisibility(View.INVISIBLE);
-                spinner_scent_layout.setVisibility(View.INVISIBLE);
-                spinner_kitchen_layout.setVisibility(View.INVISIBLE);
-                spinner_shampoo_layout.setVisibility(View.INVISIBLE);
-                spinner_conditioner_layout.setVisibility(View.INVISIBLE);
-                gram_layout.setVisibility(View.INVISIBLE);
-                gram_400_layout.setVisibility(View.INVISIBLE);
-                complete_btn.setVisibility(View.INVISIBLE);
+
+                setINVISIBLElayout();
 
                 break;
 
@@ -549,20 +586,9 @@ public class AR_select_almaeng extends AppCompatActivity implements View.OnClick
                 spinner_kitchen_layout.setVisibility(View.INVISIBLE);
                 spinner_shampoo_layout.setVisibility(View.INVISIBLE);
                 spinner_conditioner_layout.setVisibility(View.INVISIBLE);
-                spinner_conditioner_item.setSelection(0);
-                spinner_shampoo_item.setSelection(0);
-                spinner_tonor_item.setSelection(0);
-                spinner_cream_item.setSelection(0);
-                spinner_scent_item.setSelection(0);
-                spinner_kitchen_item.setSelection(0);
-                spinner_tea_item.setSelection(0);
-                spinner_coffee_item.setSelection(0);
-                spinner_gram_400.setSelection(0);
-                spinner_gram.setSelection(0);
 
-                gram_layout.setVisibility(View.INVISIBLE);
-                gram_400_layout.setVisibility(View.INVISIBLE);
-                complete_btn.setVisibility(View.INVISIBLE);
+                setINVISIBLE();
+
                 break;
 
 
@@ -579,20 +605,9 @@ public class AR_select_almaeng extends AppCompatActivity implements View.OnClick
                 spinner_kitchen_layout.setVisibility(View.INVISIBLE);
                 spinner_shampoo_layout.setVisibility(View.INVISIBLE);
                 spinner_conditioner_layout.setVisibility(View.INVISIBLE);
-                spinner_conditioner_item.setSelection(0);
-                spinner_shampoo_item.setSelection(0);
-                spinner_tonor_item.setSelection(0);
-                spinner_cream_item.setSelection(0);
-                spinner_scent_item.setSelection(0);
-                spinner_kitchen_item.setSelection(0);
-                spinner_tea_item.setSelection(0);
-                spinner_coffee_item.setSelection(0);
-                spinner_gram_400.setSelection(0);
-                spinner_gram.setSelection(0);
 
-                gram_layout.setVisibility(View.INVISIBLE);
-                gram_400_layout.setVisibility(View.INVISIBLE);
-                complete_btn.setVisibility(View.INVISIBLE);
+                setINVISIBLE();
+
                 break;
 
 
@@ -609,20 +624,9 @@ public class AR_select_almaeng extends AppCompatActivity implements View.OnClick
                 spinner_kitchen_layout.setVisibility(View.INVISIBLE);
                 spinner_shampoo_layout.setVisibility(View.INVISIBLE);
                 spinner_conditioner_layout.setVisibility(View.INVISIBLE);
-                spinner_conditioner_item.setSelection(0);
-                spinner_shampoo_item.setSelection(0);
-                spinner_tonor_item.setSelection(0);
-                spinner_cream_item.setSelection(0);
-                spinner_scent_item.setSelection(0);
-                spinner_kitchen_item.setSelection(0);
-                spinner_tea_item.setSelection(0);
-                spinner_coffee_item.setSelection(0);
-                spinner_gram_400.setSelection(0);
-                spinner_gram.setSelection(0);
 
-                gram_layout.setVisibility(View.INVISIBLE);
-                gram_400_layout.setVisibility(View.INVISIBLE);
-                complete_btn.setVisibility(View.INVISIBLE);
+                setINVISIBLE();
+
                 break;
 
             //크림
@@ -638,20 +642,8 @@ public class AR_select_almaeng extends AppCompatActivity implements View.OnClick
                 spinner_kitchen_layout.setVisibility(View.INVISIBLE);
                 spinner_shampoo_layout.setVisibility(View.INVISIBLE);
                 spinner_conditioner_layout.setVisibility(View.INVISIBLE);
-                spinner_conditioner_item.setSelection(0);
-                spinner_shampoo_item.setSelection(0);
-                spinner_tonor_item.setSelection(0);
-                spinner_cream_item.setSelection(0);
-                spinner_scent_item.setSelection(0);
-                spinner_kitchen_item.setSelection(0);
-                spinner_tea_item.setSelection(0);
-                spinner_coffee_item.setSelection(0);
-                spinner_gram_400.setSelection(0);
-                spinner_gram.setSelection(0);
 
-                gram_layout.setVisibility(View.INVISIBLE);
-                gram_400_layout.setVisibility(View.INVISIBLE);
-                complete_btn.setVisibility(View.INVISIBLE);
+                setINVISIBLE();
                 break;
 
 
@@ -668,20 +660,8 @@ public class AR_select_almaeng extends AppCompatActivity implements View.OnClick
                 spinner_kitchen_layout.setVisibility(View.INVISIBLE);
                 spinner_shampoo_layout.setVisibility(View.INVISIBLE);
                 spinner_conditioner_layout.setVisibility(View.INVISIBLE);
-                spinner_conditioner_item.setSelection(0);
-                spinner_shampoo_item.setSelection(0);
-                spinner_tonor_item.setSelection(0);
-                spinner_cream_item.setSelection(0);
-                spinner_scent_item.setSelection(0);
-                spinner_kitchen_item.setSelection(0);
-                spinner_tea_item.setSelection(0);
-                spinner_coffee_item.setSelection(0);
-                spinner_gram_400.setSelection(0);
-                spinner_gram.setSelection(0);
+                setINVISIBLE();
 
-                gram_layout.setVisibility(View.INVISIBLE);
-                gram_400_layout.setVisibility(View.INVISIBLE);
-                complete_btn.setVisibility(View.INVISIBLE);
                 break;
 
             //주방세제
@@ -697,20 +677,9 @@ public class AR_select_almaeng extends AppCompatActivity implements View.OnClick
                 spinner_kitchen_layout.setVisibility(View.VISIBLE);
                 spinner_shampoo_layout.setVisibility(View.INVISIBLE);
                 spinner_conditioner_layout.setVisibility(View.INVISIBLE);
-                spinner_conditioner_item.setSelection(0);
-                spinner_shampoo_item.setSelection(0);
-                spinner_tonor_item.setSelection(0);
-                spinner_cream_item.setSelection(0);
-                spinner_scent_item.setSelection(0);
-                spinner_kitchen_item.setSelection(0);
-                spinner_tea_item.setSelection(0);
-                spinner_coffee_item.setSelection(0);
-                spinner_gram_400.setSelection(0);
-                spinner_gram.setSelection(0);
 
-                gram_layout.setVisibility(View.INVISIBLE);
-                gram_400_layout.setVisibility(View.INVISIBLE);
-                complete_btn.setVisibility(View.INVISIBLE);
+                setINVISIBLE();
+
                 break;
 
 
@@ -727,20 +696,8 @@ public class AR_select_almaeng extends AppCompatActivity implements View.OnClick
                 spinner_kitchen_layout.setVisibility(View.INVISIBLE);
                 spinner_shampoo_layout.setVisibility(View.VISIBLE);
                 spinner_conditioner_layout.setVisibility(View.INVISIBLE);
-                spinner_conditioner_item.setSelection(0);
-                spinner_shampoo_item.setSelection(0);
-                spinner_tonor_item.setSelection(0);
-                spinner_cream_item.setSelection(0);
-                spinner_scent_item.setSelection(0);
-                spinner_kitchen_item.setSelection(0);
-                spinner_tea_item.setSelection(0);
-                spinner_coffee_item.setSelection(0);
-                spinner_gram_400.setSelection(0);
-                spinner_gram.setSelection(0);
+                setINVISIBLE();
 
-                gram_layout.setVisibility(View.INVISIBLE);
-                gram_400_layout.setVisibility(View.INVISIBLE);
-                complete_btn.setVisibility(View.INVISIBLE);
                 break;
 
 
@@ -757,20 +714,9 @@ public class AR_select_almaeng extends AppCompatActivity implements View.OnClick
                 spinner_kitchen_layout.setVisibility(View.INVISIBLE);
                 spinner_shampoo_layout.setVisibility(View.INVISIBLE);
                 spinner_conditioner_layout.setVisibility(View.VISIBLE);
-                spinner_conditioner_item.setSelection(0);
-                spinner_shampoo_item.setSelection(0);
-                spinner_tonor_item.setSelection(0);
-                spinner_cream_item.setSelection(0);
-                spinner_scent_item.setSelection(0);
-                spinner_kitchen_item.setSelection(0);
-                spinner_tea_item.setSelection(0);
-                spinner_coffee_item.setSelection(0);
-                spinner_gram_400.setSelection(0);
-                spinner_gram.setSelection(0);
 
-                gram_layout.setVisibility(View.INVISIBLE);
-                gram_400_layout.setVisibility(View.INVISIBLE);
-                complete_btn.setVisibility(View.INVISIBLE);
+                setINVISIBLE();
+
                 break;
 
         }

@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@drawable/ar_bg"
+    android:id="@+id/layout_bg"
     tools:context=".AR.AR_camera">
 
     <!--스캔 실사 이미지-->
@@ -120,29 +121,30 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center_horizontal|center"
+                android:layout_gravity="center|center_horizontal"
                 android:orientation="vertical">
 
                 <!--스캔 공병 이미지-->
                 <LinearLayout
-                    android:layout_width="320dp"
-                    android:layout_height="500dp"
+                    android:layout_width="350dp"
+                    android:layout_height="560dp"
                     android:orientation="vertical"
-                    android:layout_gravity="center"
-                    android:padding="40dp"
+                    android:gravity="center"
                     android:background="@drawable/ar_green_bg">
                     <ImageView
+                        android:layout_marginTop="20dp"
                         android:id="@+id/scan_bottle_image"
-                        android:layout_width="225dp"
-                        android:layout_height="300dp"
+                        android:layout_width="318dp"
+                        android:layout_height="318dp"
                         android:paddingLeft="12dp"
-                        android:paddingTop="13dp"
-                        android:src= "@drawable/example_al_resize"
+                        android:src= "@drawable/bottle_al_m"
                         android:layout_gravity="center"/>
                     <LinearLayout
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="vertical"
                         android:layout_marginTop="40dp"
+                        android:layout_marginBottom="40dp"
                         android:layout_gravity="center"
                         android:gravity="center">
                         <TextView
@@ -169,8 +171,9 @@
                     android:layout_width="314dp"
                     android:layout_height="wrap_content"
                     android:gravity="center_horizontal"
-                    android:layout_marginTop="30dp"
-                    android:orientation="horizontal">
+                    android:layout_marginTop="40dp"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="40dp">
                     <Button
                         android:id="@+id/re_scan_btn"
                         android:layout_width="150dp"

@@ -41,10 +41,11 @@ public class AR_select_aromatica extends AppCompatActivity implements View.OnCli
     Spinner spinner_aro_cream_item;
 
 
-    LinearLayout gram_aro_layout;
-    Spinner spinner_aro_gram;
-    LinearLayout gram_aro_400_layout;
-    Spinner spinner_aro_gram_400;
+    //그램 스피너
+    LinearLayout layout_aro_400g;
+    Spinner spinner_aro_400g;
+    LinearLayout layout_aro_50g;
+    Spinner spinner_aro_50g;
 
     Button complete_btn_aro;
 
@@ -93,10 +94,10 @@ public class AR_select_aromatica extends AppCompatActivity implements View.OnCli
         spinner_aro_tonor_layout = findViewById(R.id.spinner_aro_tonor_layout);
         spinner_aro_cream_layout = findViewById(R.id.spinner_aro_cream_layout);
 
-        gram_aro_layout=findViewById(R.id.gram_aro_layout);
-        spinner_aro_gram = (Spinner)findViewById(R.id.spinner_aro_gram);
-        gram_aro_400_layout = findViewById(R.id.gram_aro_400_layout);
-        spinner_aro_gram_400 = (Spinner)findViewById(R.id.spinner_aro_gram_400);
+        layout_aro_400g=findViewById(R.id.layout_aro_400g);
+        spinner_aro_400g = (Spinner)findViewById(R.id.spinner_aro_400g);
+        layout_aro_50g = findViewById(R.id.layout_aro_50g);
+        spinner_aro_50g = (Spinner)findViewById(R.id.spinner_aro_50g);
 
 
         //샴푸 스피너
@@ -191,16 +192,16 @@ public class AR_select_aromatica extends AppCompatActivity implements View.OnCli
         //완료버튼
         complete_btn_aro =findViewById(R.id.item_select_complete_aro);
 
-        //그램 스피너
-        spinner_aro_gram = (Spinner) findViewById(R.id.spinner_aro_gram);
+        //400그램 스피너
+        spinner_aro_400g = (Spinner) findViewById(R.id.spinner_aro_400g);
         ArrayAdapter itemAdapter_gram= ArrayAdapter.createFromResource(this,
-                R.array.spinner_g_list, android.R.layout.simple_spinner_dropdown_item);
-        spinner_aro_gram.setAdapter(itemAdapter_gram);
-        spinner_aro_gram.setSelected(false);
-        spinner_aro_gram.post(new Runnable() {
+                R.array.spinner_400g_list, android.R.layout.simple_spinner_dropdown_item);
+        spinner_aro_400g.setAdapter(itemAdapter_gram);
+        spinner_aro_400g.setSelected(false);
+        spinner_aro_400g.post(new Runnable() {
             @Override
             public void run() {
-                spinner_aro_gram.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                spinner_aro_400g.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                     @Override
                     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                         complete_btn_aro.setVisibility(View.VISIBLE);
@@ -214,16 +215,16 @@ public class AR_select_aromatica extends AppCompatActivity implements View.OnCli
             }
         });
 
-        //그램 스피너 400
-        spinner_aro_gram_400 = (Spinner) findViewById(R.id.spinner_aro_gram_400);
+        //50그램 스피너
+        spinner_aro_50g = (Spinner) findViewById(R.id.spinner_aro_50g);
         ArrayAdapter itemAdapter_gram_400= ArrayAdapter.createFromResource(this,
-                R.array.spinner_400g_list, android.R.layout.simple_spinner_dropdown_item);
-        spinner_aro_gram_400.setAdapter(itemAdapter_gram_400);
-        spinner_aro_gram_400.setSelected(false);
-        spinner_aro_gram_400.post(new Runnable() {
+                R.array.spinner_50g_list, android.R.layout.simple_spinner_dropdown_item);
+        spinner_aro_50g.setAdapter(itemAdapter_gram_400);
+        spinner_aro_50g.setSelected(false);
+        spinner_aro_50g.post(new Runnable() {
             @Override
             public void run() {
-                spinner_aro_gram_400.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                spinner_aro_50g.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                     @Override
                     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                         complete_btn_aro.setVisibility(View.VISIBLE);
@@ -250,8 +251,8 @@ public class AR_select_aromatica extends AppCompatActivity implements View.OnCli
                 intent.putExtra("아로마 컨디셔너", spinner_aro_conditioner_item.getSelectedItem().toString());
                 intent.putExtra("아로마 토너", spinner_aro_tonor_item.getSelectedItem().toString());
                 intent.putExtra("아로마 크림", spinner_aro_cream_item.getSelectedItem().toString());
-                intent.putExtra("아로마 선택한 그램", spinner_aro_gram.getSelectedItem().toString());
-                intent.putExtra("아로마 선택한 그램 400", spinner_aro_gram_400.getSelectedItem().toString());
+                intent.putExtra("아로마 선택한 그램 400", spinner_aro_400g.getSelectedItem().toString());
+                intent.putExtra("아로마 선택한 그램 50", spinner_aro_50g.getSelectedItem().toString());
 
                 startActivity(intent);
             }
@@ -265,12 +266,12 @@ public class AR_select_aromatica extends AppCompatActivity implements View.OnCli
 
     public void setGramAro(){
         if(bottle_name.equals("aro_L")){//400까지
-            gram_aro_layout.setVisibility(View.INVISIBLE);
-            gram_aro_400_layout.setVisibility(View.VISIBLE);
+            layout_aro_400g.setVisibility(View.VISIBLE);
+            layout_aro_50g.setVisibility(View.INVISIBLE);
         }
         else if(bottle_name.equals("aro_s")){
-            gram_aro_400_layout.setVisibility(View.INVISIBLE);
-            gram_aro_layout.setVisibility(View.VISIBLE);
+            layout_aro_400g.setVisibility(View.INVISIBLE);
+            layout_aro_50g.setVisibility(View.VISIBLE);
         }
     }
 
@@ -291,8 +292,8 @@ public class AR_select_aromatica extends AppCompatActivity implements View.OnCli
                 spinner_aro_cream_layout.setVisibility(View.INVISIBLE);
                 spinner_aro_shampoo_layout.setVisibility(View.INVISIBLE);
                 spinner_aro_conditioner_layout.setVisibility(View.INVISIBLE);
-                gram_aro_layout.setVisibility(View.INVISIBLE);
-                gram_aro_400_layout.setVisibility(View.INVISIBLE);
+                layout_aro_400g.setVisibility(View.INVISIBLE);
+                layout_aro_50g.setVisibility(View.INVISIBLE);
                 complete_btn_aro.setVisibility(View.INVISIBLE);
                 break;
 
@@ -310,8 +311,8 @@ public class AR_select_aromatica extends AppCompatActivity implements View.OnCli
                 spinner_aro_cream_layout.setVisibility(View.INVISIBLE);
                 spinner_aro_shampoo_layout.setVisibility(View.INVISIBLE);
                 spinner_aro_conditioner_layout.setVisibility(View.INVISIBLE);
-                gram_aro_layout.setVisibility(View.INVISIBLE);
-                gram_aro_400_layout.setVisibility(View.INVISIBLE);
+                layout_aro_400g.setVisibility(View.INVISIBLE);
+                layout_aro_50g.setVisibility(View.INVISIBLE);
                 complete_btn_aro.setVisibility(View.INVISIBLE);
                 break;
         }
@@ -331,11 +332,11 @@ public class AR_select_aromatica extends AppCompatActivity implements View.OnCli
                 spinner_aro_shampoo_item.setSelection(0);
                 spinner_aro_tonor_item.setSelection(0);
                 spinner_aro_cream_item.setSelection(0);
-                spinner_aro_gram.setSelection(0);
-                spinner_aro_gram_400.setSelection(0);
+                spinner_aro_400g.setSelection(0);
+                spinner_aro_50g.setSelection(0);
 
-                gram_aro_layout.setVisibility(View.INVISIBLE);
-                gram_aro_400_layout.setVisibility(View.INVISIBLE);
+                layout_aro_400g.setVisibility(View.INVISIBLE);
+                layout_aro_50g.setVisibility(View.INVISIBLE);
                 complete_btn_aro.setVisibility(View.INVISIBLE);
 
                 break;
@@ -354,11 +355,11 @@ public class AR_select_aromatica extends AppCompatActivity implements View.OnCli
                 spinner_aro_shampoo_item.setSelection(0);
                 spinner_aro_tonor_item.setSelection(0);
                 spinner_aro_cream_item.setSelection(0);
-                spinner_aro_gram.setSelection(0);
-                spinner_aro_gram_400.setSelection(0);
+                spinner_aro_400g.setSelection(0);
+                spinner_aro_50g.setSelection(0);
 
-                gram_aro_layout.setVisibility(View.INVISIBLE);
-                gram_aro_400_layout.setVisibility(View.INVISIBLE);
+                layout_aro_400g.setVisibility(View.INVISIBLE);
+                layout_aro_50g.setVisibility(View.INVISIBLE);
                 complete_btn_aro.setVisibility(View.INVISIBLE);
 
                 break;
@@ -377,11 +378,11 @@ public class AR_select_aromatica extends AppCompatActivity implements View.OnCli
                 spinner_aro_shampoo_item.setSelection(0);
                 spinner_aro_tonor_item.setSelection(0);
                 spinner_aro_cream_item.setSelection(0);
-                spinner_aro_gram.setSelection(0);
-                spinner_aro_gram_400.setSelection(0);
+                spinner_aro_400g.setSelection(0);
+                spinner_aro_50g.setSelection(0);
 
-                gram_aro_layout.setVisibility(View.INVISIBLE);
-                gram_aro_400_layout.setVisibility(View.INVISIBLE);
+                layout_aro_400g.setVisibility(View.INVISIBLE);
+                layout_aro_50g.setVisibility(View.INVISIBLE);
                 complete_btn_aro.setVisibility(View.INVISIBLE);
                 break;
 
@@ -400,11 +401,11 @@ public class AR_select_aromatica extends AppCompatActivity implements View.OnCli
                 spinner_aro_shampoo_item.setSelection(0);
                 spinner_aro_tonor_item.setSelection(0);
                 spinner_aro_cream_item.setSelection(0);
-                spinner_aro_gram.setSelection(0);
-                spinner_aro_gram_400.setSelection(0);
+                spinner_aro_400g.setSelection(0);
+                spinner_aro_50g.setSelection(0);
 
-                gram_aro_layout.setVisibility(View.INVISIBLE);
-                gram_aro_400_layout.setVisibility(View.INVISIBLE);
+                layout_aro_400g.setVisibility(View.INVISIBLE);
+                layout_aro_50g.setVisibility(View.INVISIBLE);
                 complete_btn_aro.setVisibility(View.INVISIBLE);
 
                 break;

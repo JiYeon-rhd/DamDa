@@ -20,25 +20,27 @@ public class AR_complete extends AppCompatActivity {
     String Bottle_name;
     String Shop_name;
 
+    TextView shop_name;
+
+
+
     TextView bottle_name;
     TextView item_name_txt;
     TextView item_g_txt;
-    TextView shop_name;
     TextView item_price_txt;
+    ImageView scan_image;
+
+    //스크립트
     TextView bottle_name2;
     TextView item_name_txt2;
     TextView item_g_txt2;
     TextView item_price_txt2;
 
-    TextView price_txt; //측정된 금액은
-    TextView max_gram;
-    LinearLayout max_gram_layout;
-    LinearLayout other_layout;
+
 
     Button scan_btn;
     Button home_btn;
 
-    ImageView scan_image;
 
     String Product_name_1;
     String Product_name_2;
@@ -56,13 +58,13 @@ public class AR_complete extends AppCompatActivity {
     String Product_name_14;
     String Product_name_15;
     String Product_name_16;
-    String Gram_name_1;
-    String Gram_name_2;
-    String Gram_name_3;
-    String Gram_name_4;
-
-    String Gram_name_5;//알맹상점 400
-    String Gram_name_6; //아로마티카 400
+    String Gram_name_1; //알맹 400
+    String Gram_name_2; //알맹 200
+    String Gram_name_3; //알맹 100
+    String Gram_name_4; //아로마 400
+    String Gram_name_5;//아로마 50
+    String Gram_name_6; //채움소 400
+    String Gram_name_7; //지구샵 400
 
     //파이어베이스 연동
     private  FirebaseDatabase database = FirebaseDatabase.getInstance();
@@ -73,14 +75,16 @@ public class AR_complete extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.ar_complete);
 
-        bottle_name = findViewById(R.id.bottle_name);
         shop_name = findViewById(R.id.shop_name);
 
+        bottle_name = findViewById(R.id.bottle_name);
         item_name_txt = findViewById(R.id.item_name_txt);
         item_g_txt = findViewById(R.id.item_g_txt);
-        scan_image = findViewById(R.id.scan_bottle_gram_image);
         item_price_txt = findViewById(R.id.item_price_txt);
-        price_txt = findViewById(R.id.price_txt);
+
+        scan_image = findViewById(R.id.scan_bottle_gram_image);
+
+        //스크립트
         bottle_name2=findViewById(R.id.bottle_name2);
         item_name_txt2=findViewById(R.id.item_name_txt2);
         item_g_txt2=findViewById(R.id.item_g_txt2);
@@ -137,12 +141,13 @@ public class AR_complete extends AppCompatActivity {
         Product_name_15 = intent.getStringExtra("지구샵 섬유유연제");
         Product_name_16 = intent.getStringExtra("지구샵 주방세제");
         //선택한 그램
-        Gram_name_1 =intent.getStringExtra("알맹 선택한 그램");
-        Gram_name_2 =intent.getStringExtra("아로마 선택한 그램");
-        Gram_name_3 =intent.getStringExtra("채움소 선택한 그램");
-        Gram_name_4 =intent.getStringExtra("지구샵 선택한 그램");
-        Gram_name_5 = intent.getStringExtra("알맹 선택한 그램 400");
-        Gram_name_6 = intent.getStringExtra("아로마 선택한 그램 400");
+        Gram_name_1 =intent.getStringExtra("알맹 선택한 그램 400");
+        Gram_name_2 =intent.getStringExtra("알맹 선택한 그램 200");
+        Gram_name_3 =intent.getStringExtra("알맹 선택한 그램 50");
+        Gram_name_4 =intent.getStringExtra("아로마 선택한 그램 400");
+        Gram_name_5 = intent.getStringExtra("아로마 선택한 그램 50");
+        Gram_name_6 = intent.getStringExtra("채움소 선택한 그램");
+        Gram_name_7 = intent.getStringExtra("지구샵 선택한 그램");
 
 
         //알맹상점 상품이 선택됐으면
@@ -151,9 +156,12 @@ public class AR_complete extends AppCompatActivity {
             if(!Gram_name_1.equals("선택하세요")){
                 item_g_txt.setText(Gram_name_1);
                 item_g_txt2.setText(Gram_name_1);}
-            else if(!Gram_name_5.equals("선택하세요")){
-                item_g_txt.setText(Gram_name_5);
-                item_g_txt2.setText(Gram_name_5);}
+            else if(!Gram_name_2.equals("선택하세요")){
+                item_g_txt.setText(Gram_name_2);
+                item_g_txt2.setText(Gram_name_2);}
+            else if(!Gram_name_3.equals("선택하세요")){
+                item_g_txt.setText(Gram_name_3);
+                item_g_txt2.setText(Gram_name_3);}
 
             if(!Product_name_1.equals("선택하세요")){ item_name_txt.setText(Product_name_1); item_name_txt2.setText(Product_name_1);}
             else if(!Product_name_2.equals("선택하세요")){ item_name_txt.setText(Product_name_2); item_name_txt2.setText(Product_name_2);}
@@ -167,12 +175,12 @@ public class AR_complete extends AppCompatActivity {
 
         //아로마티카
         else if(Product_name_9 != null || Product_name_10 != null || Product_name_11 != null || Product_name_12 != null){
-            if(!Gram_name_2.equals("선택하세요")){
-                item_g_txt.setText(Gram_name_2);
-                item_g_txt2.setText(Gram_name_2);}
-            else if(!Gram_name_6.equals("선택하세요")){
-                item_g_txt.setText(Gram_name_6);
-                item_g_txt2.setText(Gram_name_6);}
+            if(!Gram_name_4.equals("선택하세요")){
+                item_g_txt.setText(Gram_name_4);
+                item_g_txt2.setText(Gram_name_4);}
+            else if(!Gram_name_5.equals("선택하세요")){
+                item_g_txt.setText(Gram_name_5);
+                item_g_txt2.setText(Gram_name_5);}
             if(!Product_name_9.equals("선택하세요")){ item_name_txt.setText(Product_name_9); item_name_txt2.setText(Product_name_9);}
             else if(!Product_name_10.equals("선택하세요")){ item_name_txt.setText(Product_name_10); item_name_txt2.setText(Product_name_10);}
             else if(!Product_name_11.equals("선택하세요")){ item_name_txt.setText(Product_name_11); item_name_txt2.setText(Product_name_11);}
@@ -180,15 +188,15 @@ public class AR_complete extends AppCompatActivity {
         }
         //채움소
         else if(Product_name_13 != null || Product_name_14 !=null){
-            item_g_txt.setText(Gram_name_3);
-            item_g_txt2.setText(Gram_name_3);
+            item_g_txt.setText(Gram_name_6);
+            item_g_txt2.setText(Gram_name_6);
             if(!Product_name_13.equals("선택하세요")){ item_name_txt.setText(Product_name_13); item_name_txt2.setText(Product_name_13);}
             else if(!Product_name_14.equals("선택하세요")){ item_name_txt.setText(Product_name_14); item_name_txt2.setText(Product_name_14);}
         }
         //지구샵
         else  if(Product_name_15 != null || Product_name_16 !=null) {
-            item_g_txt.setText(Gram_name_4);
-            item_g_txt2.setText(Gram_name_4);
+            item_g_txt.setText(Gram_name_7);
+            item_g_txt2.setText(Gram_name_7);
             if(!Product_name_15.equals("선택하세요")){ item_name_txt.setText(Product_name_15); item_name_txt2.setText(Product_name_16);}
             else if(!Product_name_16.equals("선택하세요")){ item_name_txt.setText(Product_name_16); item_name_txt2.setText(Product_name_15);}
         }
@@ -305,288 +313,6 @@ public class AR_complete extends AppCompatActivity {
     }
 
 
-    public void maxPriceCalculation(){
-        //가격 계산
-        int Maxgram=0;
-        int gram=0;
-        //String Gram = item_g_txt.getText().toString();
-        //gram = Integer.parseInt(Gram);
-
-        if(bottle_name.getText().toString().equals("al_L") ||
-                bottle_name.getText().toString().equals("aro_L") ||
-                bottle_name.getText().toString().equals("ch_M") ||
-                bottle_name.getText().toString().equals("ear_L")){
-            Maxgram = 400;
-            //세제랑 섬유유연제
-            if(item_name_txt.getText().toString().equals("에코띠끄 친환경 세탁세제") || item_name_txt.getText().toString().equals("에코띠끄 친환경 섬유유연제")){
-                gram = Maxgram * 7;
-                item_price_txt.setText(String.valueOf(gram));
-                item_price_txt2.setText(String.valueOf(gram));}
-            else if(item_name_txt.getText().toString().equals("유칼립투스향 세탁세제") || item_name_txt.getText().toString().equals("꽃마리 세탹세제")){
-                gram = Maxgram * 10;
-                item_price_txt.setText(String.valueOf(gram));
-                item_price_txt2.setText(String.valueOf(gram));}
-            else if(item_name_txt.getText().toString().equals("인블리스 컨전셔스 섬유유연제")){
-                gram = Maxgram * 4;
-                item_price_txt.setText(String.valueOf(gram));
-                item_price_txt2.setText(String.valueOf(gram));}
-            else if(item_name_txt.getText().toString().equals("시트러스향 섬유유연제")){
-                gram = Maxgram * 13;
-                item_price_txt.setText(String.valueOf(gram));
-                item_price_txt2.setText(String.valueOf(gram));}
-            //크림이랑 토너
-            else if(item_name_txt.getText().toString().equals("팜앤코 수분크림")){
-                gram = Maxgram * 180;
-                item_price_txt.setText(String.valueOf(gram));
-                item_price_txt2.setText(String.valueOf(gram));}
-            else if(item_name_txt.getText().toString().equals("체이싱래빗 말차 크림")){
-                gram = Maxgram * 300;
-                item_price_txt.setText(String.valueOf(gram));
-                item_price_txt2.setText(String.valueOf(gram));}
-            else if(item_name_txt.getText().toString().equals("어성초 토너") || item_name_txt.getText().toString().equals("티오피라 아쿠아샷 토너")){
-                gram = Maxgram * 70;
-                item_price_txt.setText(String.valueOf(gram));
-                item_price_txt2.setText(String.valueOf(gram));}
-            else if(item_name_txt.getText().toString().equals("바이탈라이징 로즈마리 토너")){
-                gram = Maxgram * 44;
-                item_price_txt.setText(String.valueOf(gram));
-                item_price_txt2.setText(String.valueOf(gram));}
-            //샴푸랑 컨디셔너
-            else if(item_name_txt.getText().toString().equals("로즈마리 스칼라 스케일링 샴푸") || item_name_txt.getText().toString().equals("티트리 퓨리파잉 샴푸")){
-                gram = Maxgram * 35;
-                item_price_txt.setText(String.valueOf(gram));
-                item_price_txt2.setText(String.valueOf(gram));}
-            else if(item_name_txt.getText().toString().equals("B5+ 비오틴 포티파잉 샴푸") ||
-                    item_name_txt.getText().toString().equals("로즈마리 헤어 씨크닝 컨디셔너") ||
-                    item_name_txt.getText().toString().equals("B5+ 비오틴 포티파잉 컨디셔너")){
-                gram = Maxgram * 30;
-                item_price_txt.setText(String.valueOf(gram));
-                item_price_txt2.setText(String.valueOf(gram));}
-            //커피랑 차
-            else if(item_name_txt.getText().toString().equals("로즈마리") ||
-                    item_name_txt.getText().toString().equals("페퍼민트") ||
-                    item_name_txt.getText().toString().equals("카모마일")){
-                gram = Maxgram * 200;
-                item_price_txt.setText(String.valueOf(gram));
-                item_price_txt2.setText(String.valueOf(gram));}
-            else if(item_name_txt.getText().toString().equals("리브레 원두")){
-                gram = Maxgram * 45;
-                item_price_txt.setText(String.valueOf(gram));
-                item_price_txt2.setText(String.valueOf(gram));}
-            else if(item_name_txt.getText().toString().equals("다크 벨벳")){
-                gram = Maxgram * 90;
-                item_price_txt.setText(String.valueOf(gram));
-                item_price_txt2.setText(String.valueOf(gram));}
-            else if(item_name_txt.getText().toString().equals("커피 원두")){
-                gram = Maxgram * 50;
-                item_price_txt.setText(String.valueOf(gram));
-                item_price_txt2.setText(String.valueOf(gram));}
-        }
-        else if(bottle_name.getText().toString().equals("al_M")){
-            Maxgram = 200;
-            //세제랑 섬유유연제
-            if(item_name_txt.getText().toString().equals("에코띠끄 친환경 세탁세제") || item_name_txt.getText().toString().equals("에코띠끄 친환경 섬유유연제")){
-                gram = Maxgram * 7;
-                item_price_txt.setText(String.valueOf(gram));
-                item_price_txt2.setText(String.valueOf(gram));}
-            else if(item_name_txt.getText().toString().equals("유칼립투스향 세탁세제") || item_name_txt.getText().toString().equals("꽃마리 세탹세제")){
-                gram = Maxgram * 10;
-                item_price_txt.setText(String.valueOf(gram));
-                item_price_txt2.setText(String.valueOf(gram));}
-            else if(item_name_txt.getText().toString().equals("인블리스 컨전셔스 섬유유연제")){
-                gram = Maxgram * 4;
-                item_price_txt.setText(String.valueOf(gram));
-                item_price_txt2.setText(String.valueOf(gram));}
-            else if(item_name_txt.getText().toString().equals("시트러스향 섬유유연제")){
-                gram = Maxgram * 13;
-                item_price_txt.setText(String.valueOf(gram));
-                item_price_txt2.setText(String.valueOf(gram));}
-            //크림이랑 토너
-            else if(item_name_txt.getText().toString().equals("팜앤코 수분크림")){
-                gram = Maxgram * 180;
-                item_price_txt.setText(String.valueOf(gram));
-                item_price_txt2.setText(String.valueOf(gram));}
-            else if(item_name_txt.getText().toString().equals("체이싱래빗 말차 크림")){
-                gram = Maxgram * 300;
-                item_price_txt.setText(String.valueOf(gram));
-                item_price_txt2.setText(String.valueOf(gram));}
-            else if(item_name_txt.getText().toString().equals("어성초 토너") || item_name_txt.getText().toString().equals("티오피라 아쿠아샷 토너")){
-                gram = Maxgram * 70;
-                item_price_txt.setText(String.valueOf(gram));
-                item_price_txt2.setText(String.valueOf(gram));}
-            else if(item_name_txt.getText().toString().equals("바이탈라이징 로즈마리 토너")){
-                gram = Maxgram * 44;
-                item_price_txt.setText(String.valueOf(gram));
-                item_price_txt2.setText(String.valueOf(gram));}
-            //샴푸랑 컨디셔너
-            else if(item_name_txt.getText().toString().equals("로즈마리 스칼라 스케일링 샴푸") || item_name_txt.getText().toString().equals("티트리 퓨리파잉 샴푸")){
-                gram = Maxgram * 35;
-                item_price_txt.setText(String.valueOf(gram));
-                item_price_txt2.setText(String.valueOf(gram));}
-            else if(item_name_txt.getText().toString().equals("B5+ 비오틴 포티파잉 샴푸") ||
-                    item_name_txt.getText().toString().equals("로즈마리 헤어 씨크닝 컨디셔너") ||
-                    item_name_txt.getText().toString().equals("B5+ 비오틴 포티파잉 컨디셔너")){
-                gram = Maxgram * 30;
-                item_price_txt.setText(String.valueOf(gram));
-                item_price_txt2.setText(String.valueOf(gram));}
-            //커피랑 차
-            else if(item_name_txt.getText().toString().equals("로즈마리") ||
-                    item_name_txt.getText().toString().equals("페퍼민트") ||
-                    item_name_txt.getText().toString().equals("카모마일")){
-                gram = Maxgram * 200;
-                item_price_txt.setText(String.valueOf(gram));
-                item_price_txt2.setText(String.valueOf(gram));}
-            else if(item_name_txt.getText().toString().equals("리브레 원두")){
-                gram = Maxgram * 45;
-                item_price_txt.setText(String.valueOf(gram));
-                item_price_txt2.setText(String.valueOf(gram));}
-            else if(item_name_txt.getText().toString().equals("다크 벨벳")){
-                gram = Maxgram * 90;
-                item_price_txt.setText(String.valueOf(gram));
-                item_price_txt2.setText(String.valueOf(gram));}
-            else if(item_name_txt.getText().toString().equals("커피 원두")){
-                gram = Maxgram * 50;
-                item_price_txt.setText(String.valueOf(gram));
-                item_price_txt2.setText(String.valueOf(gram));}
-        }
-        else if(bottle_name.getText().toString().equals("al_s")){
-            Maxgram = 100;
-            //세제랑 섬유유연제
-            if(item_name_txt.getText().toString().equals("에코띠끄 친환경 세탁세제") || item_name_txt.getText().toString().equals("에코띠끄 친환경 섬유유연제")){
-                gram = Maxgram * 7;
-                item_price_txt.setText(String.valueOf(gram));
-                item_price_txt2.setText(String.valueOf(gram));}
-            else if(item_name_txt.getText().toString().equals("유칼립투스향 세탁세제") || item_name_txt.getText().toString().equals("꽃마리 세탹세제")){
-                gram = Maxgram * 10;
-                item_price_txt.setText(String.valueOf(gram));
-                item_price_txt2.setText(String.valueOf(gram));}
-            else if(item_name_txt.getText().toString().equals("인블리스 컨전셔스 섬유유연제")){
-                gram = Maxgram * 4;
-                item_price_txt.setText(String.valueOf(gram));
-                item_price_txt2.setText(String.valueOf(gram));}
-            else if(item_name_txt.getText().toString().equals("시트러스향 섬유유연제")){
-                gram = Maxgram * 13;
-                item_price_txt.setText(String.valueOf(gram));
-                item_price_txt2.setText(String.valueOf(gram));}
-            //크림이랑 토너
-            else if(item_name_txt.getText().toString().equals("팜앤코 수분크림")){
-                gram = Maxgram * 180;
-                item_price_txt.setText(String.valueOf(gram));
-                item_price_txt2.setText(String.valueOf(gram));}
-            else if(item_name_txt.getText().toString().equals("체이싱래빗 말차 크림")){
-                gram = Maxgram * 300;
-                item_price_txt.setText(String.valueOf(gram));
-                item_price_txt2.setText(String.valueOf(gram));}
-            else if(item_name_txt.getText().toString().equals("어성초 토너") || item_name_txt.getText().toString().equals("티오피라 아쿠아샷 토너")){
-                gram = Maxgram * 70;
-                item_price_txt.setText(String.valueOf(gram));
-                item_price_txt2.setText(String.valueOf(gram));}
-            else if(item_name_txt.getText().toString().equals("바이탈라이징 로즈마리 토너")){
-                gram = Maxgram * 44;
-                item_price_txt.setText(String.valueOf(gram));
-                item_price_txt2.setText(String.valueOf(gram));}
-            //샴푸랑 컨디셔너
-            else if(item_name_txt.getText().toString().equals("로즈마리 스칼라 스케일링 샴푸") || item_name_txt.getText().toString().equals("티트리 퓨리파잉 샴푸")){
-                gram = Maxgram * 35;
-                item_price_txt.setText(String.valueOf(gram));
-                item_price_txt2.setText(String.valueOf(gram));}
-            else if(item_name_txt.getText().toString().equals("B5+ 비오틴 포티파잉 샴푸") ||
-                    item_name_txt.getText().toString().equals("로즈마리 헤어 씨크닝 컨디셔너") ||
-                    item_name_txt.getText().toString().equals("B5+ 비오틴 포티파잉 컨디셔너")){
-                gram = Maxgram * 30;
-                item_price_txt.setText(String.valueOf(gram));
-                item_price_txt2.setText(String.valueOf(gram));}
-            //커피랑 차
-            else if(item_name_txt.getText().toString().equals("로즈마리") ||
-                    item_name_txt.getText().toString().equals("페퍼민트") ||
-                    item_name_txt.getText().toString().equals("카모마일")){
-                gram = Maxgram * 200;
-                item_price_txt.setText(String.valueOf(gram));
-                item_price_txt2.setText(String.valueOf(gram));}
-            else if(item_name_txt.getText().toString().equals("리브레 원두")){
-                gram = Maxgram * 45;
-                item_price_txt.setText(String.valueOf(gram));
-                item_price_txt2.setText(String.valueOf(gram));}
-            else if(item_name_txt.getText().toString().equals("다크 벨벳")){
-                gram = Maxgram * 90;
-                item_price_txt.setText(String.valueOf(gram));
-                item_price_txt2.setText(String.valueOf(gram));}
-            else if(item_name_txt.getText().toString().equals("커피 원두")){
-                gram = Maxgram * 50;
-                item_price_txt.setText(String.valueOf(gram));
-                item_price_txt2.setText(String.valueOf(gram));}
-        }
-        else if(bottle_name.getText().toString().equals("aro_s")){
-            Maxgram = 50;
-            //세제랑 섬유유연제
-            if(item_name_txt.getText().toString().equals("에코띠끄 친환경 세탁세제") || item_name_txt.getText().toString().equals("에코띠끄 친환경 섬유유연제")){
-                gram = Maxgram * 7;
-                item_price_txt.setText(String.valueOf(gram));
-                item_price_txt2.setText(String.valueOf(gram));}
-            else if(item_name_txt.getText().toString().equals("유칼립투스향 세탁세제") || item_name_txt.getText().toString().equals("꽃마리 세탹세제")){
-                gram = Maxgram * 10;
-                item_price_txt.setText(String.valueOf(gram));
-                item_price_txt2.setText(String.valueOf(gram));}
-            else if(item_name_txt.getText().toString().equals("인블리스 컨전셔스 섬유유연제")){
-                gram = Maxgram * 4;
-                item_price_txt.setText(String.valueOf(gram));
-                item_price_txt2.setText(String.valueOf(gram));}
-            else if(item_name_txt.getText().toString().equals("시트러스향 섬유유연제")){
-                gram = Maxgram * 13;
-                item_price_txt.setText(String.valueOf(gram));
-                item_price_txt2.setText(String.valueOf(gram));}
-            //크림이랑 토너
-            else if(item_name_txt.getText().toString().equals("팜앤코 수분크림")){
-                gram = Maxgram * 180;
-                item_price_txt.setText(String.valueOf(gram));
-                item_price_txt2.setText(String.valueOf(gram));}
-            else if(item_name_txt.getText().toString().equals("체이싱래빗 말차 크림")){
-                gram = Maxgram * 300;
-                item_price_txt.setText(String.valueOf(gram));
-                item_price_txt2.setText(String.valueOf(gram));}
-            else if(item_name_txt.getText().toString().equals("어성초 토너") || item_name_txt.getText().toString().equals("티오피라 아쿠아샷 토너")){
-                gram = Maxgram * 70;
-                item_price_txt.setText(String.valueOf(gram));
-                item_price_txt2.setText(String.valueOf(gram));}
-            else if(item_name_txt.getText().toString().equals("바이탈라이징 로즈마리 토너")){
-                gram = Maxgram * 44;
-                item_price_txt.setText(String.valueOf(gram));
-                item_price_txt2.setText(String.valueOf(gram));}
-            //샴푸랑 컨디셔너
-            else if(item_name_txt.getText().toString().equals("로즈마리 스칼라 스케일링 샴푸") || item_name_txt.getText().toString().equals("티트리 퓨리파잉 샴푸")){
-                gram = Maxgram * 35;
-                item_price_txt.setText(String.valueOf(gram));
-                item_price_txt2.setText(String.valueOf(gram));}
-            else if(item_name_txt.getText().toString().equals("B5+ 비오틴 포티파잉 샴푸") ||
-                    item_name_txt.getText().toString().equals("로즈마리 헤어 씨크닝 컨디셔너") ||
-                    item_name_txt.getText().toString().equals("B5+ 비오틴 포티파잉 컨디셔너")){
-                gram = Maxgram * 30;
-                item_price_txt.setText(String.valueOf(gram));
-                item_price_txt2.setText(String.valueOf(gram));}
-            //커피랑 차
-            else if(item_name_txt.getText().toString().equals("로즈마리") ||
-                    item_name_txt.getText().toString().equals("페퍼민트") ||
-                    item_name_txt.getText().toString().equals("카모마일")){
-                gram = Maxgram * 200;
-                item_price_txt.setText(String.valueOf(gram));
-                item_price_txt2.setText(String.valueOf(gram));}
-            else if(item_name_txt.getText().toString().equals("리브레 원두")){
-                gram = Maxgram * 45;
-                item_price_txt.setText(String.valueOf(gram));
-                item_price_txt2.setText(String.valueOf(gram));}
-            else if(item_name_txt.getText().toString().equals("다크 벨벳")){
-                gram = Maxgram * 90;
-                item_price_txt.setText(String.valueOf(gram));
-                item_price_txt2.setText(String.valueOf(gram));}
-            else if(item_name_txt.getText().toString().equals("커피 원두")){
-                gram = Maxgram * 50;
-                item_price_txt.setText(String.valueOf(gram));
-                item_price_txt2.setText(String.valueOf(gram));}
-        }
-
-
-
-    }
 
     public void priceSet(){
         //가격 계산
@@ -597,100 +323,46 @@ public class AR_complete extends AppCompatActivity {
         //al_L
         if(bottle_name.getText().toString().equals("al_L")){
             if(gram <= 400){
-                price_txt.setText("금액");
                 priceCalculation();
-
             }
-            else if(gram > 401){
-                max_gram.setText("400g");
-                price_txt.setText("최대용량을 기준으로 측정된 금액은");
-                maxPriceCalculation();
 
-            }
         }
         //al_M
         else if(bottle_name.getText().toString().equals("al_M")){
             if(gram <- 200){
-                price_txt.setText("금액");
                 priceCalculation();
+            }
 
-            }
-            else if(gram >201){
-                max_gram.setText("200g");
-                price_txt.setText("최대용량을 기준으로 측정된 금액은");
-                maxPriceCalculation();
-            }
 
         }
         //al_S
         else if(bottle_name.getText().toString().equals("al_S")){
             if(gram <=100){
-
-                price_txt.setText("측정된 금액은");
                 priceCalculation();
-
-
-            }
-            else if(gram >101){
-                max_gram.setText("100g");
-                price_txt.setText("최대용량을 기준으로 측정된 금액은");
-                maxPriceCalculation();
-
             }
 
         }
         //aro_L
         else if(bottle_name.getText().toString().equals("aro_L")){
             if(gram <= 400){
-                max_gram_layout.setVisibility(View.GONE);
-                other_layout.setVisibility(View.GONE);
-                price_txt.setText("측정된 금액은");
                 priceCalculation();
             }
-            else if(gram >401){
-                max_gram_layout.setVisibility(View.VISIBLE);
-                other_layout.setVisibility(View.VISIBLE);
-                max_gram.setText("400g");
-                price_txt.setText("최대용량을 기준으로 측정된 금액은");
-                maxPriceCalculation();
 
-            }
 
         }
         //aro_S
         else if(bottle_name.getText().toString().equals("aro_s")){
             if(gram <= 50){
-                max_gram_layout.setVisibility(View.GONE);
-                other_layout.setVisibility(View.GONE);
-                price_txt.setText("측정된 금액은");
                 priceCalculation();
-            }
-            else if(gram >51){
-
-                max_gram_layout.setVisibility(View.VISIBLE);
-                other_layout.setVisibility(View.VISIBLE);
-                max_gram.setText("50g");
-                price_txt.setText("최대용량을 기준으로 측정된 금액은");
-                maxPriceCalculation();
             }
 
         }
         //ch_M
         else if(bottle_name.getText().toString().equals("ch_M")){
             if( gram <= 400){
-                max_gram_layout.setVisibility(View.GONE);
-                other_layout.setVisibility(View.GONE);
-                price_txt.setText("측정된 금액은");
                 priceCalculation();
             }
-            else if(gram > 401){
 
-                max_gram_layout.setVisibility(View.VISIBLE);
-                other_layout.setVisibility(View.VISIBLE);
-                max_gram.setText("400g");
-                price_txt.setText("최대용량을 기준으로 측정된 금액은");
-                maxPriceCalculation();
-            }
         }
 
         //ear_L

@@ -402,13 +402,14 @@
     </FrameLayout>
 
 
-    <!--그램-->
+    <!--그램 스피너-->
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
+        <!--아로마 l 400그램 스피너-->
         <LinearLayout
-            android:id="@+id/gram_aro_layout"
+            android:id="@+id/layout_aro_400g"
             android:visibility="invisible"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -429,7 +430,7 @@
             <Spinner
                 android:background="@drawable/ar_btn_detection3"
                 android:layout_marginTop="15dp"
-                android:id="@+id/spinner_aro_gram"
+                android:id="@+id/spinner_aro_400g"
                 android:layout_width="300dp"
                 android:layout_height="30dp"
                 android:gravity="center"
@@ -438,8 +439,10 @@
 
         </LinearLayout>
 
+
+        <!--아로마 s 50그램 스피너-->
         <LinearLayout
-            android:id="@+id/gram_aro_400_layout"
+            android:id="@+id/layout_aro_50g"
             android:visibility="invisible"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -460,7 +463,7 @@
             <Spinner
                 android:background="@drawable/ar_btn_detection3"
                 android:layout_marginTop="15dp"
-                android:id="@+id/spinner_aro_gram_400"
+                android:id="@+id/spinner_aro_50g"
                 android:layout_width="300dp"
                 android:layout_height="30dp"
                 android:gravity="center"
@@ -468,6 +471,9 @@
             </Spinner>
 
         </LinearLayout>
+
+
+
     </FrameLayout>
 
 

@@ -637,8 +637,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
+        <!--알맹 s 100그램 스피너-->
         <LinearLayout
-            android:id="@+id/gram_layout"
+            android:id="@+id/layout_100g"
             android:visibility="invisible"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -656,9 +657,9 @@
                 android:text="담고싶은 g수를 입력해주세요">
             </TextView>
             <Spinner
+                android:id="@+id/spinner_100g"
                 android:background="@drawable/ar_btn_detection3"
                 android:layout_marginTop="15dp"
-                android:id="@+id/spinner_gram"
                 android:layout_width="300dp"
                 android:layout_height="30dp"
                 android:gravity="center"
@@ -666,8 +667,10 @@
             </Spinner>
 
         </LinearLayout>
+
+        <!--알맹 m 200그램 스피너-->
         <LinearLayout
-            android:id="@+id/gram_400_layout"
+            android:id="@+id/layout_200g"
             android:visibility="invisible"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -685,9 +688,9 @@
                 android:text="담고싶은 g수를 입력해주세요">
             </TextView>
             <Spinner
+                android:id="@+id/spinner_200g"
                 android:background="@drawable/ar_btn_detection3"
                 android:layout_marginTop="15dp"
-                android:id="@+id/spinner_gram_400"
                 android:layout_width="300dp"
                 android:layout_height="30dp"
                 android:gravity="center"
@@ -695,6 +698,40 @@
             </Spinner>
 
         </LinearLayout>
+
+        <!--알맹 l 400그램 스피너-->
+        <LinearLayout
+            android:id="@+id/layout_400g"
+            android:visibility="invisible"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:gravity="center"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:textSize="15dp"
+                android:fontFamily="@font/notosansregular"
+                android:layout_gravity="center"
+                android:textColor="#000000"
+                android:text="담고싶은 g수를 입력해주세요">
+            </TextView>
+            <Spinner
+                android:id="@+id/spinner_400g"
+                android:background="@drawable/ar_btn_detection3"
+                android:layout_marginTop="15dp"
+                android:layout_width="300dp"
+                android:layout_height="30dp"
+                android:gravity="center"
+                android:layout_weight="1">
+            </Spinner>
+
+        </LinearLayout>
+
+
+
     </FrameLayout>
 
 

@@ -97,9 +97,6 @@
             android:name=".Exp.Exp_detail"
             android:exported="true" />
         <activity
-            android:name=".AR.AR_select_item"
-            android:exported="true" />
-        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>

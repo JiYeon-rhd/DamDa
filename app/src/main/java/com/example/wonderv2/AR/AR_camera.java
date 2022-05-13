@@ -59,6 +59,8 @@ public class AR_camera extends AppCompatActivity {
 
     AR_splash_scan ar_splash_scan;
 
+    LinearLayout layout_bg;
+
     public int itemG =0;
     public String itemName_earth_detergent;
     public String itemName_ch_tea;
@@ -88,6 +90,7 @@ public class AR_camera extends AppCompatActivity {
         item_select_btn=findViewById(R.id.item_select_btn);
         re_scan_btn=findViewById(R.id.re_scan_btn);
 
+        layout_bg = findViewById(R.id.layout_bg);
 
         ar_main = new AR_main();
 
@@ -97,6 +100,7 @@ public class AR_camera extends AppCompatActivity {
         ar_splash_scan.setCancelable(false);
         ar_splash_scan.getWindow().setFlags(WindowManager.LayoutParams.FLAG_NOT_TOUCH_MODAL, WindowManager.LayoutParams.FLAG_NOT_TOUCH_MODAL);
         ar_splash_scan.getWindow().clearFlags(WindowManager.LayoutParams.FLAG_DIM_BEHIND);
+
 
 
 
@@ -299,6 +303,7 @@ public class AR_camera extends AppCompatActivity {
 
             classifyImage(image);
             success_scan_layout.setVisibility(View.VISIBLE);
+            layout_bg.setBackgroundResource(R.drawable.bg_image);
 
         }
         super.onActivityResult(requestCode, resultCode, data);

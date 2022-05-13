@@ -1,15 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string-array name="spinner_400g_list">
+    <string-array name="spinner_200g_list">
         <item>선택하세요</item>
         <item>50</item>
         <item>100</item>
         <item>150</item>
         <item>200</item>
-        <item>250</item>
-        <item>300</item>
-        <item>350</item>
-        <item>400</item>
-        <item>450</item>
     </string-array>
 </resources>

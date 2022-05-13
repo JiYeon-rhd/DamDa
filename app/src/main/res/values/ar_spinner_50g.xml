@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="spinner_50g_list">
+        <item>선택하세요</item>
+        <item>10</item>
+        <item>30</item>
+        <item>50</item>
+    </string-array>
+</resources>
