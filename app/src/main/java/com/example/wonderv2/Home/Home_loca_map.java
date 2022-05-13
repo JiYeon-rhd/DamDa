@@ -35,6 +35,11 @@ public class Home_loca_map extends Fragment implements OnMapReadyCallback{
     private MarkerOptions markerOptions;
 
 
+    Button almaeng_btn;
+    Button chaeum_btn;
+    Button earth_btn;
+    Button aromatica_btn;
+
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -75,7 +80,6 @@ public class Home_loca_map extends Fragment implements OnMapReadyCallback{
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
     }
-
     public void onAttach(Context context){
         super.onAttach(context);
         activity = (MainActivity) getActivity();
@@ -84,7 +88,6 @@ public class Home_loca_map extends Fragment implements OnMapReadyCallback{
         super.onDetach();
         activity = null;
     }
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -134,25 +137,22 @@ public class Home_loca_map extends Fragment implements OnMapReadyCallback{
     }
 
 
+
     @Override
     public void onStart() {
         super.onStart();
         mapView.onStart();
     }
-
     @Override
     public void onResume() {
         super.onResume();
         mapView.onResume();
     }
-
     @Override
     public void onStop() {
         super.onStop();
         mapView.onStop();
     }
-
-
     @Override
     public void onSaveInstanceState(@NonNull Bundle outState) {
         super.onSaveInstanceState(outState);
@@ -171,8 +171,7 @@ public class Home_loca_map extends Fragment implements OnMapReadyCallback{
         mapView.onLowMemory();
     }
 
-
-      public void onMapReady(GoogleMap googleMap){
+    public void onMapReady(GoogleMap googleMap){
         final LatLng seoul =new LatLng(37.55785465716031, 126.90515485604969);
 
           MarkerOptions marker = new MarkerOptions();
@@ -191,7 +190,7 @@ public class Home_loca_map extends Fragment implements OnMapReadyCallback{
           //googleMap.addMarker(new MarkerOptions().position(new LatLng(37.55785465716031, 126.90515485604969)).title("알맹상점"));
 
 
-      }
+    }
 
 
 
