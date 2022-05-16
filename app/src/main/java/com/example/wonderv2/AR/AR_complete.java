@@ -182,21 +182,21 @@ public class AR_complete extends AppCompatActivity {
         //용기이름과 그램수에 따라 이미지 바꾸기
         if(bottle_name.getText().toString().equals("al_L")){
             if(item_g_txt.getText().toString().equals("400")){
-                scan_image.setImageResource(R.drawable.bottle_al_l_400); }
+                scan_image.setImageResource(R.drawable.bottle_al_l_400g); }
             else if(item_g_txt.getText().toString().equals("350")){
-                scan_image.setImageResource(R.drawable.bottle_al_l_350); }
+                scan_image.setImageResource(R.drawable.bottle_al_l_350g); }
             else if(item_g_txt.getText().toString().equals("300")){
-                scan_image.setImageResource(R.drawable.bottle_al_l_300); }
+                scan_image.setImageResource(R.drawable.bottle_al_l_300g); }
             else if(item_g_txt.getText().toString().equals("250")){
-                scan_image.setImageResource(R.drawable.bottle_al_l_250); }
+                scan_image.setImageResource(R.drawable.bottle_al_l_250g); }
             else if(item_g_txt.getText().toString().equals("200")){
-                scan_image.setImageResource(R.drawable.bottle_al_l_200); }
+                scan_image.setImageResource(R.drawable.bottle_al_l_200g); }
             else if(item_g_txt.getText().toString().equals("150")){
-                scan_image.setImageResource(R.drawable.bottle_al_l_150); }
+                scan_image.setImageResource(R.drawable.bottle_al_l_150g); }
             else if(item_g_txt.getText().toString().equals("100")){
-                scan_image.setImageResource(R.drawable.bottle_al_l_100); }
+                scan_image.setImageResource(R.drawable.bottle_al_l_100g); }
             else if(item_g_txt.getText().toString().equals("50")){
-                scan_image.setImageResource(R.drawable.bottle_al_l_50); }
+                scan_image.setImageResource(R.drawable.bottle_al_l_50g); }
         }
         else if(bottle_name.getText().toString().equals("al_M")){
             scan_image.setImageResource(R.drawable.bottle_al_m);
@@ -211,7 +211,22 @@ public class AR_complete extends AppCompatActivity {
             scan_image.setImageResource(R.drawable.bottle_aro_s);
         }
         else if(bottle_name.getText().toString().equals("ch_M")){
-            scan_image.setImageResource(R.drawable.bottle_ch_m);
+            if(item_g_txt.getText().toString().equals("400")){
+                scan_image.setImageResource(R.drawable.bottle_ch_l_400g); }
+            else if(item_g_txt.getText().toString().equals("350")){
+                scan_image.setImageResource(R.drawable.bottle_ch_l_350g); }
+            else if(item_g_txt.getText().toString().equals("300")){
+                scan_image.setImageResource(R.drawable.bottle_ch_l_300g); }
+            else if(item_g_txt.getText().toString().equals("250")){
+                scan_image.setImageResource(R.drawable.bottle_ch_l_250g); }
+            else if(item_g_txt.getText().toString().equals("200")){
+                scan_image.setImageResource(R.drawable.bottle_ch_l_200g); }
+            else if(item_g_txt.getText().toString().equals("150")){
+                scan_image.setImageResource(R.drawable.bottle_ch_l_150g); }
+            else if(item_g_txt.getText().toString().equals("100")){
+                scan_image.setImageResource(R.drawable.bottle_ch_l_100g); }
+            else if(item_g_txt.getText().toString().equals("50")){
+                scan_image.setImageResource(R.drawable.bottle_ch_l_50g);}
         }
         else if(bottle_name.getText().toString().equals("ear_L")){
             scan_image.setImageResource(R.drawable.bottle_ear_l);

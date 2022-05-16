@@ -27,6 +27,8 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
 import java.util.List;
 
 /**
@@ -140,6 +142,7 @@ public class AR_main extends Fragment{
         ar_recyclerveiw = v.findViewById(R.id.ar_recyclerveiw);
         ar_recyclerveiw.setHasFixedSize(true);
         layoutManager = new LinearLayoutManager(getActivity());
+
         ar_recyclerveiw.setLayoutManager(layoutManager);
         arrayList = new ArrayList<>();
 
@@ -156,6 +159,8 @@ public class AR_main extends Fragment{
                 for(DataSnapshot snapshot1 : snapshot.getChildren()){
                     AR_card_model ar_card_model = snapshot1.getValue(AR_card_model.class);
                     arrayList.add(ar_card_model);
+                    Collections.reverse(arrayList);
+
                 }
                 arAdapter.notifyDataSetChanged();
             }
@@ -165,6 +170,9 @@ public class AR_main extends Fragment{
 
             }
         });
+
+
+
 
         arAdapter = new AR_card_adapter(arrayList, getActivity());
         ar_recyclerveiw.setAdapter(arAdapter);

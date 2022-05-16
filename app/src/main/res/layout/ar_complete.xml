@@ -60,8 +60,8 @@
             <ImageView
                 android:id="@+id/scan_bottle_gram_image"
                 android:layout_width="wrap_content"
-                android:layout_height="300dp"
-                android:src= "@drawable/bottle_al_m"
+                android:layout_height="280dp"
+                android:src= "@drawable/bottle_ch_l_50g"
                 android:layout_gravity="center">
             </ImageView>
         </LinearLayout>
