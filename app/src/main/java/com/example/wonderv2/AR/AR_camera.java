@@ -300,7 +300,7 @@ public class AR_camera extends AppCompatActivity {
                     };
 
                     Timer timer = new Timer();
-                    timer.schedule(task, 4500);
+                    timer.schedule(task, 6000);
                 }
             });
             thread.start();
