@@ -63,10 +63,10 @@
                 android:gravity="center_horizontal|center"
                 android:orientation="vertical">
                 <ImageView
-                    android:layout_width="217dp"
-                    android:layout_height="285dp"
+                    android:layout_width="220dp"
+                    android:layout_height="290dp"
                     android:elevation="10dp"
-                    android:src="@drawable/ar_scan_start">
+                    android:src="@drawable/scan_start">
                 </ImageView>
                 <TextView
                     android:layout_marginTop="40dp"

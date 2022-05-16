@@ -130,6 +130,7 @@
         <entry key="app/src/main/res/drawable/ar_background_selectitem.xml" value="0.33958333333333335" />
         <entry key="app/src/main/res/drawable/ar_btn_detection_lightgreen.xml" value="0.2796296296296296" />
         <entry key="app/src/main/res/drawable/bottom_sheet_bg.xml" value="0.24166666666666667" />
+        <entry key="app/src/main/res/drawable/white_bg2.xml" value="0.41302083333333334" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.335" />
         <entry key="app/src/main/res/layout/activity_main2.xml" value="0.2971014492753623" />
         <entry key="app/src/main/res/layout/ar_camera.xml" value="0.45" />
@@ -160,8 +161,10 @@
         <entry key="app/src/main/res/layout/product_food.xml" value="0.1" />
         <entry key="app/src/main/res/layout/product_wash.xml" value="0.1" />
         <entry key="app/src/main/res/layout/productlist_item.xml" value="0.45" />
-        <entry key="app/src/main/res/layout/sign_in.xml" value="0.2798913043478261" />
-        <entry key="app/src/main/res/layout/sign_up.xml" value="0.2798913043478261" />
+        <entry key="app/src/main/res/layout/setting_main.xml" value="0.2798913043478261" />
+        <entry key="app/src/main/res/layout/sign_in.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/sign_up.xml" value="0.45" />
+        <entry key="app/src/main/res/layout/splash.xml" value="0.2798913043478261" />
         <entry key="app/src/main/res/menu/menu.xml" value="0.10185185185185185" />
       </map>
     </option>

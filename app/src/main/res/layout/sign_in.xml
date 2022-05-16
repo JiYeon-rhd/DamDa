@@ -9,7 +9,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/signin_bg"
+        android:background="@drawable/fianl_bg2"
         android:orientation="vertical"
         android:gravity="center"
         android:padding="40dp">
@@ -21,6 +21,7 @@
             android:layout_gravity="top"
             android:text="로그인"
             android:textSize="15dp"
+            android:textColor="@color/black"
             android:fontFamily="@font/notosansbold"/>
 
         <View
@@ -36,13 +37,23 @@
             android:orientation="vertical"
             android:padding="15dp">
             <ImageView
-                android:layout_width="100dp"
-                android:layout_height="130dp"
-                android:background="@drawable/logo_icon"/>
+                android:layout_width="55dp"
+                android:layout_height="71dp"
+                android:alpha="0.8"
+                android:background="@drawable/logo_icon" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="담다"
+                android:textSize="17dp"
+                android:textColor="#FFFFFF"
+                android:layout_marginTop="15dp">
+
+            </TextView>
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="70dp"
                 android:paddingRight="10dp"
                 android:paddingLeft="10dp"
                 android:gravity="center"
@@ -70,18 +81,18 @@
                 android:gravity="center"
                 android:background="@drawable/white_bg"
                 android:orientation="horizontal">
+
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/password_txt"
                     android:layout_width="match_parent"
                     android:layout_height="40dp"
-                    android:hint="비밀번호"
-                    android:textSize="15dp"
-                    android:gravity="left|center"
-                    android:inputType="textPassword"
                     android:background="@android:color/transparent"
                     android:fontFamily="@font/notosansregular"
-                    android:textColor="#6D6D6D">
-                </com.google.android.material.textfield.TextInputEditText>
+                    android:gravity="left|center"
+                    android:hint="비밀번호"
+                    android:inputType="textPassword"
+                    android:textColor="#6D6D6D"
+                    android:textSize="15dp"></com.google.android.material.textfield.TextInputEditText>
 
             </LinearLayout>
 
@@ -108,7 +119,7 @@
                 android:id="@+id/sign_in_btn"
                 android:layout_width="150dp"
                 android:layout_height="50dp"
-                android:background="@drawable/white_bg"
+                android:background="@drawable/white_bg2"
                 android:text="로그인"
                 android:textSize="15dp"
                 android:fontFamily="@font/notosansbold"/>
@@ -116,7 +127,7 @@
                 android:id="@+id/sign_up_btn"
                 android:layout_width="150dp"
                 android:layout_height="50dp"
-                android:background="@drawable/white_bg"
+                android:background="@drawable/white_bg2"
                 android:layout_marginTop="15dp"
                 android:layout_marginBottom="30dp"
                 android:text="회원가입"

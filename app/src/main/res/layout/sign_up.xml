@@ -9,7 +9,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/signin_bg"
+        android:background="@drawable/fianl_bg2"
         android:orientation="vertical"
         android:gravity="center"
         android:padding="40dp">
@@ -33,6 +33,7 @@
                 android:layout_gravity="top"
                 android:text="회원가입"
                 android:textSize="15dp"
+                android:textColor="@color/black"
                 android:fontFamily="@font/notosansbold"/>
             <View
                 android:layout_width="0dp"
@@ -55,13 +56,23 @@
             android:orientation="vertical"
             android:padding="15dp">
             <ImageView
-                android:layout_width="55dp"
+                android:layout_width="43dp"
                 android:layout_height="55dp"
-                android:background="@drawable/user_icon"/>
+                android:alpha="0.8"
+                android:background="@drawable/logo_icon" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="담다"
+                android:textSize="17dp"
+                android:textColor="#FFFFFF"
+                android:layout_marginTop="15dp">
+
+            </TextView>
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:layout_marginTop="15dp"
+                android:layout_marginTop="25dp"
                 android:paddingRight="10dp"
                 android:paddingLeft="10dp"
                 android:gravity="center"
@@ -191,7 +202,7 @@
                 android:id="@+id/sign_up_btn"
                 android:layout_width="150dp"
                 android:layout_height="50dp"
-                android:background="@drawable/white_bg"
+                android:background="@drawable/white_bg2"
                 android:layout_marginTop="15dp"
                 android:layout_marginBottom="30dp"
                 android:text="가입하기"
