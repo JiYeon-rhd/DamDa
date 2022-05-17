@@ -220,38 +220,39 @@ public class AR_camera extends AppCompatActivity {
                     maxPos=i;
                 }
             }
+            //"al_L", "al_M", "al_S", "aro_L", "aro_s", "ch_M", "ear_L"
 
             //공병 이름들
-            String[] classes = {"al_L", "al_M", "al_S", "aro_L", "aro_s", "ch_M", "ear_L"};
+            String[] classes = {"알맹상점 에코 PET L", "알맹상점 디스펜서 M", "알맹상점 에코 PET S","아로마티카 PET L", "아로마티카 PET S", "채움소 BIO PET L", "자구샵 PCR L"};
             bottle_name_txt.setText(classes[maxPos]);
             //bottle_name_fail.setText(classes[maxPos]);
 
             //공병 이름에 따라 상점 이름 바꾸기
-            if(bottle_name_txt.getText().toString() == "al_L"){
+            if(bottle_name_txt.getText().toString() == "알맹상점 에코 PET L"){
                 shop_name_txt.setText("알맹상점");
                 scan_bottle_image.setImageResource(R.drawable.bottle_al_l);
             }
-            else if(bottle_name_txt.getText().toString() == "al_M"){
+            else if(bottle_name_txt.getText().toString() == "알맹상점 디스펜서 M"){
                 shop_name_txt.setText("알맹상점");
                 scan_bottle_image.setImageResource(R.drawable.bottle_al_m);
             }
-            else if(bottle_name_txt.getText().toString() == "al_S"){
+            else if(bottle_name_txt.getText().toString() == "알맹상점 에코 PET S"){
                 shop_name_txt.setText("알맹상점");
                 scan_bottle_image.setImageResource(R.drawable.bottle_al_s);
             }
-            else if(bottle_name_txt.getText().toString() == "aro_L"){
+            else if(bottle_name_txt.getText().toString() == "아로마티카 PET L"){
                 shop_name_txt.setText("아로마티카");
                 scan_bottle_image.setImageResource(R.drawable.bottle_aro_l);
             }
-            else if(bottle_name_txt.getText().toString() == "aro_s"){
+            else if(bottle_name_txt.getText().toString() == "아로마티카 PET S"){
                 shop_name_txt.setText("아로마티카");
                 scan_bottle_image.setImageResource(R.drawable.bottle_aro_s);
             }
-            else if(bottle_name_txt.getText().toString() == "ch_M"){
+            else if(bottle_name_txt.getText().toString() == "채움소 BIO PET L"){
                 shop_name_txt.setText("채움소");
                 scan_bottle_image.setImageResource(R.drawable.bottle_ch_m);
             }
-            else if(bottle_name_txt.getText().toString() == "ear_L"){
+            else if(bottle_name_txt.getText().toString() == "자구샵 PCR L"){
                 shop_name_txt.setText("지구샵");
                 scan_bottle_image.setImageResource(R.drawable.bottle_ear_l);
             }

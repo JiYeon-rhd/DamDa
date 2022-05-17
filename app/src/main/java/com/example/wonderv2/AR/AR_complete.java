@@ -178,9 +178,10 @@ public class AR_complete extends AppCompatActivity {
             if(!Product_name_15.equals("선택하세요")){ item_name_txt.setText(Product_name_15); item_name_txt2.setText(Product_name_16);}
             else if(!Product_name_16.equals("선택하세요")){ item_name_txt.setText(Product_name_16); item_name_txt2.setText(Product_name_15);}
         }
+        //"알맹상점 에코 PET L", "알맹상점 디스펜서 M", "알맹상점 에코 PET S","아로마티카 PET L", "아로마티카 PET S", "채움소 BIO PET L", "자구샵 PCR L"
 
         //용기이름과 그램수에 따라 이미지 바꾸기
-        if(bottle_name.getText().toString().equals("al_L")){
+        if(bottle_name.getText().toString().equals("알맹상점 에코 PET L")){
             if(item_g_txt.getText().toString().equals("400")){
                 scan_image.setImageResource(R.drawable.bottle_al_l_400g); }
             else if(item_g_txt.getText().toString().equals("350")){
@@ -198,19 +199,19 @@ public class AR_complete extends AppCompatActivity {
             else if(item_g_txt.getText().toString().equals("50")){
                 scan_image.setImageResource(R.drawable.bottle_al_l_50g); }
         }
-        else if(bottle_name.getText().toString().equals("al_M")){
+        else if(bottle_name.getText().toString().equals("알맹상점 디스펜서 M")){
             scan_image.setImageResource(R.drawable.bottle_al_m);
         }
-        else if(bottle_name.getText().toString().equals("al_S")){
+        else if(bottle_name.getText().toString().equals("알맹상점 에코 PET S")){
             scan_image.setImageResource(R.drawable.bottle_al_s);
         }
-        else if(bottle_name.getText().toString().equals("aro_L")){
+        else if(bottle_name.getText().toString().equals("아로마티카 PET L")){
             scan_image.setImageResource(R.drawable.bottle_aro_l);
         }
-        else if(bottle_name.getText().toString().equals("aro_s")){
+        else if(bottle_name.getText().toString().equals("아로마티카 PET S")){
             scan_image.setImageResource(R.drawable.bottle_aro_s);
         }
-        else if(bottle_name.getText().toString().equals("ch_M")){
+        else if(bottle_name.getText().toString().equals("채움소 BIO PET L")){
             if(item_g_txt.getText().toString().equals("400")){
                 scan_image.setImageResource(R.drawable.bottle_ch_l_400g); }
             else if(item_g_txt.getText().toString().equals("350")){
@@ -228,7 +229,7 @@ public class AR_complete extends AppCompatActivity {
             else if(item_g_txt.getText().toString().equals("50")){
                 scan_image.setImageResource(R.drawable.bottle_ch_l_50g);}
         }
-        else if(bottle_name.getText().toString().equals("ear_L")){
+        else if(bottle_name.getText().toString().equals("자구샵 PCR L")){
             scan_image.setImageResource(R.drawable.bottle_ear_l);
         }
 
@@ -350,15 +351,16 @@ public class AR_complete extends AppCompatActivity {
         String Gram = item_g_txt.getText().toString();
         gram = Integer.parseInt(Gram);
 
+        //"알맹상점 에코 PET L", "알맹상점 디스펜서 M", "알맹상점 에코 PET S","아로마티카 PET L", "아로마티카 PET S", "채움소 BIO PET L", "자구샵 PCR L"
         //al_L
-        if(bottle_name.getText().toString().equals("al_L")){
+        if(bottle_name.getText().toString().equals("알맹상점 에코 PET L")){
             if(gram <= 400){
                 priceCalculation();
             }
 
         }
         //al_M
-        else if(bottle_name.getText().toString().equals("al_M")){
+        else if(bottle_name.getText().toString().equals("알맹상점 디스펜서 M")){
             if(gram <- 200){
                 priceCalculation();
             }
@@ -366,14 +368,14 @@ public class AR_complete extends AppCompatActivity {
 
         }
         //al_S
-        else if(bottle_name.getText().toString().equals("al_S")){
+        else if(bottle_name.getText().toString().equals("알맹상점 에코 PET S")){
             if(gram <=100){
                 priceCalculation();
             }
 
         }
         //aro_L
-        else if(bottle_name.getText().toString().equals("aro_L")){
+        else if(bottle_name.getText().toString().equals("아로마티카 PET L")){
             if(gram <= 400){
                 priceCalculation();
             }
@@ -381,14 +383,14 @@ public class AR_complete extends AppCompatActivity {
 
         }
         //aro_S
-        else if(bottle_name.getText().toString().equals("aro_s")){
+        else if(bottle_name.getText().toString().equals("아로마티카 PET S")){
             if(gram <= 50){
                 priceCalculation();
             }
 
         }
         //ch_M
-        else if(bottle_name.getText().toString().equals("ch_M")){
+        else if(bottle_name.getText().toString().equals("채움소 BIO PET L")){
             if( gram <= 400){
                 priceCalculation();
             }
@@ -396,7 +398,7 @@ public class AR_complete extends AppCompatActivity {
         }
 
         //ear_L
-        else if(bottle_name.getText().toString().equals("ear_L")){
+        else if(bottle_name.getText().toString().equals("자구샵 PCR L")){
             priceCalculation();
         }
 

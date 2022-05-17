@@ -430,17 +430,18 @@ public class AR_select_almaeng extends AppCompatActivity implements View.OnClick
     }
 
     public void setGramSpinner(){
-        if(bottle_name.equals("al_L")){//400까지
+        //"알맹상점 에코 PET L", "알맹상점 디스펜서 M", "알맹상점 에코 PET S","아로마티카 PET L", "아로마티카 PET S", "채움소 BIO PET L", "자구샵 PCR L"
+        if(bottle_name.equals("알맹상점 에코 PET L")){//400까지
             layout_400g.setVisibility(View.VISIBLE);
             layout_200g.setVisibility(View.INVISIBLE);
             layout_100g.setVisibility(View.INVISIBLE);
         }
-        else if(bottle_name.equals("al_M")){ //200
+        else if(bottle_name.equals("알맹상점 디스펜서 M")){ //200
             layout_400g.setVisibility(View.INVISIBLE);
             layout_200g.setVisibility(View.VISIBLE);
             layout_100g.setVisibility(View.INVISIBLE);
         }
-        else if(bottle_name.equals("al_S")){ //100
+        else if(bottle_name.equals("알맹상점 에코 PET S")){ //100
             layout_400g.setVisibility(View.INVISIBLE);
             layout_200g.setVisibility(View.INVISIBLE);
             layout_100g.setVisibility(View.VISIBLE);

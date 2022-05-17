@@ -263,13 +263,14 @@ public class AR_select_aromatica extends AppCompatActivity implements View.OnCli
 
 
     }
+    //"알맹상점 에코 PET L", "알맹상점 디스펜서 M", "알맹상점 에코 PET S","아로마티카 PET L", "아로마티카 PET S", "채움소 BIO PET L", "자구샵 PCR L"
 
     public void setGramAro(){
-        if(bottle_name.equals("aro_L")){//400까지
+        if(bottle_name.equals("아로마티카 PET L")){//400까지
             layout_aro_400g.setVisibility(View.VISIBLE);
             layout_aro_50g.setVisibility(View.INVISIBLE);
         }
-        else if(bottle_name.equals("aro_s")){
+        else if(bottle_name.equals("아로마티카 PET S")){
             layout_aro_400g.setVisibility(View.INVISIBLE);
             layout_aro_50g.setVisibility(View.VISIBLE);
         }
