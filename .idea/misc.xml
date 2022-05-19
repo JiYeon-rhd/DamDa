@@ -117,17 +117,23 @@
         <entry key="..\:/final_wonder/app/src/main/res/drawable/ar_btn_reselect.xml" value="0.2814814814814815" />
         <entry key="..\:/final_wonder/app/src/main/res/drawable/dash_line.xml" value="0.2814814814814815" />
         <entry key="..\:/final_wonder/app/src/main/res/drawable/icon_rescan_resize.xml" value="0.2814814814814815" />
+        <entry key="..\:/final_wonder/app/src/main/res/drawable/shadow.xml" value="0.3635897435897436" />
         <entry key="..\:/final_wonder/app/src/main/res/layout/ar_camera.xml" value="0.23777173913043478" />
         <entry key="..\:/final_wonder/app/src/main/res/layout/ar_card.xml" value="0.23777173913043478" />
         <entry key="..\:/final_wonder/app/src/main/res/layout/ar_complete.xml" value="0.25" />
         <entry key="..\:/final_wonder/app/src/main/res/layout/ar_main.xml" value="0.23777173913043478" />
         <entry key="..\:/final_wonder/app/src/main/res/layout/ar_select_almaeng.xml" value="0.23777173913043478" />
         <entry key="..\:/final_wonder/app/src/main/res/layout/ar_splash_scan.xml" value="0.23777173913043478" />
+        <entry key="..\:/final_wonder/app/src/main/res/layout/exp_camera.xml" value="0.2703804347826087" />
+        <entry key="..\:/final_wonder/app/src/main/res/layout/exp_detail.xml" value="0.2703804347826087" />
+        <entry key="..\:/final_wonder/app/src/main/res/layout/exp_main.xml" value="0.2703804347826087" />
+        <entry key="..\:/final_wonder/app/src/main/res/layout/home_loca_list.xml" value="0.2703804347826087" />
         <entry key="..\:/final_wonder/app/src/main/res/layout/home_loca_map.xml" value="0.23777173913043478" />
         <entry key="..\:/final_wonder/app/src/main/res/layout/home_shop_almaeng_detail.xml" value="0.19947916666666668" />
         <entry key="..\:/final_wonder/app/src/main/res/layout/home_shop_aromatica_detail.xml" value="0.17097264437689969" />
         <entry key="..\:/final_wonder/app/src/main/res/layout/home_shop_chaeum_detail.xml" value="0.33" />
         <entry key="..\:/final_wonder/app/src/main/res/layout/home_shop_earth_detail.xml" value="0.17097264437689969" />
+        <entry key="..\:/final_wonder/app/src/main/res/layout/productlist_item.xml" value="0.5" />
         <entry key="..\:/final_wonder/app/src/main/res/menu/menu.xml" value="0.3578125" />
         <entry key="app/src/main/res/drawable/ar_background_green.xml" value="0.33958333333333335" />
         <entry key="app/src/main/res/drawable/ar_background_selectitem.xml" value="0.33958333333333335" />

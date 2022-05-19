@@ -10,7 +10,7 @@
     <LinearLayout
         android:id="@+id/exp_wash"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="85dp"
         android:orientation="vertical"
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp"
@@ -20,8 +20,8 @@
             android:layout_width="match_parent"
             android:layout_height="80dp"
             android:layout_gravity="center"
-            android:background="@drawable/white_bg"
             android:elevation="1.1dp"
+            android:background="@drawable/white_bg"
             android:orientation="horizontal"
             android:paddingLeft="20dp"
             android:paddingRight="0dp">
